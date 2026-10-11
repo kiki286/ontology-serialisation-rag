@@ -1,0 +1,146 @@
+{
+  "n_rows": 40,
+  "verification": {
+    "n": 24,
+    "majority_class_baseline": 0.6666666666666666,
+    "majority_label": "supported",
+    "gold_label_counts": {
+      "supported": 16,
+      "contradicted": 8
+    },
+    "per_model": {
+      "gpt-4o-2024-11-20": {
+        "n": 12,
+        "accuracy": 1.0,
+        "majority_class_baseline": 0.6666666666666666,
+        "modal_pred_label": "supported",
+        "modal_pred_frac": 0.6666666666666666,
+        "pred_label_counts": {
+          "supported": 8,
+          "contradicted": 4
+        },
+        "flags": []
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "n": 12,
+        "accuracy": 0.6666666666666666,
+        "majority_class_baseline": 0.6666666666666666,
+        "modal_pred_label": "supported",
+        "modal_pred_frac": 1.0,
+        "pred_label_counts": {
+          "supported": 12
+        },
+        "flags": [
+          "verification accuracy 0.667 <= majority baseline 0.667",
+          "modal predicted label 'supported' is 1.000 of answers (>90%)"
+        ]
+      }
+    },
+    "per_reasoning_type": {
+      "direct_assertion": {
+        "n": 16,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "supported": 16
+        },
+        "missing_label_classes": [
+          "contradicted",
+          "undetermined"
+        ]
+      },
+      "structural": {
+        "n": 8,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "contradicted": 8
+        },
+        "missing_label_classes": [
+          "supported",
+          "undetermined"
+        ]
+      }
+    },
+    "labels_absent_everywhere": [
+      "undetermined"
+    ],
+    "flags": [
+      "[gpt-4o-mini-2024-07-18] verification accuracy 0.667 <= majority baseline 0.667",
+      "[gpt-4o-mini-2024-07-18] modal predicted label 'supported' is 1.000 of answers (>90%)",
+      "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+      "[reasoning_type=structural] gold missing label classes ['supported', 'undetermined']",
+      "gold label class(es) absent from the whole set: ['undetermined']"
+    ]
+  },
+  "ceiling_floor": {
+    "threshold": 0.9,
+    "per_task": {
+      "T01": {
+        "n_cells": 8,
+        "cells_at_1.0": 8,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T02": {
+        "n_cells": 8,
+        "cells_at_1.0": 1,
+        "cells_at_0.0": 7,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T03": {
+        "n_cells": 8,
+        "cells_at_1.0": 4,
+        "cells_at_0.0": 4,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T04": {
+        "n_cells": 8,
+        "cells_at_1.0": 8,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T05": {
+        "n_cells": 8,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 8,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      }
+    },
+    "flags": [
+      "[T01] CEILING: 8/8 cells at 1.0 (0 exceptions)",
+      "[T04] CEILING: 8/8 cells at 1.0 (0 exceptions)",
+      "[T05] FLOOR: 8/8 cells at 0.0 (0 exceptions)"
+    ]
+  },
+  "determinism": {
+    "n_cells": 40,
+    "identical_raw_cells": 40,
+    "identical_frac": 1.0,
+    "distinct_system_fingerprints": 4,
+    "system_fingerprints": [
+      "fp_5d8d1116aa",
+      "fp_756104e0cc",
+      "fp_98f538dc1a",
+      "fp_b21e18781d"
+    ]
+  },
+  "flags": [
+    "[gpt-4o-mini-2024-07-18] verification accuracy 0.667 <= majority baseline 0.667",
+    "[gpt-4o-mini-2024-07-18] modal predicted label 'supported' is 1.000 of answers (>90%)",
+    "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+    "[reasoning_type=structural] gold missing label classes ['supported', 'undetermined']",
+    "gold label class(es) absent from the whole set: ['undetermined']",
+    "[T01] CEILING: 8/8 cells at 1.0 (0 exceptions)",
+    "[T04] CEILING: 8/8 cells at 1.0 (0 exceptions)",
+    "[T05] FLOOR: 8/8 cells at 0.0 (0 exceptions)"
+  ]
+}

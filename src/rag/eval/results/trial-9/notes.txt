@@ -1,0 +1,87 @@
+==============================
+EXPERIMENT DETAILS:
+==============================
+- same as trial 8 except
+        -> we now have query breakdown -> takes query, breaks down into (max 3) retrieval units, uses these to retrieved
+
+Tbh I don't seem much difference in results. Doesn't seem to help the questions it's meant to. Some modelling ones answered better?
+And in theory, more compound questions are answered better.
+
+==============================
+ANALYSIS:
+==============================
+
+What are the key concepts in IDO?
+- PARTIAL
+What is IDO and why would I use it?
+- GOOD 
+I want to model Failure Modes. Where does a “Failure Effect” sit in IDO?
+- PARTIAL
+- ans:
+        In the context of the Industrial Data Ontology (IDO), a "Failure Effect" can be considered as a consequence resulting from a "Failure Mode." Specifically, it is characterized as a process that corresponds to the operational, functional, or status impact of a failure (as defined in IEC 60812:2008). Within IDO, a "Failure Effect" can be related to a "Failure Event," and it exists in the hierarchy of concepts that deal with functional failures and their observation. To model this effectively, one would typically use classes within a Failure Modes and Effects Analysis (FMEA) framework aligned with IDO.
+Explain an Activity Profile to me and give me an example of how I would use it
+- GOOD 
+I have a Failure Mode Code (representing the failure mode that has occurred) and I have modelled that as an information object. I also want to model the actual Failure Mode that occurred on the equipment. What IDO relation do I use between the Failure Mode Code and the Failure Mode.
+- GOOD
+What is the difference between a Location and a Site in IDO?
+- PARTIAL
+What OWL profile does IDO use?
+- GOOD
+I want to create a reference ontology for failure modes aligned with IDO, what should my namespace for my ontology look like?
+- BAD
+If I create a concept in an IDO aligned ontology, what annotations / metadata is required on that concept.
+- PARTIAL
+When was IDO last updated?
+- GOOD
+What is the difference between OBI and IDO?
+- GOOD
+What are the principles of OBI
+- GOOD
+What is an ontology maintenance agency?
+- GOOD
+What does a maintenance agency do?
+- GOOD
+What sort of ontology checks are required for ontology resources to be considered part of OBI?
+- GOOD
+Who maintains ontologies aligned to IDO that are not part of ISO?
+- GOOD
+Does IDO use Linked Data?
+- GOOD
+What is a shortcut property
+- GOOD
+What are the differences between an upper ontology, reference ontology, application ontology, and enterprise ontology?
+- GOOD
+What are annotation properties?
+- GOOD
+Is IDO available in different languages?
+- BAD (could not answer - was honest)
+Does the class InformationObject in IDO include documents and database records?
+- GOOD 
+In IDO what is the difference between the classes 'function', 'capability' and 'disposition?
+- GOOD 
+In IDO what is meant by a Dependent class?
+- GOOD
+
+==============================
+SUMMARY:
+==============================
+
+GOOD = 16 -> 18
+PARTIAL = 3 -> 4
+BAD = 5 -> 2
+
+==============================
+TAKEAWAYS:
+==============================
+
+- Still cannot answer these two because of extremely specific retrieval and the sections needed don't use the terms we want:
+        - I want to create a reference ontology for failure modes aligned with IDO, what should my namespace for my ontology look like?
+        - If I create a concept in an IDO aligned ontology, what annotations / metadata is required on that concept.
+- Still don't have the 'languages' context
+- Got a modelling question right! Although it should have not attempted to ans...
+
+Direction:
+- Synonym generation -> namespace -> URI, URL, etc.
+- ToC -> map of all the headings in markdowns
+- intent analysis -> what type of q is this
+- added some automated tests

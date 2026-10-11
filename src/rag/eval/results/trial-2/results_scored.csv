@@ -1,0 +1,328 @@
+query,actual_answer,gold_answer,answer_relevancy,answer_accuracy,semantic_similarity
+What are the key concepts in IDO?,"The **Industrial Data Ontology (IDO)** is an upper ontology designed to enhance interoperability within the industrial data domain. Here are the key concepts associated with IDO:
+
+1. **Upper Ontology**: IDO serves as a top-level ontology that defines generalized terms applicable across multiple industrial domains. This makes it suitable for standardizing language and concepts utilized in various sectors of the industry.
+
+2. **OWL 2 Implementation**: IDO is formulated in OWL 2 (Web Ontology Language), specifically in OWL DL, a sublanguage that facilitates description logic. This allows for rich representation of knowledge and supports automated reasoning, ensuring data is machine-readable and semantically interoperable.
+
+3. **Semantic Interoperability**: One of the main goals of IDO is to address the common issue of semantic interoperability, where organizational data may be expressed through proprietary terms and definitions. By providing a consistent ontology, IDO ensures that data meanings are explicit and understandable by both humans and machines.
+
+4. **Lifecycle Phases**: The ontology supports all life cycle phases of industrial assets and processes, enabling the development and management of vocabularies and asset models across their entire lifespan.
+
+5. **Reference Data Libraries (RDLs)**: IDO facilitates the integration of reference data libraries, which are collections of standardized data that assist in ensuring consistency and accuracy in data management across different systems and contexts.
+
+6. **Automated Reasoning**: IDO allows for automated reasoning through OWL DL reasoners, which can perform tasks such as consistency checking, classification of terms, and inference of new facts. This is crucial for maintaining data quality and integrity.
+
+7. **Modeling Patterns**: IDO includes modeling patterns designed to aid in the construction of IDO-aligned ontologies, enabling effective data representation and reasoning.
+
+8. **Interconnected Ecosystem**: IDO is part of a broader Ontology-Based Interoperability (OBI) ecosystem, which includes shared resources like ontologies, templates, and data quality rules, aimed at enhancing interoperability within organizations.
+
+By incorporating these concepts, IDO aims to provide a structured framework for managing industrial data effectively, thereby supporting advanced automation and artificial intelligence applications within the industry.","IDO has five top-level concepts (each with taxonomic breakdowns). The five top-level concepts are Dependent, Object, Prescriptive, Actual, Temporal",0.6676486178749994,0.0,0.5614767887682344
+What is IDO and why would I use it?,"The Industrial Data Ontology (IDO) is a structured framework designed for the representation and integration of industrial data across various domains, utilizing the W3C Web Ontology Language (OWL 2). It is intended for use throughout all life cycle phases of industrial assets and processes, facilitating the creation of vocabularies and management of asset models that leverage Reference Data Libraries (RDLs). IDO serves as a ""top-level"" ontology, defining generic terms applicable across multiple industrial sectors.
+
+### Key Reasons to Use IDO:
+
+1. **Semantic Interoperability**: IDO addresses the challenge of semantic interoperability in industrial data, which often uses proprietary terms and formats. By providing a standardized vocabulary and structure, it allows for more efficient data exchange while minimizing manual interpretation and the potential for misinterpretation.
+
+2. **Automated Reasoning and Data Quality**: Leveraging OWL DL, IDO supports automated reasoning capabilities that allow software to perform logical tasks such as consistency checking, classification, and inferring new facts. This ensures higher data quality and consistency within industrial processes.
+
+3. **Integration Across Domains**: As a top-level ontology, IDO defines concepts that exist across various industrial domains, making it easier for organizations to align their internal data models with broader industry standards and practices.
+
+4. **Facilitation of AI and Automation**: By enabling machine-interpretable data formats, IDO plays a crucial role in industrial automation and the integration of artificial intelligence (AI) into industrial operations, enhancing data analytics, machine learning, and operational efficiency.
+
+5. **Foundation for Standards**: IDO is part of the ISO 23726 standards series, specifically the foundation for representing industrial data and models, ensuring that organizations utilizing IDO are adhering to recognized international standards.
+
+In summary, adopting IDO can significantly enhance an organization's capacity to manage, share, and interpret industrial data effectively, thereby improving operational efficiencies and data interoperability across various platforms and stakeholders.","The Industrial Data Ontology (IDO) is a W3C OWL 2 ontology. The IDO is intended for use in all life cycle phases of industrial assets and processes, to build vocabularies and manage asset models that employ Reference Data Libraries (RDLs).",0.6423708183280156,0.25,0.8682375767209792
+I want to model Failure Modes. Where does a “Failure Effect” sit in IDO?,"In the context of the Industrial Data Ontology (IDO), the concept of ""Failure Effect"" can be understood through the lens of its structured hierarchy and the pattern of relationships among various classes.
+
+While the provided snippets do not directly mention ""Failure Effect,"" it falls under the broader category of system and asset failure management, which is crucial in industrial contexts. In IDO, entities like ""Failure Mode"" and ""Failure Effect"" are relevant for representing different aspects of system behavior and reliability.
+
+### Positioning of “Failure Effect” in IDO
+
+1. **Classes and Hierarchies**: ""Failure Effect"" would likely be modeled as a subclass within a domain that deals with ""Failure Modes"" or ""Risk Management."" This domain would involve concepts such as failures, their causes, effects, and related analysis processes. 
+
+2. **Relationship to Other Concepts**: In IDO, a ""Failure Effect"" would be associated with a ""Failure Mode,"" illustrating the consequences of specific failures on system or process performance.
+
+3. **Modeling Patterns**: To represent a ""Failure Effect"" correctly in an ontology aligned with IDO, one would follow established modeling patterns that encapsulate the various attributes and relationships of failure concepts. These patterns can provide guidelines on how to define and interrelate entities.
+
+### Practical Steps for Modeling ""Failure Effects""
+- **Identify Relevant Classes**: Determine existing classes in IDO that relate to failures, effects, and risk management.
+- **Define Properties and Relationships**: Establish properties for ""Failure Effect"" that define its characteristics and relationships with ""Failure Mode"" and other related classes.
+- **Use Modeling Tools**: Utilize modeling tools like Protégé to visually represent the ontology structure, ensuring that the class hierarchy adheres to IDO specifications.
+
+### Example Structure
+- **Class: Failure Mode**
+  - **Subclass: Specific Failure Mode 1**
+    - **Property: hasFailureEffect**
+      - **Object: Failure Effect 1**
+      - **Object: Failure Effect 2**
+
+Though exact relationships may not be explicitly defined in the snippets, structuring your ontology based on these principles will help in creating a robust model for ""Failure Effects"" within the IDO framework. If you have specific cases or need detailed assistance, I advise examining IDO or related resources that discuss failure modes and management more explicitly.","If a failure effect is defined as, “The consequence of a ‘FailureMode’ in terms of the operation, function or status of the item (IEC 60812:2008).”, a failure effect would sit under the “Activity” concept in IDO. This is an opinion based on the definition provided, and should be discussed with domain experts.",0.7242103894425128,0.0,0.7528583732832328
+Explain an Activity Profile to me and give me an example of how I would use it,"An **Activity Profile** in the context of the Industrial Data Ontology (IDO) refers to a structured representation of activities that are performed within an industrial setting. It encapsulates the characteristics of activities, including their relationships with physical objects, process flows, and other activities, forming a comprehensive model essential for data interoperability and semantic clarity in industrial data environments.
+
+### Example Usage of an Activity Profile
+
+1. **Process Flow Representation:**
+   An Activity Profile can be utilized to model a complex process flow within a manufacturing plant. For instance, consider a Separation System in a chemical processing facility. 
+
+   - **Components**: The system may consist of various units like separators, pumps, and heat exchangers.
+   - **Activities**: You could represent activities such as ""Separation of fluids,"" ""Pumping,"" and ""Heating."" Each of these activities can be modeled as individuals in the Activity Profile.
+   - **Relationships**: The relationships between these activities and physical components can be defined using object properties like `hasPart` to indicate which physical objects are involved in each activity (e.g., a pump performing the ""Pumping"" activity).
+
+2. **Block Diagrams in Process Design:**
+   Main process activities can often be represented on block diagrams. Each block can illustrate a specific activity alongside its inputs and outputs. For example:
+   - You may create a block for the ""Separation System"" that includes inlets (e.g., raw material input) and outlets (e.g., separated product output). 
+   - The separation activity will have an associated function represented in the Activity Profile, thus supporting the activities' contextual relationships with the physical assets.
+
+3. **Data Interoperability:**
+   Utilizing Activity Profiles allows different stakeholders (designers, operators, regulatory bodies) to have a unified understanding of the processes involved, thus ensuring that regardless of the system each uses, the language of process activities remains consistent.
+
+### Summary
+
+By using an Activity Profile, organizations can effectively model complex processes, enhancing both operational clarity and data integration. It also supports the identification of system interactions, which is critical for design and operational efficiency, particularly in environments characterized by extensive interdependencies between equipment and processes.","An activity profile is “An activity obtained by ""selective abstraction"" to just that part of an activity that consists in varying or maintaining a specified 'quality' of a participant”. An example is “An 'activity profile' of an 'activity' involving rotating equipment, instantiating a class ""100 revolutions per minute"".",0.6783963653450952,0.0,0.6153680679142831
+I have a Failure Mode Code (representing the failure mode that has occurred) and I have modelled that as an information object. I also want to model the actual Failure Mode that occurred on the equipment. What IDO relation do I use between the Failure Mode Code and the Failure Mode.,"To model the relationship between the Failure Mode Code (an information object) and the actual Failure Mode that occurred on the equipment in accordance with the Industrial Data Ontology (IDO), you should utilize an appropriate IDO relation that captures the nature of this association.
+
+The IDO suggests using **""is a code for""** or similar relationships that define that the Failure Mode Code provides a representation or reference for the actual Failure Mode. To establish a clear connection, you can consider an object property that indicates that one entity serves as a semantic representation or identifier of another.
+
+For instance, in this specific case:
+- **Failure Mode Code** `is a code for` **Failure Mode**: This indicates that the Failure Mode Code serves as an identifier or a reference to the actual Failure Mode that took place.
+
+It's essential to ensure that you have corresponding classes defined in your ontology for both the Failure Mode Code and the Failure Mode if they are not already established. By accurately defining these relationships, you can enhance the semantic interoperability of your data and ensure it aligns with the principles of IDO. 
+
+If you need further steps on how to implement this or additional guidance on building or aligning ontologies with IDO, feel free to ask!","If a failure mode code is an information object, and a failure mode is an Activity then to correct object property to use in this case would be “is about” (domain: information object, range: anything).",0.7947198555156448,0.0,0.6482625201957875
+What is the difference between a Location and a Site in IDO?,"In the Industrial Data Ontology (IDO), the concepts of ""Location"" and ""Site"" are related but distinct, with specific definitions:
+
+1. **Location**:
+   - The term ""Location"" refers to a broader category that encompasses any defined place or position in space. In the context of IDO, a Location is classified as a subclass of `lis:Object`. According to the provided context, it serves as a foundational entity for defining places in various industrial applications.
+
+2. **Site**:
+   - A ""Site"" is more specific and is defined as a three-dimensional immaterial entity that is either partially or wholly bounded by a material entity or is a part thereof. It is a subclass of Location, meaning that every Site is a Location, but not every Location is a Site. The definition includes a reference to the Basic Formal Ontology (BFO), which specifies this relationship. This reflects that a Site has additional constraints regarding its spatial boundaries compared to a general Location.
+
+To summarize:
+- **Location**: A general term for any spatial point or area.
+- **Site**: A specific type of Location with defined spatial boundaries, directly related to material entities.
+
+This structured differentiation helps clarify how different types of locations can be categorized and utilized within the framework of industrial data management and ontology design in IDO.","A location is defined as “An object that is a region in space” (example: An outdoor plant area, an opening in a wall, the space inside an enclosure) and a site is defined as “A location determined in relation to one or more physical objects.” (example: A flight deck, the inside of a manifold, the hold of a ship, a centre of gravity, an outside area)",0.8361766792767066,0.25,0.6565497394125586
+What OWL profile does IDO use?,"The Industrial Data Ontology (IDO) is formulated in **OWL DL**, which is a sublanguage of **OWL 2** (Web Ontology Language). OWL DL is based on description logics (DL) and is specifically designed for use in logic-based knowledge representation and reasoning. It supports various ontology reasoning tasks such as consistency checks, taxonomical classification, and inference of new facts.
+
+IDO serves as a ""top-level"" ontology intended for industrial data across different domains, allowing organizations to build vocabularies and manage asset models using Reference Data Libraries (RDLs) (source: [IDO Documentation](https://rds.posccaesar.org/ontology/lis14/)).
+
+This choice of OWL DL facilitates efficient automated reasoning for IDO-aligned ontologies, which is critical for the representation and integration of industrial data (source: ISO 23726 documentation).",IDO uses OWL2 DL.,0.5060546711909967,0.5,0.6601050951024703
+"I want to create a reference ontology for failure modes aligned with IDO, what should my namespace for my ontology look like?","To create a reference ontology for failure modes aligned with the Industrial Data Ontology (IDO), you need to follow specific guidelines regarding the namespace for your ontology. Based on the provided context, here’s how you should structure your namespace:
+
+1. **Base Namespace**: Use a namespace provided by a designated maintenance agency as per the OBI (Ontology-based Interoperability) standard. For example, the IDO entities utilize the following URI:
+   - `https://rds.posccaesar.org/ontology/lis14/ont/core/`
+
+2. **Versioning**: It's essential to manage versioning in your ontology's namespace. You should append a version extension at the end of the namespace URIs. For instance, if your ontology is at version 3.0, your namespace could look like:
+   - `https://rds.posccaesar.org/ontology/lis14/ont/core/3.0/`
+
+3. **Custom Namespace**: If your ontology is created and managed by an external group, ensure that it uses a suitable namespace. This should follow a similar format but can be customized based on your organizational needs. An example of a custom namespace for your failure modes ontology could be:
+   - `https://your-org-domain.org/ontology/failure-modes/1.0/`
+
+In summary, your reference ontology's namespace for failure modes aligned with IDO should follow the structure of a base URL specifying the ontology core, with versioning reflected in the URL. This ensures that any applications or systems utilizing your ontology can reference and manage it effectively.",Reference ontologies should have a namespace of the structure http://rds.posccaesar.org/ontology/XXX/ont/core where X is the name of the reference ontology. So this example may be of the form http://rds.posccaesar.org/ontology/failure-modes/ont/core,0.8372689229679713,0.0,0.7575947502317376
+"If I create a concept in an IDO aligned ontology, what annotations / metadata is required on that concept.","When creating a concept in an IDO-aligned ontology, the following annotations and metadata are required to ensure proper documentation and alignment within the framework:
+
+1. **Basic Metadata Requirements**:
+   - Each class and property in the ontology should be documented with the metadata defined in Clause 8 and Clause 9 of the IDO documentation. These clauses outline essential metadata that must be included, such as definitions, usage notes, and other relevant information.
+
+2. **Additional Annotations**:
+   - While the metadata outlined in Clauses 8 and 9 are mandatory, you can include other annotations as well. These additional annotations should be governed by a documented process to maintain consistency and relevance across the ontology.
+
+3. **Specific Annotation Properties**:
+   - Implement the following specific annotation properties for additional metadata:
+     - **dcterms:abstract**: A summary of the resource.
+     - **skos:example**: Provides an example of the concept's use, which is recommended for all classes.
+     - **skos:prefLabel**: The preferred lexical label for the concept in a given language.
+     - **skos:altLabel**: Alternative lexical labels for the resource.
+     - **rdfs:comment**: A textual comment to clarify the meaning of RDF properties and classes, but this is less preferred in OBI ontologies.
+     - **skos:scopeNote**: Clarifies the meaning and/or use of a concept, particularly useful for detailed explanations of intended use.
+
+4. **Documenting Alignment Decisions**:
+   - It is crucial to review and approve alignment decisions for the ontology by a recognized maintenance agency to ensure consistent adherence to the standards outlined in the IDO.
+
+By including these annotations and adhering to the prescribed processes, you will help ensure that your concept is well-documented, aligned with IDO standards, and usable within the broader ontology ecosystem.",The principles document state two annotations that are required. That is rdfs:label and skos:defintions. Additional annotation properties are supported by IDO but are only recommended for use.,0.9246298720045955,0.0,0.6742957938700521
+When was IDO last updated?,"The Industrial Data Ontology (IDO) is currently undergoing updates as it is being standardized within the ISO process. It is due to be published as an ISO standard in 2026. The final resolution and updates to the IDO contents are expected to evolve until its submission to ISO as part of ISO 23726-1 in October 2025. Thus, the last significant update occurred during this ongoing process, but specific details about previous individual updates are not provided in the sources.",The IDO ontology was last updated on the 24th of November 2024.,0.5655749485144026,0.0,0.6933103065994065
+What is the difference between OBI and IDO?,"The **Industrial Data Ontology (IDO)** and **Ontology-Based Interoperability (OBI)** are closely related but serve different purposes within the framework of semantic interoperability for industrial data.
+
+### Industrial Data Ontology (IDO)
+- **Definition**: IDO is a W3C OWL 2 ontology designed to provide a structured vocabulary for industrial data, support the management of asset models, and facilitate the integration of reference data libraries across various industries.
+- **Functionality**: It acts as a **top-level ontology** that defines generic terms applicable to multiple industrial domains, ensuring a high level of conceptual abstraction.
+- **Use Case**: IDO helps with the representation and integration of industrial data, enabling automated reasoning, data quality management, and interoperability across different life cycle phases of industrial processes and assets. For example, it's utilized to standardize asset information across sectors such as oil and gas.
+
+### Ontology-Based Interoperability (OBI)
+- **Definition**: OBI is a broader concept encompassing a series of standards aimed at achieving semantic interoperability across different domains. It involves multiple parts that define how ontologies and related artifacts can be structured and utilized to ensure seamless data exchange.
+- **Relationship to IDO**: IDO forms the foundation for the OBI standards, specifically as part of the ISO 23726 series. Essentially, IDO provides the initial framework or upper ontology that underpins the interoperability goals articulated in the OBI specifications.
+- **Scope**: OBI includes not just the foundational ontological standards but also enterprise ontologies, shared artifacts, data quality rules, and templates necessary for effective data management and exchange across organizational boundaries.
+
+### Summary of Differences
+- **Focus**: IDO focuses specifically on defining a structured vocabulary for industrial data, while OBI encompasses a wider set of rules and frameworks for achieving interoperability across various domains.
+- **Implementation**: IDO serves as a core component within the OBI framework, but OBI itself integrates multiple methodologies and standards designed for broader applications beyond just industrial data.
+
+In essence, IDO is a critical component of the OBI ecosystem, enabling organizations to create a common understanding for industrial data that can be leveraged for interoperability.","OBI stands for Ontology-based interoperability for industrial data. It is the name of a new ISO standard series ISO 23726. The OBI ecosystem includes ontologies, artefacts, stakeholders, and processes. In order to be part of the OBI ecosystem, ontology models have to adhere to the ontological commitments of IDO. The Industrial Data Ontology (IDO) is the upper ontology in the ISO 23726 series. IDO is being published as ISO DIS 23726-3.",0.7554315660032503,0.25,0.8107410532321958
+What are the principles of OBI,"The principles of Ontology-based Interoperability (OBI) are outlined in the document associated with the ISO 23726 series. Here are the fundamental principles that ensure artefacts in the OBI series are compliant:
+
+1. **Direct Semantics Consistent**: Any ontology in the OBI series must comply with OWL 2 Direct Semantics. This principle ensures that the ontologies used provide a clear and unambiguous understanding of their semantics, allowing for consistent interpretation across different systems.
+
+2. **Comprehensive Interoperability**: Artefacts within the OBI series should facilitate interoperability not only within a single organisation but also between different organisations. This is essential for effective data exchange and cooperation across various stakeholders in the industry.
+
+3. **Governance and Maintenance**: Artefacts must be governed and maintained with quality control mechanisms that ensure their reliability and effectiveness, similarly to those managed by an ISO-recognized maintenance agency. This principle emphasizes the importance of trust and integrity in the artefacts used.
+
+4. **Alignment with Upper Ontology**: The methodologies and artefacts must align with the upper ontology, specifically with the Industrial Data Ontology (IDO), which serves as a foundational layer for the OBI series.
+
+These principles ensure that the artefacts developed and used within the OBI ecosystem are trustworthy, effective, and promote semantic data interoperability, essential for modern industrial applications.","The OBI document proposes a set of principles which ontology resources will have to comply with in order to be considered compliant with IDO and the ISO 23726 series. There are 10 principles listed in Section 6 of the document. They are listed as follows:
+-	Direct Semantics consistent
+-	Resource description framework (RDF and RDFS)
+-	Digital resource
+-	Axioms, rules and constraints
+-	Ontology alignment, review and documentation
+-	Annotation
+-	Versioning and storage of artefacts
+-	Ontology modularisation
+-	Ontology evaluation
+-	Ontology maintenance agencies and process",0.6820670178411007,0.0,0.80598824269459
+What is an ontology maintenance agency?,"An **ontology maintenance agency** is a body that is appointed to oversee the maintenance, application, administration, and publication of ontologies and associated artefacts. These agencies can be recognized by ISO (ISO-recognised) or function as independent external groups (ISO-external) and play a crucial role in ensuring the integrity and quality of ontological resources.
+
+The fundamental responsibilities of a maintenance agency include:
+
+1. **Digital Versioning Management**: They regularly publish updates to digital versions of ontology artefacts.
+2. **Quality Assurance**: They maintain a documented and auditable quality management process to ensure conformance with established principles. This is particularly important when external groups propose and manage ontology-based artefacts.
+3. **Namespace Provision**: A key responsibility is to provide a namespace for the Internationalized Resource Identifiers (IRIs) associated with these ontologies, ensuring they are easily identifiable and maintainable.
+4. **User Feedback Mechanisms**: Maintenance agencies establish processes for collecting feedback from users to improve the ontological resources over time.
+
+The maintenance process consists of addressing various aspects such as change management (e.g., management of meaning changes in terms), documentation upkeep, issue tracking, and testing the impacts of changes on existing ontologies used in the industry.
+
+For example, the maintenance agency might handle questions like:
+- How will a change in the meaning of a term affect existing implementations?
+- What processes are in place for updating versions of imported ontologies and ensuring alignment with the current standards? 
+
+These agencies are vital to the **ontology-based interoperability (OBI) ecosystem**, which facilitates semantic interoperability necessary for industries relying on accurate and consistent data exchange.","OBI artefacts issued by the ISO OBI standards (ISO 23726) community shall be managed by a maintenance agency. A maintenance agency is responsible for maintaining the publishing updates to digital versions of artefacts that are part of the ISO 23726 series. 
+A maintenance agency must be able to assess ontology artefacts to assure that they meet the requirements set out in Section 6 of the OBI document.",0.9525997502389255,0.25,0.7384155196653575
+What does a maintenance agency do?,"A **maintenance agency** is an organisational body that is responsible for the maintenance, application, administration, and publication of ontologies and related artefacts as part of the ISO 23726 series. This includes regularly publishing updates to digital versions of artefacts, ensuring they conform to industry standards and undergo appropriate maintenance processes.
+
+Key responsibilities of a maintenance agency include:
+
+1. **Namespace Provisioning**: It provides a namespace for identifiers (IRIs) associated with the OBI artefacts, ensuring they can be uniquely identified.
+
+2. **Digital Version Management**: The agency manages how digital versions of ontologies and artefacts are maintained, including decision-making regarding changes to terminology or meanings.
+
+3. **Quality Management Processes**: They establish quality management processes to document and maintain artefacts, ensuring these processes are transparent and auditable.
+
+4. **Impact Analysis**: The agency addresses potential impacts of changes on existing ontologies in use, performing necessary testing to prevent disruptions in interoperability.
+
+5. **Feedback Mechanisms**: It incorporates user feedback into its processes to continuously improve the ontological frameworks and artefacts.
+
+6. **Documentation Maintenance**: The agency is responsible for capturing and maintaining documentation related to the purpose and structure of ontologies and artefacts, which is essential for their usability and integrity.
+
+In essence, the maintenance agency plays a crucial role in ensuring that ontologies remain relevant, reliable, and usable, thereby facilitating communication and interoperability among different stakeholders in the industrial data ecosystem.","A maintenance agency has the following characteristics
+1.	A maintenance agency is responsible for maintaining and publishing updates to digital versions of artefacts that are part of the ISO 23726 series.
+2.	A maintenance agency shall have a documented maintenance process.
+3.	A maintenance agency provides an independent evaluation of the alignment of digital artefacts to ensure conformance with the principles in Clause 6 of the ISO 23726-1 standard.",0.685135985088141,0.5,0.8006386672056995
+What sort of ontology checks are required for ontology resources to be considered part of OBI?,"To determine if ontology resources can be considered part of the Ontology-based Interoperability (OBI) series, several essential evaluation checks must be conducted. These checks include:
+
+1. **Suitability of Quality Tests**: All ontologies in the OBI series must undergo suitable ontology quality tests. These tests are designed to provide evidence of the ontology's soundness and consist of:
+   - **Model Checking Processes**: This involves checking the structure of the ontology against certain models to ensure it accurately represents the intended concepts and relationships.
+   - **Syntax Checkers**: Tools that validate the syntax of the ontology to ensure it follows the prescribed format and rules.
+   - **Reasoners**: These are used to infer new knowledge from the existing data and to verify the logical consistency of the ontology.
+
+2. **Review and Approval**: The processes for evaluating ontologies that are managed by ISO must be reviewed and approved by an ISO-recognized maintenance agency. For ontologies managed by external groups, these evaluations must meet standards equivalent to those set by the ISO maintenance agency.
+
+3. **Addressing Common Issues**: Model checkers examine typical issues, such as:
+   - **Polysemous Elements**: Identifying ontology elements that have multiple meanings and represent more than one conceptual idea. This can lead to confusion and inaccuracies in the ontology's application.
+   - **Synonyms**: Ensuring that no two classes that convey the same meaning have different names, which could create redundancy and complicate the ontology's use.
+
+4. **Digital Resources**: Each ontology must be accompanied by a digital file containing a serialization of all classes and properties described in the standard document. It should also include use cases and competency questions related to the ontology, alongside instance data that demonstrates reasoning and compliance with the ontological commitments outlined in the Industrial Data Ontology (IDO).
+
+5. **Axioms, Rules, and Constraints**: Resources in an OBI series ontology should be defined with clear constraints that specify axioms, rules, properties, and relationships needed to distinguish them semantically from other resources. The use of axioms must be balanced to avoid overly complex structures that could hinder reasoning performance.
+
+By adhering to these evaluation criteria and processes, ontology resources can be validated for inclusion in the OBI series, ensuring their effectiveness for industrial data interoperability.","All ontologies in the OBI series shall have suitable ontology quality tests. These tests should provide evidence of ontology evaluation with, for example, model checking processes, syntax checkers, and reasoners. Processes for ontology evaluation of OBI artefacts managed by external groups are the responsibility of the external group and the evaluation should be done to a standard equivalent to that of the ISO 23726 maintenance agency.",0.8607266909169176,0.5,0.823797013527271
+Who maintains ontologies aligned to IDO that are not part of ISO?,"The maintenance of ontologies aligned to the Industrial Data Ontology (IDO) that are not part of ISO is not explicitly addressed in the provided context. The documents focus primarily on the IDO itself, its relationship with ISO standards, and the processes of ontology alignment within the framework of the IDO.
+
+However, it can be inferred that since IDO is an open standard for semantic exchange of industrial data, ontologies that seek alignment with IDO may be developed and maintained by a variety of organizations, including industry consortia, academic institutions, and individual companies that participate in the development of ontologies for specific domains outside the ISO framework.
+
+If you are looking for specific organizations or entities responsible for maintaining such ontologies, further details may be found outside of the provided context.",External groups can own and manage IDO-aligned ontology resources. The involvement of external groups is a core part of the vision for an OBI ecosystem. Processes for ontology evaluation of OBI artefacts managed by external groups are the responsibility of the external group and the evaluation should be done to a standard equivalent to that of the ISO 23726 maintenance agency.,0.0,0.25,0.6409236895060642
+Does IDO use Linked Data?,"Yes, the Industrial Data Ontology (IDO) does utilize Linked Data principles and technologies. Specifically, IDO is formulated as a W3C OWL 2 ontology, leveraging standards like the Web Ontology Language (OWL), the Resource Description Framework (RDF), and SHACL, all of which are foundational to the Semantic Web. These standards enable the creation of machine-readable, semantically interoperable data representations based on shared vocabularies and logical structures, which are characteristic features of Linked Data.
+
+Furthermore, the IDO is designed to facilitate interoperability between different data sources by providing a structured vocabulary for the representation and integration of industrial data, akin to the principles of Linked Data that emphasize using shared URIs and structured formats for data exchange across the web. This approach enhances the ability to share and connect data across various systems and domains, which is a core aspect of Linked Data practices.","Yes, ontologies, ontology modules and ontology patterns in the OBI series shall conform to the W3C Linked Data standard and protocols.",0.7629331581933333,0.0,0.6384913809725805
+What is a shortcut property,"A **shortcut property** is defined as an object or datatype property in OWL (Web Ontology Language) that is intended to be equivalent in meaning to a modeling pattern. This pattern would typically involve additional entities or classifications if it were made explicit. In other words, shortcut properties simplify the representation of complex relationships by allowing a more straightforward way to express certain qualities without detailing every underlying classification or entity involved.
+
+For example, a shortcut property could be used to represent a complex notion like ""speed in meters per second"" without explicitly modeling each component of that expression. Instead, the shortcut property allows the representation of this quality in a streamlined manner, making the ontology easier to work with while still maintaining the intended meanings as per the modeling patterns.
+
+(Source: ISO DIS 23726-3 Annex B)",A shortcut property is an OWL object or datatype property intended as equivalent in meaning to a modelling pattern that would involve additional entities or classifications if made fully explicit. The meaning of a shortcut property can in general be partially captured by OWL property chains. Shortcut properties are used in the OBI series to support modelling at different levels of detail.,0.7300856620194569,0.5,0.9167073442038188
+"What are the differences between an upper ontology, reference ontology, application ontology, and enterprise ontology?","The distinctions between upper ontology, reference ontology, application ontology, and enterprise ontology are defined as follows:
+
+1. **Upper Ontology**:
+   - An upper ontology serves as a foundational framework that encompasses abstract concepts and general relationships common across all domains. It includes high-level categories such as Object, Event, Process, Role, Quality, and Function. Examples of relationships in an upper ontology might be partOf, participatesIn, or hasQuality. The aim is to standardize basic concepts for interoperability across various domains.
+
+2. **Reference Ontology**:
+   - A reference ontology is domain-specific and models key concepts and relationships within a particular domain or field of knowledge. It provides a shared vocabulary and structure that can be reused across multiple applications, making it a valuable resource for ensuring consistency in terminology. Reference ontologies are typically stable, actively maintained, and aim to facilitate the development of more specialized ontologies or applications.
+
+3. **Application Ontology**:
+   - An application ontology is tailored for a specific task or use case. It includes only the concepts, relationships, and constraints necessary for that unique context. Unlike reference ontologies, application ontologies are not always reusable beyond their intended purpose and are designed for particular operational requirements.
+
+4. **Enterprise Ontology**:
+   - An enterprise ontology is developed, owned, and maintained by a specific organization. It conceptualizes the vocabulary and knowledge pertinent to that enterprise's operations. Importantly, enterprise ontologies include application and reference ontologies but are not tied to a specific software application, enabling a broader understanding of the organizational context.
+
+In summary:
+- **Upper Ontology**: Abstract concepts across all domains.
+- **Reference Ontology**: Domain-specific, reusable across applications.
+- **Application Ontology**: Specific to a particular use case.
+- **Enterprise Ontology**: Tailored to the vocabulary and knowledge of an organization. 
+
+These distinctions help in understanding the roles and applications of different types of ontologies within the larger framework of industrial data and knowledge management.","An upper ontology is an ontology of abstract concepts and general relationships that are common across all domains. A reference ontology is an ontology based on a shared understanding of the concepts and relationships within a specific domain or field of knowledge. A reference ontology models key concepts in a domain so that other more specialized ontologies or applications can reuse or extend it. A trusted reference ontology (3.1.3) can be used across multiple applications. An application ontology is ontology developed for a particular task or use case that contains only the concepts, relationships, and constraints necessary for the context. An enterprise ontology is an ontology developed, owned, and maintained by an enterprise. Enterprise ontologies include reference ontologies and application ontologies.",0.9666477628155751,0.75,0.8286098753949701
+What are annotation properties?,"Annotation properties are a type of metadata used in ontologies to provide additional information about classes and properties. They help enhance the understanding and usability of the data represented by ontology resources. In the context of the Industrial Data Ontology (IDO), various annotation properties are defined, primarily drawing from established vocabularies such as RDFS, SKOS, and the Commons Annotation Vocabulary.
+
+Here are some key annotation properties relevant to IDO:
+
+1. **dcterms:abstract**: Provides a summary of the resource. It's useful for giving a quick overview of what the resource entails (e.g., a brief description of an ontological class).
+
+2. **skos:example**: Supplies an example of how a concept is used. It's recommended that all classes in an ontology have an associated example to illustrate their application.
+
+   - **Example**: For a class like **lis:Role**, an example could be ""The role an individual person takes in a work situation, such as a manager.""
+
+3. **skos:prefLabel**: Represents the preferred label for an ontology resource in a specified language. There is only one preferred label per language for a resource.
+
+4. **skos:altLabel**: Provides alternative labels for resources, which can include acronyms or alternative spellings.
+
+5. **cmns-av:synonym**: Defines a word that is synonymous with another term in the same language, helping to clarify the meaning of concepts within the ontology.
+
+6. **rdfs:comment**: Intended to clarify the meaning of RDF properties and classes, though it is recommended to use specific SKOS and IOF annotation properties for better documentation in OBI ontologies.
+
+7. **skos:scopeNote**: Clarifies the meaning or use of a concept, providing insight into how it should be applied, especially useful in academic or formal contexts.
+
+These properties allow ontologists to enrich their structures and facilitate better interoperability and understanding of industrial data. As per IDO guidelines, proper usage of annotation properties involves governing them through a documented process, ensuring that all relevant metadata is consistently applied throughout the ontology ([ISO_23726-1.md](https://spec.industrialontologies.org)).",Annotation properties in ontologies are a vital part of documentation to ensure a shared understanding of the resource and how it should be used. The OBI principles document requires the use of two annotation properties rdfs:label and skos:definitions and suggests the use of many more. Annotation properties are not used by the OWL reasoner.,0.6947388014348949,0.0,0.7693370008292413
+Is IDO available in different languages?,"The provided context does not mention whether the Industrial Data Ontology (IDO) is available in different languages. Therefore, I cannot provide information on the language availability of IDO. If you need information on IDO that is specifically covered in the context, please feel free to ask!","Yes, versions of the IDO ontology file (as a .ttl) have been produced in Norwegian, German, Korean and Japanese using AI translation of the source text file managed in an EMACS package called ELOT https://github.com/johanwk/elot .",0.0,0.0,0.5719389934316239
+Does the class InformationObject in IDO include documents and database records?,"Yes, the class `InformationObject` in the Industrial Data Ontology (IDO) does include documents and database records. According to the provided context, `InformationObject` is part of the ontology that actively deals with the representation of information and can encompass various forms of information content, which would typically include structured data like database records and unstructured data like documents.
+
+The IDO is designed to accommodate various types of information that exist in industrial contexts, as indicated by its related entities such as `InformationContent` and its relation to `ClassOfInformationObject`. This implies that `InformationObject` is a broad category capable of incorporating a variety of information types, supporting its application across different use cases in industrial data management.","Yes, but they must be given some physical form to exist, for documents this may be a paper printout and for the database record this could be a configuration of electrons in computer memory. This physical representation of an information object is called a 'concretization'. IDO uses the concretizedBy relation.",0.877404940500839,0.25,0.5902854511946631
+"In IDO what is the difference between the classes 'function', 'capability' and 'disposition?","In the Industrial Data Ontology (IDO), the classes 'function', 'capability', and 'disposition' represent distinct concepts, each serving a particular purpose within the ontology framework:
+
+1. **Function**: 
+   - The 'Function' class in IDO is inspired by the Basic Formal Ontology (BFO) class ""function."" It represents the intended purpose or role of an entity within a process. For example, a function might describe why a piece of equipment exists or what it is supposed to achieve in an industrial context. 
+   - For instance, an industrial pump's function could be ""to transfer fluids from one location to another.""
+
+2. **Capability**: 
+   - While the provided context does not specifically detail the 'capability' class, typically in ontology frameworks like IDO, a capability refers to the inherent potential of an entity to perform a certain range of functions or tasks. Capabilities often relate to the characteristics of assets or systems that enable them to undertake specified operations effectively.
+   - For example, a robotic arm's capability might be defined as ""being able to pick up objects weighing up to 10 kg.""
+
+3. **Disposition**: 
+   - The 'Disposition' class is also inspired by the BFO class ""disposition."" It denotes the potential states or conditions of an entity that allow it to perform its functions or exhibit capabilities under certain circumstances. Dispositions are inherent traits that can manifest when specific conditions are met.
+   - For example, a chemical reactor might have a disposition that allows it to effectively operate under specific temperature ranges, suggesting it is designed to remain functional and reliable within those conditions.
+
+In summary:
+- **Function** pertains to what an entity is intended to do.
+- **Capability** relates to what an entity is able to do.
+- **Disposition** is concerned with the conditions under which an entity can perform its functions or utilize its capabilities effectively. 
+
+Understanding these distinctions is crucial for effectively modeling and representing industrial systems within the IDO framework.","Each managed item in an industrial plant is there to serve a function (a purpose). Every function is a capability, and every capability is a disposition. This class hierarchy allows for a suitable degree of distinction between types of behaviour,
+from the overall level of plant systems down to individual pieces of equipment.
+
+Function a capability that is the reason for the object’s existence or presence
+Capability a favourable disposition that is not a primary purpose
+Disposition what an object tends to do",0.8000614433034986,0.0,0.7575409880781521
+In IDO what is meant by a Dependent class?,"In the context of the Industrial Data Ontology (IDO), the term ""Dependent class"" refers to a class that is defined in terms of some other class or set of classes in the ontology. This means that a Dependent class cannot exist independently; it relies on the existence of other classes for its definition and understanding.
+
+Dependent classes typically derive their meaning from their relationship to other classes, indicating a dependency that could represent attributes, behaviors, or contextual information that provide a full description of their characteristics.
+
+For example, if we consider an ontology that defines various types of industrial equipment, a Dependent class might be “Operational Status” of a machine, which would depend on the class “Machine” to which it is related. The ""Operational Status"" class cannot be fully understood without contextualizing it within the ""Machine"" class, thus illustrating its dependency.
+
+This structured approach aligns with the fundamental principles outlined in the IDO documentation, which emphasizes creating a network of interrelated classes to improve semantic interoperability and facilitate automated reasoning (as per the discussions on semantic interoperability and ontology-based systems).","A Dependent class is a class that only exists given that a independent object that bears the specified dependency exists. Examples of subclasses of the Dependent class include Disposition, Function, Role, and Quality.",0.7806367860549438,0.0,0.7405919323735957

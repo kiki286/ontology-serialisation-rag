@@ -1,0 +1,131 @@
+{
+  "n_rows": 240,
+  "verification": {
+    "n": 144,
+    "majority_class_baseline": 0.6666666666666666,
+    "majority_label": "supported",
+    "gold_label_counts": {
+      "supported": 96,
+      "contradicted": 48
+    },
+    "per_model": {
+      "llama3.1:8b-instruct-q8_0": {
+        "n": 144,
+        "accuracy": 0.4375,
+        "majority_class_baseline": 0.6666666666666666,
+        "modal_pred_label": "supported",
+        "modal_pred_frac": 0.7708333333333334,
+        "pred_label_counts": {
+          "supported": 111,
+          "contradicted": 33
+        },
+        "flags": [
+          "verification accuracy 0.438 <= majority baseline 0.667"
+        ]
+      }
+    },
+    "per_reasoning_type": {
+      "direct_assertion": {
+        "n": 96,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "supported": 96
+        },
+        "missing_label_classes": [
+          "contradicted",
+          "undetermined"
+        ]
+      },
+      "structural": {
+        "n": 48,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "contradicted": 48
+        },
+        "missing_label_classes": [
+          "supported",
+          "undetermined"
+        ]
+      }
+    },
+    "labels_absent_everywhere": [
+      "undetermined"
+    ],
+    "flags": [
+      "[llama3.1:8b-instruct-q8_0] verification accuracy 0.438 <= majority baseline 0.667",
+      "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+      "[reasoning_type=structural] gold missing label classes ['supported', 'undetermined']",
+      "gold label class(es) absent from the whole set: ['undetermined']"
+    ]
+  },
+  "ceiling_floor": {
+    "threshold": 0.9,
+    "per_task": {
+      "T01": {
+        "n_cells": 16,
+        "cells_at_1.0": 16,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T02": {
+        "n_cells": 16,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 16,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T03": {
+        "n_cells": 16,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 16,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T04": {
+        "n_cells": 16,
+        "cells_at_1.0": 5,
+        "cells_at_0.0": 11,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T05": {
+        "n_cells": 16,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 16,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      }
+    },
+    "flags": [
+      "[T01] CEILING: 16/16 cells at 1.0 (0 exceptions)",
+      "[T02] FLOOR: 16/16 cells at 0.0 (0 exceptions)",
+      "[T03] FLOOR: 16/16 cells at 0.0 (0 exceptions)",
+      "[T05] FLOOR: 16/16 cells at 0.0 (0 exceptions)"
+    ]
+  },
+  "determinism": {
+    "n_cells": 80,
+    "identical_raw_cells": 77,
+    "identical_frac": 0.9625,
+    "distinct_system_fingerprints": 1,
+    "system_fingerprints": [
+      "fp_ollama"
+    ]
+  },
+  "flags": [
+    "[llama3.1:8b-instruct-q8_0] verification accuracy 0.438 <= majority baseline 0.667",
+    "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+    "[reasoning_type=structural] gold missing label classes ['supported', 'undetermined']",
+    "gold label class(es) absent from the whole set: ['undetermined']",
+    "[T01] CEILING: 16/16 cells at 1.0 (0 exceptions)",
+    "[T02] FLOOR: 16/16 cells at 0.0 (0 exceptions)",
+    "[T03] FLOOR: 16/16 cells at 0.0 (0 exceptions)",
+    "[T05] FLOOR: 16/16 cells at 0.0 (0 exceptions)"
+  ]
+}

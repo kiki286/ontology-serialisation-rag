@@ -1,0 +1,8 @@
+format,oracle,retrieved,oracle_minus_retrieved
+elot-org,4209.0,5958.0,-1749.0
+elot-org-ancestors,4267.0,6294.0,-2027.0
+jsonld,5724.0,9321.0,-3597.0
+ofn,4827.0,7744.0,-2917.0
+omn,4587.0,6419.0,-1832.0
+turtle,5429.0,8494.0,-3065.0
+yaml-ld,4672.0,7118.0,-2446.0

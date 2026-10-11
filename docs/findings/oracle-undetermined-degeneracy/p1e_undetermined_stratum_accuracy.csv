@@ -1,0 +1,5 @@
+m,acc_on_undetermined_stratum,n_correct,n,n_wrong
+gpt-4o,0.0,0,354,354
+gpt-4o-mini,0.0,0,354,354
+llama,0.014,5,354,349
+sonnet,0.251,89,354,265

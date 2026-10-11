@@ -1,0 +1,3131 @@
+{
+  "method": "Deterministic local samples (maximum 20 per tier); no benchmark items selected.",
+  "formats": [
+    "turtle",
+    "elot-org",
+    "elot-org-ancestors",
+    "omn",
+    "jsonld",
+    "yaml-ld",
+    "ofn"
+  ],
+  "tiers": {
+    "inherited_disjointness": {
+      "sampled": 20,
+      "uniform": 20,
+      "non_uniform": 0,
+      "false_formats": [],
+      "prose_screens": {
+        "toward": 0,
+        "away": 0,
+        "neutral": 20,
+        "states_axiom": 0
+      },
+      "candidates": [
+        {
+          "id": "I-01",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:ActivityProfile",
+            "lis:Activity",
+            "lis:SpatiotemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:SpatiotemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-02",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Event",
+            "lis:Activity",
+            "lis:SpatiotemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:SpatiotemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Event: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-03",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:ActivityProfile",
+            "lis:Activity",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-04",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Event",
+            "lis:Activity",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Event: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-05",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Instant",
+            "lis:Activity",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Instant: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-06",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:InstantRegion",
+            "lis:Activity",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:InstantRegion: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-07",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Interval",
+            "lis:Activity",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Interval: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-08",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:IntervalRegion",
+            "lis:Activity",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "owl:disjointWith",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:IntervalRegion: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-09",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Capability",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Capability: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-10",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Compound",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Compound: [annotation text withheld; needs the licensed ontology]",
+            "lis:Compound: [annotation text withheld; needs the licensed ontology]",
+            "lis:Compound: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-11",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Disposition",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Disposition: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-12",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Feature",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Feature: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-13",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Function",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Function: [annotation text withheld; needs the licensed ontology]",
+            "lis:Function: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-14",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:FunctionalObject",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-15",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:InanimatePhysicalObject",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:InanimatePhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-16",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:InformationObject",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-17",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Interest",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Interest: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-18",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:LineInSpace",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:LineInSpace: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-19",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:Location",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Location: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "I-20",
+          "mechanism": "inherited_disjointness",
+          "gold_chunks": [
+            "lis:MaterialCompositionQuality",
+            "lis:Dependent",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Dependent",
+            "owl:disjointWith",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:MaterialCompositionQuality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        }
+      ]
+    },
+    "direct_domain_range": {
+      "sampled": 20,
+      "uniform": 20,
+      "non_uniform": 0,
+      "false_formats": [],
+      "prose_screens": {
+        "toward": 0,
+        "away": 0,
+        "neutral": 20,
+        "states_axiom": 0
+      },
+      "candidates": [
+        {
+          "id": "D-01",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:concretizes",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:concretizes",
+            "rdfs:range",
+            "lis:InformationObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:concretizes: [annotation text withheld; needs the licensed ontology]",
+            "lis:concretizes: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-02",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:connectedTo",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:connectedTo",
+            "rdfs:domain",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:connectedTo: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-03",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:connectedTo",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:connectedTo",
+            "rdfs:range",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:connectedTo: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-04",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:datumUOM",
+            "lis:QualityDatum"
+          ],
+          "licensing_axiom": [
+            "lis:datumUOM",
+            "rdfs:domain",
+            "lis:QualityDatum"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:datumUOM: [annotation text withheld; needs the licensed ontology]",
+            "lis:QualityDatum: [annotation text withheld; needs the licensed ontology]",
+            "lis:QualityDatum: [annotation text withheld; needs the licensed ontology]",
+            "lis:QualityDatum: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-05",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:datumUOM",
+            "lis:UnitOfMeasure"
+          ],
+          "licensing_axiom": [
+            "lis:datumUOM",
+            "rdfs:range",
+            "lis:UnitOfMeasure"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:datumUOM: [annotation text withheld; needs the licensed ontology]",
+            "lis:UnitOfMeasure: [annotation text withheld; needs the licensed ontology]",
+            "lis:UnitOfMeasure: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-06",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:datumValue",
+            "lis:QualityDatum"
+          ],
+          "licensing_axiom": [
+            "lis:datumValue",
+            "rdfs:domain",
+            "lis:QualityDatum"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:datumValue: [annotation text withheld; needs the licensed ontology]",
+            "lis:datumValue: [annotation text withheld; needs the licensed ontology]",
+            "lis:datumValue: [annotation text withheld; needs the licensed ontology]",
+            "lis:QualityDatum: [annotation text withheld; needs the licensed ontology]",
+            "lis:QualityDatum: [annotation text withheld; needs the licensed ontology]",
+            "lis:QualityDatum: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-07",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasActivityBound",
+            "lis:Event"
+          ],
+          "licensing_axiom": [
+            "lis:hasActivityBound",
+            "rdfs:range",
+            "lis:Event"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasActivityBound: [annotation text withheld; needs the licensed ontology]",
+            "lis:Event: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-08",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasActivityPart",
+            "lis:Activity"
+          ],
+          "licensing_axiom": [
+            "lis:hasActivityPart",
+            "rdfs:domain",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasActivityPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-09",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasActivityPart",
+            "lis:Activity"
+          ],
+          "licensing_axiom": [
+            "lis:hasActivityPart",
+            "rdfs:range",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasActivityPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-10",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasActivityProfile",
+            "lis:ActivityProfile"
+          ],
+          "licensing_axiom": [
+            "lis:hasActivityProfile",
+            "rdfs:range",
+            "lis:ActivityProfile"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-11",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasArrangedPart",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasArrangedPart",
+            "rdfs:domain",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-12",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasArrangedPart",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasArrangedPart",
+            "rdfs:range",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-13",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasCapability",
+            "lis:Capability"
+          ],
+          "licensing_axiom": [
+            "lis:hasCapability",
+            "rdfs:range",
+            "lis:Capability"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasCapability: [annotation text withheld; needs the licensed ontology]",
+            "lis:Capability: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-14",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasContentPart",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasContentPart",
+            "rdfs:domain",
+            "lis:InformationObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasContentPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-15",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasContentPart",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasContentPart",
+            "rdfs:range",
+            "lis:InformationObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasContentPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-16",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasDisposition",
+            "lis:Disposition"
+          ],
+          "licensing_axiom": [
+            "lis:hasDisposition",
+            "rdfs:range",
+            "lis:Disposition"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasDisposition: [annotation text withheld; needs the licensed ontology]",
+            "lis:Disposition: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-17",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasFeature",
+            "lis:Feature"
+          ],
+          "licensing_axiom": [
+            "lis:hasFeature",
+            "rdfs:range",
+            "lis:Feature"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasFeature: [annotation text withheld; needs the licensed ontology]",
+            "lis:Feature: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-18",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasFunction",
+            "lis:Function"
+          ],
+          "licensing_axiom": [
+            "lis:hasFunction",
+            "rdfs:range",
+            "lis:Function"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasFunction: [annotation text withheld; needs the licensed ontology]",
+            "lis:Function: [annotation text withheld; needs the licensed ontology]",
+            "lis:Function: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-19",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasFunctionalPart",
+            "lis:System"
+          ],
+          "licensing_axiom": [
+            "lis:hasFunctionalPart",
+            "rdfs:domain",
+            "lis:System"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:System: [annotation text withheld; needs the licensed ontology]",
+            "lis:System: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "D-20",
+          "mechanism": "direct_domain_range",
+          "gold_chunks": [
+            "lis:hasFunctionalPart",
+            "lis:FunctionalObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasFunctionalPart",
+            "rdfs:range",
+            "lis:FunctionalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasFunctionalPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        }
+      ]
+    },
+    "composed_domain_range_disjointness": {
+      "sampled": 20,
+      "uniform": 20,
+      "non_uniform": 0,
+      "false_formats": [],
+      "prose_screens": {
+        "toward": 0,
+        "away": 0,
+        "neutral": 20,
+        "states_axiom": 0
+      },
+      "candidates": [
+        {
+          "id": "C-01",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:concretizes",
+            "lis:InformationObject",
+            "lis:Location"
+          ],
+          "licensing_axiom": [
+            "lis:concretizes",
+            "rdfs:range",
+            "lis:InformationObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:concretizes: [annotation text withheld; needs the licensed ontology]",
+            "lis:concretizes: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-02",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:connectedTo",
+            "lis:PhysicalObject",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:connectedTo",
+            "rdfs:domain",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:connectedTo: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-03",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:connectedTo",
+            "lis:PhysicalObject",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:connectedTo",
+            "rdfs:range",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:connectedTo: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-04",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasActivityPart",
+            "lis:Activity",
+            "lis:SpatiotemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:hasActivityPart",
+            "rdfs:domain",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasActivityPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-05",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasActivityPart",
+            "lis:Activity",
+            "lis:SpatiotemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:hasActivityPart",
+            "rdfs:range",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasActivityPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-06",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasArrangedPart",
+            "lis:PhysicalObject",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasArrangedPart",
+            "rdfs:domain",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-07",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasArrangedPart",
+            "lis:PhysicalObject",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasArrangedPart",
+            "rdfs:range",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasArrangedPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-08",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasContentPart",
+            "lis:InformationObject",
+            "lis:Location"
+          ],
+          "licensing_axiom": [
+            "lis:hasContentPart",
+            "rdfs:domain",
+            "lis:InformationObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasContentPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-09",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasContentPart",
+            "lis:InformationObject",
+            "lis:Location"
+          ],
+          "licensing_axiom": [
+            "lis:hasContentPart",
+            "rdfs:range",
+            "lis:InformationObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasContentPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-10",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasMaterialPart",
+            "lis:PhysicalObject",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasMaterialPart",
+            "rdfs:domain",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasMaterialPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasMaterialPart: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-11",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasParticipant",
+            "lis:Activity",
+            "lis:SpatiotemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:hasParticipant",
+            "rdfs:domain",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-12",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasParticipant",
+            "lis:Object",
+            "lis:Dependent"
+          ],
+          "licensing_axiom": [
+            "lis:hasParticipant",
+            "rdfs:range",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasParticipant: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-13",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasParticipantQualityQuantifiedAs",
+            "lis:Activity",
+            "lis:SpatiotemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:hasParticipantQualityQuantifiedAs",
+            "rdfs:domain",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasParticipantQualityQuantifiedAs: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasParticipantQualityQuantifiedAs: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-14",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasPhysicalQuantity",
+            "lis:PhysicalObject",
+            "lis:InformationObject"
+          ],
+          "licensing_axiom": [
+            "lis:hasPhysicalQuantity",
+            "rdfs:domain",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasPhysicalQuantity: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-15",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasPotential",
+            "lis:Object",
+            "lis:Dependent"
+          ],
+          "licensing_axiom": [
+            "lis:hasPotential",
+            "rdfs:domain",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasPotential: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-16",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasPotential",
+            "lis:Potential",
+            "lis:Quality"
+          ],
+          "licensing_axiom": [
+            "lis:hasPotential",
+            "rdfs:range",
+            "lis:Potential"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasPotential: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-17",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasQuality",
+            "lis:Object",
+            "lis:Dependent"
+          ],
+          "licensing_axiom": [
+            "lis:hasQuality",
+            "rdfs:domain",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasQuality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-18",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasQuality",
+            "lis:Quality",
+            "lis:Potential"
+          ],
+          "licensing_axiom": [
+            "lis:hasQuality",
+            "rdfs:range",
+            "lis:Quality"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasQuality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-19",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasQualityQuantifiedAs",
+            "lis:Object",
+            "lis:Dependent"
+          ],
+          "licensing_axiom": [
+            "lis:hasQualityQuantifiedAs",
+            "rdfs:domain",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasQualityQuantifiedAs: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasQualityQuantifiedAs: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+            "lis:Dependent: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "C-20",
+          "mechanism": "composed_domain_range_disjointness",
+          "gold_chunks": [
+            "lis:hasSpatialExtent",
+            "lis:SpatialLocation",
+            "lis:Site"
+          ],
+          "licensing_axiom": [
+            "lis:hasSpatialExtent",
+            "rdfs:range",
+            "lis:SpatialLocation"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:hasSpatialExtent: [annotation text withheld; needs the licensed ontology]",
+            "lis:hasSpatialExtent: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]",
+            "lis:Site: [annotation text withheld; needs the licensed ontology]",
+            "lis:Site: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        }
+      ]
+    },
+    "functional_property": {
+      "sampled": 2,
+      "uniform": 2,
+      "non_uniform": 0,
+      "false_formats": [],
+      "prose_screens": {
+        "toward": 0,
+        "away": 0,
+        "neutral": 2,
+        "states_axiom": 0
+      },
+      "candidates": [
+        {
+          "id": "F-01",
+          "mechanism": "functional_property",
+          "gold_chunks": [
+            "lis:datumUOM"
+          ],
+          "licensing_axiom": [
+            "lis:datumUOM",
+            "rdf:type",
+            "owl:FunctionalProperty"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:datumUOM: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "F-02",
+          "mechanism": "functional_property",
+          "gold_chunks": [
+            "lis:datumValue"
+          ],
+          "licensing_axiom": [
+            "lis:datumValue",
+            "rdf:type",
+            "owl:FunctionalProperty"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": true,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": true,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:datumValue: [annotation text withheld; needs the licensed ontology]",
+            "lis:datumValue: [annotation text withheld; needs the licensed ontology]",
+            "lis:datumValue: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        }
+      ]
+    },
+    "subsumption": {
+      "sampled": 20,
+      "uniform": 0,
+      "non_uniform": 20,
+      "false_formats": [
+        "elot-org-ancestors"
+      ],
+      "prose_screens": {
+        "toward": 0,
+        "away": 0,
+        "neutral": 20,
+        "states_axiom": 0
+      },
+      "candidates": [
+        {
+          "id": "S-01",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Activity",
+            "lis:Temporal"
+          ],
+          "licensing_axiom": [
+            "lis:Activity",
+            "rdfs:subClassOf",
+            "lis:Temporal"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+            "lis:Temporal: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-02",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:ActivityProfile",
+            "lis:Activity"
+          ],
+          "licensing_axiom": [
+            "lis:ActivityProfile",
+            "rdfs:subClassOf",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:ActivityProfile: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-03",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Capability",
+            "lis:Disposition"
+          ],
+          "licensing_axiom": [
+            "lis:Capability",
+            "rdfs:subClassOf",
+            "lis:Disposition"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Capability: [annotation text withheld; needs the licensed ontology]",
+            "lis:Disposition: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-04",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Compound",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:Compound",
+            "rdfs:subClassOf",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Compound: [annotation text withheld; needs the licensed ontology]",
+            "lis:Compound: [annotation text withheld; needs the licensed ontology]",
+            "lis:Compound: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-05",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Disposition",
+            "lis:Potential"
+          ],
+          "licensing_axiom": [
+            "lis:Disposition",
+            "rdfs:subClassOf",
+            "lis:Potential"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Disposition: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-06",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Event",
+            "lis:Activity"
+          ],
+          "licensing_axiom": [
+            "lis:Event",
+            "rdfs:subClassOf",
+            "lis:Activity"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Event: [annotation text withheld; needs the licensed ontology]",
+            "lis:Activity: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-07",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Feature",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:Feature",
+            "rdfs:subClassOf",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Feature: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-08",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Function",
+            "lis:Capability"
+          ],
+          "licensing_axiom": [
+            "lis:Function",
+            "rdfs:subClassOf",
+            "lis:Capability"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Function: [annotation text withheld; needs the licensed ontology]",
+            "lis:Function: [annotation text withheld; needs the licensed ontology]",
+            "lis:Capability: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-09",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:FunctionalObject",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:FunctionalObject",
+            "rdfs:subClassOf",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:FunctionalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-10",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:InanimatePhysicalObject",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:InanimatePhysicalObject",
+            "rdfs:subClassOf",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:InanimatePhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-11",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:InformationObject",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:InformationObject",
+            "rdfs:subClassOf",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-12",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Instant",
+            "lis:InstantRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Instant",
+            "rdfs:subClassOf",
+            "lis:InstantRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Instant: [annotation text withheld; needs the licensed ontology]",
+            "lis:InstantRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-13",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:InstantRegion",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:InstantRegion",
+            "rdfs:subClassOf",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:InstantRegion: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-14",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Interest",
+            "lis:Potential"
+          ],
+          "licensing_axiom": [
+            "lis:Interest",
+            "rdfs:subClassOf",
+            "lis:Potential"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Interest: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]",
+            "lis:Potential: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-15",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Interval",
+            "lis:IntervalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:Interval",
+            "rdfs:subClassOf",
+            "lis:IntervalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Interval: [annotation text withheld; needs the licensed ontology]",
+            "lis:IntervalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-16",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:IntervalRegion",
+            "lis:TemporalRegion"
+          ],
+          "licensing_axiom": [
+            "lis:IntervalRegion",
+            "rdfs:subClassOf",
+            "lis:TemporalRegion"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:IntervalRegion: [annotation text withheld; needs the licensed ontology]",
+            "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-17",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:LineInSpace",
+            "lis:SpatialLocation"
+          ],
+          "licensing_axiom": [
+            "lis:LineInSpace",
+            "rdfs:subClassOf",
+            "lis:SpatialLocation"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:LineInSpace: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]",
+            "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-18",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Location",
+            "lis:Object"
+          ],
+          "licensing_axiom": [
+            "lis:Location",
+            "rdfs:subClassOf",
+            "lis:Object"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Location: [annotation text withheld; needs the licensed ontology]",
+            "lis:Location: [annotation text withheld; needs the licensed ontology]",
+            "lis:Object: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-19",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:MaterialCompositionQuality",
+            "lis:Quality"
+          ],
+          "licensing_axiom": [
+            "lis:MaterialCompositionQuality",
+            "rdfs:subClassOf",
+            "lis:Quality"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:MaterialCompositionQuality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+            "lis:Quality: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        },
+        {
+          "id": "S-20",
+          "mechanism": "subsumption",
+          "gold_chunks": [
+            "lis:Organism",
+            "lis:PhysicalObject"
+          ],
+          "licensing_axiom": [
+            "lis:Organism",
+            "rdfs:subClassOf",
+            "lis:PhysicalObject"
+          ],
+          "profile": {
+            "turtle": true,
+            "elot-org": true,
+            "elot-org-ancestors": false,
+            "omn": true,
+            "jsonld": true,
+            "yaml-ld": true,
+            "ofn": true
+          },
+          "uniform": false,
+          "gate_verdict": "pass",
+          "annotation_fragments": [
+            "lis:Organism: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+            "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+          ],
+          "prose_screen": "neutral"
+        }
+      ]
+    }
+  },
+  "bare_disjointness_prose_screen": {
+    "sampled": 15,
+    "uniform": 15,
+    "non_uniform": 0,
+    "false_formats": [],
+    "prose_screens": {
+      "toward": 0,
+      "away": 0,
+      "neutral": 14,
+      "states_axiom": 1
+    },
+    "candidates": [
+      {
+        "id": "B-01",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Activity",
+          "lis:SpatiotemporalRegion"
+        ],
+        "licensing_axiom": [
+          "lis:Activity",
+          "owl:disjointWith",
+          "lis:SpatiotemporalRegion"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+          "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-02",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Activity",
+          "lis:TemporalRegion"
+        ],
+        "licensing_axiom": [
+          "lis:Activity",
+          "owl:disjointWith",
+          "lis:TemporalRegion"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Activity: [annotation text withheld; needs the licensed ontology]",
+          "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-03",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Actual",
+          "lis:Specified"
+        ],
+        "licensing_axiom": [
+          "lis:Actual",
+          "owl:disjointWith",
+          "lis:Specified"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Actual: [annotation text withheld; needs the licensed ontology]",
+          "lis:Specified: [annotation text withheld; needs the licensed ontology]",
+          "lis:Specified: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "states_axiom"
+      },
+      {
+        "id": "B-04",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Dependent",
+          "lis:Object"
+        ],
+        "licensing_axiom": [
+          "lis:Dependent",
+          "owl:disjointWith",
+          "lis:Object"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+          "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+          "lis:Object: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-05",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Dependent",
+          "lis:Temporal"
+        ],
+        "licensing_axiom": [
+          "lis:Dependent",
+          "owl:disjointWith",
+          "lis:Temporal"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+          "lis:Dependent: [annotation text withheld; needs the licensed ontology]",
+          "lis:Temporal: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-06",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:InformationObject",
+          "lis:Location"
+        ],
+        "licensing_axiom": [
+          "lis:InformationObject",
+          "owl:disjointWith",
+          "lis:Location"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:Location: [annotation text withheld; needs the licensed ontology]",
+          "lis:Location: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-07",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:InformationObject",
+          "lis:Organization"
+        ],
+        "licensing_axiom": [
+          "lis:InformationObject",
+          "owl:disjointWith",
+          "lis:Organization"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:Organization: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-08",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:InformationObject",
+          "lis:PhysicalObject"
+        ],
+        "licensing_axiom": [
+          "lis:InformationObject",
+          "owl:disjointWith",
+          "lis:PhysicalObject"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:InformationObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-09",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Location",
+          "lis:Organization"
+        ],
+        "licensing_axiom": [
+          "lis:Location",
+          "owl:disjointWith",
+          "lis:Organization"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Location: [annotation text withheld; needs the licensed ontology]",
+          "lis:Location: [annotation text withheld; needs the licensed ontology]",
+          "lis:Organization: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-10",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Location",
+          "lis:PhysicalObject"
+        ],
+        "licensing_axiom": [
+          "lis:Location",
+          "owl:disjointWith",
+          "lis:PhysicalObject"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Location: [annotation text withheld; needs the licensed ontology]",
+          "lis:Location: [annotation text withheld; needs the licensed ontology]",
+          "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-11",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Object",
+          "lis:Temporal"
+        ],
+        "licensing_axiom": [
+          "lis:Object",
+          "owl:disjointWith",
+          "lis:Temporal"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Object: [annotation text withheld; needs the licensed ontology]",
+          "lis:Temporal: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-12",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Organization",
+          "lis:PhysicalObject"
+        ],
+        "licensing_axiom": [
+          "lis:Organization",
+          "owl:disjointWith",
+          "lis:PhysicalObject"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Organization: [annotation text withheld; needs the licensed ontology]",
+          "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]",
+          "lis:PhysicalObject: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-13",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Potential",
+          "lis:Quality"
+        ],
+        "licensing_axiom": [
+          "lis:Potential",
+          "owl:disjointWith",
+          "lis:Quality"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Potential: [annotation text withheld; needs the licensed ontology]",
+          "lis:Potential: [annotation text withheld; needs the licensed ontology]",
+          "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+          "lis:Quality: [annotation text withheld; needs the licensed ontology]",
+          "lis:Quality: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-14",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:Site",
+          "lis:SpatialLocation"
+        ],
+        "licensing_axiom": [
+          "lis:Site",
+          "owl:disjointWith",
+          "lis:SpatialLocation"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:Site: [annotation text withheld; needs the licensed ontology]",
+          "lis:Site: [annotation text withheld; needs the licensed ontology]",
+          "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]",
+          "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]",
+          "lis:SpatialLocation: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      },
+      {
+        "id": "B-15",
+        "mechanism": "bare_disjointness",
+        "gold_chunks": [
+          "lis:SpatiotemporalRegion",
+          "lis:TemporalRegion"
+        ],
+        "licensing_axiom": [
+          "lis:SpatiotemporalRegion",
+          "owl:disjointWith",
+          "lis:TemporalRegion"
+        ],
+        "profile": {
+          "turtle": true,
+          "elot-org": true,
+          "elot-org-ancestors": true,
+          "omn": true,
+          "jsonld": true,
+          "yaml-ld": true,
+          "ofn": true
+        },
+        "uniform": true,
+        "gate_verdict": "pass",
+        "annotation_fragments": [
+          "lis:SpatiotemporalRegion: [annotation text withheld; needs the licensed ontology]",
+          "lis:TemporalRegion: [annotation text withheld; needs the licensed ontology]"
+        ],
+        "prose_screen": "neutral"
+      }
+    ]
+  }
+}

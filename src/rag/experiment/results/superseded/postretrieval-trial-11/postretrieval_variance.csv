@@ -1,0 +1,10 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,6,0.0,0.0,0.0,0,T04,verification,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+exact_match_rate,6,0.0,0.0,0.0,0,T02,slot_filling,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+field_accuracy_class_correct,6,0.0,0.0,0.0,0,T02,slot_filling,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+field_accuracy_intermediate_correct,6,0.0,0.0,0.0,0,T02,slot_filling,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+field_accuracy_property_correct,6,0.0,0.0,0.0,0,T02,slot_filling,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+field_accuracy_support_class_correct,6,0.0,0.0,0.0,0,T02,slot_filling,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+field_accuracy_support_property_correct,6,0.0,0.0,0.0,0,T02,slot_filling,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+mean_partial_credit,6,0.0,0.0,0.0,0,T02,slot_filling,elot-org-ancestors,whole_context,gpt-4o-2024-11-20
+parse_errors,6,0.0,0.0,0.0,0,T04,verification,elot-org-ancestors,whole_context,gpt-4o-2024-11-20

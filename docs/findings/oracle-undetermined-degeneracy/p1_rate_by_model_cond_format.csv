@@ -1,0 +1,9 @@
+m,condition,elot-org,elot-org-ancestors,jsonld,ofn,omn,turtle,yaml-ld
+gpt-4o,oracle,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+gpt-4o,retrieved,0.133,0.167,0.044,0.189,0.1,0.067,0.133
+gpt-4o-mini,oracle,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+gpt-4o-mini,retrieved,0.044,0.022,0.111,0.0,0.0,0.033,0.156
+llama,oracle,0.133,0.1,0.067,0.067,0.1,0.133,0.1
+llama,retrieved,0.267,0.3,0.3,0.133,0.144,0.167,0.3
+sonnet,oracle,0.033,0.133,0.067,0.067,0.067,0.122,0.133
+sonnet,retrieved,0.222,0.233,0.244,0.267,0.133,0.167,0.278

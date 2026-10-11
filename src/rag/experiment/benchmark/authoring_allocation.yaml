@@ -1,0 +1,1115 @@
+# Historical paper feasibility table only; it is not a target distribution.
+# Placeholder wording is not a benchmark item.
+# Profile, prose-screen, gold-chunk, and licensing-axiom fields are measured local candidates.
+# Run: python -m scripts.verify_authoring_constraints --tasks experiment/benchmark/authoring_allocation.yaml
+
+- task_id: V01
+  task_type: verification
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: subsumption
+  gold_chunks:
+  - lis:Activity
+  - lis:Temporal
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:Activity
+  - rdfs:subClassOf
+  - lis:Temporal
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V02
+  task_type: verification
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: subsumption
+  gold_chunks:
+  - lis:ActivityProfile
+  - lis:Activity
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:ActivityProfile
+  - rdfs:subClassOf
+  - lis:Activity
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V03
+  task_type: verification
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: subsumption
+  gold_chunks:
+  - lis:Capability
+  - lis:Disposition
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:Capability
+  - rdfs:subClassOf
+  - lis:Disposition
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V04
+  task_type: verification
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: subsumption
+  gold_chunks:
+  - lis:Compound
+  - lis:PhysicalObject
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:Compound
+  - rdfs:subClassOf
+  - lis:PhysicalObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V05
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: subsumption
+  gold_chunks:
+  - lis:Disposition
+  - lis:Potential
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:Disposition
+  - rdfs:subClassOf
+  - lis:Potential
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V06
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: subsumption
+  gold_chunks:
+  - lis:Event
+  - lis:Activity
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:Event
+  - rdfs:subClassOf
+  - lis:Activity
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V07
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: subsumption
+  gold_chunks:
+  - lis:Feature
+  - lis:PhysicalObject
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:Feature
+  - rdfs:subClassOf
+  - lis:PhysicalObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V08
+  task_type: verification
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: subsumption
+  gold_chunks:
+  - lis:Function
+  - lis:Capability
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:Function
+  - rdfs:subClassOf
+  - lis:Capability
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V09
+  task_type: verification
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: subsumption
+  gold_chunks:
+  - lis:FunctionalObject
+  - lis:Object
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:FunctionalObject
+  - rdfs:subClassOf
+  - lis:Object
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: V10
+  task_type: verification
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: explicit_axiom
+  gold_chunks:
+  - lis:InanimatePhysicalObject
+  - lis:PhysicalObject
+  statement: placeholder
+  gold_label: supported
+  licensing_axiom_status: asserted
+  licensing_axiom:
+  - lis:InanimatePhysicalObject
+  - rdfs:subClassOf
+  - lis:PhysicalObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C01
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: bare_disjointness
+  gold_chunks:
+  - lis:Activity
+  - lis:SpatiotemporalRegion
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:Activity
+  - owl:disjointWith
+  - lis:SpatiotemporalRegion
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C02
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: bare_disjointness
+  gold_chunks:
+  - lis:Activity
+  - lis:TemporalRegion
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:Activity
+  - owl:disjointWith
+  - lis:TemporalRegion
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C03
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: bare_disjointness
+  gold_chunks:
+  - lis:Actual
+  - lis:Specified
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: states_axiom
+  licensing_axiom:
+  - lis:Actual
+  - owl:disjointWith
+  - lis:Specified
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C04
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: direct_domain_range
+  gold_chunks:
+  - lis:concretizes
+  - lis:InformationObject
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:concretizes
+  - rdfs:range
+  - lis:InformationObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C05
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: direct_domain_range
+  gold_chunks:
+  - lis:connectedTo
+  - lis:PhysicalObject
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:connectedTo
+  - rdfs:domain
+  - lis:PhysicalObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C06
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: direct_domain_range
+  gold_chunks:
+  - lis:connectedTo
+  - lis:PhysicalObject
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:connectedTo
+  - rdfs:range
+  - lis:PhysicalObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C07
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: composed_domain_range_disjointness
+  gold_chunks:
+  - lis:concretizes
+  - lis:concretizedBy
+  - lis:InformationObject
+  - lis:PhysicalObject
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: toward
+  licensing_axiom:
+  - lis:concretizes
+  - rdfs:domain
+  - lis:PhysicalObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C08
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: composed_domain_range_disjointness
+  gold_chunks:
+  - lis:concretizes
+  - lis:InformationObject
+  - lis:Location
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:concretizes
+  - rdfs:range
+  - lis:InformationObject
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C09
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: functional_property
+  gold_chunks:
+  - lis:datumUOM
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:datumUOM
+  - rdf:type
+  - owl:FunctionalProperty
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: C10
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: functional_property
+  gold_chunks:
+  - lis:datumValue
+  statement: placeholder
+  gold_label: contradicted
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  licensing_axiom:
+  - lis:datumValue
+  - rdf:type
+  - owl:FunctionalProperty
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+- task_id: U01
+  task_type: verification
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: paraphrase
+  mechanism: unstated_domain_range
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U02
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: unstated_domain_range
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U03
+  task_type: verification
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: unstated_domain_range
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U04
+  task_type: verification
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: cross_branch_subsumption
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U05
+  task_type: verification
+  query: placeholder
+  reasoning_type: structural
+  query_source: label
+  mechanism: cross_branch_subsumption
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U06
+  task_type: verification
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: cross_branch_subsumption
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U07
+  task_type: verification
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: unasserted_inverse
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U08
+  task_type: verification
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: unasserted_inverse
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U09
+  task_type: verification
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: unstated_cardinality
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: U10
+  task_type: verification
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: unstated_cardinality
+  gold_chunks:
+  - lis:Person
+  - lis:PhysicalQuantity
+  statement: placeholder
+  gold_label: undetermined
+  licensing_axiom_status: hypothetical
+  axiom: lis:Person SubClassOf lis:PhysicalQuantity
+  negated_axiom: lis:PhysicalQuantity SubClassOf lis:Person
+  licensing_axiom:
+  - lis:Person
+  - rdfs:subClassOf
+  - lis:PhysicalQuantity
+  annotation_prose_screen: passed
+- task_id: S01
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: &id001
+    class: null
+    property: null
+    intermediate_node: null
+  field_gold_chunks: &id002
+    class: []
+    property: []
+    intermediate_node: []
+    support_class: []
+    support_property: []
+    support_intermediate: []
+- task_id: S02
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S03
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S04
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S05
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S06
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S07
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S08
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S09
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S10
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S11
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S12
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S13
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S14
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S15
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S16
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: example
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S17
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: example
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S18
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: example
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S19
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: example
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S20
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: example
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  gold_supporting_chunks: *id001
+  field_gold_chunks: *id002
+- task_id: S21
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: example
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S22
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: modelling_pattern
+  query_source: example
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S23
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S24
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S25
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S26
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S27
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S28
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S29
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001
+- task_id: S30
+  task_type: slot_filling
+  query: placeholder
+  reasoning_type: definitional
+  query_source: definition
+  mechanism: modelling_pattern
+  gold_chunks:
+  - lis:PhysicalObject
+  scenario: placeholder
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  field_gold_chunks: *id002
+  gold_supporting_chunks: *id001

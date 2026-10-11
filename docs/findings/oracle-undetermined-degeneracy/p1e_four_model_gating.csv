@@ -1,0 +1,17 @@
+m,gold_present,stratum,und_rate,n_und,n
+gpt-4o,0,determinate,0.356,63,177
+gpt-4o,0,undetermined-gold,0.182,12,66
+gpt-4o,1,determinate,0.0,0,663
+gpt-4o,1,undetermined-gold,0.0,0,354
+gpt-4o-mini,0,determinate,0.147,26,177
+gpt-4o-mini,0,undetermined-gold,0.076,5,66
+gpt-4o-mini,1,determinate,0.003,2,663
+gpt-4o-mini,1,undetermined-gold,0.0,0,354
+llama,0,determinate,0.497,88,177
+llama,0,undetermined-gold,0.318,21,66
+llama,1,determinate,0.142,94,663
+llama,1,undetermined-gold,0.014,5,354
+sonnet,0,determinate,0.475,84,177
+sonnet,0,undetermined-gold,0.333,22,66
+sonnet,1,determinate,0.0,0,663
+sonnet,1,undetermined-gold,0.251,89,354

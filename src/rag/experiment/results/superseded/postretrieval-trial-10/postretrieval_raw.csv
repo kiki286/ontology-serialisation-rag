@@ -1,0 +1,289 @@
+trial_idx,task_id,task_type,reasoning_type,query_source,format,condition,model,provider,model_returned,system_prompt,n_context_chunks,context_char_len,context_chunk_ids,n_pad_chunks,oracle_over_k,pad_strategy,finish_reason,system_fingerprint,prompt_tokens,completion_tokens,total_tokens,raw_response,user_content,covered_class,covered_property,covered_intermediate_node,covered_support_class,covered_support_property,covered_support_intermediate,coverage_all,coverage_frac,parse_ok,parse_error,pred_label,citation_hallucinated,hallucinated_citation_ids,grade_gold_label,grade_pred_label,grade_correct,pred_class,pred_property,pred_intermediate_node,pred_support_class,pred_support_property,pred_support_intermediate,grade_class_correct,grade_property_correct,grade_intermediate_correct,grade_support_class_correct,grade_support_property_correct,grade_support_intermediate_correct,grade_n_fields,grade_exact_match,grade_partial_credit
+0,T01,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,160,32,192,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content regarding the relationship between lis:Person and lis:Organism is not provided.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,160,33,193,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Person and lis:Organism.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,164,45,209,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Biosample, which in turn is a subclass of lis:Organism.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,163,34,197,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide any information about the relationship between lis:Person and lis:Organism.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,163,31,194,"{""label"": ""supported"", ""reasoning"": ""The ontology content indicates that all instances of lis:Person are classified as lis:Organism.""}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,168,30,198,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology explicitly states that a Person is a subclass of Organism.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+0,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,642,105,747,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""ido:SteelBar"", ""property"": ""ido:hasMass"", ""intermediate_node"": ""ido:Mass""},
+ ""reasoning"": ""The steel bar is modelled as ido:SteelBar, and its mass is related using the property ido:hasMass, which requires an intermediate node of type ido:Mass to represent the mass correctly.""}",,,,,,,,,,True,,,1,"[""ido:SteelBar"", ""ido:hasMass"", ""ido:Mass""]",,,,ido:SteelBar,ido:hasMass,True,ido:SteelBar,ido:hasMass,ido:Mass,0,0,0,0,0,,5,0,0.0
+0,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,642,77,719,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""1"", ""property"": ""2"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasMass' directly relates the steel bar to its mass without the need for an intermediate node.""}",,,,,,,,,,True,,,1,"[""1"", ""2""]",,,,ido:SteelBar,ido:hasMass,False,1,2,,0,0,1,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,646,82,728,"{
+  ""class"": ""ido:PhysicalObject"",
+  ""property"": ""ido:hasMass"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""ido:hasMass"", ""intermediate_node"": null},
+  ""reasoning"": ""The IDO property ido:hasMass directly relates a physical object to its mass.""
+}",,,,,,,,,,True,,,1,"[""ido:hasMass""]",,,,ido:PhysicalObject,ido:hasMass,False,,ido:hasMass,,0,0,1,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,645,83,728,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": null, ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario directly relates a steel bar to its mass, which can be represented using the 'ido:hasMass' property without requiring an intermediate node.""}",,,,,,,,,,True,,,0,[],,,,ido:SteelBar,ido:hasMass,False,,,,0,0,1,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,645,77,722,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""1"", ""property"": ""2"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasMass' directly relates the steel bar to its mass without the need for an intermediate node.""}",,,,,,,,,,True,,,1,"[""1"", ""2""]",,,,ido:SteelBar,ido:hasMass,False,1,2,,0,0,1,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,650,76,726,"{""class"": ""ido:PhysicalObject"", 
+""property"": ""ido:hasMass"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The IDO property ido:hasMass directly relates a physical object to its mass.""}",,,,,,,,,,True,,,0,[],,,,ido:PhysicalObject,ido:hasMass,False,,,,0,0,1,0,0,,5,0,0.2
+0,T03,verification,structural,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,165,36,201,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between a maintenance procedure document and a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,165,36,201,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about whether a maintenance procedure document can concretize a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,169,57,226,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology defines lis:concretizes as an inverse property of lis:abstracts, and the statement about a maintenance procedure document concretizing a printed paper copy of itself is consistent with this definition.""
+}",,,,,,,,,,True,,supported,,,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,168,36,204,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between a maintenance procedure document and a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,168,36,204,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about whether a maintenance procedure document can concretize a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,173,37,210,"{
+  ""label"": ""undetermined"",
+  ""reasoning"": ""The ontology does not provide information about the relationship between a maintenance procedure document and its printed paper copy.""
+}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,159,32,191,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,159,32,191,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,163,32,195,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,162,32,194,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,162,32,194,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,167,37,204,"{
+  ""label"": ""undetermined"",
+  ""reasoning"": ""There is no explicit relationship defined between lis:Function and lis:Capability in the provided ontology content.""
+}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+0,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,642,93,735,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasOutletPressure"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""ido:Pump"", ""property"": ""ido:hasOutletPressure"", ""intermediate_node"": ""ido:MeasuredValue""},
+ ""reasoning"": ""The subject is a pump (P-101), and the outlet pressure is a measured value, requiring an intermediate node to represent the measurement.""}",,,,,,,,,,True,,,1,"[""ido:Pump"", ""ido:hasOutletPressure"", ""ido:MeasuredValue""]",,,,ido:Pump,ido:hasOutletPressure,True,ido:Pump,ido:hasOutletPressure,ido:MeasuredValue,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,642,83,725,"{""class"": ""ido:Pump"",""property"": ""ido:hasMeasuredValue"",""intermediate_node"": true,""supporting_chunks"": {""class"": ""# Chunk: 1"",""property"": ""# Chunk: 2"",""intermediate_node"": ""# Chunk: 3""},""reasoning"": ""The pump is the subject, the measured outlet pressure is a value that requires an intermediate node to represent it correctly.""}",,,,,,,,,,True,,,1,"[""# Chunk: 1"", ""# Chunk: 2"", ""# Chunk: 3""]",,,,ido:Pump,ido:hasMeasuredValue,True,# Chunk: 1,# Chunk: 2,# Chunk: 3,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,646,95,741,"{
+""class"": ""ido:Pump"",
+""property"": ""ido:hasMeasuredValue"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""# Chunk: ido:Pump"", ""property"": ""# Chunk: ido:hasMeasuredValue"", ""intermediate_node"": ""# Chunk: ido:MeasuredValue""},
+""reasoning"": ""A measured value is required to represent the scenario correctly, as it indicates a specific measurement of pressure.""
+}",,,,,,,,,,True,,,1,"[""# Chunk: ido:Pump"", ""# Chunk: ido:hasMeasuredValue"", ""# Chunk: ido:MeasuredValue""]",,,,ido:Pump,ido:hasMeasuredValue,True,# Chunk: ido:Pump,# Chunk: ido:hasMeasuredValue,# Chunk: ido:MeasuredValue,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,645,88,733,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasOutletPressure"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""null"", ""property"": ""null"", ""intermediate_node"": ""null""},
+ ""reasoning"": ""The scenario describes a pump (P-101) with a measured outlet pressure, which requires an intermediate node to represent the measurement value (5 bar) correctly.""}",,,,,,,,,,True,,,1,"[""null"", ""null"", ""null""]",,,,ido:Pump,ido:hasOutletPressure,True,null,null,null,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,645,85,730,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasMeasuredValue"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""ido:MeasuredValue"", ""property"": ""ido:hasPressure"", ""intermediate_node"": null},
+ ""reasoning"": ""The scenario indicates that the pump has a specific measured outlet pressure, which requires an intermediate node to represent the measured value.""}",,,,,,,,,,True,,,1,"[""ido:MeasuredValue"", ""ido:hasPressure""]",,,,ido:Pump,ido:hasMeasuredValue,True,ido:MeasuredValue,ido:hasPressure,,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,650,82,732,"{""class"": ""ido:Pump"", 
+""property"": ""ido:hasMeasuredValue"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": null, ""property"": ""ido:measuredOutletPressure"", ""intermediate_node"": ""Chunk: 123""}, 
+""reasoning"": ""An intermediate node is required to represent the measured value of outlet pressure.""}",,,,,,,,,,True,,,1,"[""ido:measuredOutletPressure"", ""Chunk: 123""]",,,,ido:Pump,ido:hasMeasuredValue,True,,ido:measuredOutletPressure,Chunk: 123,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T01,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,160,37,197,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content is not provided, so it cannot be determined whether every lis:Person is an lis:Organism.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,160,33,193,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Person and lis:Organism.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,164,45,209,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Biosample, which in turn is a subclass of lis:Organism.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,163,34,197,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide any information about the relationship between lis:Person and lis:Organism.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,163,31,194,"{""label"": ""supported"", ""reasoning"": ""The ontology content indicates that all instances of lis:Person are classified as lis:Organism.""}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,168,30,198,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology explicitly states that a Person is a subclass of Organism.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+1,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,642,104,746,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""ido:SteelBar"", ""property"": ""ido:hasMass"", ""intermediate_node"": ""ido:hasMass""},
+ ""reasoning"": ""The steel bar is modelled as ido:SteelBar, and its mass is related using the property ido:hasMass, which requires an intermediate node to represent the mass as a measurable quality.""}",,,,,,,,,,True,,,1,"[""ido:SteelBar"", ""ido:hasMass"", ""ido:hasMass""]",,,,ido:SteelBar,ido:hasMass,True,ido:SteelBar,ido:hasMass,ido:hasMass,0,0,0,0,0,,5,0,0.0
+1,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,642,77,719,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""1"", ""property"": ""2"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasMass' directly relates the steel bar to its mass without the need for an intermediate node.""}",,,,,,,,,,True,,,1,"[""1"", ""2""]",,,,ido:SteelBar,ido:hasMass,False,1,2,,0,0,1,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,646,82,728,"{
+  ""class"": ""ido:PhysicalObject"",
+  ""property"": ""ido:hasMass"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""ido:hasMass"", ""intermediate_node"": null},
+  ""reasoning"": ""The IDO property ido:hasMass directly relates a physical object to its mass.""
+}",,,,,,,,,,True,,,1,"[""ido:hasMass""]",,,,ido:PhysicalObject,ido:hasMass,False,,ido:hasMass,,0,0,1,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,645,83,728,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": null, ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario directly relates a steel bar to its mass, which can be represented using the 'ido:hasMass' property without requiring an intermediate node.""}",,,,,,,,,,True,,,0,[],,,,ido:SteelBar,ido:hasMass,False,,,,0,0,1,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,645,77,722,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""1"", ""property"": ""2"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasMass' directly relates the steel bar to its mass without the need for an intermediate node.""}",,,,,,,,,,True,,,1,"[""1"", ""2""]",,,,ido:SteelBar,ido:hasMass,False,1,2,,0,0,1,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,650,76,726,"{""class"": ""ido:PhysicalObject"", 
+""property"": ""ido:hasMass"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The IDO property ido:hasMass directly relates a physical object to its mass.""}",,,,,,,,,,True,,,0,[],,,,ido:PhysicalObject,ido:hasMass,False,,,,0,0,1,0,0,,5,0,0.2
+1,T03,verification,structural,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,165,36,201,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between a maintenance procedure document and a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,165,36,201,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about whether a maintenance procedure document can concretize a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,169,57,226,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology defines lis:concretizes as an inverse property of lis:abstracts, and the statement about a maintenance procedure document concretizing a printed paper copy of itself is consistent with this definition.""
+}",,,,,,,,,,True,,supported,,,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,168,36,204,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between a maintenance procedure document and a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,168,36,204,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about whether a maintenance procedure document can concretize a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,173,37,210,"{
+  ""label"": ""undetermined"",
+  ""reasoning"": ""The ontology does not provide information about the relationship between a maintenance procedure document and its printed paper copy.""
+}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,159,32,191,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,159,34,193,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide enough information to determine the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,163,32,195,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,162,32,194,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,162,32,194,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,167,37,204,"{
+  ""label"": ""undetermined"",
+  ""reasoning"": ""There is no explicit relationship defined between lis:Function and lis:Capability in the provided ontology content.""
+}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+1,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,642,93,735,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasOutletPressure"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""ido:Pump"", ""property"": ""ido:hasOutletPressure"", ""intermediate_node"": ""ido:MeasuredValue""},
+ ""reasoning"": ""The subject is a pump (P-101), and the outlet pressure is a measured value, requiring an intermediate node to represent the measurement.""}",,,,,,,,,,True,,,1,"[""ido:Pump"", ""ido:hasOutletPressure"", ""ido:MeasuredValue""]",,,,ido:Pump,ido:hasOutletPressure,True,ido:Pump,ido:hasOutletPressure,ido:MeasuredValue,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,642,80,722,"{""class"": ""ido:Pump"",""property"": ""ido:hasMeasuredValue"",""intermediate_node"": true,""supporting_chunks"": {""class"": ""# Chunk: 1"",""property"": ""# Chunk: 2"",""intermediate_node"": ""# Chunk: 3""},""reasoning"": ""The pump is the subject, and the measured outlet pressure requires an intermediate node to represent the measurement.""}",,,,,,,,,,True,,,1,"[""# Chunk: 1"", ""# Chunk: 2"", ""# Chunk: 3""]",,,,ido:Pump,ido:hasMeasuredValue,True,# Chunk: 1,# Chunk: 2,# Chunk: 3,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,646,95,741,"{
+""class"": ""ido:Pump"",
+""property"": ""ido:hasMeasuredValue"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""# Chunk: ido:Pump"", ""property"": ""# Chunk: ido:hasMeasuredValue"", ""intermediate_node"": ""# Chunk: ido:MeasuredValue""},
+""reasoning"": ""A measured value is required to represent the scenario correctly, as it indicates a specific measurement of pressure.""
+}",,,,,,,,,,True,,,1,"[""# Chunk: ido:Pump"", ""# Chunk: ido:hasMeasuredValue"", ""# Chunk: ido:MeasuredValue""]",,,,ido:Pump,ido:hasMeasuredValue,True,# Chunk: ido:Pump,# Chunk: ido:hasMeasuredValue,# Chunk: ido:MeasuredValue,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,645,82,727,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasMeasuredPressure"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""null"", ""property"": ""null"", ""intermediate_node"": ""null""},
+ ""reasoning"": ""The subject is a pump, and the scenario involves a measured pressure, which typically requires an intermediate node to represent the measurement value.""}",,,,,,,,,,True,,,1,"[""null"", ""null"", ""null""]",,,,ido:Pump,ido:hasMeasuredPressure,True,null,null,null,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,645,86,731,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasMeasuredValue"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""5-bar"", ""property"": ""ido:hasPressure"", ""intermediate_node"": null},
+ ""reasoning"": ""The pump P-101 is the subject, and the measured outlet pressure of 5 bar requires an intermediate node to represent the measurement.""}",,,,,,,,,,True,,,1,"[""5-bar"", ""ido:hasPressure""]",,,,ido:Pump,ido:hasMeasuredValue,True,5-bar,ido:hasPressure,,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,650,82,732,"{""class"": ""ido:Pump"", 
+""property"": ""ido:hasMeasuredValue"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": null, ""property"": ""ido:measuredOutletPressure"", ""intermediate_node"": ""Chunk: 123""}, 
+""reasoning"": ""An intermediate node is required to represent the measured value of outlet pressure.""}",,,,,,,,,,True,,,1,"[""ido:measuredOutletPressure"", ""Chunk: 123""]",,,,ido:Pump,ido:hasMeasuredValue,True,,ido:measuredOutletPressure,Chunk: 123,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T01,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,160,32,192,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content regarding the relationship between lis:Person and lis:Organism is not provided.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,160,33,193,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Person and lis:Organism.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,164,45,209,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Biosample, which in turn is a subclass of lis:Organism.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,163,34,197,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide any information about the relationship between lis:Person and lis:Organism.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,163,33,196,"{""label"": ""supported"", ""reasoning"": ""The ontology content indicates that all instances of lis:Person are classified as instances of lis:Organism.""}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,168,30,198,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology explicitly states that a Person is a subclass of Organism.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+2,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,642,105,747,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""ido:SteelBar"", ""property"": ""ido:hasMass"", ""intermediate_node"": ""ido:Mass""},
+ ""reasoning"": ""The steel bar is modelled as ido:SteelBar, and its mass is related using the property ido:hasMass, which requires an intermediate node of type ido:Mass to represent the mass correctly.""}",,,,,,,,,,True,,,1,"[""ido:SteelBar"", ""ido:hasMass"", ""ido:Mass""]",,,,ido:SteelBar,ido:hasMass,True,ido:SteelBar,ido:hasMass,ido:Mass,0,0,0,0,0,,5,0,0.0
+2,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,642,77,719,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""1"", ""property"": ""2"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasMass' directly relates a steel bar to its mass without the need for an intermediate node.""}",,,,,,,,,,True,,,1,"[""1"", ""2""]",,,,ido:SteelBar,ido:hasMass,False,1,2,,0,0,1,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,646,82,728,"{
+  ""class"": ""ido:PhysicalObject"",
+  ""property"": ""ido:hasMass"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""ido:hasMass"", ""intermediate_node"": null},
+  ""reasoning"": ""The IDO property ido:hasMass directly relates a physical object to its mass.""
+}",,,,,,,,,,True,,,1,"[""ido:hasMass""]",,,,ido:PhysicalObject,ido:hasMass,False,,ido:hasMass,,0,0,1,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,645,83,728,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": null, ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario directly relates a steel bar to its mass, and 'hasMass' is the most appropriate property for this relationship without requiring an intermediate node.""}",,,,,,,,,,True,,,0,[],,,,ido:SteelBar,ido:hasMass,False,,,,0,0,1,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,645,77,722,"{""class"": ""ido:SteelBar"",
+ ""property"": ""ido:hasMass"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""1"", ""property"": ""2"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasMass' directly relates the steel bar to its mass without the need for an intermediate node.""}",,,,,,,,,,True,,,1,"[""1"", ""2""]",,,,ido:SteelBar,ido:hasMass,False,1,2,,0,0,1,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,650,76,726,"{""class"": ""ido:PhysicalObject"", 
+""property"": ""ido:hasMass"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The IDO property ido:hasMass directly relates a physical object to its mass.""}",,,,,,,,,,True,,,0,[],,,,ido:PhysicalObject,ido:hasMass,False,,,,0,0,1,0,0,,5,0,0.2
+2,T03,verification,structural,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,165,36,201,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between a maintenance procedure document and a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,165,36,201,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about whether a maintenance procedure document can concretize a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,169,57,226,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology defines lis:concretizes as an inverse property of lis:abstracts, and the statement about a maintenance procedure document concretizing a printed paper copy of itself is consistent with this definition.""
+}",,,,,,,,,,True,,supported,,,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,168,36,204,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between a maintenance procedure document and a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,168,36,204,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about whether a maintenance procedure document can concretize a printed paper copy of itself.""}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,173,37,210,"{
+  ""label"": ""undetermined"",
+  ""reasoning"": ""The ontology does not provide information about the relationship between a maintenance procedure document and its printed paper copy.""
+}",,,,,,,,,,True,,undetermined,,,contradicted,undetermined,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,159,32,191,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,159,32,191,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,163,32,195,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""
+}",,,,,,,,,,True,,supported,,,supported,supported,1,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,verification_system_v1.txt,0,0,[],0,False,,stop,fp_b21e18781d,162,32,194,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,verification_system_v1.txt,0,0,[],0,False,,stop,fp_98f538dc1a,162,32,194,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not provide information about the relationship between lis:Function and lis:Capability.""}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,0,0,[],0,False,,stop,fp_ollama,167,37,204,"{
+  ""label"": ""undetermined"",
+  ""reasoning"": ""There is no explicit relationship defined between lis:Function and lis:Capability in the provided ontology content.""
+}",,,,,,,,,,True,,undetermined,,,supported,undetermined,0,,,,,,,,,,,,,,,
+2,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,642,105,747,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasOutletPressure"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""chunk_pump"", ""property"": ""chunk_outlet_pressure"", ""intermediate_node"": ""chunk_measured_value""},
+ ""reasoning"": ""The subject is a pump (ido:Pump), the outlet pressure is linked to the pump using the property ido:hasOutletPressure, and a measured value requires an intermediate node to represent the measurement correctly.""}",,,,,,,,,,True,,,1,"[""chunk_pump"", ""chunk_outlet_pressure"", ""chunk_measured_value""]",,,,ido:Pump,ido:hasOutletPressure,True,chunk_pump,chunk_outlet_pressure,chunk_measured_value,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,642,83,725,"{""class"": ""ido:Pump"",""property"": ""ido:hasMeasuredValue"",""intermediate_node"": true,""supporting_chunks"": {""class"": ""# Chunk: 1"",""property"": ""# Chunk: 2"",""intermediate_node"": ""# Chunk: 3""},""reasoning"": ""The pump is the subject, the measured outlet pressure is a quality that requires an intermediate node to represent the measurement.""}",,,,,,,,,,True,,,1,"[""# Chunk: 1"", ""# Chunk: 2"", ""# Chunk: 3""]",,,,ido:Pump,ido:hasMeasuredValue,True,# Chunk: 1,# Chunk: 2,# Chunk: 3,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,no_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,646,95,741,"{
+""class"": ""ido:Pump"",
+""property"": ""ido:hasMeasuredValue"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""# Chunk: ido:Pump"", ""property"": ""# Chunk: ido:hasMeasuredValue"", ""intermediate_node"": ""# Chunk: ido:MeasuredValue""},
+""reasoning"": ""A measured value is required to represent the scenario correctly, as it indicates a specific measurement of pressure.""
+}",,,,,,,,,,True,,,1,"[""# Chunk: ido:Pump"", ""# Chunk: ido:hasMeasuredValue"", ""# Chunk: ido:MeasuredValue""]",,,,ido:Pump,ido:hasMeasuredValue,True,# Chunk: ido:Pump,# Chunk: ido:hasMeasuredValue,# Chunk: ido:MeasuredValue,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-2024-11-20,openai,gpt-4o-2024-11-20,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_1e6c79a6d6,645,84,729,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasMeasuredPressure"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""null"", ""property"": ""null"", ""intermediate_node"": ""null""},
+ ""reasoning"": ""The subject is a pump, and the scenario involves a measured pressure, which typically requires an intermediate node to represent the measurement and its value.""}",,,,,,,,,,True,,,1,"[""null"", ""null"", ""null""]",,,,ido:Pump,ido:hasMeasuredPressure,True,null,null,null,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,gpt-4o-mini-2024-07-18,openai,gpt-4o-mini-2024-07-18,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_5d8d1116aa,645,85,730,"{""class"": ""ido:Pump"",
+ ""property"": ""ido:hasMeasuredValue"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""ido:MeasuredValue"", ""property"": ""ido:hasPressure"", ""intermediate_node"": null},
+ ""reasoning"": ""The scenario indicates that the pump has a specific measured outlet pressure, which requires an intermediate node to represent the measured value.""}",,,,,,,,,,True,,,1,"[""ido:MeasuredValue"", ""ido:hasPressure""]",,,,ido:Pump,ido:hasMeasuredValue,True,ido:MeasuredValue,ido:hasPressure,,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,__no_corpus__,empty_context,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,0,0,[],0,False,,stop,fp_ollama,650,82,732,"{""class"": ""ido:Pump"", 
+""property"": ""ido:hasMeasuredValue"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": null, ""property"": ""ido:measuredOutletPressure"", ""intermediate_node"": ""Chunk: 123""}, 
+""reasoning"": ""An intermediate node is required to represent the measured value of outlet pressure.""}",,,,,,,,,,True,,,1,"[""ido:measuredOutletPressure"", ""Chunk: 123""]",,,,ido:Pump,ido:hasMeasuredValue,True,,ido:measuredOutletPressure,Chunk: 123,0,0,1,0,0,0,6,0,0.16666666666666666

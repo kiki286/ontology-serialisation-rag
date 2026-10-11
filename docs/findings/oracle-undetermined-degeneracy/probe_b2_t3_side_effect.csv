@@ -1,0 +1,7 @@
+arm,m,false_und_rate,n_und,n
+B2 open-world,gpt-4o,0.0,0,90
+B2 open-world,gpt-4o-mini,0.033,3,90
+B2 open-world,sonnet,0.0,0,90
+frozen (row zero),gpt-4o,0.0,0,90
+frozen (row zero),gpt-4o-mini,0.0,0,90
+frozen (row zero),sonnet,0.0,0,90

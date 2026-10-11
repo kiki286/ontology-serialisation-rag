@@ -1,0 +1,7 @@
+model,grade_gold_label,supported,contradicted,undetermined,n
+gpt-4o-2024-11-20,contradicted,0,210,0,210
+gpt-4o-2024-11-20,supported,189,21,0,210
+gpt-4o-2024-11-20,undetermined,0,210,0,210
+gpt-4o-mini-2024-07-18,contradicted,0,210,0,210
+gpt-4o-mini-2024-07-18,supported,149,61,0,210
+gpt-4o-mini-2024-07-18,undetermined,0,210,0,210

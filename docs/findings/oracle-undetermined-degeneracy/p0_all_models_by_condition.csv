@@ -1,0 +1,9 @@
+model,condition,supported,contradicted,undetermined,,n
+claude-sonnet-4-5-20250929,oracle,210,364,56,0,630
+claude-sonnet-4-5-20250929,retrieved,189,302,139,0,630
+gpt-4o-2024-11-20,oracle,189,441,0,0,630
+gpt-4o-2024-11-20,retrieved,147,408,75,0,630
+gpt-4o-mini-2024-07-18,oracle,149,481,0,0,630
+gpt-4o-mini-2024-07-18,retrieved,121,476,33,0,630
+llama3.1:8b-instruct-q8_0,oracle,127,439,63,1,630
+llama3.1:8b-instruct-q8_0,retrieved,148,336,145,1,630

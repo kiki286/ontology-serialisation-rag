@@ -1,0 +1,13 @@
+m,grade_gold_label,gold_all,und_rate,n_und,n
+gpt-4o,contradicted,0,0.52,39,75
+gpt-4o,contradicted,1,0.0,0,135
+gpt-4o,supported,0,0.235,24,102
+gpt-4o,supported,1,0.0,0,108
+gpt-4o,undetermined,0,0.182,12,66
+gpt-4o,undetermined,1,0.0,0,144
+gpt-4o-mini,contradicted,0,0.307,23,75
+gpt-4o-mini,contradicted,1,0.015,2,135
+gpt-4o-mini,supported,0,0.029,3,102
+gpt-4o-mini,supported,1,0.0,0,108
+gpt-4o-mini,undetermined,0,0.076,5,66
+gpt-4o-mini,undetermined,1,0.0,0,144

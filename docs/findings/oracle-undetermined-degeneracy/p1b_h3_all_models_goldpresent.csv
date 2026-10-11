@@ -1,0 +1,9 @@
+m,condition,und_rate,n_und,n
+gpt-4o,oracle,0.0,0,210
+gpt-4o,retrieved,0.0,0,144
+gpt-4o-mini,oracle,0.0,0,210
+gpt-4o-mini,retrieved,0.0,0,144
+llama,oracle,0.01,2,210
+llama,retrieved,0.021,3,144
+sonnet,oracle,0.267,56,210
+sonnet,retrieved,0.229,33,144

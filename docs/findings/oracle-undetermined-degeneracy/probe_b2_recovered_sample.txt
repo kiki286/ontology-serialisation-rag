@@ -1,0 +1,12 @@
+[sonnet | T19 | turtle] The ontology states that lis:Organization is disjoint with lis:PhysicalObject and both are subclasses of lis:Object, but there is no axiom stating that lis:Organization is a subclass of lis:FunctionalObject or that they are disjoint, so the relationship is undetermined.
+
+[sonnet | T23 | turtle] The ontology defines lis:Compound and lis:Phase as separate subclasses of lis:PhysicalObject with different restrictions, but does not assert that every Compound is a Phase or vice versa.
+
+[sonnet | T24 | turtle] The ontology states that lis:Feature is a subclass of lis:PhysicalObject and lis:PhysicalArtefact is also a subclass of lis:PhysicalObject, but there is no axiom stating that every Feature is a PhysicalArtefact or that Feature is a subclass of PhysicalArtefact.
+
+[sonnet | T25 | turtle] The ontology shows lis:Disposition and lis:Interest are both subclasses of lis:Potential, but there is no axiom stating that every Disposition is an Interest or that Disposition is a subclass of Interest.
+
+[sonnet | T27 | elot-org] The ontology states that lis:MaterialCompositionQuality is a subclass of lis:Quality and lis:PhaseQuality is also a subclass of lis:Quality, but there is no axiom stating that MaterialCompositionQuality is a subclass of PhaseQuality or vice versa.
+
+[gpt-4o-mini | T24 | jsonld] The ontology content does not provide enough information to determine whether every lis:Feature is a lis:PhysicalArtefact, as it only states that lis:Feature is a subclass of lis:PhysicalObject, but does not clarify the relationship between lis:PhysicalObject and lis:PhysicalArtefact.
+

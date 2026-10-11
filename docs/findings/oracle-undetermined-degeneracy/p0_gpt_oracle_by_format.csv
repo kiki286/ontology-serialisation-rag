@@ -1,0 +1,15 @@
+model,format,supported,contradicted,undetermined,n
+gpt-4o-2024-11-20,elot-org,27,63,0,90
+gpt-4o-2024-11-20,elot-org-ancestors,24,66,0,90
+gpt-4o-2024-11-20,jsonld,27,63,0,90
+gpt-4o-2024-11-20,ofn,27,63,0,90
+gpt-4o-2024-11-20,omn,30,60,0,90
+gpt-4o-2024-11-20,turtle,27,63,0,90
+gpt-4o-2024-11-20,yaml-ld,27,63,0,90
+gpt-4o-mini-2024-07-18,elot-org,21,69,0,90
+gpt-4o-mini-2024-07-18,elot-org-ancestors,18,72,0,90
+gpt-4o-mini-2024-07-18,jsonld,21,69,0,90
+gpt-4o-mini-2024-07-18,ofn,24,66,0,90
+gpt-4o-mini-2024-07-18,omn,27,63,0,90
+gpt-4o-mini-2024-07-18,turtle,23,67,0,90
+gpt-4o-mini-2024-07-18,yaml-ld,15,75,0,90

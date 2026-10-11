@@ -1,0 +1,5 @@
+m,determinate,undetermined-gold,n_det,n_und
+gpt-4o,0.356,0.182,177,66
+gpt-4o-mini,0.147,0.076,177,66
+llama,0.497,0.318,177,66
+sonnet,0.475,0.333,177,66

@@ -1,0 +1,42 @@
+{
+  "stage": "retrieval",
+  "timestamp_utc": "2026-05-29T09:42:09.530642+00:00",
+  "git_commit": null,
+  "seed": 20260529,
+  "temperature": 0.0,
+  "embedding_model": "text-embedding-3-large",
+  "retrieval_k": 5,
+  "formats": [
+    "turtle",
+    "elot-org",
+    "omn"
+  ],
+  "models": [
+    "gpt-4o",
+    "gpt-4o-mini"
+  ],
+  "conditions": [
+    "oracle",
+    "retrieved"
+  ],
+  "task_types": [
+    "verification",
+    "slot_filling"
+  ],
+  "n_tasks": 2,
+  "task_ids": [
+    "T01",
+    "T02"
+  ],
+  "elot_include_ancestor_headings": true,
+  "system_prompts": {
+    "verification": "verification_system_v1.txt",
+    "slot_filling": "slot_filling_system_v1.txt"
+  },
+  "loader_versions": {
+    "turtle": "4.0",
+    "elot-org": "2.0",
+    "omn": "2.0"
+  },
+  "n_calls": 6
+}

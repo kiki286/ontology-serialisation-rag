@@ -1,0 +1,119 @@
+{
+  "stage": "postretrieval",
+  "timestamp_utc": "2026-08-19T12:14:12.036848+00:00",
+  "git_commit": "4d2e16f8fdb15662b1e82ee1e52f562c7eebf19e",
+  "task_file": "experiment\\benchmark\\tasks_60.yaml",
+  "task_file_sha256": "96b7923868028976a1b682be1555e7f4d26120b66730ca5307d091ab5c9bf083",
+  "pricing_snapshot_date": "2026-06-07",
+  "cache_pricing_snapshot_date": "2026-08-13",
+  "seed": 20260529,
+  "temperature": 0.0,
+  "embedding_model": "text-embedding-3-large",
+  "retrieval_k": 5,
+  "formats": [
+    "turtle",
+    "elot-org",
+    "elot-org-ancestors",
+    "omn",
+    "jsonld",
+    "yaml-ld",
+    "ofn"
+  ],
+  "models": [
+    "gpt-4o-2024-11-20",
+    "gpt-4o-mini-2024-07-18",
+    "claude-sonnet-4-5-20250929",
+    "llama3.1:8b-instruct-q8_0"
+  ],
+  "conditions": [
+    "oracle",
+    "retrieved"
+  ],
+  "task_types": [
+    "verification",
+    "slot_filling"
+  ],
+  "n_tasks": 2,
+  "task_ids": [
+    "T06",
+    "T29"
+  ],
+  "elot_ancestor_format": "elot-org-ancestors",
+  "retrieval_index_filter_version": "1.1",
+  "retrieval_index_excluded_entity_types": [
+    "elot:FileIntro",
+    "elot:Prefixes",
+    "elot:Root",
+    "jsonld:Prefixes",
+    "ofn:Prefixes",
+    "omn:Prefixes",
+    "owl:AnnotationProperty",
+    "owl:Ontology",
+    "yamlld:Prefixes"
+  ],
+  "retrieval_index_excluded_entity_ids": [
+    "elot:file-intro",
+    "elot:prefixes",
+    "elot:root:core",
+    "jsonld:prefixes",
+    "ofn:prefixes",
+    "omn:prefixes",
+    "rdfs:Literal",
+    "xsd:boolean",
+    "xsd:date",
+    "xsd:dateTime",
+    "xsd:string",
+    "yamlld:prefixes"
+  ],
+  "retrieval_index_excludes_elot_sections": true,
+  "system_prompts": {
+    "verification": "verification_system_v1.txt",
+    "slot_filling": "slot_filling_system_v4.txt"
+  },
+  "loader_versions": {
+    "turtle": "4.0",
+    "elot-org": "3.0",
+    "elot-org-ancestors": "2.0",
+    "omn": "2.0",
+    "jsonld": "1.0",
+    "yaml-ld": "1.0",
+    "ofn": "1.0"
+  },
+  "n_calls": 112,
+  "n_trials": 1,
+  "seeds": [
+    20260529
+  ],
+  "trial_seed_map": {
+    "0": 20260529
+  },
+  "seed_policy": "different seed per trial",
+  "seed_determinism": {
+    "gpt-4o-2024-11-20": "pinned",
+    "gpt-4o-mini-2024-07-18": "pinned",
+    "claude-sonnet-4-5-20250929": "pinned",
+    "llama3.1:8b-instruct-q8_0": "best-effort"
+  },
+  "ollama_num_ctx": 16384,
+  "ollama_num_ctx_whole_context": 56246,
+  "ollama_kv_cache_type": "q8_0",
+  "anthropic_cache_corpus": true,
+  "postretrieval_loop_order": "format -> model -> condition -> task -> trial",
+  "floor_conditions_run": [],
+  "floor_only_run": false,
+  "floor_format_sentinel": null,
+  "floor_retrieval_metrics": "null (undefined without a corpus)",
+  "oracle_padded_condition": false,
+  "oracle_pad_strategy": null,
+  "oracle_pad_seed": null,
+  "oracle_pad_entity_ids": null,
+  "cost_summary": {
+    "total_prompt_tokens": 240330,
+    "total_completion_tokens": 9665,
+    "total_tokens": 249995,
+    "total_calls": 112,
+    "cost_usd_at_pricing_date": 0.471534,
+    "pricing_snapshot_date": "2026-06-07",
+    "pricing_source_url": "https://platform.openai.com/docs/pricing"
+  }
+}

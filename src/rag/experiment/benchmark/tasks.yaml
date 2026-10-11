@@ -1,0 +1,220 @@
+# Pilot tasks for the format × task post-retrieval study.
+# Five tasks: 2 floor checks, 3 high-sensitivity format-hypothesis tasks.
+# 3 verification (2 supported, 1 contradicted) + 2 slot-filling.
+# 2 control + 3 high-sensitivity. 3 IDO->abstract + 2 abstract->IDO.
+# Undetermined label deferred to the full 30-task benchmark since it is
+# the hardest of the three to write well.
+
+- task_id: T01
+  task_type: verification
+  query: "Is every Person an Organism in IDO?"
+  reasoning_type: direct_assertion   # one asserted subclass axiom; both IRIs in the query
+  query_source: label                # statement names both classes by IRI
+  mechanism: explicit_axiom
+  gold_chunks:
+    - lis:Person
+    - lis:Organism
+  statement: "Every lis:Person is an lis:Organism."
+  gold_label: supported
+  licensing_axiom: [lis:Person, rdfs:subClassOf, lis:Organism]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Floor check. Single-hop subclass, both labels appear in chunk text.
+    Format-hypothesis sensitivity: control. Direction: IDO -> abstract.
+    Expected to pass under every condition; failure indicates a pipeline
+    bug rather than a format effect.
+
+
+- task_id: T02
+  task_type: slot_filling
+  query: "Which IDO property relates a steel bar to its mass?"
+  reasoning_type: modelling_pattern  # requires selecting IDO's representational convention
+  query_source: paraphrase           # scenario contains no ontology vocabulary
+  mechanism: modelling_pattern
+  gold_chunks:
+    - lis:hasPhysicalQuantity
+    - lis:hasQuality
+    - lis:PhysicalQuantity
+    - lis:Quality
+    - lis:PhysicalObject
+  retrieval_gold_chunks:
+    - lis:hasPhysicalQuantity
+    - lis:hasQuality
+    - lis:PhysicalQuantity
+  scenario: "Select the most appropriate IDO property to relate a steel bar to its mass."
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: false
+  primary_answer_chunk: lis:hasPhysicalQuantity  # DEPRECATED: superseded by field_gold_chunks
+  gold_supporting_chunks:
+    class: lis:PhysicalObject
+    property: lis:hasPhysicalQuantity
+    intermediate_node: null
+  # WI4: per-field licensing chunks. intermediate_node/support_intermediate are empty
+  # because gold has no intermediate node, so support_intermediate is excluded from the
+  # denominator (WI2). Licensing sets are the strict gold ids, aligned with the strict
+  # exact-match grader (CHANGELOG 2026-07-23); the defensible-bearer alternates
+  # (PhysicalArtefact, FunctionalObject) are deliberately NOT added here so coverage
+  # tracks the strict answer rather than an accept-set.
+  field_gold_chunks:
+    class: [lis:PhysicalObject]
+    property: [lis:hasPhysicalQuantity]
+    intermediate_node: []
+    support_class: [lis:PhysicalObject]
+    support_property: [lis:hasPhysicalQuantity]
+    support_intermediate: []
+  notes: >
+    Floor check for slot-filling. The phrase "mass of a bar of steel" appears
+    as a skos:example on lis:PhysicalQuantity, so lexical alignment with the
+    formal labels is strong. A known failure mode is picking lis:hasQuality
+    (the superclass) over lis:hasPhysicalQuantity; this scores 0 on the
+    property slot — strict equality grading, no gold_property_accept — because
+    the task intentionally tests subproperty resolution, not approximate
+    exact-match against the canonical lis:PhysicalObject, so a less-specific
+    but valid bearer (e.g. lis:PhysicalArtefact) scores 0. Format-hypothesis
+    sensitivity: control. Direction: IDO -> abstract. Floor check exercising
+    the slot-filling grader before higher-stakes slot-filling tasks.
+      mechanism: explicit_axiom
+
+
+- task_id: T03
+  task_type: verification
+  query: "What does lis:concretizes relate, and in which direction?"
+  reasoning_type: structural         # requires composing domain/range + inverse direction
+  query_source: label                # statement names the property by IRI
+  mechanism: composed_domain_range_disjointness
+  gold_chunks:
+    - lis:concretizes
+    - lis:concretizedBy
+    - lis:InformationObject
+    - lis:PhysicalObject
+  retrieval_gold_chunks:
+    - lis:concretizes
+    - lis:concretizedBy
+  statement: "A maintenance procedure document lis:concretizes a printed paper copy of itself."
+  gold_label: contradicted
+  licensing_axiom: [lis:concretizes, rdfs:domain, lis:PhysicalObject]
+  annotation_prose_screen: toward
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Tests directionality of lis:concretizes. Domain is Activity or
+    PhysicalObject; range is InformationObject. The statement inverts this -
+    the document is the InformationObject and the paper copy is the
+    PhysicalObject, so the correct relation is the inverse (lis:concretizedBy
+    from the document's perspective). Expected failure mode: model answers
+    "supported" because it recognises lis:concretizes without checking
+    domain/range. The lis:concretizedBy chunk is a stub pointing to its
+    inverse - tests whether the retriever surfaces inverse pairs together.
+    Format-hypothesis sensitivity: high. Direction: abstract -> IDO. Provides
+    the pilot's required contradicted label. retrieval_gold_chunks excludes
+    the class chunks because they justify the contradiction but are not
+    discoverable from a query about the relation itself.
+
+
+- task_id: T04
+  task_type: verification
+  query: "Is lis:Function a kind of lis:Capability in IDO?"
+  mechanism: explicit_axiom
+  reasoning_type: direct_assertion   # one asserted subclass axiom; both IRIs in the query
+  query_source: label                # statement names both classes by IRI
+  gold_chunks:
+    - lis:Function
+    - lis:Capability
+  statement: "Every lis:Function is a lis:Capability."
+  gold_label: supported
+  licensing_axiom: [lis:Function, rdfs:subClassOf, lis:Capability]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Targets the IDO/BFO hierarchy disagreement. In BFO, Function is a subclass
+    of Disposition directly - there is no Capability class. In IDO, Capability
+    sits between Disposition and Function. A model relying on BFO pretraining
+    has no basis for answering this from parametric knowledge; it must read
+    IDO retrieval. This isolates the format-hypothesis signal from BFO
+    pretraining. Format-hypothesis sensitivity: high. Direction: abstract ->
+    IDO. Failure modes: "undetermined" (model doesn't recognise Capability)
+    or "contradicted" (model defaults to BFO's Function-as-Disposition
+    structure). Both class labels appear in the query, so gold_chunks and
+    retrieval_gold_chunks collapse to the same set.
+
+
+- task_id: T05
+  task_type: slot_filling
+  query: "How do I model that pump P-101 has a measured outlet pressure of 5 bar?"
+  reasoning_type: modelling_pattern  # requires selecting IDO's Quality/Datum/Unit pattern
+  query_source: paraphrase           # scenario contains no ontology vocabulary
+  mechanism: modelling_pattern
+  gold_chunks:
+    - lis:PhysicalObject
+    - lis:PhysicalQuantity
+    - lis:Quality
+    - lis:QualityDatum
+    - lis:ScalarQuantityDatum
+    - lis:hasPhysicalQuantity
+    - lis:hasQuality
+    - lis:qualityQuantifiedAs
+    - lis:datumUOM
+    - lis:datumValue
+  retrieval_gold_chunks:
+    - lis:hasPhysicalQuantity
+    - lis:PhysicalQuantity
+    - lis:qualityQuantifiedAs
+  scenario: "Model that pump P-101 has a measured outlet pressure of 5 bar."
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: true
+  primary_answer_chunk: lis:hasPhysicalQuantity  # DEPRECATED: superseded by field_gold_chunks
+  gold_supporting_chunks:
+    class: lis:PhysicalObject
+    property: lis:hasPhysicalQuantity
+    intermediate_node: lis:ScalarQuantityDatum
+  # WI4: per-field licensing chunks. All six fields have gold, so none are excluded
+  # (denominator 6). Licensing sets are the strict gold ids (see T02 note).
+  field_gold_chunks:
+    class: [lis:PhysicalObject]
+    property: [lis:hasPhysicalQuantity]
+    intermediate_node: [lis:ScalarQuantityDatum]
+    support_class: [lis:PhysicalObject]
+    support_property: [lis:hasPhysicalQuantity]
+    support_intermediate: [lis:ScalarQuantityDatum]
+  notes: >
+    Central IDO Quality/Datum/Unit pattern. The measured value "5 bar" is
+    represented via a ScalarQuantityDatum (specific subclass of QualityDatum
+    for scalar measurements) connected to the PhysicalQuantity by
+    lis:qualityQuantifiedAs. The scalar is split into lis:datumValue (the
+    magnitude, 5) and lis:datumUOM (the unit, bar). Expected failure modes:
+    (a) attaching "5"^^xsd:decimal directly to the quality, skipping the
+    datum node; (b) citing QualityDatum (the parent) instead of
+    ScalarQuantityDatum for the supporting_chunks.intermediate_node citation,
+    which scores 0 on support_intermediate_correct (strict equality, no accept
+    set for chunk citations).
+    Class slot is bearer-first: the subject is the pump, so the canonical
+    gold_class is lis:PhysicalObject (parallel to T02's steel bar), NOT the
+    quality side lis:PhysicalQuantity. PhysicalObject is the canonical pick
+    because it keeps the rubric internally consistent - lis:hasPhysicalQuantity
+    has domain PhysicalObject. The class slot is graded by strict exact-match
+    bearer for a pump (e.g. lis:PhysicalArtefact, or lis:FunctionalObject, which
+    carries the "a pump" skos:example) scores 0, consistent with the property
+    slot and with treating a less-specific typing as a semantic error in a
+    T-Box ontology.
+    Format-hypothesis sensitivity: high. Direction: IDO -> abstract.

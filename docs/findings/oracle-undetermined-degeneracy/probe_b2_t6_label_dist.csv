@@ -1,0 +1,7 @@
+arm,m,contradicted,undetermined
+B2 open-world,gpt-4o,90,0
+B2 open-world,gpt-4o-mini,89,1
+B2 open-world,sonnet,60,30
+frozen (row zero),gpt-4o,90,0
+frozen (row zero),gpt-4o-mini,90,0
+frozen (row zero),sonnet,70,20

@@ -1,0 +1,11 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,96,0.0,0.0,0.0,0,T01,verification,elot-org,oracle,gpt-4o-2024-11-20
+exact_match_rate,64,0.0,0.05412658773652741,0.5773502691896257,6,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_class_correct,64,0.0,0.0,0.0,0,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_intermediate_correct,64,0.0,0.04510548978043951,0.5773502691896257,5,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_property_correct,64,0.0,0.0,0.0,0,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_support_class_correct,64,0.0,0.018042195912175804,0.5773502691896257,2,T02,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18
+field_accuracy_support_intermediate_correct,32,0.0,0.09021097956087902,0.5773502691896257,5,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20
+field_accuracy_support_property_correct,64,0.0,0.018042195912175804,0.5773502691896257,2,T02,slot_filling,omn,retrieved,gpt-4o-mini-2024-07-18
+mean_partial_credit,64,0.0,0.023154151420625612,0.11547005383792519,14,T02,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18
+parse_errors,96,0.0,0.0,0.0,0,T01,verification,elot-org,oracle,gpt-4o-2024-11-20

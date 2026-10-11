@@ -1,0 +1,5 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,46,0.0,0.0,0.0,0,T06,verification,__no_corpus__,empty_context,claude-sonnet-4-5-20250929
+answered,46,0.0,0.0,0.0,0,T06,verification,__no_corpus__,empty_context,claude-sonnet-4-5-20250929
+parse_errors,46,0.0,0.0,0.0,0,T06,verification,__no_corpus__,empty_context,claude-sonnet-4-5-20250929
+selective_correct,46,0.0,0.0,0.0,0,T06,verification,__no_corpus__,empty_context,claude-sonnet-4-5-20250929

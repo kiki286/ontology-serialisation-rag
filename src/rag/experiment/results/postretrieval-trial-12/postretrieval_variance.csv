@@ -1,0 +1,10 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,21,0.0,0.02749286996141075,0.5773502691896257,1,T04,verification,omn,whole_context,gpt-4o-mini-2024-07-18
+exact_match_rate,21,0.0,0.02749286996141075,0.5773502691896257,1,T02,slot_filling,jsonld,whole_context,gpt-4o-mini-2024-07-18
+field_accuracy_class_correct,21,0.0,0.0,0.0,0,T02,slot_filling,elot-org,whole_context,gpt-4o-2024-11-20
+field_accuracy_intermediate_correct,21,0.0,0.02749286996141075,0.5773502691896257,1,T02,slot_filling,jsonld,whole_context,gpt-4o-mini-2024-07-18
+field_accuracy_property_correct,21,0.0,0.0,0.0,0,T02,slot_filling,elot-org,whole_context,gpt-4o-2024-11-20
+field_accuracy_support_class_correct,21,0.0,0.02749286996141075,0.5773502691896257,1,T02,slot_filling,ofn,whole_context,gpt-4o-mini-2024-07-18
+field_accuracy_support_property_correct,21,0.0,0.02749286996141075,0.5773502691896257,1,T02,slot_filling,ofn,whole_context,gpt-4o-mini-2024-07-18
+mean_partial_credit,21,0.0,0.01649572197684645,0.23094010767585033,2,T02,slot_filling,ofn,whole_context,gpt-4o-mini-2024-07-18
+parse_errors,21,0.0,0.0,0.0,0,T04,verification,elot-org,whole_context,gpt-4o-2024-11-20

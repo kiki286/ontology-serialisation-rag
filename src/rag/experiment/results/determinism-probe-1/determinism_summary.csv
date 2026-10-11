@@ -1,0 +1,49 @@
+model,task_id,format,condition,n,distinct_raw,raw_stable,distinct_graded,graded_stable,partial_credits
+claude-sonnet-4-5-20250929,T02,jsonld,oracle,3,1,True,1,True,['0.8']
+claude-sonnet-4-5-20250929,T02,jsonld,retrieved,3,3,False,1,True,['0.4']
+claude-sonnet-4-5-20250929,T02,omn,oracle,3,2,False,1,True,['0.8']
+claude-sonnet-4-5-20250929,T02,omn,retrieved,3,2,False,1,True,['0.6']
+claude-sonnet-4-5-20250929,T02,turtle,oracle,3,3,False,1,True,['0.8']
+claude-sonnet-4-5-20250929,T02,turtle,retrieved,3,2,False,1,True,['0.6']
+claude-sonnet-4-5-20250929,T05,jsonld,oracle,3,2,False,1,True,['1.0']
+claude-sonnet-4-5-20250929,T05,jsonld,retrieved,3,3,False,1,True,['0.16666666666666666']
+claude-sonnet-4-5-20250929,T05,omn,oracle,3,2,False,2,False,"['0.8333333333333334', '1.0']"
+claude-sonnet-4-5-20250929,T05,omn,retrieved,3,3,False,1,True,['0.5']
+claude-sonnet-4-5-20250929,T05,turtle,oracle,3,1,True,1,True,['1.0']
+claude-sonnet-4-5-20250929,T05,turtle,retrieved,3,2,False,1,True,['0.16666666666666666']
+gpt-4o-2024-11-20,T02,jsonld,oracle,3,2,False,1,True,['1.0']
+gpt-4o-2024-11-20,T02,jsonld,retrieved,3,1,True,1,True,['1.0']
+gpt-4o-2024-11-20,T02,omn,oracle,3,1,True,1,True,['1.0']
+gpt-4o-2024-11-20,T02,omn,retrieved,3,3,False,1,True,['0.6']
+gpt-4o-2024-11-20,T02,turtle,oracle,3,2,False,1,True,['1.0']
+gpt-4o-2024-11-20,T02,turtle,retrieved,3,2,False,1,True,['0.8']
+gpt-4o-2024-11-20,T05,jsonld,oracle,3,2,False,2,False,"['0.8333333333333334', '1.0']"
+gpt-4o-2024-11-20,T05,jsonld,retrieved,3,2,False,2,False,"['0.0', '0.16666666666666666']"
+gpt-4o-2024-11-20,T05,omn,oracle,3,3,False,2,False,"['0.8333333333333334', '1.0']"
+gpt-4o-2024-11-20,T05,omn,retrieved,3,2,False,1,True,['0.0']
+gpt-4o-2024-11-20,T05,turtle,oracle,3,3,False,1,True,['0.8333333333333334']
+gpt-4o-2024-11-20,T05,turtle,retrieved,3,2,False,1,True,['0.16666666666666666']
+gpt-4o-mini-2024-07-18,T02,jsonld,oracle,3,2,False,1,True,['0.8']
+gpt-4o-mini-2024-07-18,T02,jsonld,retrieved,3,1,True,1,True,['0.4']
+gpt-4o-mini-2024-07-18,T02,omn,oracle,3,2,False,1,True,['0.8']
+gpt-4o-mini-2024-07-18,T02,omn,retrieved,3,2,False,1,True,['0.4']
+gpt-4o-mini-2024-07-18,T02,turtle,oracle,3,1,True,1,True,['0.8']
+gpt-4o-mini-2024-07-18,T02,turtle,retrieved,3,2,False,1,True,['0.6']
+gpt-4o-mini-2024-07-18,T05,jsonld,oracle,3,2,False,2,False,"['0.8333333333333334', '1.0']"
+gpt-4o-mini-2024-07-18,T05,jsonld,retrieved,3,3,False,1,True,['0.16666666666666666']
+gpt-4o-mini-2024-07-18,T05,omn,oracle,3,2,False,1,True,['0.8333333333333334']
+gpt-4o-mini-2024-07-18,T05,omn,retrieved,3,1,True,1,True,['0.3333333333333333']
+gpt-4o-mini-2024-07-18,T05,turtle,oracle,3,1,True,1,True,['0.8333333333333334']
+gpt-4o-mini-2024-07-18,T05,turtle,retrieved,3,3,False,1,True,['0.16666666666666666']
+gpt-5.5-2026-04-23,T02,jsonld,oracle,3,3,False,2,False,"['0.8', '1.0']"
+gpt-5.5-2026-04-23,T02,jsonld,retrieved,3,3,False,2,False,"['0.6', '1.0']"
+gpt-5.5-2026-04-23,T02,omn,oracle,3,2,False,1,True,['1.0']
+gpt-5.5-2026-04-23,T02,omn,retrieved,3,3,False,1,True,['0.8']
+gpt-5.5-2026-04-23,T02,turtle,oracle,3,3,False,1,True,['1.0']
+gpt-5.5-2026-04-23,T02,turtle,retrieved,3,3,False,1,True,['0.8']
+gpt-5.5-2026-04-23,T05,jsonld,oracle,3,3,False,2,False,"['0.8333333333333334', '1.0']"
+gpt-5.5-2026-04-23,T05,jsonld,retrieved,3,3,False,1,True,['0.0']
+gpt-5.5-2026-04-23,T05,omn,oracle,3,3,False,2,False,"['0.8333333333333334', '1.0']"
+gpt-5.5-2026-04-23,T05,omn,retrieved,3,3,False,1,True,['0.0']
+gpt-5.5-2026-04-23,T05,turtle,oracle,3,3,False,1,True,['1.0']
+gpt-5.5-2026-04-23,T05,turtle,retrieved,3,3,False,1,True,['0.16666666666666666']

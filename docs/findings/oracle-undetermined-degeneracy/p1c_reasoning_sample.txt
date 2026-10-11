@@ -1,0 +1,24 @@
+[gpt-4o | T19 | elot-org] The ontology content specifies that lis:Organization is disjoint with lis:FunctionalObject, meaning no lis:Organization can be a lis:FunctionalObject.
+
+[gpt-4o-mini | T19 | elot-org] The ontology content states that lis:Organization is disjoint with lis:FunctionalObject, which means no instance of lis:Organization can be an instance of lis:FunctionalObject.
+
+[gpt-4o | T20 | elot-org] The ontology content specifies that lis:ActivityProfile is a subclass of lis:Activity, while lis:Event is also a subclass of lis:Activity, but there is no indication that lis:ActivityProfile is a subclass of lis:Event or vice versa.
+
+[gpt-4o-mini | T20 | elot-org] The ontology states that 'Event' is a subclass of 'Activity', while 'ActivityProfile' is a subclass of 'Activity' but not stated to be a subclass of 'Event', thus contradicting the statement.
+
+[gpt-4o | T21 | elot-org] The ontology content defines lis:QualityDatum and lis:TemporalDatum as distinct classes with different scopes and purposes, and there is no indication that every lis:QualityDatum is a lis:TemporalDatum.
+
+[gpt-4o-mini | T21 | elot-org] The ontology content defines 'QualityDatum' and 'TemporalDatum' as separate classes, indicating that they are not the same.
+
+[gpt-4o | T22 | elot-org] The ontology content specifies that lis:UnitOfMeasure and lis:QualityDatum are both subclasses of lis:InformationObject, but there is no indication that lis:UnitOfMeasure is a subclass of lis:QualityDatum or vice versa.
+
+[gpt-4o-mini | T22 | elot-org] The ontology content defines lis:UnitOfMeasure as a subclass of lis:InformationObject, while lis:QualityDatum is also a subclass of lis:InformationObject, but there is no indication that every lis:UnitOfMeasure is a lis:QualityDatum.
+
+[gpt-4o | T23 | elot-org] The ontology content specifies that lis:Compound and lis:Phase are both subclasses of lis:PhysicalObject, but there is no indication that lis:Compound is a subclass of lis:Phase or vice versa.
+
+[gpt-4o-mini | T23 | elot-org] The ontology content defines 'lis:Compound' and 'lis:Phase' as separate classes, both of which are subclasses of 'lis:PhysicalObject', but does not support the assertion that every 'lis:Compound' is a 'lis:Phase'.
+
+[gpt-4o | T24 | elot-org] The ontology content specifies that lis:Feature is a subclass of lis:PhysicalObject, but it does not state that it is a subclass of lis:PhysicalArtefact, which is also a subclass of lis:PhysicalObject. Therefore, not every lis:Feature is a lis:PhysicalArtefact.
+
+[gpt-4o-mini | T24 | elot-org] The ontology content indicates that lis:Feature is a subclass of lis:PhysicalObject, but does not state that every lis:Feature is a lis:PhysicalArtefact, which is a different class.
+

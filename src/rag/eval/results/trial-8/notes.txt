@@ -1,0 +1,6 @@
+==============================
+EXPERIMENT DETAILS:
+==============================
+- same as trial 7 except
+        -> v9 naive rag prompt which tinkers with disallowing out of scope questions
+        -> obi-principles-summary as been shortened to only include headings to dodge lost in the middle problem

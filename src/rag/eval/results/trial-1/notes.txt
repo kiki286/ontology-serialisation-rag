@@ -1,0 +1,31 @@
+- Naive RAG
+- K=4
+- Default Prompt
+- Retrieval Sources
+    ISO_15926-14.ttl
+    ISO_23726-1.md
+    https://rds.posccaesar.org/
+
+
+=== Evaluation Metrics Summary ===
+
+answer_relevancy:
+  mean: 0.6395
+  median: 0.7678
+  std: 0.3486
+  min: 0.0000
+  max: 0.9919
+
+answer_accuracy:
+  mean: 0.2500
+  median: 0.2500
+  std: 0.2331
+  min: 0.0000
+  max: 0.7500
+
+semantic_similarity:
+  mean: 0.7420
+  median: 0.7535
+  std: 0.1234
+  min: 0.5190
+  max: 0.9748

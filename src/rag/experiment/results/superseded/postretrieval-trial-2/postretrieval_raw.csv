@@ -1,0 +1,993 @@
+trial_idx,task_id,task_type,format,condition,model,provider,model_returned,system_prompt,n_context_chunks,finish_reason,system_fingerprint,prompt_tokens,completion_tokens,total_tokens,raw_response,user_content,parse_ok,parse_error,pred_label,grade_gold_label,grade_pred_label,grade_correct,grade_class_correct,grade_property_correct,grade_intermediate_correct,grade_support_class_correct,grade_support_property_correct,grade_support_intermediate_correct,grade_exact_match,grade_partial_credit,pred_class,pred_property,pred_intermediate_node,pred_support_class,pred_support_property,pred_support_intermediate
+0,T01,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,990,52,1042,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2283,28,2311,"{""label"": ""supported"", 
+ ""reasoning"": ""lis:Person rdfs:subClassOf lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,897,36,933,"{""label"": ""undetermined"", 
+""reasoning"": ""There is no explicit relationship defined between lis:Person and lis:Organism in the provided ontology content.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+0,T01,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1840,45,1885,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that a Person (lis:Person) is defined as 'An organism that is a human' which implies that every person is an organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,936,53,989,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which in turn is a subclass of PhysicalObject (lis:PhysicalObject)."" }",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1891,52,1943,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,905,31,936,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2259,30,2289,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T02,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,3742,118,3860,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:hasPhysicalQuantity"",
+    ""property"": null,
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The most appropriate IDO property to relate a steel bar to its mass is 'lis:hasPhysicalQuantity' because it links physical objects to their physical quantities, which in this case is the mass of the steel bar.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T02,slot_filling,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2650,105,2755,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a physical quantity (mass) as one of its qualities.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T02,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2873,113,2986,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The IDO property 'lis:hasQuality' is used to relate a physical object (such as a steel bar) to its quality, which in this case is mass.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,Chunk: lis:hasQuality,
+0,T02,slot_filling,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,1994,105,2099,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:Compound"",
+    ""property"": ""Chunk: lis:hasPhysicalQuantity"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The steel bar is a physical object, and its mass is a physical quantity that can be characterised in terms of chemical or material properties.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,hasPhysicalQuantity,True,Chunk: lis:Compound,Chunk: lis:hasPhysicalQuantity,
+0,T02,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2913,91,3004,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The IDO property 'hasQuality' is used to relate a physical object to its quality, which in this case is the mass of the steel bar.""}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T02,slot_filling,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2054,116,2170,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:Compound"",
+    ""property"": ""Chunk: lis:physicalQuantityOf"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The mass of a steel bar is a quality that can be quantified by measurement, so it should be related to the physical object (steel bar) using the 'hasQuality' property.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:Compound,Chunk: lis:physicalQuantityOf,
+0,T02,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,3196,102,3298,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasQuality' is the most appropriate to relate a steel bar to its mass because it indicates that the mass is a quality of the physical object (steel bar).""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T02,slot_filling,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2152,106,2258,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'has physical quantity' is suitable for relating a steel bar to its mass because it indicates that the steel bar has a quality (mass) that can be quantified by measurement.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.class
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T03,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,2389,50,2439,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines 'lis:concretizes' as a relation between an activity or physical object and an information object, where the latter is concretized by the former.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2423,45,2468,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property that relates a physical object or activity to an information object, and the statement fits this definition.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,1923,63,1986,"{""label"": ""supported"", 
+""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1632,55,1687,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,1935,62,1997,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1642,56,1698,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,2094,56,2150,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object or activity to an information object, and states that a report is produced as paper copies, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1706,38,1744,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object to an information object it concretizes.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T04,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1309,29,1338,"{""label"": ""contradicted"", 
+""reasoning"": ""lis:Function rdfs:subClassOf lis:Capability.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+0,T04,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1860,31,1891,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1055,35,1090,"{""label"": ""undetermined"", 
+""reasoning"": ""There is no explicit relationship defined between lis:Function and lis:Capability in the provided ontology content.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+0,T04,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1364,51,1415,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that the Range of lis:hasFunction is lis:Function, but it also defines lis:Capability as a distinct class with its own definition and examples.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+0,T04,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1110,60,1170,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content explicitly states that lis:Function has rdfs:seeAlso property with lis:hasFunction, while lis:Capability has rdfs:seeAlso property with lis:hasCapability, indicating they are distinct concepts.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+0,T04,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1475,57,1532,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that Function (lis:Function) is a subclass of Capability (lis:Capability), but it also defines hasFunction as a subproperty of hasCapability, which implies the inverse relationship.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+0,T04,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1140,56,1196,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability, but it does not imply the converse.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+0,T04,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1706,47,1753,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+0,T05,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,209,2259,"{
+  ""@context"": {
+    ""lis"": ""http://rds.posccaesar.org/ontology/lis14/rdl/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""obo"": ""http://purl.obolibrary.org/obo/"",
+    ""qudt"": ""http://qudt.org/qudt/owl/quantity/"",
+    ""om"": ""http://purl.oclc.org/NET/ssnx/qu/vocab/unit/"",
+    ""ssn"": ""http://www.w3.org/ns/sensor#"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#""
+  },
+  ""@id"": ""P-101"",
+  ""lis:hasQuality"": {
+    ""@id"": ""outlet_pressure"",
+    ""lis:qualityQuantifiedAs"": {
+      ""@id"": ""measured_outlet_pressure"",
+      ""lis:datumValue"": ""5"",
+      ""lis:datumUOM"": ""bar""
+    }
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'lis:datumUOM': 'bar'}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'lis:datumUOM': 'bar'}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'lis:datumUOM': 'bar'}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'lis:datumUOM': 'bar'}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T05,slot_filling,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2983,109,3092,"{
+  ""class"": ""lis:Pump"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:quantityDatumOfProfile"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The pump P-101 has a measured outlet pressure of 5 bar, which is an example of a quality quantified as a quantity datum.""
+}",,True,,,,,,0,0,1,0,0,0,0,0.16666666666666666,lis:Pump,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:quantityDatumOfProfile,
+0,T05,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,242,2292,"{
+  ""@context"": {
+    ""lis"": ""http://purl.org/linguistics/resource/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""rdfs"": ""http://www.w3.org/2000/01/rdf-schema#""
+  },
+  ""@id"": ""P-101"",
+  ""a"": [""lis:PhysicalObject""],
+  ""lis:hasQuality"": {
+    ""@id"": ""P-101_quality"",
+    ""a"": [""lis:Quality""],
+    ""rdfs:label"": ""outlet pressure of P-101"",
+    ""lis:qualityQuantifiedAs"": {
+      ""@id"": ""P-101_pressure_datum"",
+      ""a"": [""lis:QualityDatum""],
+      ""rdfs:label"": ""measured outlet pressure of P-101"",
+      ""lis:datumValue"": {""@value"": 5, ""@type"": ""xsd:float""},
+      ""lis:datumUOM"": {
+        ""@id"": ""bar_unit"",
+        ""a"": [""lis:UnitOfMeasure""],
+        ""rdfs:label"": ""bar""
+      }
+    }
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'rdfs:label': 'bar'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'rdfs:label': 'bar'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'rdfs:label': 'bar'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'rdfs:label': 'bar'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T05,slot_filling,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2294,105,2399,"{
+""class"": ""lis:PhysicalArtefact"",
+""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+""intermediate_node"": true,
+""supporting_chunks"": {
+""class"": ""Chunk: lis:PhysicalQuantity"",
+""property"": ""Chunk: lis:profileQuantityDatum"",
+""intermediate_node"": null
+},
+""reasoning"": ""The pump P-101 has a measured outlet pressure of 5 bar, which is an example of a physical quantity that can be quantified by measurement.""
+}",,True,,,,,,1,0,1,0,0,0,0,0.3333333333333333,lis:PhysicalArtefact,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:PhysicalQuantity,Chunk: lis:profileQuantityDatum,
+0,T05,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,477,2527,"{
+  ""@context"": {
+    ""lis"": ""http://purl.org/linguistics/resource/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""rdfs"": ""http://www.w3.org/2000/01/rdf-schema#""
+  },
+  ""@id"": ""P-101"",
+  ""a"": [""lis:PhysicalObject""],
+  ""lis:hasQuality"": {
+    ""@id"": ""pressure-quality-of-P-101"",
+    ""a"": [""lis:Quality""],
+    ""rdfs:label"": ""outlet pressure of P-101""
+  },
+  ""lis:qualityOf"": {
+    ""@id"": ""P-101"",
+    ""rdfs:seeAlso"": ""pressure-quality-of-P-101""
+  },
+  ""lis:hasPhysicalQuantity"": {
+    ""@id"": ""pressure-quantity-of-P-101"",
+    ""a"": [""lis:PhysicalQuantity""],
+    ""rdfs:label"": ""outlet pressure of P-101""
+  },
+  ""lis:physicalQuantityOf"": {
+    ""@id"": ""P-101"",
+    ""rdfs:seeAlso"": ""pressure-quantity-of-P-101""
+  },
+  ""lis:hasQualityQuantifiedAs"": {
+    ""@id"": ""measured-pressure-quality-of-P-101"",
+    ""a"": [""lis:QualityDatum""],
+    ""rdfs:label"": ""measured outlet pressure of P-101""
+  },
+  ""lis:qualityQuantifiedAs"": {
+    ""@id"": ""pressure-quantity-of-P-101"",
+    ""rdfs:seeAlso"": ""measured-pressure-quality-of-P-101""
+  },
+  ""lis:datumValue"": {
+    ""@id"": ""5-bar-measurement-value"",
+    ""xsd:value"": ""5"",
+    ""xsd:dataType"": ""xsd:float""
+  },
+  ""lis:hasDatumUOM"": {
+    ""@id"": ""bar-unit-of-measure"",
+    ""a"": [""lis:UnitOfMeasure""],
+    ""rdfs:label"": ""bar unit of measure""
+  },
+  ""lis:datumUOM"": {
+    ""@id"": ""measured-pressure-quality-of-P-101"",
+    ""rdfs:seeAlso"": ""bar-unit-of-measure""
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'bar-unit-of-measure'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'bar-unit-of-measure'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'bar-unit-of-measure'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... 'bar-unit-of-measure'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T05,slot_filling,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2457,97,2554,"{
+""class"": ""lis:Pump"",
+""property"": ""lis:hasMeasuredOutletPressure"",
+""intermediate_node"": true,
+""supporting_chunks"": {
+""class"": ""Chunk: lis:PhysicalArtefact"",
+""property"": ""Chunk: lis:profileQuantityDatum"",
+""intermediate_node"": ""Chunk: lis:Quality""
+},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure, which is a quality of the pump.""
+}",,True,,,,,,0,0,1,0,0,0,0,0.16666666666666666,lis:Pump,lis:hasMeasuredOutletPressure,True,Chunk: lis:PhysicalArtefact,Chunk: lis:profileQuantityDatum,Chunk: lis:Quality
+0,T05,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,143,2193,"{
+  ""@context"": {
+    ""lis"": ""http://rds.posccaesar.org/ontology/lis14/ont/core#"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#""
+  },
+  ""P-101"": {
+    ""a"": [""lis:PhysicalObject""],
+    ""hasQuality"": [
+      {
+        ""a"": [""lis:QualityDatum""],
+        ""datumValue"": {""@value"": ""5"", ""@type"": ""xsd:float""},
+        ""uomOfDatum"": {""@id"": ""bar""}
+      }
+    ]
+  },
+  ""bar"": {
+    ""a"": [""lis:UnitOfMeasure""]
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... ['lis:UnitOfMeasure']}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... ['lis:UnitOfMeasure']}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... ['lis:UnitOfMeasure']}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt... ['lis:UnitOfMeasure']}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+0,T05,slot_filling,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2730,100,2830,"{
+  ""class"": ""lis:FunctionalObject"",
+  ""property"": ""lis:qualityQuantityValue"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {
+    ""class"": null,
+    ""property"": ""Chunk: lis:qualityQuantityValue"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The scenario describes a functional object (pump P-101) with a measured outlet pressure, which is a quality quantity value.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.class
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T01,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,990,52,1042,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2283,28,2311,"{""label"": ""supported"", 
+ ""reasoning"": ""lis:Person rdfs:subClassOf lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,897,36,933,"{""label"": ""undetermined"", 
+ ""reasoning"": ""There is no explicit relationship defined between lis:Person and lis:Organism in the provided ontology content.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+1,T01,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1840,45,1885,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that a Person (lis:Person) is defined as 'An organism that is a human' which implies that every person is an organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,936,53,989,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which in turn is a subclass of PhysicalObject (lis:PhysicalObject)."" }",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1891,52,1943,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,905,31,936,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2259,30,2289,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T02,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,3742,103,3845,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:hasQuality"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The most appropriate IDO property to relate a steel bar to its mass is lis:hasPhysicalQuantity, as it directly links the physical object (steel bar) to its physical quantity (mass)."" }",,True,,,,,,1,1,0,0,1,1,0,0.6666666666666666,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:hasQuality,lis:hasPhysicalQuantity,
+1,T02,slot_filling,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2650,105,2755,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a physical quantity (mass) as one of its qualities.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T02,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2873,120,2993,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The IDO property 'lis:hasQuality' is used to relate a physical object (the steel bar) to its quality (mass), which is a dependent entity that is present any time the bearer exists.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,Chunk: lis:hasQuality,
+1,T02,slot_filling,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,1994,105,2099,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:Compound"",
+    ""property"": ""Chunk: lis:hasPhysicalQuantity"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The steel bar is a physical object, and its mass is a physical quantity that can be characterised in terms of chemical or material properties.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,hasPhysicalQuantity,True,Chunk: lis:Compound,Chunk: lis:hasPhysicalQuantity,
+1,T02,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2913,91,3004,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The IDO property 'hasQuality' is used to relate a physical object to its quality, which in this case is the mass of the steel bar.""}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T02,slot_filling,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2054,116,2170,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:Compound"",
+    ""property"": ""Chunk: lis:physicalQuantityOf"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The mass of a steel bar is a quality that can be quantified by measurement, so it should be related to the physical object (steel bar) using the 'hasQuality' property.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:Compound,Chunk: lis:physicalQuantityOf,
+1,T02,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,3196,102,3298,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasQuality' is the most appropriate to relate a steel bar to its mass because it indicates that the mass is a quality of the physical object (steel bar).""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T02,slot_filling,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2152,106,2258,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'has physical quantity' is suitable for relating a steel bar to its mass because it indicates that the steel bar has a quality (mass) that can be quantified by measurement.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.class
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T03,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,2389,50,2439,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines 'lis:concretizes' as a relation between an activity or physical object and an information object, where the latter is concretized by the former.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2423,55,2478,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content defines lis:concretizes as an object property that relates a physical object or activity to an information object, and provides examples where the information object is made concrete by being printed.""
+}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,1923,62,1985,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1632,55,1687,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,1935,62,1997,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1642,56,1698,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,2094,56,2150,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object or activity to an information object, and states that a report is produced as paper copies, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1706,38,1744,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object to an information object it concretizes.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T04,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1309,29,1338,"{""label"": ""contradicted"", 
+""reasoning"": ""lis:Function rdfs:subClassOf lis:Capability.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+1,T04,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1860,31,1891,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1055,35,1090,"{""label"": ""undetermined"", 
+""reasoning"": ""There is no explicit relationship defined between lis:Function and lis:Capability in the provided ontology content.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+1,T04,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1364,51,1415,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that the Range of lis:hasFunction is lis:Function, but it also defines lis:Capability as a distinct class with its own definition and examples.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+1,T04,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1110,60,1170,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content explicitly states that lis:Function has rdfs:seeAlso property with lis:hasFunction, while lis:Capability has rdfs:seeAlso property with lis:hasCapability, indicating they are distinct concepts.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+1,T04,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1475,57,1532,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that Function (lis:Function) is a subclass of Capability (lis:Capability), but it also defines hasFunction as a subproperty of hasCapability, which implies the inverse relationship.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+1,T04,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1140,56,1196,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability, but it does not imply the converse.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+1,T04,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1706,47,1753,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+1,T05,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,247,2297,"{
+  ""@context"": {
+    ""lis"": ""http://rds.posccaesar.org/ontology/lis14/rdl/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""obo"": ""http://purl.obolibrary.org/obo/"",
+    ""qudt"": ""http://qudt.org/qudt/owl/quantity/"",
+    ""om"": ""http://purl.oclc.org/NET/ssnx/qu/vocab/unit/"",
+    ""ssn"": ""http://www.w3.org/ns/ssn/""
+  },
+  ""@id"": ""P-101"",
+  ""a"": [""lis:PhysicalObject""],
+  ""lis:hasQuality"": {
+    ""@id"": ""pressure_of_P-101"",
+    ""a"": [""lis:Quality""],
+    ""lis:qualityQuantifiedAs"": {
+      ""@id"": ""measured_pressure_of_P-101"",
+      ""a"": [""lis:QualityDatum""],
+      ""lis:datumUOM"": {
+        ""@id"": ""bar""
+      },
+      ""lis:datumValue"": {
+        ""@value"": 5,
+        ""@type"": ""xsd:float""
+      }
+    }
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T05,slot_filling,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2983,109,3092,"{
+  ""class"": ""lis:Pump"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:quantityDatumOfProfile"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The pump P-101 has a measured outlet pressure of 5 bar, which is an example of a quality quantified as a quantity datum.""
+}",,True,,,,,,0,0,1,0,0,0,0,0.16666666666666666,lis:Pump,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:quantityDatumOfProfile,
+1,T05,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,136,2186,"{
+  ""@context"": {
+    ""lis"": ""http://purl.org/linguistics/resource/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""rdfs"": ""http://www.w3.org/2000/01/rdf-schema#""
+  },
+  ""P-101"": {
+    ""@type"": ""lis:PhysicalObject"",
+    ""hasQuality"": [
+      {
+        ""@type"": ""lis:ScalarQuantityDatum"",
+        ""datumValue"": ""5"",
+        ""uomOfDatum"": ""bar"",
+        ""quantifiesQuality"": ""outlet pressure""
+      }
+    ]
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T05,slot_filling,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2294,116,2410,"{
+  ""class"": ""lis:PhysicalArtefact"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:profileQuantityDatum"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The pump P-101 has a measured outlet pressure of 5 bar, which is an example of a physical quantity that can be quantified by measurement.""
+}",,True,,,,,,1,0,1,0,0,0,0,0.3333333333333333,lis:PhysicalArtefact,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:PhysicalQuantity,Chunk: lis:profileQuantityDatum,
+1,T05,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,461,2511,"{
+  ""@context"": {
+    ""lis"": ""http://purl.org/linguistics/resource/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""rdfs"": ""http://www.w3.org/2000/01/rdf-schema#""
+  },
+  ""@id"": ""P-101"",
+  ""a"": [""lis:PhysicalObject""],
+  ""lis:hasQuality"": {
+    ""@id"": ""pressure-quality-of-P-101"",
+    ""a"": [""lis:Quality""],
+    ""rdfs:label"": ""outlet pressure of P-101""
+  },
+  ""lis:qualityOf"": {
+    ""@id"": ""P-101"",
+    ""rdfs:seeAlso"": ""pressure-quality-of-P-101""
+  },
+  ""lis:hasPhysicalQuantity"": {
+    ""@id"": ""pressure-quantity-of-P-101"",
+    ""a"": [""lis:PhysicalQuantity""],
+    ""rdfs:label"": ""outlet pressure of P-101""
+  },
+  ""lis:physicalQuantityOf"": {
+    ""@id"": ""P-101"",
+    ""rdfs:seeAlso"": ""pressure-quantity-of-P-101""
+  },
+  ""lis:hasQualityQuantifiedAs"": {
+    ""@id"": ""measured-pressure-quality-of-P-101"",
+    ""a"": [""lis:QualityDatum""],
+    ""rdfs:label"": ""measured outlet pressure of P-101""
+  },
+  ""lis:qualityQuantifiedAs"": {
+    ""@id"": ""pressure-quality-of-P-101"",
+    ""rdfs:seeAlso"": ""measured-pressure-quality-of-P-101""
+  },
+  ""lis:datumValue"": {
+    ""@id"": ""5-bar"",
+    ""xsd:float"": ""5.0""
+  },
+  ""lis:hasDatumUOM"": {
+    ""@id"": ""bar-uom"",
+    ""a"": [""lis:UnitOfMeasure""],
+    ""rdfs:label"": ""bar unit of measure""
+  },
+  ""lis:datumUOM"": {
+    ""@id"": ""measured-pressure-quality-of-P-101"",
+    ""rdfs:seeAlso"": ""bar-uom""
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T05,slot_filling,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2457,97,2554,"{
+""class"": ""lis:Pump"",
+""property"": ""lis:hasMeasuredOutletPressure"",
+""intermediate_node"": true,
+""supporting_chunks"": {
+""class"": ""Chunk: lis:PhysicalArtefact"",
+""property"": ""Chunk: lis:profileQuantityDatum"",
+""intermediate_node"": ""Chunk: lis:Quality""
+},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure, which is a quality of the pump.""
+}",,True,,,,,,0,0,1,0,0,0,0,0.16666666666666666,lis:Pump,lis:hasMeasuredOutletPressure,True,Chunk: lis:PhysicalArtefact,Chunk: lis:profileQuantityDatum,Chunk: lis:Quality
+1,T05,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,158,2208,"{
+  ""@context"": {
+    ""lis"": ""http://rds.posccaesar.org/ontology/lis14/ont/core#"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#""
+  },
+  ""P-101"": {
+    ""a"": [""lis:PhysicalObject""],
+    ""hasQuality"": [
+      {
+        ""a"": [""lis:Quality""],
+        ""quantifiesQuality"": [
+          {
+            ""a"": [""lis:PhysicalQuantity""],
+            ""uomOfDatum"": [
+              {
+                ""@id"": ""bar""
+              }
+            ],
+            ""datumValue"": {
+              ""@value"": 5,
+              ""@type"": ""xsd:float""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+1,T05,slot_filling,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2730,105,2835,"{
+  ""class"": ""lis:FunctionalObject"",
+  ""property"": ""lis:qualityQuantityValue"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {
+    ""class"": null,
+    ""property"": ""Chunk: lis:hasPhysicalQuantity"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The scenario requires a functional object, which is pump P-101, and a quality quantity value, which represents the measured outlet pressure of 5 bar.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.class
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T01,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,990,52,1042,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2283,28,2311,"{""label"": ""supported"", 
+ ""reasoning"": ""lis:Person rdfs:subClassOf lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,897,36,933,"{""label"": ""undetermined"", 
+ ""reasoning"": ""There is no explicit relationship defined between lis:Person and lis:Organism in the provided ontology content.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+2,T01,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1840,45,1885,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that a Person (lis:Person) is defined as 'An organism that is a human' which implies that every person is an organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,936,53,989,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1891,52,1943,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,905,31,936,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2259,30,2289,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T02,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,3742,103,3845,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:hasQuality"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The most appropriate IDO property to relate a steel bar to its mass is lis:hasPhysicalQuantity, as it directly links the physical object (steel bar) to its physical quantity (mass)."" }",,True,,,,,,1,1,0,0,1,1,0,0.6666666666666666,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:hasQuality,lis:hasPhysicalQuantity,
+2,T02,slot_filling,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2650,105,2755,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a physical quantity (mass) as one of its qualities.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T02,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2873,120,2993,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The IDO property 'lis:hasQuality' is used to relate a physical object (the steel bar) to its quality (mass), which is a dependent entity that exists as long as the bearer exists.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,Chunk: lis:hasQuality,
+2,T02,slot_filling,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,1994,105,2099,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:Compound"",
+    ""property"": ""Chunk: lis:hasPhysicalQuantity"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The steel bar is a physical object, and its mass is a physical quantity that can be characterised in terms of chemical or material properties.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,hasPhysicalQuantity,True,Chunk: lis:Compound,Chunk: lis:hasPhysicalQuantity,
+2,T02,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2913,91,3004,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The IDO property 'hasQuality' is used to relate a physical object to its quality, which in this case is the mass of the steel bar.""}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T02,slot_filling,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2054,116,2170,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:Compound"",
+    ""property"": ""Chunk: lis:physicalQuantityOf"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The mass of a steel bar is a quality that can be quantified by measurement, so it should be related to the physical object (steel bar) using the 'hasQuality' property.""
+}",,True,,,,,,1,0,0,0,0,1,0,0.3333333333333333,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:Compound,Chunk: lis:physicalQuantityOf,
+2,T02,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,3196,102,3298,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasQuality' is the most appropriate to relate a steel bar to its mass because it indicates that the mass is a quality of the physical object (steel bar).""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.property
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T02,slot_filling,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2152,106,2258,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'has physical quantity' is suitable for relating a steel bar to its mass because it indicates that the steel bar has a quality (mass) that can be quantified by measurement.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.class
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T03,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,2389,50,2439,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines 'lis:concretizes' as a relation between an activity or physical object and an information object, where the latter is concretized by the former.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,2423,55,2478,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content defines lis:concretizes as an object property that relates a physical object or activity to an information object, and provides examples where the information object is made concrete by being printed.""
+}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,1923,62,1985,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1632,55,1687,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,1935,62,1997,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1642,56,1698,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,stop,fp_ollama,2094,56,2150,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object or activity to an information object, and states that a report is produced as paper copies, which matches the scenario described in the statement.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1706,38,1744,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object to an information object it concretizes.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T04,verification,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1309,29,1338,"{""label"": ""contradicted"", 
+""reasoning"": ""lis:Function rdfs:subClassOf lis:Capability.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T04,verification,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1860,31,1891,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1055,35,1090,"{""label"": ""undetermined"", 
+""reasoning"": ""There is no explicit relationship defined between lis:Function and lis:Capability in the provided ontology content.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1364,51,1415,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that the Range of lis:hasFunction is lis:Function, but it also defines lis:Capability as a distinct class with its own definition and examples.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1110,60,1170,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content explicitly states that lis:Function has rdfs:seeAlso property with lis:hasFunction, while lis:Capability has rdfs:seeAlso property with lis:hasCapability, indicating they are distinct concepts.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1475,57,1532,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that Function (lis:Function) is a subclass of Capability (lis:Capability), but it also defines hasFunction as a subproperty of hasCapability, which implies the inverse relationship.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T04,verification,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,stop,fp_ollama,1140,56,1196,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability, but it does not imply the converse.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T04,verification,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,stop,fp_ollama,1706,47,1753,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T05,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,247,2297,"{
+  ""@context"": {
+    ""lis"": ""http://rds.posccaesar.org/ontology/lis14/rdl/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""obo"": ""http://purl.obolibrary.org/obo/"",
+    ""qudt"": ""http://qudt.org/qudt/owl/quantity/"",
+    ""om"": ""http://purl.oclc.org/NET/ssnx/qu/vocab/unit/"",
+    ""ssn"": ""http://www.w3.org/ns/ssn/""
+  },
+  ""@id"": ""P-101"",
+  ""a"": [""lis:PhysicalObject""],
+  ""lis:hasQuality"": {
+    ""@id"": ""pressure_of_P-101"",
+    ""a"": [""lis:Quality""],
+    ""lis:qualityQuantifiedAs"": {
+      ""@id"": ""measured_pressure_of_P-101"",
+      ""a"": [""lis:QualityDatum""],
+      ""lis:datumUOM"": {
+        ""@id"": ""bar""
+      },
+      ""lis:datumValue"": {
+        ""@value"": 5,
+        ""@type"": ""xsd:float""
+      }
+    }
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...'@type': 'xsd:float'}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T05,slot_filling,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2983,109,3092,"{
+  ""class"": ""lis:Pump"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:quantityDatumOfProfile"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The pump P-101 has a measured outlet pressure of 5 bar, which is an example of a quality quantified as a quantity datum.""
+}",,True,,,,,,0,0,1,0,0,0,0,0.16666666666666666,lis:Pump,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:quantityDatumOfProfile,
+2,T05,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,136,2186,"{
+  ""@context"": {
+    ""lis"": ""http://purl.org/linguistics/resource/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""rdfs"": ""http://www.w3.org/2000/01/rdf-schema#""
+  },
+  ""P-101"": {
+    ""@type"": ""lis:PhysicalObject"",
+    ""hasQuality"": [
+      {
+        ""@type"": ""lis:ScalarQuantityDatum"",
+        ""datumValue"": ""5"",
+        ""uomOfDatum"": ""bar"",
+        ""quantifiesQuality"": ""outlet pressure""
+      }
+    ]
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...': 'outlet pressure'}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T05,slot_filling,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2294,116,2410,"{
+  ""class"": ""lis:PhysicalArtefact"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:profileQuantityDatum"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The pump P-101 has a measured outlet pressure of 5 bar, which is an example of a physical quantity that can be quantified by measurement.""
+}",,True,,,,,,1,0,1,0,0,0,0,0.3333333333333333,lis:PhysicalArtefact,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:PhysicalQuantity,Chunk: lis:profileQuantityDatum,
+2,T05,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,461,2511,"{
+  ""@context"": {
+    ""lis"": ""http://purl.org/linguistics/resource/"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#"",
+    ""rdfs"": ""http://www.w3.org/2000/01/rdf-schema#""
+  },
+  ""@id"": ""P-101"",
+  ""a"": [""lis:PhysicalObject""],
+  ""lis:hasQuality"": {
+    ""@id"": ""pressure-quality-of-P-101"",
+    ""a"": [""lis:Quality""],
+    ""rdfs:label"": ""outlet pressure of P-101""
+  },
+  ""lis:qualityOf"": {
+    ""@id"": ""P-101"",
+    ""rdfs:seeAlso"": ""pressure-quality-of-P-101""
+  },
+  ""lis:hasPhysicalQuantity"": {
+    ""@id"": ""pressure-quantity-of-P-101"",
+    ""a"": [""lis:PhysicalQuantity""],
+    ""rdfs:label"": ""outlet pressure of P-101""
+  },
+  ""lis:physicalQuantityOf"": {
+    ""@id"": ""P-101"",
+    ""rdfs:seeAlso"": ""pressure-quantity-of-P-101""
+  },
+  ""lis:hasQualityQuantifiedAs"": {
+    ""@id"": ""measured-pressure-quality-of-P-101"",
+    ""a"": [""lis:QualityDatum""],
+    ""rdfs:label"": ""measured outlet pressure of P-101""
+  },
+  ""lis:qualityQuantifiedAs"": {
+    ""@id"": ""pressure-quality-of-P-101"",
+    ""rdfs:seeAlso"": ""measured-pressure-quality-of-P-101""
+  },
+  ""lis:datumValue"": {
+    ""@id"": ""5-bar"",
+    ""xsd:float"": ""5.0""
+  },
+  ""lis:hasDatumUOM"": {
+    ""@id"": ""bar-uom"",
+    ""a"": [""lis:UnitOfMeasure""],
+    ""rdfs:label"": ""bar unit of measure""
+  },
+  ""lis:datumUOM"": {
+    ""@id"": ""measured-pressure-quality-of-P-101"",
+    ""rdfs:seeAlso"": ""bar-uom""
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...fs:seeAlso': 'bar-uom'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T05,slot_filling,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2457,97,2554,"{
+""class"": ""lis:Pump"",
+""property"": ""lis:hasMeasuredOutletPressure"",
+""intermediate_node"": true,
+""supporting_chunks"": {
+""class"": ""Chunk: lis:PhysicalArtefact"",
+""property"": ""Chunk: lis:profileQuantityDatum"",
+""intermediate_node"": ""Chunk: lis:Quality""
+},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure, which is a quality of the pump.""
+}",,True,,,,,,0,0,1,0,0,0,0,0.16666666666666666,lis:Pump,lis:hasMeasuredOutletPressure,True,Chunk: lis:PhysicalArtefact,Chunk: lis:profileQuantityDatum,Chunk: lis:Quality
+2,T05,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,10,stop,fp_ollama,2050,158,2208,"{
+  ""@context"": {
+    ""lis"": ""http://rds.posccaesar.org/ontology/lis14/ont/core#"",
+    ""xsd"": ""http://www.w3.org/2001/XMLSchema#""
+  },
+  ""P-101"": {
+    ""a"": [""lis:PhysicalObject""],
+    ""hasQuality"": [
+      {
+        ""a"": [""lis:Quality""],
+        ""quantifiesQuality"": [
+          {
+            ""a"": [""lis:PhysicalQuantity""],
+            ""uomOfDatum"": [
+              {
+                ""@id"": ""bar""
+              }
+            ],
+            ""datumValue"": {
+              ""@value"": 5,
+              ""@type"": ""xsd:float""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}",,False,"response failed slot_filling schema: 4 validation errors for SlotFillingResponse
+class
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+property
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+intermediate_node
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+supporting_chunks
+  Field required [type=missing, input_value={'@context': {'lis': 'htt...ype': 'xsd:float'}}]}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing",,,,,0,0,0,0,0,0,0,0.0,,,,,,
+2,T05,slot_filling,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v3.txt,5,stop,fp_ollama,2730,105,2835,"{
+  ""class"": ""lis:FunctionalObject"",
+  ""property"": ""lis:qualityQuantityValue"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {
+    ""class"": null,
+    ""property"": ""Chunk: lis:hasPhysicalQuantity"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The scenario requires a functional object, which is pump P-101, and a quality quantity value, which represents the measured outlet pressure of 5 bar.""
+}",,False,"response failed slot_filling schema: 1 validation error for SlotFillingResponse
+supporting_chunks.class
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type",,,,,0,0,0,0,0,0,0,0.0,,,,,,

@@ -1,0 +1,77 @@
+{
+  "stage": "postretrieval (MERGED)",
+  "timestamp_utc": "2026-07-30T10:50:57.244826+00:00",
+  "note": "Merge + offline rescore of two provider-split runs (GPT + Llama), same protocol/tasks/formats. See CHANGELOG 2026-07-30.",
+  "source_trials": {
+    "gpt": "postretrieval-trial-9",
+    "llama": "postretrieval-trial-8"
+  },
+  "source_git_commits": {
+    "gpt": "96b27b95f33915a23552d484173cb2c7b5718f0d",
+    "llama": "96b27b95f33915a23552d484173cb2c7b5718f0d"
+  },
+  "formats": [
+    "turtle",
+    "elot-org",
+    "elot-org-ancestors",
+    "omn",
+    "jsonld",
+    "yaml-ld",
+    "ofn",
+    "schema-concept"
+  ],
+  "models": [
+    "gpt-4o-2024-11-20",
+    "gpt-4o-mini-2024-07-18",
+    "llama3.1:8b-instruct-q8_0"
+  ],
+  "conditions": [
+    "oracle",
+    "retrieved"
+  ],
+  "task_types": [
+    "verification",
+    "slot_filling"
+  ],
+  "task_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05"
+  ],
+  "n_tasks": 5,
+  "n_trials": 3,
+  "seeds": [
+    20260529,
+    20260530,
+    20260531
+  ],
+  "n_calls": 720,
+  "seed": 20260529,
+  "temperature": 0.0,
+  "embedding_model": "text-embedding-3-large",
+  "retrieval_k": 5,
+  "system_prompts": {
+    "verification": "verification_system_v1.txt",
+    "slot_filling": "slot_filling_system_v4.txt"
+  },
+  "loader_versions": {
+    "turtle": "4.0",
+    "elot-org": "3.0",
+    "elot-org-ancestors": "2.0",
+    "omn": "2.0",
+    "jsonld": "1.0",
+    "yaml-ld": "1.0",
+    "ofn": "1.0",
+    "schema-concept": "1.1"
+  },
+  "cost_summary": {
+    "total_prompt_tokens": 1787706,
+    "total_completion_tokens": 48988,
+    "total_tokens": 1836694,
+    "total_calls": 720,
+    "cost_usd_at_pricing_date": 1.760168,
+    "pricing_snapshot_date": "2026-06-07"
+  }
+}

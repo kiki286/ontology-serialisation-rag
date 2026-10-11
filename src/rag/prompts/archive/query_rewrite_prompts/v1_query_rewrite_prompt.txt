@@ -1,0 +1,37 @@
+Background:
+
+The Ontology-based Interoperability (OBI) framework is an emerging ISO 23726 standards series that defines how organisations can achieve semantic interoperability by using shared, formally defined ontologies and artefacts. At its core is the Industrial Data Ontology (IDO), an OWL 2 DL upper ontology that provides high-level, logically grounded concepts—such as objects, events, qualities, and roles—intended to support consistent modelling of industrial data across domains. OBI sets the ecosystem, principles, and governance processes for developing trusted ontologies, templates, patterns, and reference data libraries that align with IDO and enable machine-interpretable data exchange. Together, IDO and the broader OBI ecosystem provide the semantic foundation for integrating industrial data, supporting automated reasoning, and enabling scalable AI and automation across enterprises.
+
+Task:
+
+Rewrite the user query so that it resolves implicit references from the conversation history. 
+The purpose, here, is to ensure that the rewritten query can be used to retrieve relevant documents from a knowledge base covering the Industrial Data Ontology (IDO).
+
+Do NOT make changes unless they are concretely based on conversation history. 
+Do NOT answer the question. 
+
+If the query is already self-contained (not referring to conversation history), return it as is.
+
+Example 1:
+
+Conversation History: The human asks the AI about the "Site" class in the Industrial Data Ontology (IDO). The AI explains that the "Site" class represents a location defined by physical objects like walls or fences, is a subclass of "Location," and is based on the BFO/Information Artefact Ontology's definition of site as a three-dimensional immaterial entity bounded by material entities. It provides examples such as a flight deck, the inside of a manifold, or specific areas like storage space, and mentions how the IDO allows the representation of activities at a site using properties like 'occursIn' and 'siteOf'.
+Question: What is OBI? 
+Rewritten Question: What is OBI?
+
+Example 2:
+
+Conversation History: The human asks the AI about the "Site" class in the Industrial Data Ontology (IDO). The AI explains that the "Site" class represents a location defined by physical objects like walls or fences, is a subclass of "Location," and is based on the BFO/Information Artefact Ontology's definition of site as a three-dimensional immaterial entity bounded by material entities. It provides examples such as a flight deck, the inside of a manifold, or specific areas like storage space, and mentions how the IDO allows the representation of activities at a site using properties like 'occursIn' and 'siteOf'.
+Question: Tell me more about the properties. 
+Rewritten Question: Tell me more about the properties of the Site class in IDO.
+
+Example 3:
+
+Conversation History: The human asks about the properties of the Activity class. The AI explains that the Activity class in the IDO represents a temporal entity involving physical objects, defined as a subclass of the Temporal class. It has a key property, `hasParticipant`, that indicates participation. Examples of activities include actions like pumping, inspection, report writing, and fastening, and the class is designed to model activities with various temporal aspects.
+Question: What's the domain and range of the property?
+Rewritten Question: What's the domain and range of the `hasParticipant` property in the Activity class of the IDO?
+
+Real Task:
+
+Conversation History: {history}
+Question: {question}
+Rewritten Question:

@@ -1,0 +1,188 @@
+==============================
+EXPERIMENT DETAILS:
+==============================
+- Naive RAG
+- K=20
+- v5 naive rag prompt
+- Retrieval Sources
+    ISO_15926-14.ttl
+    ISO_23726-1.md
+    https://rds.posccaesar.org/
+    LIS-14.tex
+    obi-ido-training-session 2, 3, 8, 9
+    disjointness.md 
+    CII-FMEA.tex 
+    modelling_Objects_in_IDO.md 
+    ido-summary 
+    obi-principles 
+
+==============================
+ANSWER BREAKDOWN:
+==============================
+
+1. What are the key concepts in IDO? PARTIAL
+- we want just the five top-level classes
+- actual answer:
+        The Industrial Data Ontology (IDO) encompasses key concepts organized into a hierarchical classification system designed for industrial data. Central to IDO are concepts such as `Object`, which represents independent entities, and various subclasses that include `PhysicalObject`, `InformationObject`, and `Location`. Furthermore, IDO includes properties that establish relationships among entities, covering aspects such as parthood and participation in activities. This structured approach facilitates comprehensive modeling and analysis across different industrial sectors, making IDO suitable for various applications, including automated reasoning and asset management.
+- it's not wrong but not as relevant as we'd like
+- the LLM has access to the top-level classes in its context, it just doesn't realise that's what we want from this question.
+- is this question too vague?
+
+---
+
+2. What is IDO and why would I use it? GOOD
+- perfect 
+
+---
+
+3. I want to model Failure Modes. Where does a “Failure Effect” sit in IDO? BAD
+- we want Activity
+- actual answer:    
+        In the Industrial Data Ontology (IDO), a "Failure Effect" is represented as a subclass of the class that captures outputs resulting from a functional failure. Specifically, it is linked to a "FunctionalFailure," which integrates outcomes such as operational disruptions or changes in status due to a malfunction. For example, a "Failure Effect" could be modeled as a process that results from a "FunctionalFailure," illustrating how failures propagate through a system and impact performance. This aligns with definitions from standards such as IEC 60812 and the structured classification principles outlined within IDO.
+- I think this is using the FMEA doc not IDO stuff???
+
+---
+
+4. Explain an Activity Profile to me and give me an example of how I would use it. GOOD
+- perfect
+
+---
+
+5. I have a Failure Mode Code (representing the failure mode that has occurred) and I have modelled that as an information object. I also want to model the actual Failure Mode that occurred on the equipment. What IDO relation do I use between the Failure Mode Code and the Failure Mode. PARTIAL
+- we want isAbout
+- actual answer:
+        To model the relationship between a Failure Mode Code (as an information object) and the actual Failure Mode that occurred on the equipment, you should use the IDO relation **"represents"**. This relation is appropriate for indicating that the information object (Failure Mode Code) conveys or captures an actual instance of the failure mode. By establishing this relation, you effectively associate the coded representation with the specific failure that has occurred in the equipment.
+
+---
+
+6. What is the difference between a Location and a Site in IDO? PARTIAL
+- solid answer but it described difference between SpatialLoaction and Site
+
+---
+
+7. What OWL profile does IDO use? GOOD
+- good 
+
+---
+
+8. I want to create a reference ontology for failure modes aligned with IDO, what should my namespace for my ontology look like? BAD
+- incorrect
+- ths question is very retrieval sensitive. didn't retrieve correct section 
+- changing the question to "Is there a specific structure/format to the namespace that I must follow?" gets correct retrieval and answer
+
+---
+
+9. If I create a concept in an IDO aligned ontology, what annotations / metadata is required on that concept. PARTIAL
+- same as above. sensitive to retrieval issues 
+- change question to "What are the required annotation properties?" and it gets correct retrieval and answer
+
+---
+
+10. When was IDO last updated? GOOD
+- perfect 
+
+---
+
+11. What is the difference between OBI and IDO? GOOD
+- perfect:
+        The Ontology-based Interoperability (OBI) framework encompasses a broader ecosystem designed to facilitate semantic interoperability across various domains. In contrast, the Industrial Data Ontology (IDO) is a specific component within this framework, serving as an upper ontology that provides high-level concepts essential for modeling industrial data. IDO defines structured terms and relationships to support data integration and automated reasoning, while OBI governs the principles and processes for developing trusted ontologies and artifacts that adhere to IDO's standards. Essentially, OBI is the overarching framework, and IDO is the foundational ontology that enables its goals.
+
+---
+
+12. What are the principles of OBI? PARTIAL
+- good but not what we are looking for. want the 10 principles listed.
+- actual answer:
+        The principles of the Ontology-based Interoperability (OBI) framework include several key aspects to ensure consistency and quality in ontologies aligned with the Industrial Data Ontology (IDO). Firstly, any ontology must comply with OWL 2 Direct Semantics and the W3C Linked Data standards. Secondly, ontologies and their associated documentation should be supported by digital files that facilitate reasoning and demonstrate ontological commitments. Additionally, constraints must be specified to maintain semantic distinctions among resources, and all decisions about ontology alignment should undergo review by a maintenance agency to ensure adherence to established principles.
+- note this is NOT a retrieval issue - all principles ALWAYS provided in obi-principles.md
+
+---
+
+13. What is an ontology maintenance agency? GOOD
+- perfect 
+
+---
+
+14. What does a maintenance agency do? GOOD
+- good
+- actual answer:
+        The term "maintenance agency" refers to a body responsible for maintaining, administering, and publishing updates to ontologies and artefacts within the OBI framework. It plays a crucial role in ensuring quality control and semantic interoperability by evaluating alignment decisions and facilitating the development of ontologies compliant with the IDO standards. This agency can be an ISO-recognized organization or an external group, tasked with the responsibility for the management and quality assurance of OBI artefacts. Their work is fundamental for enterprises to trust and effectively use these ontologies in their operations.
+
+---
+
+15. What sort of ontology checks are required for ontology resources to be considered part of OBI? BAD
+- gold answer:
+        All ontologies in the OBI series shall have suitable ontology quality tests. These tests should provide evidence of ontology evaluation with, for example, model checking processes, syntax checkers, and reasoners. Processes for ontology evaluation of OBI artefacts managed by external groups are the responsibility of the external group and the evaluation should be done to a standard equivalent to that of the ISO 23726 maintenance agency.
+- actual answer:
+        To be considered part of the Ontology-based Interoperability (OBI) series, ontology resources must comply with specific checks. These include being consistent with OWL 2 Direct Semantics, conforming to the W3C Linked Data standards, and encapsulating digital files that serialize all classes and properties described in standard documents. Additionally, the ontologies must be aligned with the Industrial Data Ontology (IDO) either by subclassing directly from IDO or related ontologies, and they should include defined axioms, rules, and constraints to ensure semantic distinctiveness.
+
+---
+ 
+16.  Who maintains ontologies aligned to IDO that are not part of ISO? GOOD
+- good 
+
+---
+
+17. Does IDO use Linked Data? GOOD 
+- good 
+
+---
+
+18. What is a shortcut property? GOOD 
+- good 
+
+---
+
+19. What are the differences between an upper ontology, reference ontology, application ontology, and enterprise ontology? GOOD
+- perfect
+
+---
+
+20. What are annotation properties? GOOD
+- bit of a different answer to gold, but quite good 
+- gold 
+        Annotation properties in ontologies are a vital part of documentation to ensure a shared understanding of the resource and how it should be used. The OBI principles document requires the use of two annotation properties rdfs:label and skos:definitions and suggests the use of many more. Annotation properties are not used by the OWL reasoner.
+- actual 
+        Annotation properties in the context of the Industrial Data Ontology (IDO) are RDF properties that allow for the inclusion of non-semantic information about ontology resources. These properties support various metadata and documentation needs, such as defining human-readable labels, examples of use, and provenance details. Examples include `rdfs:label` for providing a resource's name and `skos:definition` for giving a plain text definition. They are intended to enhance understanding and context without affecting the ontology's reasoning capabilities.
+
+---
+
+21. Is IDO available in different languages? BAD
+- can't answer - I didn't put this info into context oops
+
+---
+
+22. Does the class InformationObject in IDO include documents and database records? GOOD
+- perfect
+
+---
+
+23. In IDO what is the difference between the classes 'function', 'capability' and 'disposition? GOOD 
+- perfect
+
+--- 
+
+24. In IDO what is meant by a Dependent class? GOOD 
+- good 
+
+---
+
+25. What are the different Object classes?
+- actual:
+        The Industrial Data Ontology (IDO) defines the class `lis:Object` as a fundamental categorization that includes five primary subclasses: \n\n1. **PhysicalObject** (lis:PhysicalObject) - tangible entities with mass and spatial occupancy, such as a compressor or a wire.\n2. **InformationObject** (lis:InformationObject) - entities that represent data and information, like database records.\n3. **Location** (lis:Location) - spatial regions, e.g., a room or site.\n4. **Organization** (lis:Organization) - groups with common goals, such as a company.\n5. **FunctionalObject** (lis:FunctionalObject) - entities with specific functions or roles.\n\nThis hierarchy helps systematically classify entities found in industrial settings, facilitating effective data modeling and integration.
+
+======================
+SUMMARY 
+======================
+GOOD:           13 -> 15
+PARTIAL:        4 -> 5
+BAD:            7 -> 4
+
+Key takeways:
+- some questions are very retrieval sensitive. the queries have additional information in them which clouds retrieval. consider query re-writing to ensure retrieval is focused on the relevant portions.
+- questions about applying the ontology generally fail, where LLM is required to pick a class etc.
+        -> not possible - response should say that
+- some questions are just answered differently to how we want even though it has the correct context...?
+        -> provide <4 sentences unless a list is asked for then provide entire list
+- language context still missing
+        -> key updates
+        -> future work

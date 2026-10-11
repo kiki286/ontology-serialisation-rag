@@ -1,0 +1,130 @@
+{
+  "n_rows": 126,
+  "verification": {
+    "n": 63,
+    "majority_class_baseline": 1.0,
+    "majority_label": "supported",
+    "gold_label_counts": {
+      "supported": 63
+    },
+    "per_model": {
+      "gpt-4o-2024-11-20": {
+        "n": 21,
+        "accuracy": 1.0,
+        "majority_class_baseline": 1.0,
+        "modal_pred_label": "supported",
+        "modal_pred_frac": 1.0,
+        "pred_label_counts": {
+          "supported": 21
+        },
+        "flags": [
+          "verification accuracy 1.000 <= majority baseline 1.000",
+          "modal predicted label 'supported' is 1.000 of answers (>90%)"
+        ]
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "n": 21,
+        "accuracy": 0.6666666666666666,
+        "majority_class_baseline": 1.0,
+        "modal_pred_label": "supported",
+        "modal_pred_frac": 0.6666666666666666,
+        "pred_label_counts": {
+          "supported": 14,
+          "contradicted": 7
+        },
+        "flags": [
+          "verification accuracy 0.667 <= majority baseline 1.000"
+        ]
+      },
+      "llama3.1:8b-instruct-q8_0": {
+        "n": 21,
+        "accuracy": 0.8571428571428571,
+        "majority_class_baseline": 1.0,
+        "modal_pred_label": "supported",
+        "modal_pred_frac": 0.8571428571428571,
+        "pred_label_counts": {
+          "supported": 18,
+          "contradicted": 3
+        },
+        "flags": [
+          "verification accuracy 0.857 <= majority baseline 1.000"
+        ]
+      }
+    },
+    "per_reasoning_type": {
+      "direct_assertion": {
+        "n": 63,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "supported": 63
+        },
+        "missing_label_classes": [
+          "contradicted",
+          "undetermined"
+        ]
+      }
+    },
+    "labels_absent_everywhere": [
+      "contradicted",
+      "undetermined"
+    ],
+    "flags": [
+      "[gpt-4o-2024-11-20] verification accuracy 1.000 <= majority baseline 1.000",
+      "[gpt-4o-2024-11-20] modal predicted label 'supported' is 1.000 of answers (>90%)",
+      "[gpt-4o-mini-2024-07-18] verification accuracy 0.667 <= majority baseline 1.000",
+      "[llama3.1:8b-instruct-q8_0] verification accuracy 0.857 <= majority baseline 1.000",
+      "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+      "gold label class(es) absent from the whole set: ['contradicted', 'undetermined']"
+    ]
+  },
+  "ceiling_floor": {
+    "threshold": 0.9,
+    "per_task": {
+      "T02": {
+        "n_cells": 21,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 20,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 1
+      },
+      "T04": {
+        "n_cells": 21,
+        "cells_at_1.0": 17,
+        "cells_at_0.0": 3,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      }
+    },
+    "flags": [
+      "[T02] FLOOR: 20/21 cells at 0.0 (1 exceptions)"
+    ]
+  },
+  "determinism": {
+    "n_cells": 42,
+    "identical_raw_cells": 18,
+    "identical_frac": 0.42857142857142855,
+    "distinct_system_fingerprints": 5,
+    "system_fingerprints": [
+      "",
+      "fp_82e0117e5c",
+      "fp_98f538dc1a",
+      "fp_ab203f6842",
+      "fp_b21e18781d"
+    ]
+  },
+  "floor_citations": {
+    "n_floor_rows": 0,
+    "flags": []
+  },
+  "flags": [
+    "[gpt-4o-2024-11-20] verification accuracy 1.000 <= majority baseline 1.000",
+    "[gpt-4o-2024-11-20] modal predicted label 'supported' is 1.000 of answers (>90%)",
+    "[gpt-4o-mini-2024-07-18] verification accuracy 0.667 <= majority baseline 1.000",
+    "[llama3.1:8b-instruct-q8_0] verification accuracy 0.857 <= majority baseline 1.000",
+    "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+    "gold label class(es) absent from the whole set: ['contradicted', 'undetermined']",
+    "[T02] FLOOR: 20/21 cells at 0.0 (1 exceptions)"
+  ]
+}

@@ -1,0 +1,13 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,420,0.0,0.002749286996141075,0.5773502691896257,2,T15,verification,turtle,retrieved,gpt-4o-2024-11-20
+answered,420,0.0,0.002749286996141075,0.5773502691896257,2,T15,verification,jsonld,retrieved,gpt-4o-2024-11-20
+exact_match_rate,420,0.0,0.0109971479845643,0.5773502691896257,8,T34,slot_filling,ofn,oracle,gpt-4o-2024-11-20
+field_accuracy_class_correct,420,0.0,0.004123930494211612,0.5773502691896257,3,T33,slot_filling,ofn,retrieved,gpt-4o-2024-11-20
+field_accuracy_intermediate_correct,420,0.0,0.01649572197684645,0.5773502691896257,12,T30,slot_filling,turtle,retrieved,gpt-4o-2024-11-20
+field_accuracy_property_correct,420,0.0,0.004123930494211612,0.5773502691896257,3,T42,slot_filling,elot-org,retrieved,gpt-4o-2024-11-20
+field_accuracy_support_class_correct,420,0.0,0.002749286996141075,0.5773502691896257,2,T39,slot_filling,omn,retrieved,gpt-4o-2024-11-20
+field_accuracy_support_intermediate_correct,140,0.0,0.0,0.0,0,T35,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_support_property_correct,420,0.0,0.002749286996141075,0.5773502691896257,2,T48,slot_filling,yaml-ld,retrieved,gpt-4o-2024-11-20
+mean_partial_credit,420,0.0,0.005452752542346465,0.23094010767585033,16,T39,slot_filling,omn,retrieved,gpt-4o-2024-11-20
+parse_errors,420,0.0,0.0,0.0,0,T06,verification,elot-org,oracle,gpt-4o-2024-11-20
+selective_correct,420,0.0,0.002749286996141075,0.5773502691896257,2,T15,verification,turtle,retrieved,gpt-4o-2024-11-20

@@ -1,0 +1,877 @@
+trial_idx,task_id,task_type,reasoning_type,query_source,format,condition,model,provider,model_returned,system_prompt,n_context_chunks,context_char_len,context_chunk_ids,n_pad_chunks,oracle_over_k,pad_strategy,finish_reason,system_fingerprint,prompt_tokens,completion_tokens,total_tokens,raw_response,user_content,covered_class,covered_property,covered_intermediate_node,covered_support_class,covered_support_property,covered_support_intermediate,coverage_all,coverage_frac,parse_ok,parse_error,pred_label,grade_gold_label,grade_pred_label,grade_correct,pred_class,pred_property,pred_intermediate_node,pred_support_class,pred_support_property,pred_support_intermediate,grade_class_correct,grade_property_correct,grade_intermediate_correct,grade_support_class_correct,grade_support_property_correct,grade_support_intermediate_correct,grade_n_fields,grade_exact_match,grade_partial_credit
+0,T01,verification,direct_assertion,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2665,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,990,52,1042,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7942,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:Organization"", ""lis:InformationObject""]",0,False,,stop,fp_ollama,2283,28,2311,"{""label"": ""supported"", 
+ ""reasoning"": ""lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2379,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,917,40,957,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism via the 'SubClassOf' property.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6108,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,1876,31,1907,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2473,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,936,53,989,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6194,"[""lis:Person"", ""lis:Organism"", ""lis:Object"", ""lis:Organization"", ""lis:InformationObject""]",0,False,,stop,fp_ollama,1891,52,1943,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2390,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,905,31,936,"{""label"": ""supported"", 
+ ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7748,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:hasInterest""]",0,False,,stop,fp_ollama,2259,30,2289,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2383,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,959,54,1013,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""
+}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,8316,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,2595,32,2627,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2130,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,875,33,908,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6909,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,2288,32,2320,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2566,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,915,38,953,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism via the SubClassOf axiom.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7166,"[""lis:Person"", ""lis:Organism"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,1974,36,2010,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that SubClassOf(lis:Person lis:Organism), which directly supports the statement.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2295,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,866,32,898,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person is a direct subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T01,verification,direct_assertion,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4725,"[""lis:Organism"", ""lis:Person"", ""lis:InformationObject"", ""lis:Organization"", ""lis:Object""]",0,False,,stop,fp_ollama,1433,31,1464,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person has a direct superclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T02,slot_filling,modelling_pattern,paraphrase,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,12688,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3985,108,4093,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:hasQuality"",
+    ""property"": null,
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The property lis:hasQuality is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a quality, and mass is a physical quantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8613,"[""lis:datumUOM"", ""lis:uomOfDatum"", ""lis:hasPhysicalQuantity"", ""lis:PhysicalQuantity"", ""lis:quantityDatumOfProfile""]",0,False,,stop,fp_ollama,2893,107,3000,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasPhysicalQuantity' is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a physical quantity (mass) as one of its qualities.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,Chunk: lis:hasPhysicalQuantity,,,1,1,1,0,0,,5,0,0.6
+0,T02,slot_filling,modelling_pattern,paraphrase,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8989,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3143,96,3239,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The property lis:hasQuality is used to relate an object to its quality, and since mass is a physical quantity, it should be represented as a quality of the steel bar.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,5950,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:hasPhysicalQuantity"", ""lis:PhaseQuality""]",0,False,,stop,fp_ollama,2274,90,2364,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The scenario requires an intermediate node (lis:PhysicalQuantity) to represent the mass of the steel bar correctly.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,,Chunk: lis:hasPhysicalQuantity,,1,1,0,0,0,,5,0,0.4
+0,T02,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9044,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3156,96,3252,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The property lis:hasQuality is used to relate an object to its quality, and since mass is a physical quantity, the intermediate node lis:hasPhysicalQuantity is required.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasPhysicalQuantity,,,1,0,0,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,5960,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:physicalQuantityOf"", ""lis:uomOfDatum""]",0,False,,stop,fp_ollama,2297,110,2407,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:physicalQuantityOf"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:physicalQuantityOf"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'lis:physicalQuantityOf' is the most appropriate IDO property to relate a steel bar to its mass because it represents the quality of being a physical quantity that can be quantified by measurement.""
+}",,0,0,,0,0,,0,0.0,True,,,,,,lis:PhysicalObject,lis:physicalQuantityOf,False,,Chunk: lis:physicalQuantityOf,,1,0,1,0,0,,5,0,0.4
+0,T02,slot_filling,modelling_pattern,paraphrase,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10389,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3439,88,3527,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality""}, 
+""reasoning"": ""The property 'has quality' is the most appropriate to relate a steel bar to its mass because it indicates that the mass is a dependent entity present any time the steel bar exists.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,False,Chunk: lis:hasQuality,,,1,0,1,0,0,,5,0,0.4
+0,T02,slot_filling,modelling_pattern,paraphrase,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,6385,"[""lis:hasPhysicalQuantity"", ""lis:uomOfDatum"", ""lis:qualityQuantityValue"", ""lis:physicalQuantityOf"", ""lis:PhysicalQuantity""]",0,False,,stop,fp_ollama,2395,104,2499,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The IDO property 'has physical quantity' is the most appropriate relation to link a steel bar to its mass because it directly connects an object with one of its quantifiable qualities.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,0,1,1,0,0,,5,0,0.4
+0,T02,slot_filling,modelling_pattern,paraphrase,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,14613,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,4894,101,4995,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""lis:hasQuality"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it directly links physical objects with their quantifiable qualities.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,lis:hasQuality,lis:hasPhysicalQuantity,,1,1,1,0,1,,5,0,0.8
+0,T02,slot_filling,modelling_pattern,paraphrase,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,11976,"[""lis:PhysicalQuantity"", ""lis:Compound"", ""lis:PhysicalObject"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity""]",0,False,,stop,fp_ollama,4080,87,4167,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasPhysicalQuantity' is defined to relate a physical object to its physical quantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+0,T02,slot_filling,modelling_pattern,paraphrase,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,11699,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,4286,97,4383,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it directly links physical objects with their quantifiable qualities.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+0,T02,slot_filling,modelling_pattern,paraphrase,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9015,"[""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:ScalarQuantityDatum"", ""lis:qualityQuantifiedAs""]",0,False,,stop,fp_ollama,3411,96,3507,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it directly links physical objects with their physical quantities.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+0,T02,slot_filling,modelling_pattern,paraphrase,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10615,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3325,107,3432,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The mass of a steel bar is a physical quantity that can be quantified by measurement, so it should be related to the steel bar using the hasQuality property with an intermediate node for PhysicalQuantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasPhysicalQuantity,,,1,0,0,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8923,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:qualityQuantityValue"", ""lis:profileQuantityDatum"", ""lis:hasPhysicalQuantity""]",0,False,,stop,fp_ollama,2778,88,2866,"{""class"": ""lis:Compound"", 
+""property"": ""lis:qualityQuantityValue"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario requires an intermediate node to represent the physical quantity of mass, which is a quality of the steel bar.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:Compound,lis:qualityQuantityValue,True,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,,5,0,0.0
+0,T02,slot_filling,modelling_pattern,paraphrase,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,4760,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1952,93,2045,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The mass of the steel bar is a quality that can be quantified by measurement, so it requires an intermediate node to represent the physical quantity.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,0,0,0,,5,0,0.2
+0,T02,slot_filling,modelling_pattern,paraphrase,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,4912,"[""lis:PhysicalQuantity"", ""lis:Compound"", ""lis:MaterialCompositionQuality"", ""lis:hasPhysicalQuantity"", ""lis:profileQuantityDatum""]",0,False,,stop,fp_ollama,1967,99,2066,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The property 'has physical quantity' is the most appropriate to relate a steel bar to its mass because it directly links a physical object with one of its quantifiable qualities.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,Chunk: lis:PhysicalQuantity,,,1,1,1,0,0,,5,0,0.6
+0,T03,verification,structural,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,8300,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2389,50,2439,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines 'lis:concretizes' as a relation between an activity or physical object and an information object, where the latter is concretized by the former.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,8481,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:directlyConnectedTo"", ""lis:contains""]",0,False,,stop,fp_ollama,2423,61,2484,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property that relates a physical object or activity to an information object, and provides examples of its usage, including the case where an information object is made concrete by a printed paper copy.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6070,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1939,62,2001,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4855,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:directlyConnectedTo"", ""lis:containedBy""]",0,False,,stop,fp_ollama,1632,55,1687,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6062,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1935,62,1997,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4884,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:representedIn"", ""lis:directlyConnectedTo""]",0,False,,stop,fp_ollama,1642,56,1698,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6821,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2094,56,2150,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object or activity to an information object, and states that a report is produced as paper copies, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5153,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:realizes"", ""lis:connectedTo"", ""DisjointClasses:lis:Dependent,-lis:Object,-lis:Temporal""]",0,False,,stop,fp_ollama,1706,49,1755,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property where the domain is either lis:Activity or lis:PhysicalObject, and the range is lis:InformationObject.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,8969,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2833,85,2918,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property with domain 'lis:Activity' or 'lis:PhysicalObject', and range 'lis:InformationObject'. A maintenance procedure document is an instance of 'lis:Activity', and a printed paper copy of itself is an instance of 'lis:InformationObject'.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,9192,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:connectedTo"", ""lis:contains"", ""lis:realizes""]",0,False,,stop,fp_ollama,2942,92,3034,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content defines 'lis:concretizes' as an object property with domain 'lis:Activity' or 'lis:PhysicalObject', and range 'lis:InformationObject'. The statement fits this definition, where the document is an instance of 'lis:Activity' (a maintenance procedure) and the printed paper copy is an instance of 'lis:InformationObject'.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,7198,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2474,58,2532,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology defines 'concretizes' as an object property where the range is 'InformationObject', and it also states that a printed paper copy is an example of an information object, which supports the statement.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7503,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:contains"", ""lis:realizedIn"", ""lis:connectedTo""]",0,False,,stop,fp_ollama,2645,44,2689,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property where x concretizes y, and y is an information object, which includes documents.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,7175,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2066,49,2115,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that the range of lis:concretizes is lis:InformationObject, and it also defines lis:InformationObject as an object that captures information about something.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7497,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:directlyConnectedTo"", ""lis:connectedTo"", ""lis:locatedRelativeTo""]",0,False,,stop,fp_ollama,2139,72,2211,"{""label"": ""supported"", ""reasoning"": ""The ontology content specifies that the domain of lis:concretizes is an ObjectUnionOf(lis:Activity lis:PhysicalObject), and the range is lis:InformationObject, which entails that a document (an information object) can concretize a printed paper copy (a physical object)."" }",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,4330,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1375,86,1461,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property where the domain includes 'lis:Activity or lis:PhysicalObject', and the range includes 'lis:InformationObject'. The statement describes a situation where a maintenance procedure document (an information object) concretizes a printed paper copy of itself, which is also an information object.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T03,verification,structural,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4705,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:realizes"", ""lis:isAbout"", ""lis:locatedRelativeTo""]",0,False,,stop,fp_ollama,1460,91,1551,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property with domain 'lis:Activity or lis:PhysicalObject' and range 'lis:InformationObject', which entails that a maintenance procedure document (an instance of 'lis:InformationObject') can be concretized by a printed paper copy (also an instance of 'lis:InformationObject').""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3851,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1309,29,1338,"{""label"": ""contradicted"", 
+""reasoning"": ""lis:Function rdfs:subClassOf lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5987,"[""lis:Function"", ""lis:Capability"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:capabilityOf""]",0,False,,stop,fp_ollama,1860,31,1891,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2902,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1073,31,1104,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,3926,"[""lis:functionOf"", ""lis:capabilityOf"", ""lis:hasFunction"", ""lis:Function"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1361,30,1391,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3066,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1110,60,1170,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content explicitly states that lis:Function has rdfs:seeAlso property with lis:hasFunction, while lis:Capability has rdfs:seeAlso property with lis:hasCapability, indicating they are distinct concepts.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4404,"[""lis:Function"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:capabilityOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1475,57,1532,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that Function (lis:Function) is a subclass of Capability (lis:Capability), but it also defines hasFunction as a subproperty of hasCapability, which implies the inverse relationship.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3234,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1140,56,1196,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability, but it does not imply the converse.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5240,"[""lis:Function"", ""lis:hasFunction"", ""lis:Capability"", ""lis:functionOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1706,47,1753,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,4370,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1532,53,1585,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not state that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5911,"[""lis:hasCapability"", ""lis:Function"", ""lis:capabilityOf"", ""lis:functionOf"", ""lis:Capability""]",0,False,,stop,fp_ollama,2035,39,2074,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that 'lis:Function' rdfs:subClassOf 'lis:Capability', which entails the statement.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3414,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1329,53,1382,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not entail that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4732,"[""lis:functionOf"", ""lis:capabilityOf"", ""lis:hasCapability"", ""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1751,53,1804,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not state that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3277,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1084,47,1131,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5499,"[""lis:Function"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:Capability"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1621,42,1663,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability (SubClassOf(lis:Function lis:Capability))""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2551,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,901,31,932,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Function is a direct subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T04,verification,direct_assertion,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4043,"[""lis:Function"", ""lis:Capability"", ""lis:hasFunction"", ""lis:capabilityOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1262,30,1292,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function is a direct subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+0,T05,slot_filling,modelling_pattern,paraphrase,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,23406,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,6532,81,6613,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10525,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:PhysicalQuantity"", ""lis:realizedIn"", ""lis:hasParticipantQualityQuantifiedAs""]",0,False,,stop,fp_ollama,3226,113,3339,"{
+  ""class"": ""lis:Activity"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:profileQuantityDatum"",
+    ""property"": ""Chunk: lis:qualityQuantifiedAs"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality datum, which is then quantified as by the pump's activity.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:Activity,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,Chunk: lis:qualityQuantifiedAs,,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,15395,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,4895,85,4980,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,7088,"[""lis:profileQuantityDatum"", ""lis:PhysicalArtefact"", ""lis:PhysicalQuantity"", ""lis:realizedIn"", ""lis:Function""]",0,False,,stop,fp_ollama,2565,83,2648,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""lis:profileQuantityDatum"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,,,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,15662,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,4956,85,5041,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a scalar quantity datum.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,7724,"[""lis:profileQuantityDatum"", ""lis:PhysicalQuantity"", ""lis:PhysicalArtefact"", ""lis:Stream"", ""lis:realizedIn""]",0,False,,stop,fp_ollama,2700,85,2785,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""Chunk: lis:profileQuantityDatum"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,,,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,18311,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,5512,101,5613,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalObject"", ""property"": ""Chunk: lis:hasQuality"", ""intermediate_node"": ""Chunk: lis:Quality""}, 
+""reasoning"": ""The scenario requires an intermediate node (lis:Quality) to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9113,"[""lis:profileQuantityDatum"", ""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:qualityQuantityValue"", ""lis:FunctionalObject""]",0,False,,stop,fp_ollama,2973,91,3064,"{
+""class"": ""lis:FunctionalObject"",
+""property"": ""lis:qualityQuantityValue"",
+""intermediate_node"": false,
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+""reasoning"": ""The scenario describes a functional object (pump P-101) with a measured outlet pressure of 5 bar, which is a physical quantity.""
+}",,0,1,0,0,1,0,0,0.3333333333333333,True,,,,,,lis:FunctionalObject,lis:qualityQuantityValue,False,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,0,6,0,0.0
+0,T05,slot_filling,modelling_pattern,paraphrase,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,26902,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,8363,102,8465,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalObject"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": ""Chunk: lis:Quality""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the quality being attached, which is a physical quantity.""
+}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9364,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:Stream"", ""lis:qualityQuantityValue""]",0,False,,stop,fp_ollama,3366,102,3468,"{
+  ""class"": ""lis:Pump"",
+  ""property"": ""lis:hasMeasuredOutletPressure"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": null,
+    ""property"": ""lis:qualityQuantityValue"",
+    ""intermediate_node"": ""lis:datumUOM""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure, which is a quality quantity value with a unit of measure.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:Pump,lis:hasMeasuredOutletPressure,True,,lis:qualityQuantityValue,lis:datumUOM,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,20921,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,7193,83,7276,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""An intermediate node is required to represent the scenario correctly because a physical object can have multiple qualities.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10418,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:FunctionalObject"", ""lis:PhysicalQuantity"", ""lis:realizedIn""]",0,False,,stop,fp_ollama,3672,109,3781,"{""class"": ""lis:FunctionalObject"", 
+""property"": ""lis:hasParticipantQualityQuantifiedAs"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:profileQuantityDatum"", ""property"": ""Chunk: lis:qualityQuantifiedAs"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified as a quantity datum, which is then attached to pump P-101.""}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:FunctionalObject,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,Chunk: lis:qualityQuantifiedAs,,0,0,1,0,0,0,6,0,0.16666666666666666
+0,T05,slot_filling,modelling_pattern,paraphrase,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,19305,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,5468,80,5548,"{""class"": ""lis:Pump"", 
+""property"": ""hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario describes a pump with a measured outlet pressure, which is a physical quantity.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:Pump,hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,0,6,0,0.0
+0,T05,slot_filling,modelling_pattern,paraphrase,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9216,"[""lis:profileQuantityDatum"", ""lis:qualityQuantityValue"", ""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:qualityQuantifiedAs""]",0,False,,stop,fp_ollama,2885,79,2964,"{
+""class"": ""lis:Pump"",
+""property"": ""lis:hasPhysicalQuantity"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:profileQuantityDatum"", ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantity value.""
+}",,0,1,0,0,1,0,0,0.3333333333333333,True,,,,,,lis:Pump,lis:hasPhysicalQuantity,True,,Chunk: lis:profileQuantityDatum,,0,1,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,8484,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,2893,115,3008,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:qualityQuantifiedAs"",
+    ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality datum, which is then quantified by the scalar quantity datum.""
+}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,Chunk: lis:qualityQuantifiedAs,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,6,0,0.3333333333333333
+0,T05,slot_filling,modelling_pattern,paraphrase,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,6242,"[""lis:PhysicalQuantity"", ""lis:profileQuantityDatum"", ""lis:implements"", ""lis:PhysicalArtefact"", ""lis:FunctionalObject""]",0,False,,stop,fp_ollama,2215,84,2299,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""pav:hasQuality"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality that can be quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,pav:hasQuality,True,Chunk: lis:PhysicalQuantity,,,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T01,verification,direct_assertion,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2665,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,990,52,1042,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7942,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:Organization"", ""lis:InformationObject""]",0,False,,stop,fp_ollama,2283,28,2311,"{""label"": ""supported"", 
+ ""reasoning"": ""lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2379,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,917,40,957,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism via the 'SubClassOf' property.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6108,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,1876,31,1907,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2473,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,936,53,989,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6194,"[""lis:Person"", ""lis:Organism"", ""lis:Object"", ""lis:Organization"", ""lis:InformationObject""]",0,False,,stop,fp_ollama,1891,52,1943,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2390,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,905,31,936,"{""label"": ""supported"", 
+ ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7748,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:hasInterest""]",0,False,,stop,fp_ollama,2259,30,2289,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2383,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,959,54,1013,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""
+}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,8316,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,2595,32,2627,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2130,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,875,33,908,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6909,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,2288,32,2320,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2566,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,915,38,953,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism via the SubClassOf axiom.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7166,"[""lis:Person"", ""lis:Organism"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,1974,36,2010,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that SubClassOf(lis:Person lis:Organism), which directly supports the statement.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2295,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,866,32,898,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person is a direct subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T01,verification,direct_assertion,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4725,"[""lis:Organism"", ""lis:Person"", ""lis:InformationObject"", ""lis:Organization"", ""lis:Object""]",0,False,,stop,fp_ollama,1433,31,1464,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person has a direct superclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T02,slot_filling,modelling_pattern,paraphrase,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,12688,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3985,108,4093,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:hasQuality"",
+    ""property"": null,
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The property lis:hasQuality is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a quality, and mass is a physical quantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8613,"[""lis:datumUOM"", ""lis:uomOfDatum"", ""lis:hasPhysicalQuantity"", ""lis:PhysicalQuantity"", ""lis:quantityDatumOfProfile""]",0,False,,stop,fp_ollama,2893,107,3000,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasPhysicalQuantity' is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a physical quantity (mass) as one of its qualities.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,Chunk: lis:hasPhysicalQuantity,,,1,1,1,0,0,,5,0,0.6
+1,T02,slot_filling,modelling_pattern,paraphrase,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8989,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3143,92,3235,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The mass of a steel bar is a quality that can be quantified by measurement, so it should be related to the steel bar using the hasQuality property.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,5950,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:hasPhysicalQuantity"", ""lis:PhaseQuality""]",0,False,,stop,fp_ollama,2274,90,2364,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The scenario requires an intermediate node (lis:PhysicalQuantity) to represent the mass of the steel bar correctly.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,,Chunk: lis:hasPhysicalQuantity,,1,1,0,0,0,,5,0,0.4
+1,T02,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9044,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3156,96,3252,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The property lis:hasQuality is used to relate an object to its quality, and since mass is a physical quantity, the intermediate node lis:hasPhysicalQuantity is required.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasPhysicalQuantity,,,1,0,0,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,5960,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:physicalQuantityOf"", ""lis:uomOfDatum""]",0,False,,stop,fp_ollama,2297,110,2407,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:physicalQuantityOf"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:physicalQuantityOf"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'lis:physicalQuantityOf' is the most appropriate IDO property to relate a steel bar to its mass because it represents the quality of being a physical quantity that can be quantified by measurement.""
+}",,0,0,,0,0,,0,0.0,True,,,,,,lis:PhysicalObject,lis:physicalQuantityOf,False,,Chunk: lis:physicalQuantityOf,,1,0,1,0,0,,5,0,0.4
+1,T02,slot_filling,modelling_pattern,paraphrase,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10389,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3439,88,3527,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality""}, 
+""reasoning"": ""The property 'has quality' is the most appropriate to relate a steel bar to its mass because it indicates that the mass is a dependent entity present any time the steel bar exists.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,False,Chunk: lis:hasQuality,,,1,0,1,0,0,,5,0,0.4
+1,T02,slot_filling,modelling_pattern,paraphrase,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,6385,"[""lis:hasPhysicalQuantity"", ""lis:uomOfDatum"", ""lis:qualityQuantityValue"", ""lis:physicalQuantityOf"", ""lis:PhysicalQuantity""]",0,False,,stop,fp_ollama,2395,104,2499,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The IDO property 'has physical quantity' is the most appropriate relation to link a steel bar to its mass because it directly connects an object with one of its quantifiable qualities.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,0,1,1,0,0,,5,0,0.4
+1,T02,slot_filling,modelling_pattern,paraphrase,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,14613,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,4894,100,4994,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": ""lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property lis:hasQuality is used to relate an object to its quality, and since mass is a physical quantity, it requires an intermediate node of type lis:PhysicalQuantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,11976,"[""lis:PhysicalQuantity"", ""lis:Compound"", ""lis:PhysicalObject"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity""]",0,False,,stop,fp_ollama,4080,87,4167,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasPhysicalQuantity' is defined to relate a physical object to its physical quantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+1,T02,slot_filling,modelling_pattern,paraphrase,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,11699,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,4286,97,4383,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it directly links physical objects with their quantifiable qualities.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+1,T02,slot_filling,modelling_pattern,paraphrase,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9015,"[""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:ScalarQuantityDatum"", ""lis:qualityQuantifiedAs""]",0,False,,stop,fp_ollama,3411,96,3507,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it directly links physical objects with their physical quantities.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+1,T02,slot_filling,modelling_pattern,paraphrase,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10615,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3325,107,3432,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The mass of a steel bar is a physical quantity that can be quantified by measurement, so it should be related to the steel bar using the hasQuality property with an intermediate node for PhysicalQuantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasPhysicalQuantity,,,1,0,0,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8923,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:qualityQuantityValue"", ""lis:profileQuantityDatum"", ""lis:hasPhysicalQuantity""]",0,False,,stop,fp_ollama,2778,88,2866,"{""class"": ""lis:Compound"", 
+""property"": ""lis:qualityQuantityValue"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario requires an intermediate node to represent the physical quantity of mass, which is a quality of the steel bar.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:Compound,lis:qualityQuantityValue,True,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,,5,0,0.0
+1,T02,slot_filling,modelling_pattern,paraphrase,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,4760,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1952,91,2043,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""lis:hasQuality"", ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The mass of the steel bar is a quality that can be quantified by measurement, so it requires an intermediate node to represent the scenario correctly.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+1,T02,slot_filling,modelling_pattern,paraphrase,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,4912,"[""lis:PhysicalQuantity"", ""lis:Compound"", ""lis:MaterialCompositionQuality"", ""lis:hasPhysicalQuantity"", ""lis:profileQuantityDatum""]",0,False,,stop,fp_ollama,1967,99,2066,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The property 'has physical quantity' is the most appropriate to relate a steel bar to its mass because it directly links a physical object with one of its quantifiable qualities.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,Chunk: lis:PhysicalQuantity,,,1,1,1,0,0,,5,0,0.6
+1,T03,verification,structural,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,8300,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2389,50,2439,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines 'lis:concretizes' as a relation between an activity or physical object and an information object, where the latter is concretized by the former.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,8481,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:directlyConnectedTo"", ""lis:contains""]",0,False,,stop,fp_ollama,2423,61,2484,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property that relates a physical object or activity to an information object, and provides examples of its usage, including the case where an information object is made concrete by a printed paper copy.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6070,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1939,62,2001,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4855,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:directlyConnectedTo"", ""lis:containedBy""]",0,False,,stop,fp_ollama,1632,55,1687,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6062,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1935,62,1997,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4884,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:representedIn"", ""lis:directlyConnectedTo""]",0,False,,stop,fp_ollama,1642,56,1698,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6821,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2094,56,2150,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object or activity to an information object, and states that a report is produced as paper copies, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5153,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:realizes"", ""lis:connectedTo"", ""DisjointClasses:lis:Dependent,-lis:Object,-lis:Temporal""]",0,False,,stop,fp_ollama,1706,49,1755,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property where the domain is either lis:Activity or lis:PhysicalObject, and the range is lis:InformationObject.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,8969,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2833,85,2918,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property with domain 'lis:Activity' or 'lis:PhysicalObject', and range 'lis:InformationObject'. A maintenance procedure document is an instance of 'lis:Activity', and a printed paper copy of itself is an instance of 'lis:InformationObject'.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,9192,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:connectedTo"", ""lis:contains"", ""lis:realizes""]",0,False,,stop,fp_ollama,2942,92,3034,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content defines 'lis:concretizes' as an object property with domain 'lis:Activity' or 'lis:PhysicalObject', and range 'lis:InformationObject'. The statement fits this definition, where the document is an instance of 'lis:Activity' (a maintenance procedure) and the printed paper copy is an instance of 'lis:InformationObject'.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,7198,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2474,58,2532,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology defines 'concretizes' as an object property where the range is 'InformationObject', and it also states that a printed paper copy is an example of an information object, which supports the statement.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7503,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:contains"", ""lis:realizedIn"", ""lis:connectedTo""]",0,False,,stop,fp_ollama,2645,44,2689,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property where x concretizes y, and y is an information object, which includes documents.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,7175,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2066,49,2115,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that the range of lis:concretizes is lis:InformationObject, and it also defines lis:InformationObject as an object that captures information about something.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7497,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:directlyConnectedTo"", ""lis:connectedTo"", ""lis:locatedRelativeTo""]",0,False,,stop,fp_ollama,2139,72,2211,"{""label"": ""supported"", ""reasoning"": ""The ontology content specifies that the domain of lis:concretizes is an ObjectUnionOf(lis:Activity lis:PhysicalObject), and the range is lis:InformationObject, which entails that a document (an information object) can concretize a printed paper copy (a physical object)."" }",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,4330,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1375,86,1461,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property where the domain includes 'lis:Activity or lis:PhysicalObject', and the range includes 'lis:InformationObject'. The statement describes a situation where a maintenance procedure document (an information object) concretizes a printed paper copy of itself, which is also an information object.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T03,verification,structural,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4705,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:realizes"", ""lis:isAbout"", ""lis:locatedRelativeTo""]",0,False,,stop,fp_ollama,1460,91,1551,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property with domain 'lis:Activity or lis:PhysicalObject' and range 'lis:InformationObject', which entails that a maintenance procedure document (an instance of 'lis:InformationObject') can be concretized by a printed paper copy (also an instance of 'lis:InformationObject').""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3851,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1309,29,1338,"{""label"": ""contradicted"", 
+""reasoning"": ""lis:Function rdfs:subClassOf lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5987,"[""lis:Function"", ""lis:Capability"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:capabilityOf""]",0,False,,stop,fp_ollama,1860,31,1891,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2902,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1073,31,1104,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,3926,"[""lis:functionOf"", ""lis:capabilityOf"", ""lis:hasFunction"", ""lis:Function"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1361,30,1391,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3066,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1110,60,1170,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content explicitly states that lis:Function has rdfs:seeAlso property with lis:hasFunction, while lis:Capability has rdfs:seeAlso property with lis:hasCapability, indicating they are distinct concepts.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4404,"[""lis:Function"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:capabilityOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1475,57,1532,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that Function (lis:Function) is a subclass of Capability (lis:Capability), but it also defines hasFunction as a subproperty of hasCapability, which implies the inverse relationship.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3234,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1140,56,1196,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability, but it does not imply the converse.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5240,"[""lis:Function"", ""lis:hasFunction"", ""lis:Capability"", ""lis:functionOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1706,47,1753,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,4370,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1532,53,1585,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not state that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5911,"[""lis:hasCapability"", ""lis:Function"", ""lis:capabilityOf"", ""lis:functionOf"", ""lis:Capability""]",0,False,,stop,fp_ollama,2035,39,2074,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that 'lis:Function' rdfs:subClassOf 'lis:Capability', which entails the statement.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3414,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1329,53,1382,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not entail that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4732,"[""lis:functionOf"", ""lis:capabilityOf"", ""lis:hasCapability"", ""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1751,53,1804,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not state that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3277,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1084,47,1131,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5499,"[""lis:Function"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:Capability"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1621,42,1663,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability (SubClassOf(lis:Function lis:Capability))""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2551,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,901,31,932,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Function is a direct subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T04,verification,direct_assertion,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4043,"[""lis:Function"", ""lis:Capability"", ""lis:hasFunction"", ""lis:capabilityOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1262,30,1292,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function is a direct subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+1,T05,slot_filling,modelling_pattern,paraphrase,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,23406,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,6532,81,6613,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10525,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:PhysicalQuantity"", ""lis:realizedIn"", ""lis:hasParticipantQualityQuantifiedAs""]",0,False,,stop,fp_ollama,3226,113,3339,"{
+  ""class"": ""lis:Activity"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:profileQuantityDatum"",
+    ""property"": ""Chunk: lis:qualityQuantifiedAs"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality datum, which is then quantified as by the pump's activity.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:Activity,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,Chunk: lis:qualityQuantifiedAs,,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,15395,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,4895,85,4980,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,7088,"[""lis:profileQuantityDatum"", ""lis:PhysicalArtefact"", ""lis:PhysicalQuantity"", ""lis:realizedIn"", ""lis:Function""]",0,False,,stop,fp_ollama,2565,83,2648,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""lis:profileQuantityDatum"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,,,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,15662,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,4956,85,5041,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a scalar quantity datum.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,7724,"[""lis:profileQuantityDatum"", ""lis:PhysicalQuantity"", ""lis:PhysicalArtefact"", ""lis:Stream"", ""lis:realizedIn""]",0,False,,stop,fp_ollama,2700,85,2785,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""Chunk: lis:profileQuantityDatum"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,,,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,18311,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,5512,101,5613,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalObject"", ""property"": ""Chunk: lis:hasQuality"", ""intermediate_node"": ""Chunk: lis:Quality""}, 
+""reasoning"": ""The scenario requires an intermediate node (lis:Quality) to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9113,"[""lis:profileQuantityDatum"", ""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:qualityQuantityValue"", ""lis:FunctionalObject""]",0,False,,stop,fp_ollama,2973,91,3064,"{
+""class"": ""lis:FunctionalObject"",
+""property"": ""lis:qualityQuantityValue"",
+""intermediate_node"": false,
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+""reasoning"": ""The scenario describes a functional object (pump P-101) with a measured outlet pressure of 5 bar, which is a physical quantity.""
+}",,0,1,0,0,1,0,0,0.3333333333333333,True,,,,,,lis:FunctionalObject,lis:qualityQuantityValue,False,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,0,6,0,0.0
+1,T05,slot_filling,modelling_pattern,paraphrase,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,26902,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,8363,102,8465,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalObject"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": ""Chunk: lis:Quality""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the quality being attached, which is a physical quantity.""
+}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9364,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:Stream"", ""lis:qualityQuantityValue""]",0,False,,stop,fp_ollama,3366,102,3468,"{
+  ""class"": ""lis:Pump"",
+  ""property"": ""lis:hasMeasuredOutletPressure"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": null,
+    ""property"": ""lis:qualityQuantityValue"",
+    ""intermediate_node"": ""lis:datumUOM""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure, which is a quality quantity value with a unit of measure.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:Pump,lis:hasMeasuredOutletPressure,True,,lis:qualityQuantityValue,lis:datumUOM,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,20921,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,7193,83,7276,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""An intermediate node is required to represent the scenario correctly because a physical object can have multiple qualities.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10418,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:FunctionalObject"", ""lis:PhysicalQuantity"", ""lis:realizedIn""]",0,False,,stop,fp_ollama,3672,109,3781,"{""class"": ""lis:FunctionalObject"", 
+""property"": ""lis:hasParticipantQualityQuantifiedAs"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:profileQuantityDatum"", ""property"": ""Chunk: lis:qualityQuantifiedAs"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified as a quantity datum, which is then attached to pump P-101.""}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:FunctionalObject,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,Chunk: lis:qualityQuantifiedAs,,0,0,1,0,0,0,6,0,0.16666666666666666
+1,T05,slot_filling,modelling_pattern,paraphrase,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,19305,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,5468,80,5548,"{""class"": ""lis:Pump"", 
+""property"": ""hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario describes a pump with a measured outlet pressure, which is a physical quantity.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:Pump,hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,0,6,0,0.0
+1,T05,slot_filling,modelling_pattern,paraphrase,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9216,"[""lis:profileQuantityDatum"", ""lis:qualityQuantityValue"", ""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:qualityQuantifiedAs""]",0,False,,stop,fp_ollama,2885,79,2964,"{
+""class"": ""lis:Pump"",
+""property"": ""lis:hasPhysicalQuantity"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:profileQuantityDatum"", ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantity value.""
+}",,0,1,0,0,1,0,0,0.3333333333333333,True,,,,,,lis:Pump,lis:hasPhysicalQuantity,True,,Chunk: lis:profileQuantityDatum,,0,1,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,8484,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,2893,115,3008,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:qualityQuantifiedAs"",
+    ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality datum, which is then quantified by the scalar quantity datum.""
+}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,Chunk: lis:qualityQuantifiedAs,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,6,0,0.3333333333333333
+1,T05,slot_filling,modelling_pattern,paraphrase,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,6242,"[""lis:PhysicalQuantity"", ""lis:profileQuantityDatum"", ""lis:implements"", ""lis:PhysicalArtefact"", ""lis:FunctionalObject""]",0,False,,stop,fp_ollama,2215,84,2299,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""pav:hasQuality"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality that can be quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,pav:hasQuality,True,Chunk: lis:PhysicalQuantity,,,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T01,verification,direct_assertion,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2665,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,990,52,1042,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7942,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:Organization"", ""lis:InformationObject""]",0,False,,stop,fp_ollama,2283,28,2311,"{""label"": ""supported"", 
+ ""reasoning"": ""lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2379,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,917,40,957,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism via the 'SubClassOf' property.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6108,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,1876,31,1907,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2473,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,936,53,989,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6194,"[""lis:Person"", ""lis:Organism"", ""lis:Object"", ""lis:Organization"", ""lis:InformationObject""]",0,False,,stop,fp_ollama,1891,52,1943,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that Person (lis:Person) is a subclass of Organism (lis:Organism), which implies that every instance of Person is also an instance of Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2390,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,905,31,936,"{""label"": ""supported"", 
+ ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7748,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:hasInterest""]",0,False,,stop,fp_ollama,2259,30,2289,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2383,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,959,54,1013,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism, which implies that every instance of lis:Person is also an instance of lis:Organism.""
+}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,8316,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,2595,32,2627,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2130,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,875,33,908,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,6909,"[""lis:Organism"", ""lis:Person"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,2288,32,2320,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person rdfs:subClassOf lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2566,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,915,38,953,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism via the SubClassOf axiom.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7166,"[""lis:Person"", ""lis:Organism"", ""lis:Object"", ""lis:InformationObject"", ""lis:Organization""]",0,False,,stop,fp_ollama,1974,36,2010,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that SubClassOf(lis:Person lis:Organism), which directly supports the statement.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2295,"[""lis:Person"", ""lis:Organism""]",0,False,,stop,fp_ollama,866,32,898,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Person is a direct subclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T01,verification,direct_assertion,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4725,"[""lis:Organism"", ""lis:Person"", ""lis:InformationObject"", ""lis:Organization"", ""lis:Object""]",0,False,,stop,fp_ollama,1433,31,1464,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person has a direct superclass of lis:Organism.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T02,slot_filling,modelling_pattern,paraphrase,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,12688,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3985,108,4093,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:hasQuality"",
+    ""property"": null,
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The property lis:hasQuality is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a quality, and mass is a physical quantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8613,"[""lis:datumUOM"", ""lis:uomOfDatum"", ""lis:hasPhysicalQuantity"", ""lis:PhysicalQuantity"", ""lis:quantityDatumOfProfile""]",0,False,,stop,fp_ollama,2893,107,3000,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasPhysicalQuantity' is the most appropriate to relate a steel bar to its mass because it indicates that the steel bar has a physical quantity (mass) as one of its qualities.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,Chunk: lis:hasPhysicalQuantity,,,1,1,1,0,0,,5,0,0.6
+2,T02,slot_filling,modelling_pattern,paraphrase,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8989,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3143,92,3235,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The mass of a steel bar is a quality that can be quantified by measurement, so it should be related to the steel bar using the hasQuality property.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,5950,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:hasPhysicalQuantity"", ""lis:PhaseQuality""]",0,False,,stop,fp_ollama,2274,90,2364,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The scenario requires an intermediate node (lis:PhysicalQuantity) to represent the mass of the steel bar correctly.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,,Chunk: lis:hasPhysicalQuantity,,1,1,0,0,0,,5,0,0.4
+2,T02,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9044,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3156,96,3252,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The property lis:hasQuality is used to relate an object to its quality, and since mass is a physical quantity, the intermediate node lis:hasPhysicalQuantity is required.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasPhysicalQuantity,,,1,0,0,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,5960,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:physicalQuantityOf"", ""lis:uomOfDatum""]",0,False,,stop,fp_ollama,2297,110,2407,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:physicalQuantityOf"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:physicalQuantityOf"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'lis:physicalQuantityOf' is the most appropriate IDO property to relate a steel bar to its mass because it represents the quality of being a physical quantity that can be quantified by measurement.""
+}",,0,0,,0,0,,0,0.0,True,,,,,,lis:PhysicalObject,lis:physicalQuantityOf,False,,Chunk: lis:physicalQuantityOf,,1,0,1,0,0,,5,0,0.4
+2,T02,slot_filling,modelling_pattern,paraphrase,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10389,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3439,88,3527,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": ""Chunk: lis:hasQuality""}, 
+""reasoning"": ""The property 'has quality' is the most appropriate to relate a steel bar to its mass because it indicates that the mass is a dependent entity present any time the steel bar exists.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,False,Chunk: lis:hasQuality,,,1,0,1,0,0,,5,0,0.4
+2,T02,slot_filling,modelling_pattern,paraphrase,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,6385,"[""lis:hasPhysicalQuantity"", ""lis:uomOfDatum"", ""lis:qualityQuantityValue"", ""lis:physicalQuantityOf"", ""lis:PhysicalQuantity""]",0,False,,stop,fp_ollama,2395,104,2499,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The IDO property 'has physical quantity' is the most appropriate relation to link a steel bar to its mass because it directly connects an object with one of its quantifiable qualities.""
+}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,0,1,1,0,0,,5,0,0.4
+2,T02,slot_filling,modelling_pattern,paraphrase,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,14613,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,4894,100,4994,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": ""lis:hasQuality"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The property lis:hasQuality is used to relate an object to its quality, and since mass is a physical quantity, it requires an intermediate node of type lis:PhysicalQuantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,11976,"[""lis:PhysicalQuantity"", ""lis:Compound"", ""lis:PhysicalObject"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity""]",0,False,,stop,fp_ollama,4080,87,4167,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": false,
+  ""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+  ""reasoning"": ""The property 'hasPhysicalQuantity' is defined to relate a physical object to its physical quantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+2,T02,slot_filling,modelling_pattern,paraphrase,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,11699,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,4286,97,4383,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it directly links physical objects with their quantifiable qualities.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+2,T02,slot_filling,modelling_pattern,paraphrase,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9015,"[""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:MaterialCompositionQuality"", ""lis:ScalarQuantityDatum"", ""lis:qualityQuantifiedAs""]",0,False,,stop,fp_ollama,3411,96,3507,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The property lis:hasPhysicalQuantity is the most appropriate to relate a steel bar to its mass because it directly links physical objects with their physical quantities.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,1,1,1,0,0,,5,0,0.6
+2,T02,slot_filling,modelling_pattern,paraphrase,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10615,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,3325,107,3432,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {""class"": ""Chunk: lis:hasPhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+  ""reasoning"": ""The mass of a steel bar is a physical quantity that can be quantified by measurement, so it should be related to the steel bar using the hasQuality property with an intermediate node for PhysicalQuantity.""
+}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:hasPhysicalQuantity,,,1,0,0,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,8923,"[""lis:Compound"", ""lis:PhysicalQuantity"", ""lis:qualityQuantityValue"", ""lis:profileQuantityDatum"", ""lis:hasPhysicalQuantity""]",0,False,,stop,fp_ollama,2778,88,2866,"{""class"": ""lis:Compound"", 
+""property"": ""lis:qualityQuantityValue"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario requires an intermediate node to represent the physical quantity of mass, which is a quality of the steel bar.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:Compound,lis:qualityQuantityValue,True,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,,5,0,0.0
+2,T02,slot_filling,modelling_pattern,paraphrase,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,4760,"[""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1952,91,2043,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""lis:hasQuality"", ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The mass of the steel bar is a quality that can be quantified by measurement, so it requires an intermediate node to represent the scenario correctly.""}",,1,1,,1,1,,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:hasQuality,,,1,0,0,0,0,,5,0,0.2
+2,T02,slot_filling,modelling_pattern,paraphrase,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,4912,"[""lis:PhysicalQuantity"", ""lis:Compound"", ""lis:MaterialCompositionQuality"", ""lis:hasPhysicalQuantity"", ""lis:profileQuantityDatum""]",0,False,,stop,fp_ollama,1967,99,2066,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+""reasoning"": ""The property 'has physical quantity' is the most appropriate to relate a steel bar to its mass because it directly links a physical object with one of its quantifiable qualities.""}",,0,1,,0,1,,0,0.5,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,False,Chunk: lis:PhysicalQuantity,,,1,1,1,0,0,,5,0,0.6
+2,T03,verification,structural,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,8300,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2389,50,2439,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines 'lis:concretizes' as a relation between an activity or physical object and an information object, where the latter is concretized by the former.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,8481,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:directlyConnectedTo"", ""lis:contains""]",0,False,,stop,fp_ollama,2423,61,2484,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property that relates a physical object or activity to an information object, and provides examples of its usage, including the case where an information object is made concrete by a printed paper copy.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6070,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1939,62,2001,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4855,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:directlyConnectedTo"", ""lis:containedBy""]",0,False,,stop,fp_ollama,1632,55,1687,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6062,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1935,62,1997,"{""label"": ""supported"", ""reasoning"": ""The statement is supported by the definition of 'concretizes' in IDO, which states that if x 'concretizes' y, then y is an 'information object', and x is a 'physical object' copy of y.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4884,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:connectedTo"", ""lis:representedIn"", ""lis:directlyConnectedTo""]",0,False,,stop,fp_ollama,1642,56,1698,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content defines the property lis:concretizes with a natural language definition that includes the case where an information object is made concrete by a physical object copy, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,6821,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2094,56,2150,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines the property lis:concretizes as relating a physical object or activity to an information object, and states that a report is produced as paper copies, which matches the scenario described in the statement.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5153,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:realizes"", ""lis:connectedTo"", ""DisjointClasses:lis:Dependent,-lis:Object,-lis:Temporal""]",0,False,,stop,fp_ollama,1706,49,1755,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property where the domain is either lis:Activity or lis:PhysicalObject, and the range is lis:InformationObject.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,8969,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2833,85,2918,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property with domain 'lis:Activity' or 'lis:PhysicalObject', and range 'lis:InformationObject'. A maintenance procedure document is an instance of 'lis:Activity', and a printed paper copy of itself is an instance of 'lis:InformationObject'.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,9192,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:connectedTo"", ""lis:contains"", ""lis:realizes""]",0,False,,stop,fp_ollama,2942,92,3034,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content defines 'lis:concretizes' as an object property with domain 'lis:Activity' or 'lis:PhysicalObject', and range 'lis:InformationObject'. The statement fits this definition, where the document is an instance of 'lis:Activity' (a maintenance procedure) and the printed paper copy is an instance of 'lis:InformationObject'.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,7198,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2474,58,2532,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology defines 'concretizes' as an object property where the range is 'InformationObject', and it also states that a printed paper copy is an example of an information object, which supports the statement.""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7503,"[""lis:concretizedBy"", ""lis:concretizes"", ""lis:contains"", ""lis:realizedIn"", ""lis:connectedTo""]",0,False,,stop,fp_ollama,2645,44,2689,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:concretizes as an object property where x concretizes y, and y is an information object, which includes documents.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,7175,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,2066,49,2115,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that the range of lis:concretizes is lis:InformationObject, and it also defines lis:InformationObject as an object that captures information about something.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,7497,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:directlyConnectedTo"", ""lis:connectedTo"", ""lis:locatedRelativeTo""]",0,False,,stop,fp_ollama,2139,72,2211,"{""label"": ""supported"", ""reasoning"": ""The ontology content specifies that the domain of lis:concretizes is an ObjectUnionOf(lis:Activity lis:PhysicalObject), and the range is lis:InformationObject, which entails that a document (an information object) can concretize a printed paper copy (a physical object)."" }",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,4,4330,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:InformationObject"", ""lis:PhysicalObject""]",0,False,,stop,fp_ollama,1375,86,1461,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property where the domain includes 'lis:Activity or lis:PhysicalObject', and the range includes 'lis:InformationObject'. The statement describes a situation where a maintenance procedure document (an information object) concretizes a printed paper copy of itself, which is also an information object.""}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T03,verification,structural,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4705,"[""lis:concretizes"", ""lis:concretizedBy"", ""lis:realizes"", ""lis:isAbout"", ""lis:locatedRelativeTo""]",0,False,,stop,fp_ollama,1460,91,1551,"{
+  ""label"": ""supported"",
+  ""reasoning"": ""The ontology content specifies that 'lis:concretizes' is an object property with domain 'lis:Activity or lis:PhysicalObject' and range 'lis:InformationObject', which entails that a maintenance procedure document (an instance of 'lis:InformationObject') can be concretized by a printed paper copy (also an instance of 'lis:InformationObject').""
+}",,,,,,,,,,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3851,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1309,29,1338,"{""label"": ""contradicted"", 
+""reasoning"": ""lis:Function rdfs:subClassOf lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5987,"[""lis:Function"", ""lis:Capability"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:capabilityOf""]",0,False,,stop,fp_ollama,1860,31,1891,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2902,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1073,31,1104,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,3926,"[""lis:functionOf"", ""lis:capabilityOf"", ""lis:hasFunction"", ""lis:Function"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1361,30,1391,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3066,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1110,60,1170,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content explicitly states that lis:Function has rdfs:seeAlso property with lis:hasFunction, while lis:Capability has rdfs:seeAlso property with lis:hasCapability, indicating they are distinct concepts.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4404,"[""lis:Function"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:capabilityOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1475,57,1532,"{""label"": ""contradicted"", 
+""reasoning"": ""The ontology content states that Function (lis:Function) is a subclass of Capability (lis:Capability), but it also defines hasFunction as a subproperty of hasCapability, which implies the inverse relationship.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3234,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1140,56,1196,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability, but it does not imply the converse.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5240,"[""lis:Function"", ""lis:hasFunction"", ""lis:Capability"", ""lis:functionOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1706,47,1753,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,4370,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1532,53,1585,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not state that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5911,"[""lis:hasCapability"", ""lis:Function"", ""lis:capabilityOf"", ""lis:functionOf"", ""lis:Capability""]",0,False,,stop,fp_ollama,2035,39,2074,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that 'lis:Function' rdfs:subClassOf 'lis:Capability', which entails the statement.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3414,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1329,53,1382,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not entail that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4732,"[""lis:functionOf"", ""lis:capabilityOf"", ""lis:hasCapability"", ""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1751,53,1804,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function rdfs:subClassOf lis:Capability, but it does not state that every instance of lis:Function is an instance of lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,3277,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,1084,47,1131,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, but it does not state that every lis:Function is a lis:Capability.""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,5499,"[""lis:Function"", ""lis:functionOf"", ""lis:hasFunction"", ""lis:Capability"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1621,42,1663,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability (SubClassOf(lis:Function lis:Capability))""}",,,,,,,,,,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,2,2551,"[""lis:Function"", ""lis:Capability""]",0,False,,stop,fp_ollama,901,31,932,"{""label"": ""supported"", 
+""reasoning"": ""The ontology content states that lis:Function is a direct subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T04,verification,direct_assertion,label,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,verification_system_v1.txt,5,4043,"[""lis:Function"", ""lis:Capability"", ""lis:hasFunction"", ""lis:capabilityOf"", ""lis:hasCapability""]",0,False,,stop,fp_ollama,1262,30,1292,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function is a direct subclass of lis:Capability.""}",,,,,,,,,,True,,supported,supported,supported,1,,,,,,,,,,,,,,,
+2,T05,slot_filling,modelling_pattern,paraphrase,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,23406,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,6532,81,6613,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,turtle,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10525,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:PhysicalQuantity"", ""lis:realizedIn"", ""lis:hasParticipantQualityQuantifiedAs""]",0,False,,stop,fp_ollama,3226,113,3339,"{
+  ""class"": ""lis:Activity"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:profileQuantityDatum"",
+    ""property"": ""Chunk: lis:qualityQuantifiedAs"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality datum, which is then quantified as by the pump's activity.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:Activity,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,Chunk: lis:qualityQuantifiedAs,,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,15395,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,4895,85,4980,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,elot-org,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,7088,"[""lis:profileQuantityDatum"", ""lis:PhysicalArtefact"", ""lis:PhysicalQuantity"", ""lis:realizedIn"", ""lis:Function""]",0,False,,stop,fp_ollama,2565,83,2648,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""lis:profileQuantityDatum"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,,,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,15662,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,4956,85,5041,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a scalar quantity datum.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,elot-org-ancestors,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,7724,"[""lis:profileQuantityDatum"", ""lis:PhysicalQuantity"", ""lis:PhysicalArtefact"", ""lis:Stream"", ""lis:realizedIn""]",0,False,,stop,fp_ollama,2700,85,2785,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""Chunk: lis:profileQuantityDatum"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,,,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,18311,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,5512,101,5613,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalObject"", ""property"": ""Chunk: lis:hasQuality"", ""intermediate_node"": ""Chunk: lis:Quality""}, 
+""reasoning"": ""The scenario requires an intermediate node (lis:Quality) to represent the measured outlet pressure as a quality of pump P-101.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,omn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9113,"[""lis:profileQuantityDatum"", ""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:qualityQuantityValue"", ""lis:FunctionalObject""]",0,False,,stop,fp_ollama,2973,91,3064,"{
+""class"": ""lis:FunctionalObject"",
+""property"": ""lis:qualityQuantityValue"",
+""intermediate_node"": false,
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+""reasoning"": ""The scenario describes a functional object (pump P-101) with a measured outlet pressure of 5 bar, which is a physical quantity.""
+}",,0,1,0,0,1,0,0,0.3333333333333333,True,,,,,,lis:FunctionalObject,lis:qualityQuantityValue,False,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,0,6,0,0.0
+2,T05,slot_filling,modelling_pattern,paraphrase,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,26902,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,8363,102,8465,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalObject"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": ""Chunk: lis:Quality""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the quality being attached, which is a physical quantity.""
+}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,jsonld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9364,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:Stream"", ""lis:qualityQuantityValue""]",0,False,,stop,fp_ollama,3366,102,3468,"{
+  ""class"": ""lis:Pump"",
+  ""property"": ""lis:hasMeasuredOutletPressure"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": null,
+    ""property"": ""lis:qualityQuantityValue"",
+    ""intermediate_node"": ""lis:datumUOM""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure, which is a quality quantity value with a unit of measure.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:Pump,lis:hasMeasuredOutletPressure,True,,lis:qualityQuantityValue,lis:datumUOM,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,yaml-ld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,20921,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,7193,83,7276,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""An intermediate node is required to represent the scenario correctly because a physical object can have multiple qualities.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,yaml-ld,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,10418,"[""lis:profileQuantityDatum"", ""lis:qualityQuantifiedAs"", ""lis:FunctionalObject"", ""lis:PhysicalQuantity"", ""lis:realizedIn""]",0,False,,stop,fp_ollama,3672,109,3781,"{""class"": ""lis:FunctionalObject"", 
+""property"": ""lis:hasParticipantQualityQuantifiedAs"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:profileQuantityDatum"", ""property"": ""Chunk: lis:qualityQuantifiedAs"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantified as a quantity datum, which is then attached to pump P-101.""}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:FunctionalObject,lis:hasParticipantQualityQuantifiedAs,True,Chunk: lis:profileQuantityDatum,Chunk: lis:qualityQuantifiedAs,,0,0,1,0,0,0,6,0,0.16666666666666666
+2,T05,slot_filling,modelling_pattern,paraphrase,ofn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,19305,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,5468,80,5548,"{""class"": ""lis:Pump"", 
+""property"": ""hasPhysicalQuantity"", 
+""intermediate_node"": false, 
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:hasPhysicalQuantity"", ""intermediate_node"": null}, 
+""reasoning"": ""The scenario describes a pump with a measured outlet pressure, which is a physical quantity.""}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:Pump,hasPhysicalQuantity,False,,Chunk: lis:hasPhysicalQuantity,,0,0,0,0,0,0,6,0,0.0
+2,T05,slot_filling,modelling_pattern,paraphrase,ofn,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,9216,"[""lis:profileQuantityDatum"", ""lis:qualityQuantityValue"", ""lis:PhysicalQuantity"", ""lis:hasPhysicalQuantity"", ""lis:qualityQuantifiedAs""]",0,False,,stop,fp_ollama,2885,79,2964,"{
+""class"": ""lis:Pump"",
+""property"": ""lis:hasPhysicalQuantity"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": null, ""property"": ""Chunk: lis:profileQuantityDatum"", ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality quantity value.""
+}",,0,1,0,0,1,0,0,0.3333333333333333,True,,,,,,lis:Pump,lis:hasPhysicalQuantity,True,,Chunk: lis:profileQuantityDatum,,0,1,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,schema-concept,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,8484,"[""lis:PhysicalObject"", ""lis:PhysicalQuantity"", ""lis:Quality"", ""lis:QualityDatum"", ""lis:ScalarQuantityDatum"", ""lis:hasPhysicalQuantity"", ""lis:hasQuality"", ""lis:qualityQuantifiedAs"", ""lis:datumUOM"", ""lis:datumValue""]",0,False,,stop,fp_ollama,2893,115,3008,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalQuantity"",
+    ""property"": ""Chunk: lis:qualityQuantifiedAs"",
+    ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality datum, which is then quantified by the scalar quantity datum.""
+}",,1,1,1,1,1,1,1,1.0,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,Chunk: lis:qualityQuantifiedAs,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,6,0,0.3333333333333333
+2,T05,slot_filling,modelling_pattern,paraphrase,schema-concept,retrieved,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,5,6242,"[""lis:PhysicalQuantity"", ""lis:profileQuantityDatum"", ""lis:implements"", ""lis:PhysicalArtefact"", ""lis:FunctionalObject""]",0,False,,stop,fp_ollama,2215,84,2299,"{
+""class"": ""lis:PhysicalQuantity"",
+""property"": ""pav:hasQuality"",
+""intermediate_node"": true,
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality that can be quantified by measurement.""
+}",,0,0,0,0,0,0,0,0.0,True,,,,,,lis:PhysicalQuantity,pav:hasQuality,True,Chunk: lis:PhysicalQuantity,,,0,0,1,0,0,0,6,0,0.16666666666666666

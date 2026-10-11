@@ -1,0 +1,1611 @@
+# Authored candidates for the future 60-item benchmark; not part of the five-task pilot.
+
+- task_id: T06
+  task_type: verification
+  query: "Is every lis:SpatialLocation a lis:Site in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: bare_disjointness
+  gold_chunks: [lis:Site, lis:SpatialLocation]
+  retrieval_gold_chunks: [lis:Site, lis:SpatialLocation]
+  statement: "Every lis:SpatialLocation is a lis:Site."
+  gold_label: contradicted
+  licensing_axiom: [lis:Site, owl:disjointWith, lis:SpatialLocation]
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-01 candidate B-14. The direct Site/SpatialLocation disjointness axiom
+    makes the asserted subclass statement unsatisfiable under the benchmark's
+    contradicted-label convention. All seven formats directly recover the axiom.
+
+- task_id: T07
+  task_type: verification
+  query: "Is every lis:Object a lis:Dependent in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: bare_disjointness
+  gold_chunks: [lis:Dependent, lis:Object]
+  retrieval_gold_chunks: [lis:Dependent, lis:Object]
+  statement: "Every lis:Object is a lis:Dependent."
+  gold_label: contradicted
+  licensing_axiom: [lis:Dependent, owl:disjointWith, lis:Object]
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-01 candidate B-04. The direct Dependent/Object disjointness axiom
+    makes the asserted subclass statement unsatisfiable under the benchmark's
+    contradicted-label convention. All seven formats directly recover the axiom.
+
+- task_id: T08
+  task_type: verification
+  query: "Is every lis:PhysicalObject an lis:InformationObject in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: bare_disjointness
+  gold_chunks: [lis:InformationObject, lis:PhysicalObject]
+  retrieval_gold_chunks: [lis:InformationObject, lis:PhysicalObject]
+  statement: "Every lis:PhysicalObject is an lis:InformationObject."
+  gold_label: contradicted
+  licensing_axiom: [lis:InformationObject, owl:disjointWith, lis:PhysicalObject]
+  licensing_axiom_status: asserted
+  annotation_prose_screen: neutral
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-01 candidate B-08. The direct InformationObject/PhysicalObject
+    disjointness axiom makes the asserted subclass statement unsatisfiable under
+    the benchmark's contradicted-label convention. All seven formats directly
+    recover the axiom.
+
+- task_id: T09
+  task_type: verification
+  query: "Is every feature a physical object in IDO?"
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: subsumption
+  gold_chunks: [lis:Feature, lis:PhysicalObject]
+  retrieval_gold_chunks: [lis:Feature, lis:PhysicalObject]
+  statement: "Every lis:Feature is a lis:PhysicalObject."
+  gold_label: supported
+  licensing_axiom: [lis:Feature, rdfs:subClassOf, lis:PhysicalObject]
+  licensing_axiom_status: asserted
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-A07. Clean direct formal-axiom-legibility control.
+    Feature matched set: T09 is the immediate clean item; T11 is the two-link,
+    partially leaked extension with the same subject. The leakage gradient is
+    entity-concentrated: Feature and Interval account for all clean and partial
+    items, so between-item leakage comparisons are confounded by entity familiarity.
+
+- task_id: T10
+  task_type: verification
+  query: "Is every lis:Interval an lis:IntervalRegion in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:Interval, lis:IntervalRegion]
+  retrieval_gold_chunks: [lis:Interval, lis:IntervalRegion]
+  statement: "Every lis:Interval is an lis:IntervalRegion."
+  gold_label: supported
+  licensing_axiom: [lis:Interval, rdfs:subClassOf, lis:IntervalRegion]
+  licensing_axiom_status: asserted
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-A15. Clean direct formal-axiom-legibility control.
+    Interval matched set: T10 is immediate and clean, T12 is two-link and
+    partially leaked, and T13 is three-link and partially leaked. The leakage
+    gradient is entity-concentrated, so use this within-subject set rather than
+    treating clean-versus-leaked items as an unconfounded between-item comparison.
+
+- task_id: T11
+  task_type: verification
+  query: "Is every lis:Feature an lis:Object in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:Feature, lis:PhysicalObject, lis:Object]
+  retrieval_gold_chunks: [lis:Feature, lis:PhysicalObject, lis:Object]
+  statement: "Every lis:Feature is an lis:Object."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:Feature, rdfs:subClassOf, lis:PhysicalObject]
+    - [lis:PhysicalObject, rdfs:subClassOf, lis:Object]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E07. Two-link, partially leaked composition item:
+    Feature -> PhysicalObject is clean, while PhysicalObject -> Object is
+    states_axiom. Paired with T09 as the Feature within-subject distance and
+    leakage contrast. Not an independent formal-legibility item.
+
+- task_id: T12
+  task_type: verification
+  query: "Is every interval a temporal region in IDO?"
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: subsumption
+  gold_chunks: [lis:Interval, lis:IntervalRegion, lis:TemporalRegion]
+  retrieval_gold_chunks: [lis:Interval, lis:IntervalRegion, lis:TemporalRegion]
+  statement: "Every lis:Interval is a lis:TemporalRegion."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:Interval, rdfs:subClassOf, lis:IntervalRegion]
+    - [lis:IntervalRegion, rdfs:subClassOf, lis:TemporalRegion]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E17. Two-link, partially leaked composition item:
+    Interval -> IntervalRegion is clean and IntervalRegion -> TemporalRegion is
+    states_axiom. Part of the Interval matched set with T10 and T13; use the
+    within-subject progression rather than an unconfounded between-item contrast.
+
+- task_id: T13
+  task_type: verification
+  query: "Is every lis:Interval a lis:Temporal in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:Interval, lis:IntervalRegion, lis:TemporalRegion, lis:Temporal]
+  retrieval_gold_chunks: [lis:Interval, lis:IntervalRegion, lis:TemporalRegion, lis:Temporal]
+  statement: "Every lis:Interval is a lis:Temporal."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:Interval, rdfs:subClassOf, lis:IntervalRegion]
+    - [lis:IntervalRegion, rdfs:subClassOf, lis:TemporalRegion]
+    - [lis:TemporalRegion, rdfs:subClassOf, lis:Temporal]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E16. Three-link, partially leaked composition item:
+    the first Interval link is clean and the remaining two links are states_axiom.
+    Completes the Interval matched set T10/T12/T13. Its four-chunk gold set is a
+    retrieval consideration, not an exclusion rule.
+
+- task_id: T14
+  task_type: verification
+  query: "Is every lis:ActivityProfile a lis:Temporal in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:ActivityProfile, lis:Activity, lis:Temporal]
+  retrieval_gold_chunks: [lis:ActivityProfile, lis:Activity, lis:Temporal]
+  statement: "Every lis:ActivityProfile is a lis:Temporal."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:ActivityProfile, rdfs:subClassOf, lis:Activity]
+    - [lis:Activity, rdfs:subClassOf, lis:Temporal]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E01. Fully leaked two-link composition-depth item;
+    both direct links are states_axiom. It contributes a temporal/activity branch,
+    not isolated formal-axiom legibility.
+
+- task_id: T15
+  task_type: verification
+  query: "Is every lis:Person a lis:PhysicalObject in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:Person, lis:Organism, lis:PhysicalObject]
+  retrieval_gold_chunks: [lis:Person, lis:Organism, lis:PhysicalObject]
+  statement: "Every lis:Person is a lis:PhysicalObject."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:Person, rdfs:subClassOf, lis:Organism]
+    - [lis:Organism, rdfs:subClassOf, lis:PhysicalObject]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E24. Fully leaked two-link composition-depth item;
+    both direct links are states_axiom. It broadens the batch beyond the
+    Feature/Interval concentration but does not isolate formal legibility.
+
+- task_id: T16
+  task_type: verification
+  query: "Is every lis:ScalarQuantityDatum an lis:InformationObject in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:ScalarQuantityDatum, lis:QualityDatum, lis:InformationObject]
+  retrieval_gold_chunks: [lis:ScalarQuantityDatum, lis:QualityDatum, lis:InformationObject]
+  statement: "Every lis:ScalarQuantityDatum is an lis:InformationObject."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:ScalarQuantityDatum, rdfs:subClassOf, lis:QualityDatum]
+    - [lis:QualityDatum, rdfs:subClassOf, lis:InformationObject]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E35. Fully leaked two-link composition-depth item;
+    both direct links are states_axiom. Covers the quantity-datum and information
+    branch rather than isolated formal-axiom legibility.
+
+- task_id: T17
+  task_type: verification
+  query: "Is every lis:LineInSpace an lis:Object in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:LineInSpace, lis:SpatialLocation, lis:Location, lis:Object]
+  retrieval_gold_chunks: [lis:LineInSpace, lis:SpatialLocation, lis:Location, lis:Object]
+  statement: "Every lis:LineInSpace is an lis:Object."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:LineInSpace, rdfs:subClassOf, lis:SpatialLocation]
+    - [lis:SpatialLocation, rdfs:subClassOf, lis:Location]
+    - [lis:Location, rdfs:subClassOf, lis:Object]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E20. Fully leaked three-link composition-depth item;
+    all direct links are states_axiom. Covers the spatial branch and has a
+    four-chunk retrieval gold set.
+
+- task_id: T18
+  task_type: verification
+  query: "Is every lis:Function a lis:Dependent in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: subsumption
+  gold_chunks: [lis:Function, lis:Capability, lis:Disposition, lis:Potential, lis:Dependent]
+  retrieval_gold_chunks: [lis:Function, lis:Capability, lis:Disposition, lis:Potential, lis:Dependent]
+  statement: "Every lis:Function is a lis:Dependent."
+  gold_label: supported
+  licensing_axiom_status: entailed_chain
+  licensing_axiom:
+    - [lis:Function, rdfs:subClassOf, lis:Capability]
+    - [lis:Capability, rdfs:subClassOf, lis:Disposition]
+    - [lis:Disposition, rdfs:subClassOf, lis:Potential]
+    - [lis:Potential, rdfs:subClassOf, lis:Dependent]
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: false
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-02 candidate B02-E08. Fully leaked four-link composition-depth item;
+    all direct links are states_axiom. It is the sole five-class gold set, so
+    recall@5 = 1.0 requires retrieving the exact full gold set. It continues the
+    Function hierarchy beyond pilot T04 but is not an independent formal-legibility item.
+
+- task_id: T19
+  task_type: verification
+  query: "Is every organisation of people a functional object in IDO?"
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: unasserted_class_relation
+  sub_kind: cross_branch
+  shared_parent: null
+  source_candidate_id: C-X1
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:Organization, lis:FunctionalObject]
+  retrieval_gold_chunks: [lis:Organization, lis:FunctionalObject]
+  statement: "Every lis:Organization is a lis:FunctionalObject."
+  gold_label: undetermined
+  axiom: "lis:Organization SubClassOf lis:FunctionalObject"
+  negated_axiom: "lis:Organization DisjointWith lis:FunctionalObject"
+  licensing_axiom: [lis:Organization, rdfs:subClassOf, lis:FunctionalObject]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate C-X1, selected by the author. Approved paraphrase;
+    it preserves the Organization -> FunctionalObject claim.
+    query_source is confounded with item identity at n=4: paraphrase items are a
+    specific, non-randomised subset, so any query_source difference cannot be
+    separated from their content.
+
+- task_id: T20
+  task_type: verification
+  query: "Is every process profile an event?"
+  reasoning_type: definitional
+  query_source: paraphrase
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:Activity
+  source_candidate_id: N-A1
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:ActivityProfile, lis:Event]
+  retrieval_gold_chunks: [lis:ActivityProfile, lis:Event]
+  statement: "Every lis:ActivityProfile is a lis:Event."
+  gold_label: undetermined
+  axiom: "lis:ActivityProfile SubClassOf lis:Event"
+  negated_axiom: "lis:ActivityProfile DisjointWith lis:Event"
+  licensing_axiom: [lis:ActivityProfile, rdfs:subClassOf, lis:Event]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate N-A1, selected by the author. Approved paraphrase;
+    it preserves the ActivityProfile -> Event claim.
+    query_source is confounded with item identity at n=4: paraphrase items are a
+    specific, non-randomised subset, so any query_source difference cannot be
+    separated from their content.
+
+- task_id: T21
+  task_type: verification
+  query: "Is every lis:QualityDatum a lis:TemporalDatum in IDO?"
+  reasoning_type: definitional
+  query_source: label
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:InformationObject
+  source_candidate_id: N-I1
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:QualityDatum, lis:TemporalDatum]
+  retrieval_gold_chunks: [lis:QualityDatum, lis:TemporalDatum]
+  statement: "Every lis:QualityDatum is a lis:TemporalDatum."
+  gold_label: undetermined
+  axiom: "lis:QualityDatum SubClassOf lis:TemporalDatum"
+  negated_axiom: "lis:QualityDatum DisjointWith lis:TemporalDatum"
+  licensing_axiom: [lis:QualityDatum, rdfs:subClassOf, lis:TemporalDatum]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate N-I1, selected by the author. The class definitions'
+    differentiae do not settle the QualityDatum -> TemporalDatum relation.
+
+- task_id: T22
+  task_type: verification
+  query: "Is every lis:UnitOfMeasure a lis:QualityDatum in IDO?"
+  reasoning_type: definitional
+  query_source: label
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:InformationObject
+  source_candidate_id: N-I5
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:UnitOfMeasure, lis:QualityDatum]
+  retrieval_gold_chunks: [lis:UnitOfMeasure, lis:QualityDatum]
+  statement: "Every lis:UnitOfMeasure is a lis:QualityDatum."
+  gold_label: undetermined
+  axiom: "lis:UnitOfMeasure SubClassOf lis:QualityDatum"
+  negated_axiom: "lis:UnitOfMeasure DisjointWith lis:QualityDatum"
+  licensing_axiom: [lis:UnitOfMeasure, rdfs:subClassOf, lis:QualityDatum]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate N-I5, selected by the author. N-I5 is the specified
+    UnitOfMeasure -> QualityDatum direction, not N-I6.
+
+- task_id: T23
+  task_type: verification
+  query: "Is every lis:Compound a lis:Phase in IDO?"
+  reasoning_type: definitional
+  query_source: label
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:PhysicalObject
+  source_candidate_id: C-X15
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:Compound, lis:Phase]
+  retrieval_gold_chunks: [lis:Compound, lis:Phase]
+  statement: "Every lis:Compound is a lis:Phase."
+  gold_label: undetermined
+  axiom: "lis:Compound SubClassOf lis:Phase"
+  negated_axiom: "lis:Compound DisjointWith lis:Phase"
+  licensing_axiom: [lis:Compound, rdfs:subClassOf, lis:Phase]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate C-X15, selected by the author. Defined material
+    composition and homogeneous form are not related by the annotations.
+
+- task_id: T24
+  task_type: verification
+  query: "Is every lis:Feature a lis:PhysicalArtefact in IDO?"
+  reasoning_type: definitional
+  query_source: label
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:PhysicalObject
+  source_candidate_id: C-X14
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:Feature, lis:PhysicalArtefact]
+  retrieval_gold_chunks: [lis:Feature, lis:PhysicalArtefact]
+  statement: "Every lis:Feature is a lis:PhysicalArtefact."
+  gold_label: undetermined
+  axiom: "lis:Feature SubClassOf lis:PhysicalArtefact"
+  negated_axiom: "lis:Feature DisjointWith lis:PhysicalArtefact"
+  licensing_axiom: [lis:Feature, rdfs:subClassOf, lis:PhysicalArtefact]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate C-X14, selected by the author. The Feature definition
+    does not settle deliberate creation.
+
+- task_id: T25
+  task_type: verification
+  query: "Is every lis:Disposition an lis:Interest in IDO?"
+  reasoning_type: definitional
+  query_source: label
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:Potential
+  source_candidate_id: N-P1
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:Disposition, lis:Interest]
+  retrieval_gold_chunks: [lis:Disposition, lis:Interest]
+  statement: "Every lis:Disposition is an lis:Interest."
+  gold_label: undetermined
+  axiom: "lis:Disposition SubClassOf lis:Interest"
+  negated_axiom: "lis:Disposition DisjointWith lis:Interest"
+  licensing_axiom: [lis:Disposition, rdfs:subClassOf, lis:Interest]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate N-P1, selected by the author. Structural dependence and
+    value to a bearer are not related by the annotations.
+
+- task_id: T26
+  task_type: verification
+  query: "Is the potential of an object to do something (dependent on its structure) a role in IDO?"
+  reasoning_type: definitional
+  query_source: paraphrase
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:Potential
+  source_candidate_id: N-P2
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:Disposition, lis:Role]
+  retrieval_gold_chunks: [lis:Disposition, lis:Role]
+  statement: "Every lis:Disposition is a lis:Role."
+  gold_label: undetermined
+  axiom: "lis:Disposition SubClassOf lis:Role"
+  negated_axiom: "lis:Disposition DisjointWith lis:Role"
+  licensing_axiom: [lis:Disposition, rdfs:subClassOf, lis:Role]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate N-P2, selected by the author. Approved paraphrase;
+    it preserves the Disposition -> Role claim. query_source is
+    confounded with item identity at n=4: paraphrase items are a specific,
+    non-randomised subset, so any query_source difference cannot be separated from
+    their content.
+
+- task_id: T27
+  task_type: verification
+  query: "Is every lis:MaterialCompositionQuality a lis:PhaseQuality in IDO?"
+  reasoning_type: definitional
+  query_source: label
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:Quality
+  source_candidate_id: N-Q1
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:MaterialCompositionQuality, lis:PhaseQuality]
+  retrieval_gold_chunks: [lis:MaterialCompositionQuality, lis:PhaseQuality]
+  statement: "Every lis:MaterialCompositionQuality is a lis:PhaseQuality."
+  gold_label: undetermined
+  axiom: "lis:MaterialCompositionQuality SubClassOf lis:PhaseQuality"
+  negated_axiom: "lis:MaterialCompositionQuality DisjointWith lis:PhaseQuality"
+  licensing_axiom: [lis:MaterialCompositionQuality, rdfs:subClassOf, lis:PhaseQuality]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate N-Q1, selected by the author. Material/chemical and phase
+    characterisation are not made exclusive in the annotations.
+
+- task_id: T28
+  task_type: verification
+  query: "Is every physical amount characterized in terms of its geometry in IDO?"
+  reasoning_type: definitional
+  query_source: paraphrase
+  mechanism: unasserted_class_relation
+  sub_kind: co_hyponym
+  shared_parent: lis:Quality
+  source_candidate_id: N-Q8
+  authoring_source: agent_candidate_human_selected
+  adversarial: false
+  gold_chunks: [lis:PhysicalQuantity, lis:ShapeQuality]
+  retrieval_gold_chunks: [lis:PhysicalQuantity, lis:ShapeQuality]
+  statement: "Every lis:PhysicalQuantity is a lis:ShapeQuality."
+  gold_label: undetermined
+  axiom: "lis:PhysicalQuantity SubClassOf lis:ShapeQuality"
+  negated_axiom: "lis:PhysicalQuantity DisjointWith lis:ShapeQuality"
+  licensing_axiom: [lis:PhysicalQuantity, rdfs:subClassOf, lis:ShapeQuality]
+  licensing_axiom_status: hypothetical
+  recoverability_profile: null
+  annotation_prose_screen: passed
+  notes: >
+    Batch-03b candidate N-Q8, selected by the author. Approved paraphrase;
+    it preserves the PhysicalQuantity -> ShapeQuality claim.
+    query_source is confounded with item identity at n=4: paraphrase items are a
+    specific, non-randomised subset, so any query_source difference cannot be
+    separated from their content.
+
+- task_id: T29
+  task_type: slot_filling
+  query: "Two equipment components are physically attached in the installed assembly. How should I represent their physical connection?"
+  scenario: "Two equipment components are physically attached in the installed assembly. How should I represent their physical connection?"
+  reasoning_type: direct_assertion
+  query_source: definition
+  mechanism: direct_relation
+  source_candidate_id: B04-D01
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:PhysicalObject, lis:connectedTo]
+  retrieval_gold_chunks: [lis:connectedTo, lis:PhysicalObject]
+  gold_class: lis:PhysicalObject
+  gold_property: lis:connectedTo
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:PhysicalObject, property: lis:connectedTo, intermediate_node: null}
+  field_gold_chunks: {class: [lis:PhysicalObject], property: [lis:connectedTo, lis:PhysicalObject], intermediate_node: [lis:connectedTo, lis:PhysicalObject], support_class: [lis:PhysicalObject], support_property: [lis:connectedTo, lis:PhysicalObject], support_intermediate: []}
+  licensing_axiom: [lis:connectedTo, rdfs:domain, lis:PhysicalObject]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:connectedTo, rdfs:domain, lis:PhysicalObject]
+  class_domain_recoverable: &all_formats {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  class_prose_covariate: {stated: true, source_chunk: lis:PhysicalObject, fragment: "An object that occupies space and possesses mass."}
+  property_licensing_axioms: [[lis:connectedTo, rdfs:domain, lis:PhysicalObject], [lis:connectedTo, rdfs:range, lis:PhysicalObject]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D01, human selected. Gold-size class: gold < k."
+
+- task_id: T30
+  task_type: slot_filling
+  query: "A coating-thickness record gives a value in micrometres. How should I connect the record to the unit used for that value?"
+  scenario: "A coating-thickness record gives a value in micrometres. How should I connect the record to the unit used for that value?"
+  reasoning_type: direct_assertion
+  query_source: example
+  mechanism: direct_relation
+  source_candidate_id: B04-D02
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:QualityDatum, lis:datumUOM, lis:UnitOfMeasure]
+  retrieval_gold_chunks: [lis:datumUOM, lis:QualityDatum]
+  gold_class: lis:QualityDatum
+  gold_property: lis:datumUOM
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:QualityDatum, property: lis:datumUOM, intermediate_node: null}
+  field_gold_chunks: {class: [lis:QualityDatum], property: [lis:datumUOM, lis:QualityDatum, lis:UnitOfMeasure], intermediate_node: [lis:datumUOM, lis:QualityDatum, lis:UnitOfMeasure], support_class: [lis:QualityDatum], support_property: [lis:datumUOM, lis:QualityDatum, lis:UnitOfMeasure], support_intermediate: []}
+  licensing_axiom: [lis:datumUOM, rdfs:domain, lis:QualityDatum]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:datumUOM, rdfs:domain, lis:QualityDatum]
+  class_domain_recoverable: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  class_prose_covariate: {stated: true, source_chunk: lis:QualityDatum, fragment: "An information object that quantifies a quality."}
+  property_licensing_axioms: [[lis:datumUOM, rdfs:domain, lis:QualityDatum], [lis:datumUOM, rdfs:range, lis:UnitOfMeasure]]
+  property_recoverability_profile: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D02, human selected. Gold-size class: gold < k."
+
+- task_id: T31
+  task_type: slot_filling
+  query: "A commissioning procedure includes a pressure-test activity. How should I model the pressure test as part of the larger procedure?"
+  scenario: "A commissioning procedure includes a pressure-test activity. How should I model the pressure test as part of the larger procedure?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: part_whole
+  source_candidate_id: B04-D03
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Activity, lis:hasActivityPart]
+  retrieval_gold_chunks: [lis:hasActivityPart, lis:Activity]
+  gold_class: lis:Activity
+  gold_property: lis:hasActivityPart
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Activity, property: lis:hasActivityPart, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Activity], property: [lis:hasActivityPart, lis:Activity], intermediate_node: [lis:hasActivityPart, lis:Activity], support_class: [lis:Activity], support_property: [lis:hasActivityPart, lis:Activity], support_intermediate: []}
+  licensing_axiom: [lis:hasActivityPart, rdfs:domain, lis:Activity]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasActivityPart, rdfs:domain, lis:Activity]
+  class_domain_recoverable: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  class_prose_covariate: {stated: true, source_chunk: lis:Activity, fragment: "A temporal entity in which one or more physical objects participate."}
+  property_licensing_axioms: [[lis:hasActivityPart, rdfs:domain, lis:Activity], [lis:hasActivityPart, rdfs:range, lis:Activity]]
+  property_recoverability_profile: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D03, human selected. Gold-size class: gold < k."
+
+- task_id: T32
+  task_type: slot_filling
+  query: "A pump assembly includes an impeller whose function contributes to the assembly's pumping function. How should I relate the assembly to the impeller?"
+  scenario: "A pump assembly includes an impeller whose function contributes to the assembly's pumping function. How should I relate the assembly to the impeller?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: part_whole
+  source_candidate_id: B04-D06
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:System, lis:hasFunctionalPart, lis:FunctionalObject]
+  retrieval_gold_chunks: [lis:hasFunctionalPart, lis:System]
+  gold_class: lis:System
+  gold_property: lis:hasFunctionalPart
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:System, property: lis:hasFunctionalPart, intermediate_node: null}
+  field_gold_chunks: {class: [lis:System], property: [lis:hasFunctionalPart, lis:System, lis:FunctionalObject], intermediate_node: [lis:hasFunctionalPart, lis:System, lis:FunctionalObject], support_class: [lis:System], support_property: [lis:hasFunctionalPart, lis:System, lis:FunctionalObject], support_intermediate: []}
+  licensing_axiom: [lis:hasFunctionalPart, rdfs:domain, lis:System]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasFunctionalPart, rdfs:domain, lis:System]
+  class_domain_recoverable: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  class_prose_covariate: {stated: true, source_chunk: lis:System, fragment: "A 'functional object' with one or more functional parts whose functions contribute to its function."}
+  property_licensing_axioms: [[lis:hasFunctionalPart, rdfs:domain, lis:System], [lis:hasFunctionalPart, rdfs:range, lis:FunctionalObject]]
+  property_recoverability_profile: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D06, human selected. Gold-size class: gold < k."
+
+- task_id: T33
+  task_type: slot_filling
+  query: "A pump casing is made of cast iron. How should the casing be related to its material component?"
+  scenario: "A pump casing is made of cast iron. How should the casing be related to its material component?"
+  reasoning_type: direct_assertion
+  query_source: definition
+  mechanism: part_whole
+  source_candidate_id: B04-D07
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:PhysicalObject, lis:hasMaterialPart, lis:Compound]
+  retrieval_gold_chunks: [lis:hasMaterialPart, lis:PhysicalObject]
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasMaterialPart
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:PhysicalObject, property: lis:hasMaterialPart, intermediate_node: null}
+  field_gold_chunks: {class: [lis:PhysicalObject], property: [lis:hasMaterialPart, lis:PhysicalObject, lis:Compound], intermediate_node: [lis:hasMaterialPart, lis:PhysicalObject, lis:Compound], support_class: [lis:PhysicalObject], support_property: [lis:hasMaterialPart, lis:PhysicalObject, lis:Compound], support_intermediate: []}
+  licensing_axiom: [lis:hasMaterialPart, rdfs:domain, lis:PhysicalObject]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasMaterialPart, rdfs:domain, lis:PhysicalObject]
+  class_domain_recoverable: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  class_prose_covariate: {stated: true, source_chunk: lis:PhysicalObject, fragment: "An object that occupies space and possesses mass."}
+  property_licensing_axioms: [[lis:hasMaterialPart, rdfs:domain, lis:PhysicalObject], [lis:hasMaterialPart, rdfs:range, lis:Compound]]
+  property_recoverability_profile: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D07, human selected. Gold-size class: gold < k."
+
+- task_id: T34
+  task_type: slot_filling
+  query: "A centrifugal pump is capable of providing backup flow when required. How should I represent that capability as associated with the pump?"
+  scenario: "A centrifugal pump is capable of providing backup flow when required. How should I represent that capability as associated with the pump?"
+  reasoning_type: direct_assertion
+  query_source: example
+  mechanism: direct_relation
+  source_candidate_id: B04-D11
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Object, lis:hasPotential, lis:Potential]
+  retrieval_gold_chunks: [lis:hasPotential, lis:Object]
+  gold_class: lis:Object
+  gold_property: lis:hasPotential
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Object, property: lis:hasPotential, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Object], property: [lis:hasPotential, lis:Object, lis:Potential], intermediate_node: [lis:hasPotential, lis:Object, lis:Potential], support_class: [lis:Object], support_property: [lis:hasPotential, lis:Object, lis:Potential], support_intermediate: []}
+  licensing_axiom: [lis:hasPotential, rdfs:domain, lis:Object]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasPotential, rdfs:domain, lis:Object]
+  class_domain_recoverable: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  class_prose_covariate: {stated: true, source_chunk: lis:Object, fragment: "An entity that is not dependent on other entities for existence, and which persists through time."}
+  property_licensing_axioms: [[lis:hasPotential, rdfs:domain, lis:Object], [lis:hasPotential, rdfs:range, lis:Potential]]
+  property_recoverability_profile: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D11, human selected. Gold-size class: gold < k."
+
+- task_id: T35
+  task_type: slot_filling
+  query: "A maintenance activity occurred over a defined interval with recorded start and end times. What pattern should represent the activity, the interval, and the recorded times?"
+  scenario: "A maintenance activity occurred over a defined interval with recorded start and end times. What pattern should represent the activity, the interval, and the recorded times?"
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: modelling_pattern
+  source_candidate_id: B04-D17
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Activity, lis:hasTemporalRegion, lis:TemporalRegion, lis:temporalRegionQuantifiedAs, lis:TemporalDatum]
+  retrieval_gold_chunks: [lis:hasTemporalRegion, lis:Activity]
+  gold_class: lis:Activity
+  gold_property: lis:hasTemporalRegion
+  gold_intermediate_node: true
+  gold_supporting_chunks: {class: lis:Activity, property: lis:hasTemporalRegion, intermediate_node: lis:TemporalDatum}
+  field_gold_chunks: {class: [lis:Activity], property: [lis:hasTemporalRegion, lis:Activity, lis:TemporalRegion], intermediate_node: [lis:hasTemporalRegion, lis:TemporalRegion, lis:temporalRegionQuantifiedAs, lis:TemporalDatum], support_class: [lis:Activity], support_property: [lis:hasTemporalRegion, lis:Activity, lis:TemporalRegion], support_intermediate: [lis:hasTemporalRegion, lis:TemporalRegion, lis:temporalRegionQuantifiedAs, lis:TemporalDatum]}
+  licensing_axiom: [lis:hasTemporalRegion, rdfs:domain, lis:Activity]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasTemporalRegion, rdfs:domain, lis:Activity]
+  class_domain_recoverable: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  class_prose_covariate: {stated: true, source_chunk: lis:Activity, fragment: "A temporal entity in which one or more physical objects participate."}
+  property_licensing_axioms: [[lis:hasTemporalRegion, rdfs:domain, lis:Activity], [lis:hasTemporalRegion, rdfs:range, lis:TemporalRegion]]
+  property_recoverability_profile: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  intermediate_node_licensing_axioms: [[lis:hasTemporalRegion, rdfs:range, lis:TemporalRegion], [lis:temporalRegionQuantifiedAs, rdfs:domain, lis:TemporalRegion], [lis:temporalRegionQuantifiedAs, rdfs:range, lis:TemporalDatum]]
+  intermediate_node_recoverability_profile: {turtle: true, elot-org: true, elot-org-ancestors: true, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  notes: >
+    Batch-04 candidate B04-D17, human selected. Gold-size class: gold < k.
+    Matched with T39: same temporalRegionQuantifiedAs to TemporalDatum second
+    hop, contrasting one hop with this two-hop chain. Matched control for the
+    datum-chain format effect: unlike T40-T43, this all-seven-format chain has
+    no ScalarQuantityDatum subclass link. Thus any T40-T43 ELOT-ancestor effect
+    is attributable to the subclass omission, not chain composition,
+    intermediate-node difficulty, or prompt length.
+
+- task_id: T36
+  task_type: slot_filling
+  query: "An installed pump is the concrete realization of an approved equipment specification. How should I link the installed item to its specification?"
+  scenario: "An installed pump is the concrete realization of an approved equipment specification. How should I link the installed item to its specification?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: direct_relation
+  source_candidate_id: B04-D18
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Actual, lis:implements, lis:Specified]
+  retrieval_gold_chunks: [lis:implements, lis:Actual]
+  gold_class: lis:Actual
+  gold_property: lis:implements
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Actual, property: lis:implements, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Actual], property: [lis:implements, lis:Actual, lis:Specified], intermediate_node: [lis:implements, lis:Actual, lis:Specified], support_class: [lis:Actual], support_property: [lis:implements, lis:Actual, lis:Specified], support_intermediate: []}
+  licensing_axiom: [lis:implements, rdfs:domain, lis:Actual]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:implements, rdfs:domain, lis:Actual]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Actual, fragment: "An entity that is a concrete implementation of a 'specified' entity."}
+  property_licensing_axioms: [[lis:implements, rdfs:domain, lis:Actual], [lis:implements, rdfs:range, lis:Specified]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D18, human selected. Gold-size class: gold < k."
+
+- task_id: T37
+  task_type: slot_filling
+  query: "A standby pump's backup-flow capability is exercised during a test run. How should I connect that capability to the test activity?"
+  scenario: "A standby pump's backup-flow capability is exercised during a test run. How should I connect that capability to the test activity?"
+  reasoning_type: direct_assertion
+  query_source: example
+  mechanism: participation
+  source_candidate_id: B04-D23
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Potential, lis:realizedIn, lis:Activity]
+  retrieval_gold_chunks: [lis:realizedIn, lis:Potential]
+  gold_class: lis:Potential
+  gold_property: lis:realizedIn
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Potential, property: lis:realizedIn, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Potential], property: [lis:realizedIn, lis:Potential, lis:Activity], intermediate_node: [lis:realizedIn, lis:Potential, lis:Activity], support_class: [lis:Potential], support_property: [lis:realizedIn, lis:Potential, lis:Activity], support_intermediate: []}
+  licensing_axiom: [lis:realizedIn, rdfs:domain, lis:Potential]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:realizedIn, rdfs:domain, lis:Potential]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Potential, fragment: "A dependent entity that can potentially be realised through participation in an activity."}
+  property_licensing_axioms: [[lis:realizedIn, rdfs:domain, lis:Potential], [lis:realizedIn, rdfs:range, lis:Activity]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D23, human selected. Gold-size class: gold < k."
+
+- task_id: T38
+  task_type: slot_filling
+  query: "A valve is installed at a particular plant site. How should I represent the valve's location at that site?"
+  scenario: "A valve is installed at a particular plant site. How should I represent the valve's location at that site?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: direct_relation
+  source_candidate_id: B04-D24
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:PhysicalObject, lis:residesIn, lis:Site]
+  retrieval_gold_chunks: [lis:residesIn, lis:PhysicalObject]
+  gold_class: lis:PhysicalObject
+  gold_property: lis:residesIn
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:PhysicalObject, property: lis:residesIn, intermediate_node: null}
+  field_gold_chunks: {class: [lis:PhysicalObject], property: [lis:residesIn, lis:PhysicalObject, lis:Site], intermediate_node: [lis:residesIn, lis:PhysicalObject, lis:Site], support_class: [lis:PhysicalObject], support_property: [lis:residesIn, lis:PhysicalObject, lis:Site], support_intermediate: []}
+  licensing_axiom: [lis:residesIn, rdfs:domain, lis:PhysicalObject]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:residesIn, rdfs:domain, lis:PhysicalObject]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:PhysicalObject, fragment: "An object that occupies space and possesses mass."}
+  property_licensing_axioms: [[lis:residesIn, rdfs:domain, lis:PhysicalObject], [lis:residesIn, rdfs:range, lis:Site]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D24, human selected. Gold-size class: gold < k."
+
+- task_id: T39
+  task_type: slot_filling
+  query: "A maintenance window is represented as a temporal region and has a recorded time datum. How should I connect the interval to that datum?"
+  scenario: "A maintenance window is represented as a temporal region and has a recorded time datum. How should I connect the interval to that datum?"
+  reasoning_type: direct_assertion
+  query_source: definition
+  mechanism: temporal
+  source_candidate_id: B04-D28
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:TemporalRegion, lis:temporalRegionQuantifiedAs, lis:TemporalDatum]
+  retrieval_gold_chunks: [lis:temporalRegionQuantifiedAs, lis:TemporalRegion]
+  gold_class: lis:TemporalRegion
+  gold_property: lis:temporalRegionQuantifiedAs
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:TemporalRegion, property: lis:temporalRegionQuantifiedAs, intermediate_node: null}
+  field_gold_chunks: {class: [lis:TemporalRegion], property: [lis:temporalRegionQuantifiedAs, lis:TemporalRegion, lis:TemporalDatum], intermediate_node: [lis:temporalRegionQuantifiedAs, lis:TemporalRegion, lis:TemporalDatum], support_class: [lis:TemporalRegion], support_property: [lis:temporalRegionQuantifiedAs, lis:TemporalRegion, lis:TemporalDatum], support_intermediate: []}
+  licensing_axiom: [lis:temporalRegionQuantifiedAs, rdfs:domain, lis:TemporalRegion]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:temporalRegionQuantifiedAs, rdfs:domain, lis:TemporalRegion]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:TemporalRegion, fragment: "A temporal entity that extends only in time."}
+  property_licensing_axioms: [[lis:temporalRegionQuantifiedAs, rdfs:domain, lis:TemporalRegion], [lis:temporalRegionQuantifiedAs, rdfs:range, lis:TemporalDatum]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: >
+    Batch-04 candidate B04-D28, human selected. Gold-size class: gold < k.
+    Matched with T35: the same temporalRegionQuantifiedAs to TemporalDatum hop
+    alone, contrasting one hop with T35's prepended Activity to TemporalRegion.
+
+- task_id: T40
+  task_type: slot_filling
+  query: "A centrifugal pump has a recorded discharge pressure of 5 bar. What pattern should represent the pump, the pressure quantity, and its value-with-unit record?"
+  scenario: "A centrifugal pump has a recorded discharge pressure of 5 bar. What pattern should represent the pump, the pressure quantity, and its value-with-unit record?"
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: quantity_pattern
+  source_candidate_id: B04-Q01
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:PhysicalObject, lis:hasPhysicalQuantity, lis:PhysicalQuantity, lis:hasQuality, lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum, lis:ScalarQuantityDatum]
+  retrieval_gold_chunks: [lis:hasPhysicalQuantity, lis:PhysicalObject]
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasPhysicalQuantity
+  gold_intermediate_node: true
+  gold_supporting_chunks: {class: lis:PhysicalObject, property: lis:hasPhysicalQuantity, intermediate_node: lis:ScalarQuantityDatum}
+  field_gold_chunks: &quantity_fields {class: [lis:PhysicalObject], property: [lis:hasPhysicalQuantity, lis:PhysicalObject, lis:PhysicalQuantity], intermediate_node: [lis:hasPhysicalQuantity, lis:PhysicalQuantity, lis:hasQuality, lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum, lis:ScalarQuantityDatum], support_class: [lis:PhysicalObject], support_property: [lis:hasPhysicalQuantity, lis:PhysicalObject, lis:PhysicalQuantity], support_intermediate: [lis:hasPhysicalQuantity, lis:PhysicalQuantity, lis:hasQuality, lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum, lis:ScalarQuantityDatum]}
+  licensing_axiom: [lis:hasPhysicalQuantity, rdfs:domain, lis:PhysicalObject]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasPhysicalQuantity, rdfs:domain, lis:PhysicalObject]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:PhysicalObject, fragment: "An object that occupies space and possesses mass."}
+  property_licensing_axioms: [[lis:hasPhysicalQuantity, rdfs:domain, lis:PhysicalObject], [lis:hasPhysicalQuantity, rdfs:range, lis:PhysicalQuantity]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: &quantity_axioms [[lis:hasPhysicalQuantity, rdfs:range, lis:PhysicalQuantity], [lis:hasPhysicalQuantity, rdfs:subPropertyOf, lis:hasQuality], [lis:hasQuality, rdfs:range, lis:Quality], [lis:qualityQuantifiedAs, rdfs:domain, lis:Quality], [lis:qualityQuantifiedAs, rdfs:range, lis:QualityDatum], [lis:ScalarQuantityDatum, rdfs:subClassOf, lis:QualityDatum]]
+  intermediate_node_recoverability_profile: &subclass_split {turtle: true, elot-org: true, elot-org-ancestors: false, omn: true, jsonld: true, yaml-ld: true, ofn: true}
+  notes: "Batch-04 candidate B04-Q01, human selected. Gold-size class: gold < k. Matched duplicate-shape pair with T41; do not treat as independent quantity-pattern evidence."
+
+- task_id: T41
+  <<: &quantity_item
+    task_type: slot_filling
+    reasoning_type: modelling_pattern
+    query_source: paraphrase
+    mechanism: quantity_pattern
+    authoring_source: agent_candidate_human_selected
+    gold_chunks: [lis:PhysicalObject, lis:hasPhysicalQuantity, lis:PhysicalQuantity, lis:hasQuality, lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum, lis:ScalarQuantityDatum]
+    retrieval_gold_chunks: [lis:hasPhysicalQuantity, lis:PhysicalObject]
+    gold_class: lis:PhysicalObject
+    gold_property: lis:hasPhysicalQuantity
+    gold_intermediate_node: true
+    gold_supporting_chunks: {class: lis:PhysicalObject, property: lis:hasPhysicalQuantity, intermediate_node: lis:ScalarQuantityDatum}
+    field_gold_chunks: *quantity_fields
+    licensing_axiom: [lis:hasPhysicalQuantity, rdfs:domain, lis:PhysicalObject]
+    licensing_axiom_status: asserted
+    class_domain_axiom: [lis:hasPhysicalQuantity, rdfs:domain, lis:PhysicalObject]
+    class_domain_recoverable: *all_formats
+    class_prose_covariate: {stated: true, source_chunk: lis:PhysicalObject, fragment: "An object that occupies space and possesses mass."}
+    property_licensing_axioms: [[lis:hasPhysicalQuantity, rdfs:domain, lis:PhysicalObject], [lis:hasPhysicalQuantity, rdfs:range, lis:PhysicalQuantity]]
+    property_recoverability_profile: *all_formats
+    intermediate_node_licensing_axioms: *quantity_axioms
+    intermediate_node_recoverability_profile: *subclass_split
+  query: "A pipe spool has a measured outside diameter of 168 millimetres. What pattern should represent the spool, its dimensional quantity, and the recorded value?"
+  scenario: "A pipe spool has a measured outside diameter of 168 millimetres. What pattern should represent the spool, its dimensional quantity, and the recorded value?"
+  source_candidate_id: B04-Q05
+  notes: "Batch-04 candidate B04-Q05, human selected. Gold-size class: gold < k. Matched duplicate-shape pair with T40; do not treat as independent quantity-pattern evidence."
+
+- task_id: T42
+  <<: &quality_item
+    task_type: slot_filling
+    reasoning_type: modelling_pattern
+    query_source: paraphrase
+    mechanism: quality_pattern
+    authoring_source: agent_candidate_human_selected
+    gold_chunks: [lis:Object, lis:hasQuality, lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum, lis:ScalarQuantityDatum]
+    retrieval_gold_chunks: [lis:hasQuality, lis:Object]
+    gold_class: lis:Object
+    gold_property: lis:hasQuality
+    gold_intermediate_node: true
+    gold_supporting_chunks: {class: lis:Object, property: lis:hasQuality, intermediate_node: lis:ScalarQuantityDatum}
+    field_gold_chunks: &quality_fields {class: [lis:Object], property: [lis:hasQuality, lis:Object, lis:Quality], intermediate_node: [lis:hasQuality, lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum, lis:ScalarQuantityDatum], support_class: [lis:Object], support_property: [lis:hasQuality, lis:Object, lis:Quality], support_intermediate: [lis:hasQuality, lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum, lis:ScalarQuantityDatum]}
+    licensing_axiom: [lis:hasQuality, rdfs:domain, lis:Object]
+    licensing_axiom_status: asserted
+    class_domain_axiom: [lis:hasQuality, rdfs:domain, lis:Object]
+    class_domain_recoverable: *all_formats
+    class_prose_covariate: {stated: true, source_chunk: lis:Object, fragment: "An entity that is not dependent on other entities for existence, and which persists through time."}
+    property_licensing_axioms: [[lis:hasQuality, rdfs:domain, lis:Object], [lis:hasQuality, rdfs:range, lis:Quality]]
+    property_recoverability_profile: *all_formats
+    intermediate_node_licensing_axioms: &quality_axioms [[lis:hasQuality, rdfs:range, lis:Quality], [lis:qualityQuantifiedAs, rdfs:domain, lis:Quality], [lis:qualityQuantifiedAs, rdfs:range, lis:QualityDatum], [lis:ScalarQuantityDatum, rdfs:subClassOf, lis:QualityDatum]]
+    intermediate_node_recoverability_profile: *subclass_split
+  query: "A stainless-steel pipe has an inspection result for corrosion resistance. What pattern should represent the pipe, its characteristic, and the recorded result?"
+  scenario: "A stainless-steel pipe has an inspection result for corrosion resistance. What pattern should represent the pipe, its characteristic, and the recorded result?"
+  source_candidate_id: B04-Q10
+  notes: "Batch-04 candidate B04-Q10, human selected. Gold-size class: gold < k. Matched with T43: corrosion resistance is a measured property; wear is an assessed condition."
+
+- task_id: T43
+  <<: *quality_item
+  query: "A turbine blade has an inspection record for wear. What pattern should represent the blade, its condition, and the recorded result?"
+  scenario: "A turbine blade has an inspection record for wear. What pattern should represent the blade, its condition, and the recorded result?"
+  source_candidate_id: B04-Q16
+  notes: "Batch-04 candidate B04-Q16, human selected. Gold-size class: gold < k. Matched with T42: corrosion resistance is a measured property; wear is an assessed condition."
+
+- task_id: T44
+  task_type: slot_filling
+  query: "A pipeline inspection activity has an associated operating interval with observed and estimated duration records. What pattern should represent the activity, the interval, and those records?"
+  scenario: "A pipeline inspection activity has an associated operating interval with observed and estimated duration records. What pattern should represent the activity, the interval, and those records?"
+  reasoning_type: modelling_pattern
+  query_source: paraphrase
+  mechanism: temporal
+  source_candidate_id: B04-T01
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Activity, lis:hasTemporalRegion, lis:TemporalRegion, lis:temporalRegionQuantifiedAs, lis:TemporalDatum]
+  retrieval_gold_chunks: [lis:hasTemporalRegion, lis:Activity]
+  gold_class: lis:Activity
+  gold_property: lis:hasTemporalRegion
+  gold_intermediate_node: true
+  gold_supporting_chunks: {class: lis:Activity, property: lis:hasTemporalRegion, intermediate_node: lis:TemporalDatum}
+  field_gold_chunks: {class: [lis:Activity], property: [lis:hasTemporalRegion, lis:Activity, lis:TemporalRegion], intermediate_node: [lis:hasTemporalRegion, lis:TemporalRegion, lis:temporalRegionQuantifiedAs, lis:TemporalDatum], support_class: [lis:Activity], support_property: [lis:hasTemporalRegion, lis:Activity, lis:TemporalRegion], support_intermediate: [lis:hasTemporalRegion, lis:TemporalRegion, lis:temporalRegionQuantifiedAs, lis:TemporalDatum]}
+  licensing_axiom: [lis:hasTemporalRegion, rdfs:domain, lis:Activity]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasTemporalRegion, rdfs:domain, lis:Activity]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Activity, fragment: "A temporal entity in which one or more physical objects participate."}
+  property_licensing_axioms: [[lis:hasTemporalRegion, rdfs:domain, lis:Activity], [lis:hasTemporalRegion, rdfs:range, lis:TemporalRegion]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: [[lis:hasTemporalRegion, rdfs:range, lis:TemporalRegion], [lis:temporalRegionQuantifiedAs, rdfs:domain, lis:TemporalRegion], [lis:temporalRegionQuantifiedAs, rdfs:range, lis:TemporalDatum]]
+  intermediate_node_recoverability_profile: *all_formats
+  notes: >
+    Batch-04 generated candidate B04-T01, produced through the same local
+    candidate pipeline as the 45-record pool; its profile was computed, not
+    assumed. Gold-size class: gold < k. Second temporal-chain control alongside
+    T35: the route has no subclass link and is recoverable in all seven formats.
+    T35 and T44 are the only controls against eight subclass-dependent treatments
+    (T40-T43 and T55-T58). If an elot-org-ancestors effect appears on treatments,
+    attribution to the subclass omission rests on both controls behaving as expected
+    across three trials; noise in either materially weakens the contrast.
+
+- task_id: T45
+  task_type: slot_filling
+  query: "A fabricated equipment skid includes a bracket whose position and boundary are determined in relation to the other assembled components. How should I represent the skid's relation to that bracket?"
+  scenario: "A fabricated equipment skid includes a bracket whose position and boundary are determined in relation to the other assembled components. How should I represent the skid's relation to that bracket?"
+  reasoning_type: direct_assertion
+  query_source: definition
+  mechanism: part_whole
+  source_candidate_id: B04-D04
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:PhysicalObject, lis:hasArrangedPart]
+  retrieval_gold_chunks: [lis:hasArrangedPart, lis:PhysicalObject]
+  gold_class: lis:PhysicalObject
+  gold_property: lis:hasArrangedPart
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:PhysicalObject, property: lis:hasArrangedPart, intermediate_node: null}
+  field_gold_chunks: {class: [lis:PhysicalObject], property: [lis:hasArrangedPart, lis:PhysicalObject], intermediate_node: [lis:hasArrangedPart, lis:PhysicalObject], support_class: [lis:PhysicalObject], support_property: [lis:hasArrangedPart, lis:PhysicalObject], support_intermediate: []}
+  licensing_axiom: [lis:hasArrangedPart, rdfs:domain, lis:PhysicalObject]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasArrangedPart, rdfs:domain, lis:PhysicalObject]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:PhysicalObject, fragment: "An object that occupies space and possesses mass."}
+  property_licensing_axioms: [[lis:hasArrangedPart, rdfs:domain, lis:PhysicalObject], [lis:hasArrangedPart, rdfs:range, lis:PhysicalObject]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D04, human selected. Gold-size class: gold < k."
+
+- task_id: T46
+  task_type: slot_filling
+  query: "A P&ID package includes a dedicated sheet containing a portion of the diagram's information. How should I represent the package's relation to that sheet?"
+  scenario: "A P&ID package includes a dedicated sheet containing a portion of the diagram's information. How should I represent the package's relation to that sheet?"
+  reasoning_type: direct_assertion
+  query_source: example
+  mechanism: part_whole
+  source_candidate_id: B04-D05
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:InformationObject, lis:hasContentPart]
+  retrieval_gold_chunks: [lis:hasContentPart, lis:InformationObject]
+  gold_class: lis:InformationObject
+  gold_property: lis:hasContentPart
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:InformationObject, property: lis:hasContentPart, intermediate_node: null}
+  field_gold_chunks: {class: [lis:InformationObject], property: [lis:hasContentPart, lis:InformationObject], intermediate_node: [lis:hasContentPart, lis:InformationObject], support_class: [lis:InformationObject], support_property: [lis:hasContentPart, lis:InformationObject], support_intermediate: []}
+  licensing_axiom: [lis:hasContentPart, rdfs:domain, lis:InformationObject]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasContentPart, rdfs:domain, lis:InformationObject]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:InformationObject, fragment: "An object that captures information about something."}
+  property_licensing_axioms: [[lis:hasContentPart, rdfs:domain, lis:InformationObject], [lis:hasContentPart, rdfs:range, lis:InformationObject]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D05, human selected. Gold-size class: gold < k. Classified as part_whole before information, leaving the information stratum empty."
+
+- task_id: T47
+  task_type: slot_filling
+  query: "A hydrotest is represented at the generic participation level: a water volume participates, with no active, passive, or primary role being asserted. What relation should connect the test activity to that object?"
+  scenario: "A hydrotest is represented at the generic participation level: a water volume participates, with no active, passive, or primary role being asserted. What relation should connect the test activity to that object?"
+  reasoning_type: direct_assertion
+  query_source: example
+  mechanism: part_whole
+  source_candidate_id: B04-D08
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Activity, lis:hasParticipant, lis:Object]
+  retrieval_gold_chunks: [lis:hasParticipant, lis:Activity]
+  gold_class: lis:Activity
+  gold_property: lis:hasParticipant
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Activity, property: lis:hasParticipant, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Activity], property: [lis:hasParticipant, lis:Activity, lis:Object], intermediate_node: [lis:hasParticipant, lis:Activity, lis:Object], support_class: [lis:Activity], support_property: [lis:hasParticipant, lis:Activity, lis:Object], support_intermediate: []}
+  licensing_axiom: [lis:hasParticipant, rdfs:domain, lis:Activity]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasParticipant, rdfs:domain, lis:Activity]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Activity, fragment: "A temporal entity in which one or more physical objects participate."}
+  property_licensing_axioms: [[lis:hasParticipant, rdfs:domain, lis:Activity], [lis:hasParticipant, rdfs:range, lis:Object]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D08, human selected. Gold-size class: gold < k. Retained instead of B04-D25: it adds a distinct bearer-property pair, and the role-free wording makes generic participation strictly gradeable."
+
+- task_id: T48
+  task_type: slot_filling
+  query: "A pump test needs one recorded datum for the pressure of a participant during that activity, rather than a datum attached to the pump or to the test as a whole. What relation should connect the activity to that datum?"
+  scenario: "A pump test needs one recorded datum for the pressure of a participant during that activity, rather than a datum attached to the pump or to the test as a whole. What relation should connect the activity to that datum?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: part_whole
+  source_candidate_id: B04-D09
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Activity, lis:hasParticipantQualityQuantifiedAs, lis:QualityDatum]
+  retrieval_gold_chunks: [lis:hasParticipantQualityQuantifiedAs, lis:Activity]
+  gold_class: lis:Activity
+  gold_property: lis:hasParticipantQualityQuantifiedAs
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Activity, property: lis:hasParticipantQualityQuantifiedAs, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Activity], property: [lis:hasParticipantQualityQuantifiedAs, lis:Activity, lis:QualityDatum], intermediate_node: [lis:hasParticipantQualityQuantifiedAs, lis:Activity, lis:QualityDatum], support_class: [lis:Activity], support_property: [lis:hasParticipantQualityQuantifiedAs, lis:Activity, lis:QualityDatum], support_intermediate: []}
+  licensing_axiom: [lis:hasParticipantQualityQuantifiedAs, rdfs:domain, lis:Activity]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasParticipantQualityQuantifiedAs, rdfs:domain, lis:Activity]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Activity, fragment: "A temporal entity in which one or more physical objects participate."}
+  property_licensing_axioms: [[lis:hasParticipantQualityQuantifiedAs, rdfs:domain, lis:Activity], [lis:hasParticipantQualityQuantifiedAs, rdfs:range, lis:QualityDatum]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D09, human selected. Gold-size class: gold < k."
+
+- task_id: T49
+  task_type: slot_filling
+  query: "During a pipeline inspection, the route occupied through space and time must be represented. How should I connect the inspection activity to that space-time region?"
+  scenario: "During a pipeline inspection, the route occupied through space and time must be represented. How should I connect the inspection activity to that space-time region?"
+  reasoning_type: direct_assertion
+  query_source: example
+  mechanism: temporal
+  source_candidate_id: B04-D14
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Activity, lis:hasSpatiotemporalExtent, lis:SpatiotemporalRegion]
+  retrieval_gold_chunks: [lis:hasSpatiotemporalExtent, lis:Activity]
+  gold_class: lis:Activity
+  gold_property: lis:hasSpatiotemporalExtent
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Activity, property: lis:hasSpatiotemporalExtent, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Activity], property: [lis:hasSpatiotemporalExtent, lis:Activity, lis:SpatiotemporalRegion], intermediate_node: [lis:hasSpatiotemporalExtent, lis:Activity, lis:SpatiotemporalRegion], support_class: [lis:Activity], support_property: [lis:hasSpatiotemporalExtent, lis:Activity, lis:SpatiotemporalRegion], support_intermediate: []}
+  licensing_axiom: [lis:hasSpatiotemporalExtent, rdfs:domain, lis:Activity]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasSpatiotemporalExtent, rdfs:domain, lis:Activity]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Activity, fragment: "A temporal entity in which one or more physical objects participate."}
+  property_licensing_axioms: [[lis:hasSpatiotemporalExtent, rdfs:domain, lis:Activity], [lis:hasSpatiotemporalExtent, rdfs:range, lis:SpatiotemporalRegion]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D14, human selected. Gold-size class: gold < k."
+
+- task_id: T50
+  task_type: slot_filling
+  query: "A refinery area contains a smaller named operating zone. How should I represent the larger location's relation to that contained location?"
+  scenario: "A refinery area contains a smaller named operating zone. How should I represent the larger location's relation to that contained location?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: direct_relation
+  source_candidate_id: B04-D15
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Location, lis:hasSubLocation]
+  retrieval_gold_chunks: [lis:hasSubLocation, lis:Location]
+  gold_class: lis:Location
+  gold_property: lis:hasSubLocation
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Location, property: lis:hasSubLocation, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Location], property: [lis:hasSubLocation, lis:Location], intermediate_node: [lis:hasSubLocation, lis:Location], support_class: [lis:Location], support_property: [lis:hasSubLocation, lis:Location], support_intermediate: []}
+  licensing_axiom: [lis:hasSubLocation, rdfs:domain, lis:Location]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:hasSubLocation, rdfs:domain, lis:Location]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Location, fragment: "An object that is a region in space."}
+  property_licensing_axioms: [[lis:hasSubLocation, rdfs:domain, lis:Location], [lis:hasSubLocation, rdfs:range, lis:Location]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D15, human selected. Gold-size class: gold < k."
+
+- task_id: T51
+  task_type: slot_filling
+  query: "A shutdown period is scheduled relative to a separate turnaround period, without asserting that either is part of the other. How should I represent their temporal relation?"
+  scenario: "A shutdown period is scheduled relative to a separate turnaround period, without asserting that either is part of the other. How should I represent their temporal relation?"
+  reasoning_type: direct_assertion
+  query_source: example
+  mechanism: direct_relation
+  source_candidate_id: B04-D20
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Temporal, lis:occursRelativeTo]
+  retrieval_gold_chunks: [lis:occursRelativeTo, lis:Temporal]
+  gold_class: lis:Temporal
+  gold_property: lis:occursRelativeTo
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Temporal, property: lis:occursRelativeTo, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Temporal], property: [lis:occursRelativeTo, lis:Temporal], intermediate_node: [lis:occursRelativeTo, lis:Temporal], support_class: [lis:Temporal], support_property: [lis:occursRelativeTo, lis:Temporal], support_intermediate: []}
+  licensing_axiom: [lis:occursRelativeTo, rdfs:domain, lis:Temporal]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:occursRelativeTo, rdfs:domain, lis:Temporal]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Temporal, fragment: "An entity that is part of time or takes place in time."}
+  property_licensing_axioms: [[lis:occursRelativeTo, rdfs:domain, lis:Temporal], [lis:occursRelativeTo, rdfs:range, lis:Temporal]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D20, human selected. Gold-size class: gold < k."
+
+- task_id: T52
+  task_type: slot_filling
+  query: "An operating profile abstracts a pump test to variation in vibration alone. How should I connect that profile to the quality on which the abstraction is based?"
+  scenario: "An operating profile abstracts a pump test to variation in vibration alone. How should I connect that profile to the quality on which the abstraction is based?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: direct_relation
+  source_candidate_id: B04-D21
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:ActivityProfile, lis:profileOfQuality, lis:Quality]
+  retrieval_gold_chunks: [lis:profileOfQuality, lis:ActivityProfile]
+  gold_class: lis:ActivityProfile
+  gold_property: lis:profileOfQuality
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:ActivityProfile, property: lis:profileOfQuality, intermediate_node: null}
+  field_gold_chunks: {class: [lis:ActivityProfile], property: [lis:profileOfQuality, lis:ActivityProfile, lis:Quality], intermediate_node: [lis:profileOfQuality, lis:ActivityProfile, lis:Quality], support_class: [lis:ActivityProfile], support_property: [lis:profileOfQuality, lis:ActivityProfile, lis:Quality], support_intermediate: []}
+  licensing_axiom: [lis:profileOfQuality, rdfs:domain, lis:ActivityProfile]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:profileOfQuality, rdfs:domain, lis:ActivityProfile]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:ActivityProfile, fragment: "An activity obtained by \"selective abstraction\" to just that part of an activity that consists in varying or maintaining a specified 'quality' of a participant."}
+  property_licensing_axioms: [[lis:profileOfQuality, rdfs:domain, lis:ActivityProfile], [lis:profileOfQuality, rdfs:range, lis:Quality]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D21, human selected. Gold-size class: gold < k. Matched with T53 as adjacent links in one pump-vibration route, not independent evidence."
+
+- task_id: T53
+  task_type: slot_filling
+  query: "A vibration quality of a rotating pump is represented by an inspection datum. How should I connect the quality itself to that datum?"
+  scenario: "A vibration quality of a rotating pump is represented by an inspection datum. How should I connect the quality itself to that datum?"
+  reasoning_type: direct_assertion
+  query_source: definition
+  mechanism: direct_relation
+  source_candidate_id: B04-D22
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Quality, lis:qualityQuantifiedAs, lis:QualityDatum]
+  retrieval_gold_chunks: [lis:qualityQuantifiedAs, lis:Quality]
+  gold_class: lis:Quality
+  gold_property: lis:qualityQuantifiedAs
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Quality, property: lis:qualityQuantifiedAs, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Quality], property: [lis:qualityQuantifiedAs, lis:Quality, lis:QualityDatum], intermediate_node: [lis:qualityQuantifiedAs, lis:Quality, lis:QualityDatum], support_class: [lis:Quality], support_property: [lis:qualityQuantifiedAs, lis:Quality, lis:QualityDatum], support_intermediate: []}
+  licensing_axiom: [lis:qualityQuantifiedAs, rdfs:domain, lis:Quality]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:qualityQuantifiedAs, rdfs:domain, lis:Quality]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Quality, fragment: "A dependent entity that is present any time its bearer exists."}
+  property_licensing_axioms: [[lis:qualityQuantifiedAs, rdfs:domain, lis:Quality], [lis:qualityQuantifiedAs, rdfs:range, lis:QualityDatum]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D22, human selected. Gold-size class: gold < k. Matched with T52 as adjacent links in one pump-vibration route, not independent evidence."
+
+- task_id: T54
+  task_type: slot_filling
+  query: "A designated test-bay site is the place where a pressure-test activity occurs. How should I connect the site to that activity?"
+  scenario: "A designated test-bay site is the place where a pressure-test activity occurs. How should I connect the site to that activity?"
+  reasoning_type: direct_assertion
+  query_source: label
+  mechanism: direct_relation
+  source_candidate_id: B04-D27
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Site, lis:siteOf, lis:Activity]
+  retrieval_gold_chunks: [lis:siteOf, lis:Site]
+  gold_class: lis:Site
+  gold_property: lis:siteOf
+  gold_intermediate_node: false
+  gold_supporting_chunks: {class: lis:Site, property: lis:siteOf, intermediate_node: null}
+  field_gold_chunks: {class: [lis:Site], property: [lis:siteOf, lis:Site, lis:Activity], intermediate_node: [lis:siteOf, lis:Site, lis:Activity], support_class: [lis:Site], support_property: [lis:siteOf, lis:Site, lis:Activity], support_intermediate: []}
+  licensing_axiom: [lis:siteOf, rdfs:domain, lis:Site]
+  licensing_axiom_status: asserted
+  class_domain_axiom: [lis:siteOf, rdfs:domain, lis:Site]
+  class_domain_recoverable: *all_formats
+  class_prose_covariate: {stated: true, source_chunk: lis:Site, fragment: "A location determined in relation to one or more physical objects."}
+  property_licensing_axioms: [[lis:siteOf, rdfs:domain, lis:Site], [lis:siteOf, rdfs:range, lis:Activity]]
+  property_recoverability_profile: *all_formats
+  intermediate_node_licensing_axioms: null
+  intermediate_node_recoverability_profile: null
+  notes: "Batch-04 candidate B04-D27, human selected. Gold-size class: gold < k."
+
+- task_id: T55
+  <<: *quantity_item
+  query: "A heat exchanger has a measured shell-side temperature of 180 degrees C. What pattern should represent the exchanger, the temperature quantity, and its value-with-unit record?"
+  scenario: "A heat exchanger has a measured shell-side temperature of 180 degrees C. What pattern should represent the exchanger, the temperature quantity, and its value-with-unit record?"
+  source_candidate_id: B04-Q02
+  notes: "Batch-04 candidate B04-Q02, human selected. Gold-size class: gold < k. Same bearer, property, and route as T40/T41; four quantity-chain items share one gold answer."
+
+- task_id: T56
+  <<: *quantity_item
+  query: "A steel plate has a measured mass of 240 kilograms. What pattern should represent the plate, the mass quantity, and the recorded measurement?"
+  scenario: "A steel plate has a measured mass of 240 kilograms. What pattern should represent the plate, the mass quantity, and the recorded measurement?"
+  source_candidate_id: B04-Q06
+  notes: "Batch-04 candidate B04-Q06, human selected. Gold-size class: gold < k. Same bearer, property, and route as T40/T41; four quantity-chain items share one gold answer."
+
+- task_id: T57
+  <<: *quality_item
+  query: "A flange has a recorded surface-roughness result. What pattern should represent the flange, its surface quality, and the recorded result?"
+  scenario: "A flange has a recorded surface-roughness result. What pattern should represent the flange, its surface quality, and the recorded result?"
+  source_candidate_id: B04-Q12
+  notes: "Batch-04 candidate B04-Q12, human selected. Gold-size class: gold < k. Same route as T42/T43; four quality-chain items share one gold answer."
+
+- task_id: T58
+  <<: *quality_item
+  query: "A concrete foundation has an inspection record for permeability. What pattern should represent the foundation, its quality, and the recorded result?"
+  scenario: "A concrete foundation has an inspection record for permeability. What pattern should represent the foundation, its quality, and the recorded result?"
+  source_candidate_id: B04-Q17
+  notes: "Batch-04 candidate B04-Q17, human selected. Gold-size class: gold < k. Same route as T42/T43; four quality-chain items share one gold answer."
+
+- task_id: T59
+  task_type: verification
+  query: "Does every lis:Organization lis:hasPhysicalQuantity a lis:PhysicalQuantity in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: composed_domain_range_disjointness
+  source_candidate_id: B05-D03
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Organization, lis:PhysicalObject, lis:PhysicalQuantity, lis:hasPhysicalQuantity]
+  retrieval_gold_chunks: [lis:Organization, lis:PhysicalQuantity, lis:hasPhysicalQuantity]
+  statement: "Every lis:Organization lis:hasPhysicalQuantity a lis:PhysicalQuantity."
+  gold_label: contradicted
+  licensing_axiom:
+    - [lis:hasPhysicalQuantity, rdfs:domain, lis:PhysicalObject]
+    - [lis:PhysicalObject, owl:disjointWith, lis:Organization]
+  licensing_axiom_status: entailed_chain
+  annotation_prose_screen: neutral
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-05 candidate B05-D03, selected by the author. Domain-side composed route:
+    the lis:hasPhysicalQuantity domain axiom types any bearer as a lis:PhysicalObject,
+    which is disjoint from lis:Organization. Neither link is stated in annotation prose
+    - the naturalLanguageDefinition gives the range and never the domain, and the domain
+    is the licensing link - so this is one of only four batch-05 candidates whose
+    licensing link is recoverable solely from the formal serialisation. Uses the
+    Organization/PhysicalObject disjointness axiom, which no committed item uses.
+    lis:Organization alone becomes unsatisfiable; no collateral. Gold-size class: gold < k.
+    Non-vacuous: the conjunction is entailed empty on the unmodified canonical graph while
+    lis:Organization alone is not, so the open-world caveat carried by T06-T08 does not
+    apply here. See the 2026-08-19 CHANGELOG entry for the contradicted + entailed_chain
+    status reading.
+
+- task_id: T60
+  task_type: verification
+  query: "Is every physical object connected to a location in IDO?"
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: composed_domain_range_disjointness
+  source_candidate_id: B05-R16
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:Location, lis:PhysicalObject, lis:connectedTo]
+  retrieval_gold_chunks: [lis:Location, lis:PhysicalObject, lis:connectedTo]
+  statement: "Every lis:PhysicalObject lis:connectedTo a lis:Location."
+  gold_label: contradicted
+  licensing_axiom:
+    - [lis:connectedTo, rdfs:range, lis:PhysicalObject]
+    - [lis:PhysicalObject, owl:disjointWith, lis:Location]
+  licensing_axiom_status: entailed_chain
+  annotation_prose_screen: neutral
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-05 candidate B05-R16, selected by the author. Range-side composed route:
+    the lis:connectedTo range axiom types every filler as a lis:PhysicalObject, which is
+    disjoint from lis:Location. Neither link is stated in prose - the
+    naturalLanguageDefinition says only that there is a physical connection between x and
+    y, a lexical hint that names no class - so the range axiom is recoverable only from
+    the formal serialisation. Uses the Location/PhysicalObject disjointness axiom, unused
+    by any committed item. Gold-size class: gold < k. Non-vacuous in the same sense as T59.
+    Approved paraphrase; it preserves the PhysicalObject -> connectedTo -> Location claim.
+    query_source is confounded with item identity at n=3 in this stratum: the paraphrase
+    items (T60/T62/T64) are a specific, non-randomised subset, so any query_source
+    difference cannot be separated from their content.
+
+- task_id: T61
+  task_type: verification
+  query: "Does every lis:Object lis:representedIn a lis:PhysicalObject in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: composed_domain_range_disjointness
+  source_candidate_id: B05-R09
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:InformationObject, lis:Object, lis:PhysicalObject, lis:representedIn]
+  retrieval_gold_chunks: [lis:Object, lis:PhysicalObject, lis:representedIn]
+  statement: "Every lis:Object lis:representedIn a lis:PhysicalObject."
+  gold_label: contradicted
+  licensing_axiom:
+    - [lis:representedIn, rdfs:range, lis:InformationObject]
+    - [lis:InformationObject, owl:disjointWith, lis:PhysicalObject]
+  licensing_axiom_status: entailed_chain
+  annotation_prose_screen: neutral
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-05 candidate B05-R09, selected by the author. The purest formal-legibility item
+    in the batch: lis:representedIn carries no naturalLanguageDefinition at all, only a
+    usageNote pointing to its inverse relation, so its range axiom is unavailable to a
+    prose reader in every format. Costs a deliberate reuse of the T08
+    InformationObject/PhysicalObject disjointness axiom and has the widest blast radius in
+    the selected set (lis:Object plus 28 subclasses), which is a property of the assertion,
+    not a defect. Gold-size class: gold < k. Non-vacuous in the same sense as T59. Paired
+    with T08: the same disjointness axiom read bare there and through a range axiom here.
+
+- task_id: T62
+  task_type: verification
+  query: "Does every physical object reside in a spatial location in IDO?"
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: composed_domain_range_disjointness
+  source_candidate_id: B05-R01
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:PhysicalObject, lis:Site, lis:SpatialLocation, lis:residesIn]
+  retrieval_gold_chunks: [lis:PhysicalObject, lis:SpatialLocation, lis:residesIn]
+  statement: "Every lis:PhysicalObject lis:residesIn a lis:SpatialLocation."
+  gold_label: contradicted
+  licensing_axiom:
+    - [lis:residesIn, rdfs:range, lis:Site]
+    - [lis:Site, owl:disjointWith, lis:SpatialLocation]
+  licensing_axiom_status: entailed_chain
+  annotation_prose_screen: toward
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-05 candidate B05-R01, selected by the author. The only genuine prose-versus-axiom
+    disagreement in the batch and the contradicted-side analogue of pilot T03: the
+    lis:residesIn naturalLanguageDefinition says the filler is a location, the asserted
+    rdfs:range is the narrower lis:Site, and lis:SpatialLocation is a lis:Location - so a
+    reader following the annotation concludes supported while the axioms give contradicted.
+    Counter-pull: the usageNote describes an object located in a site. Rides the T06
+    Site/SpatialLocation disjointness axiom deliberately, giving a bare-versus-composed
+    mechanism contrast on identical entities; treat T06/T62 as a matched pair, not as
+    independent evidence. Gold-size class: gold < k. Non-vacuous in the same sense as T59.
+    Approved paraphrase; it preserves the PhysicalObject -> residesIn -> SpatialLocation
+    claim. Shares the T60 paraphrase-subset confound.
+
+- task_id: T63
+  task_type: verification
+  query: "Does every lis:ActivityProfile lis:profileOfQuality a lis:Potential in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: composed_domain_range_disjointness
+  source_candidate_id: B05-R13
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:ActivityProfile, lis:Potential, lis:Quality, lis:profileOfQuality]
+  retrieval_gold_chunks: [lis:ActivityProfile, lis:Potential, lis:profileOfQuality]
+  statement: "Every lis:ActivityProfile lis:profileOfQuality a lis:Potential."
+  gold_label: contradicted
+  licensing_axiom:
+    - [lis:profileOfQuality, rdfs:range, lis:Quality]
+    - [lis:Quality, owl:disjointWith, lis:Potential]
+  licensing_axiom_status: entailed_chain
+  annotation_prose_screen: away
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-05 candidate B05-R13, selected by the author. Range-side composed route on the
+    Quality/Potential disjointness axiom, which no committed item uses, with a subject class
+    no committed contradicted item touches and no collateral (lis:ActivityProfile alone).
+    Its naturalLanguageDefinition states the range link, so link 1 leaks in prose and the
+    item points away from the false claim; it is the prose-direction counterweight to T62
+    rather than a formal-legibility probe. Gold-size class: gold < k. Non-vacuous in the
+    same sense as T59.
+
+- task_id: T64
+  task_type: verification
+  query: "Can a single quality datum have more than one unit of measure in IDO?"
+  reasoning_type: structural
+  query_source: paraphrase
+  mechanism: functional_property
+  source_candidate_id: B05-F01
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:QualityDatum, lis:datumUOM]
+  retrieval_gold_chunks: [lis:QualityDatum, lis:datumUOM]
+  statement: "A single quality datum carries two different units of measure at once."
+  gold_label: contradicted
+  licensing_axiom: [lis:datumUOM, rdf:type, owl:FunctionalProperty]
+  licensing_axiom_status: asserted
+  annotation_prose_screen: toward
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-05 candidate B05-F01, selected by the author, in the previously selected
+    Candidate-2 (existential, T03-style) wording. T-Box form: the A-Box form produces
+    ontology inconsistency rather than class unsatisfiability, which the contradicted-label
+    convention does not reach. The subject must be lis:QualityDatum, not
+    lis:ScalarQuantityDatum, whose usageNote states the functionality consequence verbatim
+    and is therefore a states_axiom rejection. The functionality declaration itself is not
+    in prose, but the lis:QualityDatum usageNote - data that do not fit the single unit,
+    single number restriction - reads as licensing two units, so the prose points toward
+    the false claim; this was not surfaced by the Part A functional-property screen, which
+    ran the reasoner gate only. Materialised as rdf:type owl:FunctionalProperty in all
+    seven serialisations, so the profile is uniform by construction and the item carries no
+    format-effect signal - it contributes contradicted-label balance and a cardinality
+    reading distinct from the disjointness route. Gold-size class: gold < k. Non-vacuous:
+    lis:QualityDatum and (lis:datumUOM min 2) is entailed empty while lis:QualityDatum is
+    not. Approved paraphrase; unit of measure names the lis:datumUOM range class, but the
+    answer needs only the functionality declaration, so lis:UnitOfMeasure is not a
+    retrieval target. Shares the T60 paraphrase-subset confound.
+
+- task_id: T65
+  task_type: verification
+  query: "Can one lis:QualityDatum have more than one lis:datumValue in IDO?"
+  reasoning_type: structural
+  query_source: label
+  mechanism: functional_property
+  source_candidate_id: B05-F02
+  authoring_source: agent_candidate_human_selected
+  gold_chunks: [lis:QualityDatum, lis:datumValue]
+  retrieval_gold_chunks: [lis:QualityDatum, lis:datumValue]
+  statement: "A single quality datum carries two different literal values at once."
+  gold_label: contradicted
+  licensing_axiom: [lis:datumValue, rdf:type, owl:FunctionalProperty]
+  licensing_axiom_status: asserted
+  annotation_prose_screen: toward
+  recoverability_profile:
+    turtle: true
+    elot-org: true
+    elot-org-ancestors: true
+    omn: true
+    jsonld: true
+    yaml-ld: true
+    ofn: true
+  notes: >
+    Batch-05 candidate B05-F02, selected by the author. The lis:datumValue mirror of T64
+    and the only way to reach two distinct functional-property items: LIS-14 declares
+    exactly two functional properties, and the lis:ScalarQuantityDatum phrasings of both
+    are states_axiom rejections, so the stratum cannot supply more than two. B05-F05 was
+    not taken - it is a qualified-cardinality rephrasing of T64 on the same licensing
+    axiom, not an independent item. Inherits the toward screen from the same
+    lis:QualityDatum usageNote as T64; counter-pull in the lis:datumValue usageNote, which
+    asks for a single unit of measure for a quality datum to be interpretable. Uniform
+    profile by construction, as for T64. Gold-size class: gold < k. Treat T64/T65 as a
+    matched pair on one modelling convention, not as independent evidence.

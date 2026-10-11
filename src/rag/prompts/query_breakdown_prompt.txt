@@ -1,0 +1,98 @@
+Background:
+
+The Ontology-based Interoperability (OBI) framework is an emerging ISO 23726 standards series that defines how organisations can achieve semantic interoperability by using shared, formally defined ontologies and artefacts. At its core is the Industrial Data Ontology (IDO), an OWL 2 DL upper ontology that provides high-level, logically grounded concepts—such as objects, events, qualities, and roles—intended to support consistent modelling of industrial data across domains. OBI sets the ecosystem, principles, and governance processes for developing trusted ontologies, templates, patterns, and reference data libraries that align with IDO and enable machine-interpretable data exchange. Together, IDO and the broader OBI ecosystem provide the semantic foundation for integrating industrial data, supporting automated reasoning, and enabling scalable AI and automation across enterprises.
+
+Task:
+
+You transform a user query into a **small set of retrieval units**.
+A *retrieval unit* is a short phrase representing **one specific piece of information that must be retrieved from the corpus to answer the query**.
+Each *retrieval unit* will be used in an independent retrieval step on its own (so it should stand alone).
+
+Corpus:
+
+* The corpus is entirely about IDO / OBI.
+* Domain context is implicit. This means repeating “IDO”, “ontology”, or similar background terms **reduces retrieval quality**, unless they are the core of the question (e.g. "What is IDO?").
+
+Instructions:
+
+1. Identify the **minimum set of distinct information needs** required to answer the query.
+2. For each information need:
+   * Express it as a **short noun phrase**
+   * Remove all conversational framing, conditionals, and assumptions
+   * Remove domain terms that are already implicit in the corpus
+3. Do **not** split unless the information needs are genuinely different.
+
+Rules:
+
+* Do NOT answer the query
+* Do NOT introduce new terms
+* NEVER repeat implicit domain terms like "ontology", "IDO", "OBI" in your output
+* Do NOT include generic verbs or terms that would not assist specific information retrieval from our OBI/IDO database (e.g., "design", "method", etc.)
+* ONLY output retrieval units for information CRUCIAL to answer the question (not background, not implicit, etc.). 
+* Optimize strictly for vector similarity
+
+What a Retrieval Unit Looks Like:
+
+**Good**
+
+* `Dependent subclass`
+* `required metadata on concepts`
+* `role constraints`
+* `temporal relationship constraints`
+* `event modelling rules`
+
+**Bad**
+
+* full questions
+* repeated domain terms (like IDO, OBI, etc.)
+* combined or vague needs
+* background setup (“when modelling…”, “in an IDO ontology…”)
+
+Output Rules:
+
+* One retrieval unit per line
+* MAXIMUM 3 retrieval units
+* No bullets
+* No numbering
+* No explanations
+* No JSON
+
+Example 1:
+
+**Input**
+
+How are roles represented in IDO and what constraints apply to their use?
+
+**Output**
+
+role constraints
+
+Example 2:
+
+**Input**
+
+What are the different Object classes in IDO?
+
+**Output**
+
+Object class
+
+Example 3:
+
+**Input**
+
+How should physical quantities be represented, how are they linked to units of measure, and how are those quantities associated with physical objects?
+
+**Output**
+
+physical quantity
+physical quantity and unit of measure
+physical quantity and physical object
+
+Real Data:
+
+**Input**
+
+{question}
+
+**Output**

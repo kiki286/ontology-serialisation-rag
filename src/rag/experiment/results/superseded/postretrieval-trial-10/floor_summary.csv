@@ -1,0 +1,7 @@
+model,condition,n_calls,n_verification_calls,n_slot_calls,parse_error_rate,verification_accuracy,majority_class_baseline,majority_label,accuracy_minus_baseline,beats_majority_baseline,modal_pred_label,modal_pred_frac,pred_label_counts,slot_exact_match_rate,slot_mean_partial_credit,citation_hallucination_rate,recall_at_k,mrr,ndcg_at_k,coverage_frac
+gpt-4o-2024-11-20,empty_context,15,9,6,0.0,0.0,0.6666666666666666,supported,-0.6666666666666666,False,undetermined,1.0,"{""undetermined"": 9}",0.0,0.18333333333333335,0.5,,,,
+gpt-4o-2024-11-20,no_context,15,9,6,0.0,0.0,0.6666666666666666,supported,-0.6666666666666666,False,undetermined,1.0,"{""undetermined"": 9}",0.0,0.08333333333333333,1.0,,,,
+gpt-4o-mini-2024-07-18,empty_context,15,9,6,0.0,0.3333333333333333,0.6666666666666666,supported,-0.3333333333333333,False,undetermined,0.6666666666666666,"{""supported"": 3, ""undetermined"": 6}",0.0,0.18333333333333335,1.0,,,,
+gpt-4o-mini-2024-07-18,no_context,15,9,6,0.0,0.0,0.6666666666666666,supported,-0.6666666666666666,False,undetermined,1.0,"{""undetermined"": 9}",0.0,0.18333333333333335,1.0,,,,
+llama3.1:8b-instruct-q8_0,empty_context,15,9,6,0.0,0.3333333333333333,0.6666666666666666,supported,-0.3333333333333333,False,undetermined,0.6666666666666666,"{""supported"": 3, ""undetermined"": 6}",0.0,0.18333333333333335,0.5,,,,
+llama3.1:8b-instruct-q8_0,no_context,15,9,6,0.0,0.6666666666666666,0.6666666666666666,supported,0.0,False,supported,1.0,"{""supported"": 9}",0.0,0.18333333333333335,1.0,,,,

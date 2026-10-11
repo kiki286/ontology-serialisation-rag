@@ -1,0 +1,11 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,144,0.0,0.0,0.0,0,T01,verification,elot-org,oracle,gpt-4o-2024-11-20
+exact_match_rate,96,0.0,0.03608439182435161,0.5773502691896257,6,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_class_correct,96,0.0,0.0,0.0,0,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_intermediate_correct,96,0.0,0.03608439182435161,0.5773502691896257,6,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20
+field_accuracy_property_correct,96,0.0,0.006014065304058601,0.5773502691896257,1,T02,slot_filling,jsonld,oracle,llama3.1:8b-instruct-q8_0
+field_accuracy_support_class_correct,96,0.0,0.012028130608117202,0.5773502691896257,2,T02,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18
+field_accuracy_support_intermediate_correct,48,0.0,0.060140653040586016,0.5773502691896257,5,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20
+field_accuracy_support_property_correct,96,0.0,0.018042195912175804,0.5773502691896257,3,T02,slot_filling,jsonld,oracle,llama3.1:8b-instruct-q8_0
+mean_partial_credit,96,0.0,0.019044540129518905,0.34641016151377546,15,T02,slot_filling,jsonld,oracle,llama3.1:8b-instruct-q8_0
+parse_errors,144,0.0,0.0,0.0,0,T01,verification,elot-org,oracle,gpt-4o-2024-11-20

@@ -1,0 +1,7 @@
+arm,m,elot-org,jsonld,turtle
+B2 open-world,gpt-4o,0.0,0.0,0.0
+B2 open-world,gpt-4o-mini,0.0,0.033,0.0
+B2 open-world,sonnet,0.3,0.3,0.4
+frozen (row zero),gpt-4o,0.0,0.0,0.0
+frozen (row zero),gpt-4o-mini,0.0,0.0,0.0
+frozen (row zero),sonnet,0.1,0.2,0.367

@@ -1,0 +1,65 @@
+{
+  "stage": "retrieval",
+  "timestamp_utc": "2026-06-06T00:30:59.243200+00:00",
+  "git_commit": "8ce1632d8f25920ebe8460ae1424c81adacd7c5d",
+  "seed": 20260529,
+  "temperature": 0.0,
+  "embedding_model": "text-embedding-3-large",
+  "retrieval_k": 5,
+  "formats": [
+    "turtle",
+    "elot-org",
+    "elot-org-ancestors",
+    "omn"
+  ],
+  "models": [
+    "gpt-4o",
+    "gpt-4o-mini"
+  ],
+  "conditions": [
+    "oracle",
+    "retrieved"
+  ],
+  "task_types": [
+    "verification",
+    "slot_filling"
+  ],
+  "n_tasks": 2,
+  "task_ids": [
+    "T01",
+    "T02"
+  ],
+  "elot_ancestor_format": "elot-org-ancestors",
+  "retrieval_index_filter_version": "1.1",
+  "retrieval_index_excluded_entity_types": [
+    "elot:FileIntro",
+    "elot:Prefixes",
+    "elot:Root",
+    "omn:Prefixes",
+    "owl:AnnotationProperty",
+    "owl:Ontology"
+  ],
+  "retrieval_index_excluded_entity_ids": [
+    "elot:file-intro",
+    "elot:prefixes",
+    "elot:root:core",
+    "omn:prefixes",
+    "rdfs:Literal",
+    "xsd:boolean",
+    "xsd:date",
+    "xsd:dateTime",
+    "xsd:string"
+  ],
+  "retrieval_index_excludes_elot_sections": true,
+  "system_prompts": {
+    "verification": "verification_system_v1.txt",
+    "slot_filling": "slot_filling_system_v2.txt"
+  },
+  "loader_versions": {
+    "turtle": "4.0",
+    "elot-org": "2.0",
+    "elot-org-ancestors": "2.0",
+    "omn": "2.0"
+  },
+  "n_calls": 8
+}

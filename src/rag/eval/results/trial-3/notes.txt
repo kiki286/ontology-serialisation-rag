@@ -1,0 +1,69 @@
+- Naive RAG
+- K=20
+- v2 Prompt
+- Retrieval Sources
+    ISO_15926-14.ttl
+    ISO_23726-1.md
+    https://rds.posccaesar.org/
+    LIS-14.tex
+    obi-ido-training-session 2, 3, 8, 9
+
+
+==========================
+ Metrics Summary
+==========================
+
+answer_relevancy:
+  mean:   0.6982
+  median: 0.7324
+  std:    0.2328
+  min:    0.0000
+  max:    0.9655
+
+answer_accuracy:
+  mean:   0.3229
+  median: 0.5000
+  std:    0.2386
+  min:    0.0000
+  max:    0.7500
+
+semantic_similarity:
+  mean:   0.7579
+  median: 0.7809
+  std:    0.0975
+  min:    0.5735
+  max:    0.9766
+
+==========================
+ Question Breakdown
+==========================
+
+1. Misunderstands "concepts" as broad ideas behind IDO, rather than ontological classes. Question re-phrase?
+2. Very good.
+3. It says Failure Effect can be an instance of Dependent class. We think under Activity class (one of top-5). There seems to be an emphasis on these top 5 - it might be worth having them in the prompt itself as IDO background.
+4. Perfect.
+5. Incorrect. It might help to say in the question that the actual Failure Mode is being modelled as an Activity, since that's assumed in the gold answer.
+6. Okay - rather than contrasting Location and Site, it gets the 2 sub-classes of Location, being SpatialLocation and Site, and compares those accurately.
+7. Bit verbose but correct.
+8. Bad - it just gives the namespace of the IDO onto.
+9. Wrong.
+10. "unable to answer" - no info in context about last update of IDO.
+11. OBI vs IDO - IDO good, OBI explanation is a little poor. 
+12. Partially correct, just missing lots. Only ave like 1-2 principles of the 10. These would each be a chunk so yeah, need to retrieve all of them. Also we must consider - do these markdown chunks include the higher level headings too? Otherwise just 6.2 RDF as a heading is quite out of context, for example.
+13. Quite different to our gold answer but looks really good - it uses the maintenance agency definition from the OBI doc.
+14. Good.
+15. Good.
+16. Ok...
+17. Good.
+18. Good.
+19. Good.
+20. Solid - but worth including the OBI required annotation properties, which arent identified like in the earlier question.
+21. Could not answer - context does not contain info about the various languages of IDO onto file. 
+22. Good.
+23. Perfect.
+24. Looks good tbh and the gold answer looks incorrect?
+
+TOTAL:
+13 - Complete
+4 - Partially there
+7 - Pretty bad

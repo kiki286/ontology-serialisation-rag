@@ -1,0 +1,13 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,1680,0.0,0.007216878364870322,0.5773502691896257,21,T09,verification,ofn,retrieved,llama3.1:8b-instruct-q8_0
+answered,1680,0.0,0.007560539239387956,0.5773502691896257,22,T11,verification,omn,retrieved,llama3.1:8b-instruct-q8_0
+exact_match_rate,1680,0.0,0.01340277410618774,0.5773502691896257,39,T29,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0
+field_accuracy_class_correct,1680,0.0,0.0034366087451763437,0.5773502691896257,10,T33,slot_filling,ofn,retrieved,gpt-4o-2024-11-20
+field_accuracy_intermediate_correct,1680,0.0,0.013746434980705375,0.5773502691896257,40,T30,slot_filling,turtle,retrieved,gpt-4o-2024-11-20
+field_accuracy_property_correct,1680,0.0,0.0034366087451763437,0.5773502691896257,10,T31,slot_filling,jsonld,retrieved,gpt-4o-mini-2024-07-18
+field_accuracy_support_class_correct,1680,0.0,0.005154913117764516,0.5773502691896257,15,T30,slot_filling,jsonld,retrieved,gpt-4o-mini-2024-07-18
+field_accuracy_support_intermediate_correct,560,0.0,0.014433756729740644,0.5773502691896257,14,T40,slot_filling,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18
+field_accuracy_support_property_correct,1680,0.0,0.011340808859081933,0.5773502691896257,33,T29,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18
+mean_partial_credit,1680,0.0,0.007022137202643662,0.34641016151377546,91,T48,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18
+parse_errors,1680,0.0,0.0006873217490352688,0.5773502691896257,2,T18,verification,ofn,oracle,llama3.1:8b-instruct-q8_0
+selective_correct,1680,0.0,0.005842234866799784,0.5773502691896257,17,T09,verification,ofn,retrieved,llama3.1:8b-instruct-q8_0

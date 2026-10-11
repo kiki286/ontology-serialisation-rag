@@ -1,0 +1,304 @@
+{
+  "n_rows": 46,
+  "verification": {
+    "n": 46,
+    "majority_class_baseline": 0.43478260869565216,
+    "majority_label": "supported",
+    "n_answered": 12,
+    "coverage": 0.2608695652173913,
+    "accuracy_on_answered": 0.5,
+    "gold_label_counts": {
+      "contradicted": 6,
+      "supported": 20,
+      "undetermined": 20
+    },
+    "per_model": {
+      "claude-sonnet-4-5-20250929": {
+        "n": 46,
+        "accuracy": 0.45652173913043476,
+        "n_answered": 12,
+        "coverage": 0.2608695652173913,
+        "accuracy_on_answered": 0.5,
+        "majority_class_baseline": 0.43478260869565216,
+        "modal_pred_label": "undetermined",
+        "modal_pred_frac": 0.7391304347826086,
+        "pred_label_counts": {
+          "undetermined": 34,
+          "contradicted": 9,
+          "supported": 3
+        },
+        "flags": []
+      }
+    },
+    "per_reasoning_type": {
+      "definitional": {
+        "n": 18,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "undetermined": 18
+        },
+        "missing_label_classes": [
+          "supported",
+          "contradicted"
+        ]
+      },
+      "structural": {
+        "n": 28,
+        "majority_class_baseline": 0.7142857142857143,
+        "gold_label_counts": {
+          "contradicted": 6,
+          "supported": 20,
+          "undetermined": 2
+        },
+        "missing_label_classes": []
+      }
+    },
+    "labels_absent_everywhere": [],
+    "flags": [
+      "[reasoning_type=definitional] gold missing label classes ['supported', 'contradicted']"
+    ]
+  },
+  "ceiling_floor": {
+    "threshold": 0.9,
+    "per_task": {
+      "T06": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T07": {
+        "n_cells": 2,
+        "cells_at_1.0": 1,
+        "cells_at_0.0": 1,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T08": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T09": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T10": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T11": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T12": {
+        "n_cells": 2,
+        "cells_at_1.0": 1,
+        "cells_at_0.0": 1,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T13": {
+        "n_cells": 2,
+        "cells_at_1.0": 1,
+        "cells_at_0.0": 1,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T14": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T15": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T16": {
+        "n_cells": 2,
+        "cells_at_1.0": 1,
+        "cells_at_0.0": 1,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T17": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T18": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T19": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T20": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T21": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T22": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T23": {
+        "n_cells": 2,
+        "cells_at_1.0": 1,
+        "cells_at_0.0": 1,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T24": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T25": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T26": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T27": {
+        "n_cells": 2,
+        "cells_at_1.0": 2,
+        "cells_at_0.0": 0,
+        "ceiling": true,
+        "floor": false,
+        "exception_cells": 0
+      },
+      "T28": {
+        "n_cells": 2,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 2,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      }
+    },
+    "flags": [
+      "[T06] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T08] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T09] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T10] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T11] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T14] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T15] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T17] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T18] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T19] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T20] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T21] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T22] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+      "[T24] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T25] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T26] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T27] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+      "[T28] FLOOR: 2/2 cells at 0.0 (0 exceptions)"
+    ]
+  },
+  "determinism": {
+    "n_cells": 46,
+    "identical_raw_cells": 46,
+    "identical_frac": 1.0,
+    "distinct_system_fingerprints": 1,
+    "system_fingerprints": [
+      ""
+    ]
+  },
+  "floor_citations": {
+    "n_floor_rows": 0,
+    "flags": []
+  },
+  "flags": [
+    "[reasoning_type=definitional] gold missing label classes ['supported', 'contradicted']",
+    "[T06] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T08] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T09] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T10] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T11] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T14] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T15] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T17] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T18] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T19] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T20] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T21] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T22] FLOOR: 2/2 cells at 0.0 (0 exceptions)",
+    "[T24] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T25] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T26] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T27] CEILING: 2/2 cells at 1.0 (0 exceptions)",
+    "[T28] FLOOR: 2/2 cells at 0.0 (0 exceptions)"
+  ]
+}

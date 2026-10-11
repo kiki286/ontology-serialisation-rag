@@ -1,0 +1,169 @@
+{
+  "stage": "postretrieval",
+  "timestamp_utc": "2026-08-13T07:58:46.694102+00:00",
+  "git_commit": "c68c6f0d88d52cd754e56be4d8673cb076e65b1c",
+  "seed": 20260529,
+  "temperature": 0.0,
+  "embedding_model": "text-embedding-3-large",
+  "retrieval_k": 5,
+  "formats": [
+    "turtle",
+    "elot-org",
+    "elot-org-ancestors",
+    "omn",
+    "jsonld",
+    "yaml-ld",
+    "ofn"
+  ],
+  "models": [
+    "gpt-4o-2024-11-20",
+    "gpt-4o-mini-2024-07-18",
+    "llama3.1:8b-instruct-q8_0"
+  ],
+  "conditions": [
+    "whole_context"
+  ],
+  "task_types": [
+    "verification",
+    "slot_filling"
+  ],
+  "n_tasks": 2,
+  "task_ids": [
+    "T02",
+    "T04"
+  ],
+  "elot_ancestor_format": "elot-org-ancestors",
+  "retrieval_index_filter_version": "1.1",
+  "retrieval_index_excluded_entity_types": [
+    "elot:FileIntro",
+    "elot:Prefixes",
+    "elot:Root",
+    "jsonld:Prefixes",
+    "ofn:Prefixes",
+    "omn:Prefixes",
+    "owl:AnnotationProperty",
+    "owl:Ontology",
+    "yamlld:Prefixes"
+  ],
+  "retrieval_index_excluded_entity_ids": [
+    "elot:file-intro",
+    "elot:prefixes",
+    "elot:root:core",
+    "jsonld:prefixes",
+    "ofn:prefixes",
+    "omn:prefixes",
+    "rdfs:Literal",
+    "xsd:boolean",
+    "xsd:date",
+    "xsd:dateTime",
+    "xsd:string",
+    "yamlld:prefixes"
+  ],
+  "retrieval_index_excludes_elot_sections": true,
+  "system_prompts": {
+    "verification": "verification_system_v1.txt",
+    "slot_filling": "slot_filling_system_v4.txt"
+  },
+  "loader_versions": {
+    "turtle": "4.0",
+    "elot-org": "3.0",
+    "elot-org-ancestors": "2.0",
+    "omn": "2.0",
+    "jsonld": "1.0",
+    "yaml-ld": "1.0",
+    "ofn": "1.0"
+  },
+  "n_calls": 126,
+  "n_trials": 3,
+  "seeds": [
+    20260529,
+    20260530,
+    20260531
+  ],
+  "trial_seed_map": {
+    "0": 20260529,
+    "1": 20260530,
+    "2": 20260531
+  },
+  "seed_policy": "different seed per trial",
+  "seed_determinism": {
+    "gpt-4o-2024-11-20": "pinned",
+    "gpt-4o-mini-2024-07-18": "pinned",
+    "llama3.1:8b-instruct-q8_0": "best-effort"
+  },
+  "ollama_num_ctx": 16384,
+  "ollama_num_ctx_whole_context": 56246,
+  "ollama_kv_cache_type": "q8_0",
+  "whole_context_construction": "mapped source file read verbatim; no chunk scaffolding or prefix prepending",
+  "whole_context_source_measurements": {
+    "turtle": {
+      "source_chars": 192511,
+      "source_llama_tokens": 46077,
+      "T02_prompt_llama_tokens": 46713,
+      "T04_prompt_llama_tokens": 46230
+    },
+    "elot-org": {
+      "source_chars": 123656,
+      "source_llama_tokens": 33190,
+      "T02_prompt_llama_tokens": 33826,
+      "T04_prompt_llama_tokens": 33343
+    },
+    "elot-org-ancestors": {
+      "source_chars": 123656,
+      "source_llama_tokens": 33190,
+      "T02_prompt_llama_tokens": 33826,
+      "T04_prompt_llama_tokens": 33343
+    },
+    "omn": {
+      "source_chars": 155226,
+      "source_llama_tokens": 40817,
+      "T02_prompt_llama_tokens": 41453,
+      "T04_prompt_llama_tokens": 40970
+    },
+    "jsonld": {
+      "source_chars": 201505,
+      "source_llama_tokens": 55097,
+      "T02_prompt_llama_tokens": 55734,
+      "T04_prompt_llama_tokens": 55251
+    },
+    "yaml-ld": {
+      "source_chars": 155043,
+      "source_llama_tokens": 46188,
+      "T02_prompt_llama_tokens": 46824,
+      "T04_prompt_llama_tokens": 46341
+    },
+    "ofn": {
+      "source_chars": 172421,
+      "source_llama_tokens": 41135,
+      "T02_prompt_llama_tokens": 41772,
+      "T04_prompt_llama_tokens": 41289
+    }
+  },
+  "source_graph_equality": {
+    "canonical_turtle_triples": 2214,
+    "jsonld": "isomorphic",
+    "yaml-ld": "isomorphic",
+    "ofn": "skipped: ROBOT_JAR unavailable; generation-time axiom-set equality evidence",
+    "omn": "skipped: ROBOT_JAR unavailable",
+    "elot-org": "not checkable in-repo: requires ELOT/Emacs tangle"
+  },
+  "graded_stability_rate": null,
+  "graded_stability_rate_note": "Not computed by the current harness; per-trial variance is recorded in postretrieval_variance.csv.",
+  "floor_conditions_run": [],
+  "floor_only_run": false,
+  "floor_format_sentinel": null,
+  "floor_retrieval_metrics": "null (undefined without a corpus)",
+  "oracle_padded_condition": false,
+  "oracle_pad_strategy": null,
+  "oracle_pad_seed": null,
+  "oracle_pad_entity_ids": null,
+  "cost_summary": {
+    "total_prompt_tokens": 5321583,
+    "total_completion_tokens": 8670,
+    "total_tokens": 5330253,
+    "total_calls": 126,
+    "cost_usd_at_pricing_date": 4.708508,
+    "pricing_snapshot_date": "2026-06-07",
+    "pricing_source_url": "https://platform.openai.com/docs/pricing"
+  }
+}

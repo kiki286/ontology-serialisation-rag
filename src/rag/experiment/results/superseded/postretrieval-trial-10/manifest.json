@@ -1,0 +1,105 @@
+{
+  "stage": "postretrieval",
+  "timestamp_utc": "2026-08-04T10:25:41.364082+00:00",
+  "git_commit": "6b27d80dd4fc0721e72bb581c6aac26e3a04dcf8",
+  "seed": 20260529,
+  "temperature": 0.0,
+  "embedding_model": "text-embedding-3-large",
+  "retrieval_k": 5,
+  "formats": [
+    "__no_corpus__"
+  ],
+  "models": [
+    "gpt-4o-2024-11-20",
+    "gpt-4o-mini-2024-07-18",
+    "llama3.1:8b-instruct-q8_0"
+  ],
+  "conditions": [
+    "no_context",
+    "empty_context"
+  ],
+  "task_types": [
+    "verification",
+    "slot_filling"
+  ],
+  "n_tasks": 5,
+  "task_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05"
+  ],
+  "elot_ancestor_format": "elot-org-ancestors",
+  "retrieval_index_filter_version": "1.1",
+  "retrieval_index_excluded_entity_types": [
+    "elot:FileIntro",
+    "elot:Prefixes",
+    "elot:Root",
+    "jsonld:Prefixes",
+    "ofn:Prefixes",
+    "omn:Prefixes",
+    "owl:AnnotationProperty",
+    "owl:Ontology",
+    "yamlld:Prefixes"
+  ],
+  "retrieval_index_excluded_entity_ids": [
+    "elot:file-intro",
+    "elot:prefixes",
+    "elot:root:core",
+    "jsonld:prefixes",
+    "ofn:prefixes",
+    "omn:prefixes",
+    "rdfs:Literal",
+    "xsd:boolean",
+    "xsd:date",
+    "xsd:dateTime",
+    "xsd:string",
+    "yamlld:prefixes"
+  ],
+  "retrieval_index_excludes_elot_sections": true,
+  "system_prompts": {
+    "verification": "verification_system_v1.txt",
+    "slot_filling": "slot_filling_system_v4.txt"
+  },
+  "loader_versions": {},
+  "n_calls": 90,
+  "n_trials": 3,
+  "seeds": [
+    20260529,
+    20260530,
+    20260531
+  ],
+  "trial_seed_map": {
+    "0": 20260529,
+    "1": 20260530,
+    "2": 20260531
+  },
+  "seed_policy": "different seed per trial",
+  "seed_determinism": {
+    "gpt-4o-2024-11-20": "pinned",
+    "gpt-4o-mini-2024-07-18": "pinned",
+    "llama3.1:8b-instruct-q8_0": "best-effort"
+  },
+  "ollama_num_ctx": 16384,
+  "floor_conditions_run": [
+    "no_context",
+    "empty_context"
+  ],
+  "floor_only_run": true,
+  "floor_format_sentinel": "__no_corpus__",
+  "floor_retrieval_metrics": "null (undefined without a corpus)",
+  "oracle_padded_condition": false,
+  "oracle_pad_strategy": null,
+  "oracle_pad_seed": null,
+  "oracle_pad_entity_ids": null,
+  "cost_summary": {
+    "total_prompt_tokens": 32094,
+    "total_completion_tokens": 5006,
+    "total_tokens": 37100,
+    "total_calls": 90,
+    "cost_usd_at_pricing_date": 0.046361,
+    "pricing_snapshot_date": "2026-06-07",
+    "pricing_source_url": "https://platform.openai.com/docs/pricing"
+  }
+}

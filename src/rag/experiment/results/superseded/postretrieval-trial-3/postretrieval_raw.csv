@@ -1,0 +1,94 @@
+trial_idx,task_id,task_type,format,condition,model,provider,model_returned,system_prompt,n_context_chunks,finish_reason,system_fingerprint,prompt_tokens,completion_tokens,total_tokens,raw_response,user_content,parse_ok,parse_error,pred_class,pred_property,pred_intermediate_node,pred_support_class,pred_support_property,pred_support_intermediate,grade_class_correct,grade_property_correct,grade_intermediate_correct,grade_support_class_correct,grade_support_property_correct,grade_support_intermediate_correct,grade_exact_match,grade_partial_credit
+0,T05,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,6532,81,6613,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,0,0.3333333333333333
+0,T05,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,4895,85,4980,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,0,0.3333333333333333
+0,T05,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,4956,85,5041,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a scalar quantity datum.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,0,0.3333333333333333
+0,T05,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,5512,101,5613,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalObject"", ""property"": ""Chunk: lis:hasQuality"", ""intermediate_node"": ""Chunk: lis:Quality""}, 
+""reasoning"": ""The scenario requires an intermediate node (lis:Quality) to represent the measured outlet pressure as a quality of pump P-101.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,0,0.3333333333333333
+0,T05,slot_filling,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,8363,102,8465,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalObject"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": ""Chunk: lis:Quality""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the quality being attached, which is a physical quantity.""
+}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,0,0.3333333333333333
+1,T05,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,6532,81,6613,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,0,0.3333333333333333
+1,T05,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,4895,85,4980,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,0,0.3333333333333333
+1,T05,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,4956,85,5041,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a scalar quantity datum.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,0,0.3333333333333333
+1,T05,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,5512,107,5619,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalObject"", ""property"": ""Chunk: lis:hasQuality"", ""intermediate_node"": ""Chunk: lis:Quality""}, 
+""reasoning"": ""The subject of the scenario is a physical object (the pump), and it has a quality (outlet pressure) that is quantified as a measured value.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,0,0.3333333333333333
+1,T05,slot_filling,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,8363,102,8465,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalObject"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": ""Chunk: lis:Quality""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the quality being attached, which is a physical quantity.""
+}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,0,0.3333333333333333
+2,T05,slot_filling,turtle,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,6532,81,6613,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,0,0.3333333333333333
+2,T05,slot_filling,elot-org,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,4895,85,4980,"{""class"": ""lis:PhysicalObject"", 
+ ""property"": ""lis:hasQuality"", 
+ ""intermediate_node"": true, 
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": null}, 
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a quality of pump P-101.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,,1,0,1,0,0,0,0,0.3333333333333333
+2,T05,slot_filling,elot-org-ancestors,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,4956,85,5041,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalQuantity"", ""property"": null, ""intermediate_node"": ""Chunk: lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The scenario requires an intermediate node to represent the measured outlet pressure as a scalar quantity datum.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalQuantity,,Chunk: lis:ScalarQuantityDatum,1,0,1,0,0,0,0,0.3333333333333333
+2,T05,slot_filling,omn,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,5512,107,5619,"{""class"": ""lis:PhysicalObject"", 
+""property"": ""lis:hasQuality"", 
+""intermediate_node"": true, 
+""supporting_chunks"": {""class"": ""Chunk: lis:PhysicalObject"", ""property"": ""Chunk: lis:hasQuality"", ""intermediate_node"": ""Chunk: lis:Quality""}, 
+""reasoning"": ""The subject of the scenario is a physical object (the pump), and it has a quality (outlet pressure) that is quantified as a measured value.""}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,0,0.3333333333333333
+2,T05,slot_filling,jsonld,oracle,llama3.1:8b-instruct-q8_0,ollama,llama3.1:8b-instruct-q8_0,slot_filling_system_v4.txt,10,stop,fp_ollama,8363,102,8465,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""Chunk: lis:PhysicalObject"",
+    ""property"": ""Chunk: lis:hasQuality"",
+    ""intermediate_node"": ""Chunk: lis:Quality""
+  },
+  ""reasoning"": ""The scenario requires an intermediate node to represent the quality being attached, which is a physical quantity.""
+}",,True,,lis:PhysicalObject,lis:hasQuality,True,Chunk: lis:PhysicalObject,Chunk: lis:hasQuality,Chunk: lis:Quality,1,0,1,0,0,0,0,0.3333333333333333

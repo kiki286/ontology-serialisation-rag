@@ -1,0 +1,13 @@
+Takeaways:
+- LLM doesn't understand what "concepts" is. Either change the phrasing of question, or perhaps include as context in prompt - something about the fact that these questions are going to be about ontologies and will use ontological terms interchangeably like concept<->class/instance, relation<->objproperty/dataproperty, etc.... ?
+- Q3 gold answer offers Activity as the class for Failure Effect, seems wrong?
+- Think gold answers to questions asking "which class should X be an instance of" should be the most granular class possible. The LLM shouldn't have to guess what level of abstraction it should provide the class at, nor is it particularly useful. Q3 for example - Activity is highest level ?
+- Question about namespace strcuture tough - turns out the section it needs form OBI doc doesnt actually contain the word namespace - probably doesnt get high semantic similarity. Difficult....
+- Not sure why the annotation proprety question failed to retrieve correct context - maybe needs to be 'annotation property' in question rahter than 'annotation'? Bit sensitive...
+- No info about latest update of IDO in our docs?
+- lots of key IDO principles not retrieved likely due to each of them being a chunk. i think could consider this in a background section of prompt for both ido and obi. its one of those pretty important high-level questions that naive rag will jsut fail. idea: can we include some key summaries of documentation we create, or llm-generated, like in graphrag, to help these kinds of questions???
+- check if markdown chunks include all levels above of headings
+- q13 actual seems good, q13 gold ??
+- no info about languages of IDO in our docs?
+- gold answer for q24 looks wrong
+- generally a sense of lack of understanding of OBI

@@ -1,0 +1,5 @@
+model,n_rows,explicit-negation claim (disjoint/not a/never),absence-as-refutation (no axiom/not stated/does not state),hierarchy mismatch (subclass/superclass/hierarchy),domain/range
+gpt-4o,408,0.172,0.272,0.831,0.032
+gpt-4o-mini,415,0.181,0.202,0.672,0.014
+llama,393,0.257,0.094,0.875,0.031
+sonnet,309,0.175,0.126,0.913,0.068

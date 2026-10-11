@@ -1,0 +1,12 @@
+metric,n_cells,median_std,mean_std,max_std,nonzero_std_cells,max_std_task_id,max_std_task_type,max_std_format,max_std_condition,max_std_model
+accuracy,56,0.0,0.0,0.0,0,T06,verification,elot-org,oracle,claude-sonnet-4-5-20250929
+answered,56,0.0,0.0,0.0,0,T06,verification,elot-org,oracle,claude-sonnet-4-5-20250929
+exact_match_rate,56,0.0,0.0,0.0,0,T29,slot_filling,elot-org,oracle,claude-sonnet-4-5-20250929
+field_accuracy_class_correct,56,0.0,0.0,0.0,0,T29,slot_filling,elot-org,oracle,claude-sonnet-4-5-20250929
+field_accuracy_intermediate_correct,56,0.0,0.0,0.0,0,T29,slot_filling,elot-org,oracle,claude-sonnet-4-5-20250929
+field_accuracy_property_correct,56,0.0,0.0,0.0,0,T29,slot_filling,elot-org,oracle,claude-sonnet-4-5-20250929
+field_accuracy_support_class_correct,56,0.0,0.0,0.0,0,T29,slot_filling,elot-org,oracle,claude-sonnet-4-5-20250929
+field_accuracy_support_property_correct,56,0.0,0.0,0.0,0,T29,slot_filling,elot-org,oracle,claude-sonnet-4-5-20250929
+mean_partial_credit,56,0.0,0.0,0.0,0,T29,slot_filling,elot-org,oracle,claude-sonnet-4-5-20250929
+parse_errors,56,0.0,0.0,0.0,0,T06,verification,elot-org,oracle,claude-sonnet-4-5-20250929
+selective_correct,56,0.0,0.0,0.0,0,T06,verification,elot-org,oracle,claude-sonnet-4-5-20250929

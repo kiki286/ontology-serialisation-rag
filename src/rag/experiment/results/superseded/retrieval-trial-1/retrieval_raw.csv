@@ -1,0 +1,7 @@
+task_id,task_type,format,query,k,n_retrieved,gold_chunks,retrieved_ids,recall_at_k,mrr,ndcg_at_k
+T01,verification,turtle,Is every Person an Organism in IDO?,5,5,lis:Person;lis:Organism,lis:Organism;lis:Person;lis:Object;lis-ont:core;lis:InformationObject,1.0,1.0,1.0
+T01,verification,elot-org,Is every Person an Organism in IDO?,5,5,lis:Person;lis:Organism,lis:Person;lis:Organism;elot:section:Individuals;lis:Object;lis-ont:core,1.0,1.0,1.0
+T01,verification,omn,Is every Person an Organism in IDO?,5,5,lis:Person;lis:Organism,lis:Organism;lis:Person;lis-ont:core;lis:Object;lis:InformationObject,1.0,1.0,1.0
+T02,slot_filling,turtle,Which IDO property relates a steel bar to its mass?,5,5,lis:hasPhysicalQuantity;lis:hasQuality;lis:PhysicalQuantity;lis:Quality;lis:PhysicalObject,lis:datumUOM;lis-ont:core;lis:uomOfDatum;lis:hasPhysicalQuantity;lis:PhysicalQuantity,0.4,0.25,0.27727342735504823
+T02,slot_filling,elot-org,Which IDO property relates a steel bar to its mass?,5,5,lis:hasPhysicalQuantity;lis:hasQuality;lis:PhysicalQuantity;lis:Quality;lis:PhysicalObject,lis:Compound;lis:PhysicalQuantity;lis:MaterialCompositionQuality;lis-ont:core;lis:physicalQuantityOf,0.2,0.5,0.21398626473452756
+T02,slot_filling,omn,Which IDO property relates a steel bar to its mass?,5,5,lis:hasPhysicalQuantity;lis:hasQuality;lis:PhysicalQuantity;lis:Quality;lis:PhysicalObject,lis-ont:core;lis:hasPhysicalQuantity;lis:uomOfDatum;lis:qualityQuantityValue;lis:physicalQuantityOf,0.2,0.5,0.21398626473452756

@@ -1,0 +1,13 @@
+format,task_type,n,recall_at_k,mrr,ndcg_at_k
+elot-org,ALL,2,0.7,1.0,0.7426142775581612
+elot-org,slot_filling,1,0.4,1.0,0.48522855511632257
+elot-org,verification,1,1.0,1.0,1.0
+elot-org-ancestors,ALL,2,0.6,0.75,0.6069931323672638
+elot-org-ancestors,slot_filling,1,0.2,0.5,0.21398626473452756
+elot-org-ancestors,verification,1,1.0,1.0,1.0
+omn,ALL,2,0.7,1.0,0.735182641392979
+omn,slot_filling,1,0.4,1.0,0.4703652827859579
+omn,verification,1,1.0,1.0,1.0
+turtle,ALL,2,0.7,0.75,0.680027307288617
+turtle,slot_filling,1,0.4,0.5,0.36005461457723403
+turtle,verification,1,1.0,1.0,1.0

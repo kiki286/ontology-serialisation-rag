@@ -1,0 +1,5 @@
+arm,gpt-4o,gpt-4o-mini,sonnet,stratum
+B2 open-world,1.0,0.8,1.0,determinate
+frozen (row zero),1.0,0.889,1.0,determinate
+B2 open-world,0.0,0.011,0.333,undetermined
+frozen (row zero),0.0,0.0,0.222,undetermined

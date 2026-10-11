@@ -1,0 +1,5 @@
+m,determinate,undetermined-gold,discrimination,n_det,n_und
+gpt-4o,0.0,0.0,0.0,663,354
+gpt-4o-mini,0.003,0.0,-0.003,663,354
+llama,0.142,0.014,-0.128,663,354
+sonnet,0.0,0.251,0.251,663,354

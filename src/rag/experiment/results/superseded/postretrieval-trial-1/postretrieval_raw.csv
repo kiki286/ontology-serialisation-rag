@@ -1,0 +1,827 @@
+trial_idx,task_id,task_type,format,condition,model,model_returned,system_prompt,n_context_chunks,finish_reason,system_fingerprint,prompt_tokens,completion_tokens,total_tokens,raw_response,user_content,parse_ok,parse_error,pred_label,grade_gold_label,grade_pred_label,grade_correct,pred_class,pred_property,pred_intermediate_node,pred_support_class,pred_support_property,pred_support_intermediate,grade_class_correct,grade_property_correct,grade_intermediate_correct,grade_support_class_correct,grade_support_property_correct,grade_support_intermediate_correct,grade_exact_match,grade_partial_credit
+0,T01,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,984,42,1026,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,984,43,1027,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is indeed an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2257,43,2300,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2257,29,2286,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,891,44,935,"{""label"": ""supported"", ""reasoning"": ""The ontology defines a lis:Person as 'an organism that is a human,' which implies that every lis:Person is a type of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,891,35,926,"{""label"": ""supported"", ""reasoning"": ""The definition of 'Person' as a human implies that every person is a living organism, thus supporting the statement.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1820,41,1861,"{""label"": ""supported"", ""reasoning"": ""The ontology defines lis:Person as 'an organism that is a human,' which implies that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1820,32,1852,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines 'Person' as a subclass of 'Organism', which supports the statement.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,930,42,972,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:Person as a subclass of lis:Organism, which entails that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,930,42,972,"{""label"": ""supported"", ""reasoning"": ""The ontology content indicates that 'Person' is a subclass of 'Organism', which means every 'Person' is indeed an 'Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1871,43,1914,"{""label"": ""supported"", ""reasoning"": ""The ontology content specifies that lis:Person is a subclass of lis:Organism, which entails that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1871,32,1903,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines 'Person' as a subclass of 'Organism', which supports the statement.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,901,43,944,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,901,51,952,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that 'lis:Person' is a subclass of 'lis:Organism', which means every 'lis:Person' is indeed an 'lis:Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2251,43,2294,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T01,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2251,54,2305,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that 'lis:Person' is a subclass of 'lis:Organism', which means every instance of 'lis:Person' is indeed an instance of 'lis:Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T02,slot_filling,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,3603,98,3701,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object, such as a steel bar, to a physical quantity, such as its mass.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,3603,90,3693,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""A steel bar has a mass, which is a physical quantity, and this relationship is represented through the hasQuality property.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,0,0,0,0,0,0,0,0.0
+0,T02,slot_filling,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2525,100,2625,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar's mass is a physical quantity, and the 'hasPhysicalQuantity' property directly relates a physical object (like a steel bar) to its physical quantity (like mass).""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2525,87,2612,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""A steel bar has a mass, which is a physical quantity, and is appropriately linked by the property hasPhysicalQuantity.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2750,99,2849,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which is appropriately related using the property lis:hasPhysicalQuantity as per its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2750,96,2846,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""The mass of a steel bar is a physical quantity that is a quality dependent on the physical object, thus requiring an intermediate node to represent the relationship.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,0,0,0,0,0,0,0,0.0
+0,T02,slot_filling,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,1878,97,1975,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar's mass is a physical quantity, and the property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object to its physical quantity.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,1878,91,1969,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The mass of a steel bar is a physical quantity that can be directly related to the steel bar using the property 'hasPhysicalQuantity'.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2788,99,2887,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which is appropriately related using the property lis:hasPhysicalQuantity as per its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2788,91,2879,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""A steel bar is a physical object that has a quality (mass), which requires an intermediate node to represent the physical quantity.""}",,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,1,0,0,0,0,0,0,0.16666666666666666
+0,T02,slot_filling,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,1938,111,2049,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:physicalQuantityOf"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": ""lis:PhysicalQuantity""},
+ ""reasoning"": ""The mass of a steel bar is a quantifiable property, which aligns with 'lis:PhysicalQuantity', and the property 'lis:physicalQuantityOf' is used to relate a physical object to its physical quantity.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:physicalQuantityOf,True,lis:PhysicalQuantity,lis:physicalQuantityOf,lis:PhysicalQuantity,0,0,0,0,0,0,0,0.0
+0,T02,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,1938,89,2027,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:physicalQuantityOf"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": ""lis:uomOfDatum""},
+ ""reasoning"": ""The mass of the steel bar is a measurable quality that requires an intermediate node to represent the relationship correctly.""}",,True,,,,,,lis:PhysicalQuantity,lis:physicalQuantityOf,True,lis:PhysicalQuantity,lis:physicalQuantityOf,lis:uomOfDatum,0,0,0,0,0,0,0,0.0
+0,T02,slot_filling,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,3097,102,3199,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which can be related using the 'lis:hasPhysicalQuantity' property as specified in its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,3097,101,3198,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:hasPhysicalQuantity"",
+    ""property"": ""lis:hasQuality"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The mass of a steel bar is a physical quantity that can be quantified, thus requiring an intermediate node to represent the relationship correctly.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:hasPhysicalQuantity,lis:hasQuality,,0,1,0,0,0,1,0,0.3333333333333333
+0,T02,slot_filling,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2050,98,2148,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object, such as a steel bar, to a physical quantity, such as its mass.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+0,T02,slot_filling,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2050,85,2135,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:hasPhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": null},
+ ""reasoning"": ""The relationship between a steel bar and its mass requires an intermediate node to represent the physical quantity of mass.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:hasPhysicalQuantity,lis:physicalQuantityOf,,0,1,0,0,0,1,0,0.3333333333333333
+0,T03,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,2362,87,2449,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'lis:concretizes' y, then x must be a 'PhysicalObject' or an 'Activity', and y must be an 'InformationObject'. A maintenance procedure document, being an 'InformationObject', cannot 'lis:concretize' a printed paper copy of itself, which would be a 'PhysicalObject'.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,2362,49,2411,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized as a printed paper copy, aligning with the definition of the 'concretizes' property.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2397,94,2491,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then y must be an 'information object' and x must be a 'physical object' copy of y or an 'activity' performance of y. A maintenance procedure document cannot 'concretize' a printed paper copy of itself because the document itself is an 'information object', not a 'physical object' or 'activity'.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2397,42,2439,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized by a physical object, such as a printed paper copy.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,1902,89,1991,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that 'lis:concretizes' has a domain of 'lis:Activity' or 'lis:PhysicalObject' and a range of 'lis:InformationObject', but the statement reverses this by suggesting an 'InformationObject' (the document) concretizes a 'PhysicalObject' (the printed paper copy), which contradicts the ontology's definition.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,1902,46,1948,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' that can be concretized into a printed paper copy, which is a 'physical object'.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1614,74,1688,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then y must be an 'information object' and x must be a 'physical object' or an 'activity', which contradicts the statement that a document (an information object) concretizes a printed paper copy (a physical object).""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1614,46,1660,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because the definition of 'concretizes' indicates that an information object, such as a maintenance procedure document, can be made concrete in printed copies.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,1914,90,2004,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that 'lis:concretizes' has a domain of 'lis:Activity' or 'lis:PhysicalObject' and a range of 'lis:InformationObject', but the statement reverses this relationship by suggesting an 'InformationObject' (the document) concretizes a 'PhysicalObject' (the printed paper copy), which contradicts the ontology's definition.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,1914,46,1960,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' that can be concretized into a printed paper copy, which is a 'physical object'.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1621,74,1695,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then y must be an 'information object' and x must be a 'physical object' or an 'activity', which contradicts the statement that a document (an information object) concretizes a printed paper copy (a physical object).""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1621,46,1667,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because the definition of 'concretizes' indicates that an information object, such as a maintenance procedure document, can be made concrete in printed copies.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,2085,82,2167,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a 'physical object' or an 'activity', and y must be an 'information object'. A maintenance procedure document, being an 'information object', cannot 'concretize' a printed paper copy of itself, which is a 'physical object'.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,2085,46,2131,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' that can be concretized by a printed paper copy, which is a 'physical object'.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T03,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1696,66,1762,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a physical object or an activity, and y must be an information object; a printed paper copy cannot be concretized as it is a physical object, not an information object.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+0,T03,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1696,50,1746,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized into a printed paper copy, which aligns with the definition of the 'concretizes' property.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+0,T04,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1295,40,1335,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1295,44,1339,"{""label"": ""supported"", ""reasoning"": ""The ontology states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1843,41,1884,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1843,42,1885,"{""label"": ""supported"", ""reasoning"": ""The ontology states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is indeed a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1047,38,1085,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not specify any relationship, such as subclass or equivalence, between lis:Function and lis:Capability.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+0,T04,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1047,45,1092,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not explicitly state the relationship between lis:Function and lis:Capability, leaving it unclear whether every lis:Function is a lis:Capability.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+0,T04,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1358,69,1427,"{""label"": ""supported"", ""reasoning"": ""The ontology content shows that lis:hasFunction is a subproperty of lis:hasCapability, and the range of lis:hasFunction is lis:Function, while the range of lis:hasCapability is lis:Capability, implying that every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1358,49,1407,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content defines 'lis:hasFunction' and 'lis:hasCapability' as separate properties, indicating that a 'Function' is not necessarily a 'Capability'.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+0,T04,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1100,38,1138,"{""label"": ""supported"", ""reasoning"": ""The ontology content shows that lis:Function is a subclass of lis:Capability, as it is hierarchically nested under it.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1100,42,1142,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not explicitly state that every lis:Function is a lis:Capability, nor does it provide information that contradicts this relationship.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+0,T04,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1467,41,1508,"{""label"": ""supported"", ""reasoning"": ""The ontology content shows that lis:Function is a subclass of lis:Capability, which entails that every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1467,38,1505,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines 'hasFunction' as a subproperty of 'hasCapability', indicating that every function is indeed a capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1138,41,1179,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1138,29,1167,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1705,29,1734,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T04,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1705,28,1733,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+0,T05,slot_filling,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,6102,142,6244,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalObject"",
+    ""property"": ""lis:hasPhysicalQuantity"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""The pump P-101 is a physical object (lis:PhysicalObject), which has a physical quantity (lis:hasPhysicalQuantity) such as outlet pressure, and the measured value of this quantity (5 bar) requires an intermediate node (lis:qualityQuantifiedAs) to represent the quantified quality.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+0,T05,slot_filling,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,6102,95,6197,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:QualityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a physical quantity (outlet pressure) which is quantified as a quality datum (5 bar)."" }",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:QualityDatum,0,1,1,1,0,0,0,0.5
+0,T05,slot_filling,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2859,104,2963,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:qualityQuantifiedAs"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""The outlet pressure of the pump is a physical quantity that is quantified as a quality datum, requiring an intermediate node to represent the measured value of 5 bar.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:qualityQuantifiedAs,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:qualityQuantifiedAs,1,0,1,1,0,0,0,0.5
+0,T05,slot_filling,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2859,115,2974,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""The measured outlet pressure of the pump is a physical quantity that needs to be linked to the activity of the pump through a quality datum.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,lis:qualityQuantifiedAs,1,0,1,0,0,0,0,0.3333333333333333
+0,T05,slot_filling,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,4449,130,4579,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalObject"",
+    ""property"": ""lis:hasPhysicalQuantity"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""Pump P-101 is a physical object (lis:PhysicalObject) that has a physical quantity (lis:hasPhysicalQuantity), and the measured outlet pressure requires an intermediate node to represent the quantified quality (lis:qualityQuantifiedAs).""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+0,T05,slot_filling,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,4449,113,4562,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:Quality"",
+    ""property"": ""lis:qualityQuantifiedAs"",
+    ""intermediate_node"": ""lis:ScalarQuantityDatum""
+  },
+  ""reasoning"": ""The pump is a physical object that has a physical quantity (outlet pressure), which is quantified as a scalar quantity datum representing the measured value of 5 bar.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:Quality,lis:qualityQuantifiedAs,lis:ScalarQuantityDatum,0,1,1,0,0,1,0,0.5
+0,T05,slot_filling,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2175,129,2304,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:profileQuantityDatum"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalQuantity"",
+    ""property"": ""lis:profileQuantityDatum"",
+    ""intermediate_node"": ""lis:profileQuantityDatum""
+  },
+  ""reasoning"": ""The outlet pressure of pump P-101 is a measurable physical quantity (lis:PhysicalQuantity) and is linked to the pump through the property lis:profileQuantityDatum, which requires an intermediate node to represent the measured value (5 bar).""
+}",,True,,,,,,lis:PhysicalQuantity,lis:profileQuantityDatum,True,lis:PhysicalQuantity,lis:profileQuantityDatum,lis:profileQuantityDatum,1,0,1,1,0,0,0,0.5
+0,T05,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2175,89,2264,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:profileQuantityDatum"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:profileQuantityDatum"", ""property"": ""lis:hasParticipantQualityQuantifiedAs"", ""intermediate_node"": null},
+ ""reasoning"": ""The measured outlet pressure of the pump is a physical quantity that needs to be represented as a profile quantity datum.""}",,True,,,,,,lis:PhysicalQuantity,lis:profileQuantityDatum,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,,1,0,1,0,0,0,0,0.3333333333333333
+0,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,4555,121,4676,"{
+ ""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""The pump P-101 is a physical object (lis:PhysicalObject) that has a physical quantity (lis:hasPhysicalQuantity), and the measured outlet pressure is represented as a quantified quality (lis:qualityQuantifiedAs) requiring an intermediate node.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+0,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,4555,102,4657,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasQuality"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:Quality"",
+    ""property"": ""lis:hasPhysicalQuantity"",
+    ""intermediate_node"": ""lis:QualityDatum""
+  },
+  ""reasoning"": ""The pump is a physical object that has a quality (outlet pressure) quantified as a quality datum (5 bar).""
+}",,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:Quality,lis:hasPhysicalQuantity,lis:QualityDatum,0,0,1,0,1,0,0,0.3333333333333333
+0,T05,slot_filling,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2237,108,2345,"{
+ ""class"": ""lis:PhysicalArtefact"",
+ ""property"": ""lis:profileQuantityDatum"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalArtefact"", ""property"": ""lis:profileQuantityDatum"", ""intermediate_node"": ""lis:profileQuantityDatum""},
+ ""reasoning"": ""The pump P-101 is a physical artefact, the measured outlet pressure is a profile quantity datum, and an intermediate node is required to represent the measurement value of 5 bar.""
+}",,True,,,,,,lis:PhysicalArtefact,lis:profileQuantityDatum,True,lis:PhysicalArtefact,lis:profileQuantityDatum,lis:profileQuantityDatum,0,0,1,0,0,0,0,0.16666666666666666
+0,T05,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2237,115,2352,"{
+  ""class"": ""lis:profileQuantityDatum"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The measured outlet pressure of the pump P-101 is represented as a profile quantity datum, which quantifies the quality of the pressure during the pump's operation.""
+}",,True,,,,,,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,,0,0,1,0,0,0,0,0.16666666666666666
+0,T05,slot_filling,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,5156,109,5265,"{
+ ""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""Pump P-101 is a physical object, outlet pressure is a physical quantity linked to the pump via 'hasPhysicalQuantity', and the measured value requires an intermediate node to represent the quantified quality.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+0,T05,slot_filling,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,5156,106,5262,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:Quality"",
+    ""property"": ""lis:qualityQuantifiedAs"",
+    ""intermediate_node"": ""lis:ScalarQuantityDatum""
+  },
+  ""reasoning"": ""The pump is a physical object that has a measurable quality (outlet pressure), which requires a quality datum to represent the measurement.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:Quality,lis:qualityQuantifiedAs,lis:ScalarQuantityDatum,0,1,1,0,0,1,0,0.5
+0,T05,slot_filling,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2620,110,2730,"{
+ ""class"": ""lis:FunctionalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:FunctionalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantityValue""},
+ ""reasoning"": ""The pump P-101 is a functional object (class), it has a physical quantity (property) representing the outlet pressure, and an intermediate node is required to represent the measured value of 5 bar.""
+}",,True,,,,,,lis:FunctionalObject,lis:hasPhysicalQuantity,True,lis:FunctionalObject,lis:hasPhysicalQuantity,lis:qualityQuantityValue,0,1,1,0,1,0,0,0.5
+0,T05,slot_filling,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2620,111,2731,"{
+  ""class"": ""lis:FunctionalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalQuantity"",
+    ""property"": ""lis:qualityQuantityValue"",
+    ""intermediate_node"": ""lis:profileQuantityDatum""
+  },
+  ""reasoning"": ""The pump is a functional object that has a physical quantity (outlet pressure) which is measured, thus requiring an intermediate node to represent the measured value.""
+}",,True,,,,,,lis:FunctionalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantityValue,lis:profileQuantityDatum,0,1,1,1,0,0,0,0.5
+1,T01,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,984,42,1026,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,984,43,1027,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is indeed an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2257,43,2300,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2257,29,2286,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,891,43,934,"{""label"": ""supported"", ""reasoning"": ""The ontology defines a lis:Person as 'an organism that is a human,' which directly implies that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,891,35,926,"{""label"": ""supported"", ""reasoning"": ""The definition of 'Person' as a human implies that every person is a living organism, thus supporting the statement.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1820,41,1861,"{""label"": ""supported"", ""reasoning"": ""The ontology defines lis:Person as 'an organism that is a human,' which implies that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1820,41,1861,"{""label"": ""supported"", ""reasoning"": ""The ontology defines 'Person' as a subclass of 'Organism', which entails that every 'Person' is indeed an 'Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,930,42,972,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:Person as a subclass of lis:Organism, which entails that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,930,42,972,"{""label"": ""supported"", ""reasoning"": ""The ontology content indicates that 'Person' is a subclass of 'Organism', which means every 'Person' is indeed an 'Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1871,42,1913,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:Person as a subclass of lis:Organism, which entails that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1871,32,1903,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines 'Person' as a subclass of 'Organism', which supports the statement.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,901,43,944,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,901,51,952,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that 'lis:Person' is a subclass of 'lis:Organism', which means every 'lis:Person' is indeed an 'lis:Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2251,43,2294,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T01,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2251,54,2305,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that 'lis:Person' is a subclass of 'lis:Organism', which means every instance of 'lis:Person' is indeed an instance of 'lis:Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T02,slot_filling,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,3603,98,3701,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object, such as a steel bar, to a physical quantity, such as its mass.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,3603,90,3693,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""A steel bar has a mass, which is a physical quantity, and this relationship is represented through the hasQuality property.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,0,0,0,0,0,0,0,0.0
+1,T02,slot_filling,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2525,100,2625,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar's mass is a physical quantity, and the 'hasPhysicalQuantity' property directly relates a physical object (like a steel bar) to its physical quantity (like mass).""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2525,89,2614,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The mass of a steel bar is a physical quantity that can be directly related to the steel bar using the hasPhysicalQuantity property.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2750,99,2849,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which is appropriately related using the property lis:hasPhysicalQuantity as per its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2750,89,2839,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""The mass of a steel bar is a physical quantity that can be represented as a quality dependent on the physical object.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,0,0,0,0,0,0,0,0.0
+1,T02,slot_filling,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,1878,97,1975,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar's mass is a physical quantity, and the property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object to its physical quantity.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,1878,95,1973,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasPhysicalQuantity' directly relates a physical object, such as a steel bar, to its measurable quality, which in this case is its mass.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2788,99,2887,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which is appropriately related using the property lis:hasPhysicalQuantity as per its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2788,91,2879,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""A steel bar is a physical object that has a quality (mass), which requires an intermediate node to represent the physical quantity.""}",,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,1,0,0,0,0,0,0,0.16666666666666666
+1,T02,slot_filling,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,1938,116,2054,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": ""lis:PhysicalQuantity""},
+ ""reasoning"": ""The mass of a steel bar is a quantifiable property, which aligns with 'lis:PhysicalQuantity', and the property 'lis:hasPhysicalQuantity' is the inverse of 'lis:physicalQuantityOf', making it the appropriate relation.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:physicalQuantityOf,lis:PhysicalQuantity,0,1,0,0,0,0,0,0.16666666666666666
+1,T02,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,1938,85,2023,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:physicalQuantityOf"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": ""null""},
+ ""reasoning"": ""The mass of the steel bar is a measurable quality that requires a physical quantity node to represent it correctly.""}",,True,,,,,,lis:PhysicalQuantity,lis:physicalQuantityOf,True,lis:PhysicalQuantity,lis:physicalQuantityOf,null,0,0,0,0,0,0,0,0.0
+1,T02,slot_filling,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,3097,102,3199,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which can be related using the 'lis:hasPhysicalQuantity' property as specified in its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,3097,88,3185,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:hasPhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": null},
+ ""reasoning"": ""The mass of a steel bar is a physical quantity that can be measured, thus requiring an intermediate node to represent the relationship.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:hasPhysicalQuantity,lis:hasQuality,,0,1,0,0,0,1,0,0.3333333333333333
+1,T02,slot_filling,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2050,98,2148,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object, such as a steel bar, to a physical quantity, such as its mass.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+1,T02,slot_filling,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2050,85,2135,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:hasPhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": null},
+ ""reasoning"": ""The relationship between a steel bar and its mass requires an intermediate node to represent the physical quantity of mass.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:hasPhysicalQuantity,lis:physicalQuantityOf,,0,1,0,0,0,1,0,0.3333333333333333
+1,T03,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,2362,79,2441,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'lis:concretizes' y, then x must be a 'PhysicalObject' or an 'Activity', and y must be an 'InformationObject'. A maintenance procedure document is an 'InformationObject', so it cannot 'lis:concretizes' a printed paper copy of itself.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,2362,49,2411,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized as a printed paper copy, aligning with the definition of the 'concretizes' property.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2397,68,2465,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a 'physical object' or an 'activity', and y must be an 'information object'; a printed paper copy cannot be concretized by a document, as the roles are reversed.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2397,42,2439,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized by a physical object, such as a printed paper copy.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,1902,89,1991,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that 'lis:concretizes' has a domain of 'lis:Activity' or 'lis:PhysicalObject' and a range of 'lis:InformationObject', but the statement reverses this by suggesting an 'InformationObject' (the document) concretizes a 'PhysicalObject' (the printed paper copy), which contradicts the ontology's definition.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,1902,46,1948,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' that can be concretized into a printed paper copy, which is a 'physical object'.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1614,72,1686,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then y must be an 'information object' and x must be a 'physical object' or an 'activity', which contradicts the statement that a document (an information object) concretizes a printed paper copy of itself.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1614,46,1660,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because the definition of 'concretizes' allows for an information object, such as a maintenance procedure document, to be made concrete in printed copies.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,1914,88,2002,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that 'lis:concretizes' has a domain of 'lis:Activity' or 'lis:PhysicalObject' and a range of 'lis:InformationObject', but the statement reverses this relationship by suggesting an 'InformationObject' (the document) concretizes a 'PhysicalObject' (the printed paper copy), which contradicts the ontology.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,1914,46,1960,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' that can be concretized into a printed paper copy, which is a 'physical object'.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1621,74,1695,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then y must be an 'information object' and x must be a 'physical object' or an 'activity', which contradicts the statement that a document (an information object) concretizes a printed paper copy (a physical object).""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1621,46,1667,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because the definition of 'concretizes' indicates that an information object, such as a maintenance procedure document, can be made concrete in printed copies.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,2085,74,2159,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a physical object or activity, and y must be an information object. A maintenance procedure document, being an information object, cannot 'concretize' a printed paper copy of itself, which is a physical object.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,2085,52,2137,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' and a printed paper copy is a 'physical object', which aligns with the definition of the 'concretizes' property.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T03,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1696,74,1770,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a physical object or an activity, and y must be an information object. A printed paper copy is a physical object, so it cannot be concretized by a maintenance procedure document, which is also an information object.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+1,T03,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1696,42,1738,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized into a printed paper copy, which is a physical object.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+1,T04,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1295,41,1336,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1295,42,1337,"{""label"": ""supported"", ""reasoning"": ""The ontology states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is indeed a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1843,41,1884,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1843,44,1887,"{""label"": ""supported"", ""reasoning"": ""The ontology states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1047,38,1085,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not specify any relationship, such as subclass or equivalence, between lis:Function and lis:Capability.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+1,T04,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1047,45,1092,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not explicitly state the relationship between lis:Function and lis:Capability, leaving it unclear whether every lis:Function is a lis:Capability.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+1,T04,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1358,70,1428,"{""label"": ""supported"", ""reasoning"": ""The ontology content shows that lis:hasFunction is a SubPropertyOf lis:hasCapability, and since the range of lis:hasFunction is lis:Function and the range of lis:hasCapability is lis:Capability, it follows that every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1358,49,1407,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content defines 'lis:hasFunction' and 'lis:hasCapability' as separate properties, indicating that a 'Function' is not necessarily a 'Capability'.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+1,T04,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1100,38,1138,"{""label"": ""supported"", ""reasoning"": ""The ontology content shows that lis:Function is a subclass of lis:Capability, as it is hierarchically nested under it.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1100,42,1142,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not explicitly state that every lis:Function is a lis:Capability, nor does it provide information that contradicts this statement.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+1,T04,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1467,40,1507,"{""label"": ""supported"", ""reasoning"": ""The ontology content shows that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1467,38,1505,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines 'hasFunction' as a subproperty of 'hasCapability', indicating that every function is indeed a capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1138,41,1179,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1138,29,1167,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1705,29,1734,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T04,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1705,28,1733,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+1,T05,slot_filling,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,6102,139,6241,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalObject"",
+    ""property"": ""lis:hasPhysicalQuantity"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""The pump P-101 is a physical object (lis:PhysicalObject), which has a physical quantity (lis:hasPhysicalQuantity) such as outlet pressure, and the measured value (5 bar) requires an intermediate node (lis:qualityQuantifiedAs) to represent the quantified quality.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+1,T05,slot_filling,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,6102,96,6198,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:QualityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a physical quantity (outlet pressure), which is quantified as a quality datum representing the measured value.""}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:QualityDatum,0,1,1,1,0,0,0,0.5
+1,T05,slot_filling,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2859,106,2965,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:qualityQuantifiedAs"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""The outlet pressure of pump P-101 is a physical quantity that is quantified as a quality datum, requiring an intermediate node to represent the measured value of 5 bar.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:qualityQuantifiedAs,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:qualityQuantifiedAs,1,0,1,1,0,0,0,0.5
+1,T05,slot_filling,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2859,116,2975,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""The measured outlet pressure of the pump is a physical quantity that needs to be represented as a quality datum linked to the activity of the pump.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,lis:qualityQuantifiedAs,1,0,1,0,0,0,0,0.3333333333333333
+1,T05,slot_filling,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,4449,120,4569,"{
+ ""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""Pump P-101 is a physical object (lis:PhysicalObject) that has a physical quantity (lis:hasPhysicalQuantity), and the measured outlet pressure is represented as a quantified quality (lis:qualityQuantifiedAs) requiring an intermediate node.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+1,T05,slot_filling,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,4449,95,4544,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:Quality"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a measurable quality (outlet pressure), which requires a quality datum to represent the specific measurement.""}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:Quality,lis:qualityQuantifiedAs,lis:ScalarQuantityDatum,0,1,1,0,0,1,0,0.5
+1,T05,slot_filling,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2175,137,2312,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:profileQuantityDatum"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalQuantity"",
+    ""property"": ""lis:profileQuantityDatum"",
+    ""intermediate_node"": ""lis:profileQuantityDatum""
+  },
+  ""reasoning"": ""The outlet pressure of pump P-101 is a measurable physical quantity (lis:PhysicalQuantity), linked to the pump via the property lis:profileQuantityDatum, which requires an intermediate node to represent the measured value (5 bar) as per the definition of lis:profileQuantityDatum.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:profileQuantityDatum,True,lis:PhysicalQuantity,lis:profileQuantityDatum,lis:profileQuantityDatum,1,0,1,1,0,0,0,0.5
+1,T05,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2175,95,2270,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:profileQuantityDatum"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:profileQuantityDatum"", ""property"": ""lis:hasParticipantQualityQuantifiedAs"", ""intermediate_node"": null},
+ ""reasoning"": ""The measured outlet pressure of the pump is a physical quantity that needs to be represented as a profile quantity datum linked to the pump's activity.""}",,True,,,,,,lis:PhysicalQuantity,lis:profileQuantityDatum,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,,1,0,1,0,0,0,0,0.3333333333333333
+1,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,4555,114,4669,"{
+ ""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""Pump P-101 is a physical object, the outlet pressure is a physical quantity linked via 'hasPhysicalQuantity', and the measured value requires an intermediate node as a 'quality quantified as' a 'quality datum'.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+1,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,4555,92,4647,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:Quality"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:QualityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a quality (outlet pressure), which is quantified as a quality datum (5 bar).""}",,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:Quality,lis:qualityQuantifiedAs,lis:QualityDatum,0,0,1,0,0,0,0,0.16666666666666666
+1,T05,slot_filling,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2237,108,2345,"{
+ ""class"": ""lis:PhysicalArtefact"",
+ ""property"": ""lis:profileQuantityDatum"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalArtefact"", ""property"": ""lis:profileQuantityDatum"", ""intermediate_node"": ""lis:profileQuantityDatum""},
+ ""reasoning"": ""The pump P-101 is a physical artefact, the measured outlet pressure is a profile quantity datum, and an intermediate node is required to represent the measurement value of 5 bar.""
+}",,True,,,,,,lis:PhysicalArtefact,lis:profileQuantityDatum,True,lis:PhysicalArtefact,lis:profileQuantityDatum,lis:profileQuantityDatum,0,0,1,0,0,0,0,0.16666666666666666
+1,T05,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2237,115,2352,"{
+  ""class"": ""lis:profileQuantityDatum"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The measured outlet pressure of the pump P-101 is represented as a profile quantity datum, which quantifies the quality of the pressure during the pump's operation.""
+}",,True,,,,,,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,,0,0,1,0,0,0,0,0.16666666666666666
+1,T05,slot_filling,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,5156,109,5265,"{
+ ""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""Pump P-101 is a physical object, outlet pressure is a physical quantity linked to the pump via 'hasPhysicalQuantity', and the measured value requires an intermediate node to represent the quantified quality.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+1,T05,slot_filling,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,5156,110,5266,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:Quality"",
+    ""property"": ""lis:qualityQuantifiedAs"",
+    ""intermediate_node"": ""lis:ScalarQuantityDatum""
+  },
+  ""reasoning"": ""The pump is a physical object that has a measurable quality (outlet pressure), which requires a quality datum to represent the measurement of 5 bar.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:Quality,lis:qualityQuantifiedAs,lis:ScalarQuantityDatum,0,1,1,0,0,1,0,0.5
+1,T05,slot_filling,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2620,118,2738,"{
+ ""class"": ""lis:FunctionalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:FunctionalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantityValue""},
+ ""reasoning"": ""The pump P-101 is a functional object (as pumps are explicitly mentioned as examples of FunctionalObject), it has a physical quantity (outlet pressure), and the measured value (5 bar) requires an intermediate node to represent the quantified quality.""
+}",,True,,,,,,lis:FunctionalObject,lis:hasPhysicalQuantity,True,lis:FunctionalObject,lis:hasPhysicalQuantity,lis:qualityQuantityValue,0,1,1,0,1,0,0,0.5
+1,T05,slot_filling,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2620,113,2733,"{
+  ""class"": ""lis:FunctionalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalQuantity"",
+    ""property"": ""lis:qualityQuantityValue"",
+    ""intermediate_node"": ""lis:profileQuantityDatum""
+  },
+  ""reasoning"": ""The pump is a functional object that has a physical quantity (outlet pressure) which needs to be quantified, thus requiring an intermediate node to represent the measured value.""
+}",,True,,,,,,lis:FunctionalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantityValue,lis:profileQuantityDatum,0,1,1,1,0,0,0,0.5
+2,T01,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,984,42,1026,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,984,55,1039,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that 'lis:Person' is a subclass of 'lis:Organism', which means every instance of 'lis:Person' is also an instance of 'lis:Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2257,43,2300,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2257,29,2286,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Person is a subclass of lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,891,42,933,"{""label"": ""supported"", ""reasoning"": ""The ontology defines a lis:Person as 'an organism that is a human,' which implies that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,891,35,926,"{""label"": ""supported"", ""reasoning"": ""The definition of 'Person' as a human implies that every person is a living organism, thus supporting the statement.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1820,41,1861,"{""label"": ""supported"", ""reasoning"": ""The ontology defines lis:Person as 'an organism that is a human,' which implies that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1820,41,1861,"{""label"": ""supported"", ""reasoning"": ""The ontology defines 'Person' as a subclass of 'Organism', which entails that every 'Person' is indeed an 'Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,930,42,972,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:Person as a subclass of lis:Organism, which entails that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,930,42,972,"{""label"": ""supported"", ""reasoning"": ""The ontology content indicates that 'Person' is a subclass of 'Organism', which means every 'Person' is indeed an 'Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1871,42,1913,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines lis:Person as a subclass of lis:Organism, which entails that every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1871,32,1903,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines 'Person' as a subclass of 'Organism', which supports the statement.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,901,43,944,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,901,51,952,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that 'lis:Person' is a subclass of 'lis:Organism', which means every 'lis:Person' is indeed an 'lis:Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2251,43,2294,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Person is a subclass of lis:Organism, which means every lis:Person is an lis:Organism.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T01,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2251,54,2305,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that 'lis:Person' is a subclass of 'lis:Organism', which means every instance of 'lis:Person' is indeed an instance of 'lis:Organism'.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T02,slot_filling,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,3603,98,3701,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object, such as a steel bar, to a physical quantity, such as its mass.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,3603,90,3693,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""A steel bar has a mass, which is a physical quantity, and this relationship is represented through the hasQuality property.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,0,0,0,0,0,0,0,0.0
+2,T02,slot_filling,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2525,100,2625,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar's mass is a physical quantity, and the 'hasPhysicalQuantity' property directly relates a physical object (like a steel bar) to its physical quantity (like mass).""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2525,93,2618,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""A steel bar has a mass, which is a physical quantity, and the property 'hasPhysicalQuantity' appropriately relates the steel bar to its mass.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2750,99,2849,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which is appropriately related using the property lis:hasPhysicalQuantity as per its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2750,100,2850,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""The mass of a steel bar is a physical quantity that is a quality dependent on the physical object (the steel bar), thus requiring an intermediate node to represent this relationship.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,0,0,0,0,0,0,0,0.0
+2,T02,slot_filling,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,1878,97,1975,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar's mass is a physical quantity, and the property 'lis:hasPhysicalQuantity' is explicitly defined to relate a physical object to its physical quantity.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,1878,99,1977,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The property 'hasPhysicalQuantity' is appropriate as it directly relates a physical object, such as a steel bar, to its measurable quality, which in this case is its mass.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2788,95,2883,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a physical object, and its mass is a physical quantity, which is appropriately related using the 'lis:hasPhysicalQuantity' property.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2788,91,2879,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasQuality"", ""intermediate_node"": ""lis:hasPhysicalQuantity""},
+ ""reasoning"": ""A steel bar is a physical object that has a quality (mass), which requires an intermediate node to represent the physical quantity.""}",,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:PhysicalQuantity,lis:hasQuality,lis:hasPhysicalQuantity,1,0,0,0,0,0,0,0.16666666666666666
+2,T02,slot_filling,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,1938,116,2054,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": ""lis:PhysicalQuantity""},
+ ""reasoning"": ""The mass of a steel bar is a quantifiable property, which aligns with 'lis:PhysicalQuantity', and the property 'lis:hasPhysicalQuantity' is the inverse of 'lis:physicalQuantityOf', making it the appropriate relation.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:physicalQuantityOf,lis:PhysicalQuantity,0,1,0,0,0,0,0,0.16666666666666666
+2,T02,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,1938,89,2027,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:physicalQuantityOf"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": ""lis:uomOfDatum""},
+ ""reasoning"": ""The mass of the steel bar is a measurable quality that requires an intermediate node to represent the relationship correctly.""}",,True,,,,,,lis:PhysicalQuantity,lis:physicalQuantityOf,True,lis:PhysicalQuantity,lis:physicalQuantityOf,lis:uomOfDatum,0,0,0,0,0,0,0,0.0
+2,T02,slot_filling,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,3097,102,3199,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar is a PhysicalObject, and its mass is a PhysicalQuantity, which can be related using the 'lis:hasPhysicalQuantity' property as specified in its domain and range.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,3097,85,3182,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The mass of a steel bar is a quantifiable quality that requires an intermediate node to represent the relationship correctly.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,0,0,1,1,0,0.5
+2,T02,slot_filling,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2050,103,2153,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": false,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": null},
+ ""reasoning"": ""The steel bar's mass is a physical quantity, and the 'lis:hasPhysicalQuantity' property directly relates a physical object (like the steel bar) to its physical quantity (mass).""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,False,lis:PhysicalQuantity,lis:hasPhysicalQuantity,,0,1,1,0,1,1,0,0.6666666666666666
+2,T02,slot_filling,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2050,85,2135,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:hasPhysicalQuantity"", ""property"": ""lis:physicalQuantityOf"", ""intermediate_node"": null},
+ ""reasoning"": ""The relationship between a steel bar and its mass requires an intermediate node to represent the physical quantity of mass.""}",,True,,,,,,lis:PhysicalQuantity,lis:hasPhysicalQuantity,True,lis:hasPhysicalQuantity,lis:physicalQuantityOf,,0,1,0,0,0,1,0,0.3333333333333333
+2,T03,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,2362,78,2440,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a 'physical object' or an 'activity', and y must be an 'information object'. A printed paper copy is a 'physical object', so it cannot be concretized by another 'information object' like a maintenance procedure document.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,2362,42,2404,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized by a physical object, such as a printed paper copy.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,2397,87,2484,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a 'physical object' or an 'activity', and y must be an 'information object'. A maintenance procedure document cannot 'concretize' a printed paper copy of itself because the document itself is an 'information object', not a 'physical object' or 'activity'.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,2397,42,2439,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized by a physical object, such as a printed paper copy.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,1902,89,1991,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that 'lis:concretizes' has a domain of 'lis:Activity' or 'lis:PhysicalObject' and a range of 'lis:InformationObject', but the statement reverses this by suggesting an 'InformationObject' (the document) concretizes a 'PhysicalObject' (the printed paper copy), which contradicts the ontology's definition.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,1902,46,1948,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' that can be concretized into a printed paper copy, which is a 'physical object'.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1614,77,1691,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then y must be an 'information object' and x must be a 'physical object' or an 'activity', which contradicts the statement where a document (an information object) is said to concretize a printed paper copy (a physical object).""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1614,46,1660,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because the definition of 'concretizes' indicates that an information object, such as a maintenance procedure document, can be made concrete in printed copies.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,1914,90,2004,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that 'lis:concretizes' has a domain of 'lis:Activity' or 'lis:PhysicalObject' and a range of 'lis:InformationObject', but the statement reverses this relationship by suggesting an 'InformationObject' (the document) concretizes a 'PhysicalObject' (the printed paper copy), which contradicts the ontology's definition.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,1914,46,1960,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' that can be concretized into a printed paper copy, which is a 'physical object'.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1621,78,1699,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then y must be an 'information object' and x must be a 'physical object' or an 'activity', but the statement incorrectly suggests that an 'information object' (the document) concretizes another 'physical object' (the printed paper copy).""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1621,46,1667,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because the definition of 'concretizes' indicates that an information object, such as a maintenance procedure document, can be made concrete in printed copies.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,4,stop,fp_7e5c0663b8,2085,74,2159,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a physical object or activity, and y must be an information object. A maintenance procedure document, being an information object, cannot 'concretize' a printed paper copy of itself, which is a physical object.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,4,stop,fp_f8d40babb7,2085,52,2137,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an 'information object' and a printed paper copy is a 'physical object', which aligns with the definition of the 'concretizes' property.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T03,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1696,74,1770,"{""label"": ""contradicted"", ""reasoning"": ""The ontology specifies that if x 'concretizes' y, then x must be a physical object or an activity, and y must be an information object. A printed paper copy is a physical object, so it cannot be concretized by a maintenance procedure document, which is also an information object.""}",,True,,contradicted,contradicted,contradicted,1,,,,,,,,,,,,,,
+2,T03,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1696,50,1746,"{""label"": ""supported"", ""reasoning"": ""The statement is supported because a maintenance procedure document is an information object that can be concretized into a printed paper copy, which aligns with the definition of the 'concretizes' property.""}",,True,,supported,contradicted,supported,0,,,,,,,,,,,,,,
+2,T04,verification,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1295,40,1335,"{""label"": ""supported"", ""reasoning"": ""The ontology content states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1295,44,1339,"{""label"": ""supported"", ""reasoning"": ""The ontology states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1843,41,1884,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1843,44,1887,"{""label"": ""supported"", ""reasoning"": ""The ontology states that lis:Function is a subclass of lis:Capability, which means every instance of lis:Function is also an instance of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1047,38,1085,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not specify any relationship, such as subclass or equivalence, between lis:Function and lis:Capability.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1047,45,1092,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not explicitly state the relationship between lis:Function and lis:Capability, leaving it unclear whether every lis:Function is a lis:Capability.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1358,70,1428,"{""label"": ""supported"", ""reasoning"": ""The ontology content specifies that lis:hasFunction is a SubPropertyOf lis:hasCapability, and since the range of lis:hasFunction is lis:Function and the range of lis:hasCapability is lis:Capability, it follows that every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1358,49,1407,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content defines 'lis:hasFunction' and 'lis:hasCapability' as separate properties, indicating that a 'Function' is not necessarily a 'Capability'.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1100,45,1145,"{""label"": ""contradicted"", ""reasoning"": ""The ontology content shows that lis:Function is defined as a specific type of lis:Capability, not that every lis:Function is a lis:Capability.""}",,True,,contradicted,supported,contradicted,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1100,42,1142,"{""label"": ""undetermined"", ""reasoning"": ""The ontology content does not explicitly state that every lis:Function is a lis:Capability, nor does it provide information that contradicts this statement.""}",,True,,undetermined,supported,undetermined,0,,,,,,,,,,,,,,
+2,T04,verification,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1467,43,1510,"{""label"": ""supported"", ""reasoning"": ""The ontology content shows that lis:Function is a subclass of lis:Capability, which supports the statement that every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1467,38,1505,"{""label"": ""supported"", ""reasoning"": ""The ontology content defines 'hasFunction' as a subproperty of 'hasCapability', indicating that every function is indeed a capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,2,stop,fp_7e5c0663b8,1138,41,1179,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,2,stop,fp_f8d40babb7,1138,29,1167,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,verification_system_v1.txt,5,stop,fp_7e5c0663b8,1705,41,1746,"{""label"": ""supported"", ""reasoning"": ""The ontology content explicitly states that lis:Function is a subclass of lis:Capability, which means every lis:Function is a lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T04,verification,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,verification_system_v1.txt,5,stop,fp_f8d40babb7,1705,28,1733,"{""label"": ""supported"", ""reasoning"": ""The ontology explicitly states that lis:Function is a subclass of lis:Capability.""}",,True,,supported,supported,supported,1,,,,,,,,,,,,,,
+2,T05,slot_filling,turtle,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,6102,139,6241,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalObject"",
+    ""property"": ""lis:hasPhysicalQuantity"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""The pump P-101 is a physical object (lis:PhysicalObject), which has a physical quantity (lis:hasPhysicalQuantity) such as outlet pressure, and the measured value (5 bar) requires an intermediate node (lis:qualityQuantifiedAs) to represent the quantified quality.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+2,T05,slot_filling,turtle,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,6102,97,6199,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a physical quantity (outlet pressure) which is quantified as a scalar quantity datum (5 bar).""}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:ScalarQuantityDatum,0,1,1,1,0,1,0,0.6666666666666666
+2,T05,slot_filling,turtle,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2859,106,2965,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:qualityQuantifiedAs"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""The outlet pressure of pump P-101 is a physical quantity that is quantified as a quality datum, requiring an intermediate node to represent the measured value of 5 bar.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:qualityQuantifiedAs,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:qualityQuantifiedAs,1,0,1,1,0,0,0,0.5
+2,T05,slot_filling,turtle,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2859,116,2975,"{
+  ""class"": ""lis:PhysicalQuantity"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""The measured outlet pressure of the pump is a physical quantity that needs to be represented as a quality datum linked to the activity of the pump.""
+}",,True,,,,,,lis:PhysicalQuantity,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,lis:qualityQuantifiedAs,1,0,1,0,0,0,0,0.3333333333333333
+2,T05,slot_filling,elot-org,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,4449,130,4579,"{
+  ""class"": ""lis:PhysicalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalObject"",
+    ""property"": ""lis:hasPhysicalQuantity"",
+    ""intermediate_node"": ""lis:qualityQuantifiedAs""
+  },
+  ""reasoning"": ""Pump P-101 is a physical object (lis:PhysicalObject) that has a physical quantity (lis:hasPhysicalQuantity), and the measured outlet pressure requires an intermediate node to represent the quantified quality (lis:qualityQuantifiedAs).""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+2,T05,slot_filling,elot-org,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,4449,97,4546,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a measurable physical quantity (outlet pressure), which requires a quality datum to represent the specific measurement.""}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:ScalarQuantityDatum,0,1,1,1,0,1,0,0.6666666666666666
+2,T05,slot_filling,elot-org,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2175,118,2293,"{
+ ""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:profileQuantityDatum"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:profileQuantityDatum"", ""intermediate_node"": ""lis:profileQuantityDatum""},
+ ""reasoning"": ""The outlet pressure of pump P-101 is a measurable physical quantity (lis:PhysicalQuantity) and is linked to the pump through the property lis:profileQuantityDatum, which requires an intermediate node to represent the measured value (5 bar).""
+}",,True,,,,,,lis:PhysicalQuantity,lis:profileQuantityDatum,True,lis:PhysicalQuantity,lis:profileQuantityDatum,lis:profileQuantityDatum,1,0,1,1,0,0,0,0.5
+2,T05,slot_filling,elot-org,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2175,90,2265,"{""class"": ""lis:PhysicalQuantity"",
+ ""property"": ""lis:profileQuantityDatum"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:profileQuantityDatum"", ""property"": ""lis:hasParticipantQualityQuantifiedAs"", ""intermediate_node"": null},
+ ""reasoning"": ""The measured outlet pressure of the pump is a physical quantity that requires a profile quantity datum to represent the measurement context.""}",,True,,,,,,lis:PhysicalQuantity,lis:profileQuantityDatum,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,,1,0,1,0,0,0,0,0.3333333333333333
+2,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,4555,121,4676,"{
+ ""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""The pump P-101 is a physical object (lis:PhysicalObject) that has a physical quantity (lis:hasPhysicalQuantity), and the measured outlet pressure is represented as a quantified quality (lis:qualityQuantifiedAs) requiring an intermediate node.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+2,T05,slot_filling,elot-org-ancestors,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,4555,93,4648,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasQuality"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:Quality"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:QualityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a quality (outlet pressure), which is quantified as a quality datum representing the measured value.""}",,True,,,,,,lis:PhysicalObject,lis:hasQuality,True,lis:Quality,lis:qualityQuantifiedAs,lis:QualityDatum,0,0,1,0,0,0,0,0.16666666666666666
+2,T05,slot_filling,elot-org-ancestors,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2237,103,2340,"{
+ ""class"": ""lis:PhysicalArtefact"",
+ ""property"": ""lis:profileQuantityDatum"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalArtefact"", ""property"": ""lis:profileQuantityDatum"", ""intermediate_node"": ""lis:profileQuantityDatum""},
+ ""reasoning"": ""The pump P-101 is a physical artefact, and its measured outlet pressure is a profile quantity datum that requires an intermediate node to represent the quantified measurement.""
+}",,True,,,,,,lis:PhysicalArtefact,lis:profileQuantityDatum,True,lis:PhysicalArtefact,lis:profileQuantityDatum,lis:profileQuantityDatum,0,0,1,0,0,0,0,0.16666666666666666
+2,T05,slot_filling,elot-org-ancestors,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2237,116,2353,"{
+  ""class"": ""lis:profileQuantityDatum"",
+  ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:profileQuantityDatum"",
+    ""property"": ""lis:hasParticipantQualityQuantifiedAs"",
+    ""intermediate_node"": null
+  },
+  ""reasoning"": ""The measured outlet pressure of the pump P-101 is represented as a profile quantity datum, which quantifies the quality of the pressure during the operation of the pump.""
+}",,True,,,,,,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,True,lis:profileQuantityDatum,lis:hasParticipantQualityQuantifiedAs,,0,0,1,0,0,0,0,0.16666666666666666
+2,T05,slot_filling,omn,oracle,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,10,stop,fp_4a75c5501f,5156,109,5265,"{
+ ""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantifiedAs""},
+ ""reasoning"": ""Pump P-101 is a physical object, outlet pressure is a physical quantity linked to the pump via 'hasPhysicalQuantity', and the measured value requires an intermediate node to represent the quantified quality.""
+}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalObject,lis:hasPhysicalQuantity,lis:qualityQuantifiedAs,0,1,1,0,1,0,0,0.5
+2,T05,slot_filling,omn,oracle,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,10,stop,fp_f8d40babb7,5156,95,5251,"{""class"": ""lis:PhysicalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:PhysicalQuantity"", ""property"": ""lis:qualityQuantifiedAs"", ""intermediate_node"": ""lis:ScalarQuantityDatum""},
+ ""reasoning"": ""The pump is a physical object that has a measurable quality (outlet pressure), which requires a quality datum to represent the measurement.""}",,True,,,,,,lis:PhysicalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantifiedAs,lis:ScalarQuantityDatum,0,1,1,1,0,1,0,0.6666666666666666
+2,T05,slot_filling,omn,retrieved,gpt-4o-2024-11-20,gpt-4o-2024-11-20,slot_filling_system_v2.txt,5,stop,fp_4a75c5501f,2620,108,2728,"{
+ ""class"": ""lis:FunctionalObject"",
+ ""property"": ""lis:hasPhysicalQuantity"",
+ ""intermediate_node"": true,
+ ""supporting_chunks"": {""class"": ""lis:FunctionalObject"", ""property"": ""lis:hasPhysicalQuantity"", ""intermediate_node"": ""lis:qualityQuantityValue""},
+ ""reasoning"": ""The pump is a functional object, the outlet pressure is a physical quantity related to the pump, and the measured value of 5 bar requires an intermediate node to represent the quantity and its value.""
+}",,True,,,,,,lis:FunctionalObject,lis:hasPhysicalQuantity,True,lis:FunctionalObject,lis:hasPhysicalQuantity,lis:qualityQuantityValue,0,1,1,0,1,0,0,0.5
+2,T05,slot_filling,omn,retrieved,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,slot_filling_system_v2.txt,5,stop,fp_f8d40babb7,2620,111,2731,"{
+  ""class"": ""lis:FunctionalObject"",
+  ""property"": ""lis:hasPhysicalQuantity"",
+  ""intermediate_node"": true,
+  ""supporting_chunks"": {
+    ""class"": ""lis:PhysicalQuantity"",
+    ""property"": ""lis:qualityQuantityValue"",
+    ""intermediate_node"": ""lis:profileQuantityDatum""
+  },
+  ""reasoning"": ""The pump is a functional object that has a physical quantity (outlet pressure) which is measured, thus requiring an intermediate node to represent the measured value.""
+}",,True,,,,,,lis:FunctionalObject,lis:hasPhysicalQuantity,True,lis:PhysicalQuantity,lis:qualityQuantityValue,lis:profileQuantityDatum,0,1,1,1,0,0,0,0.5

@@ -1,0 +1,195 @@
+{
+  "n_rows": 90,
+  "verification": {
+    "n": 54,
+    "majority_class_baseline": 0.6666666666666666,
+    "majority_label": "supported",
+    "gold_label_counts": {
+      "supported": 36,
+      "contradicted": 18
+    },
+    "per_model": {
+      "gpt-4o-2024-11-20": {
+        "n": 18,
+        "accuracy": 0.0,
+        "majority_class_baseline": 0.6666666666666666,
+        "modal_pred_label": "undetermined",
+        "modal_pred_frac": 1.0,
+        "pred_label_counts": {
+          "undetermined": 18
+        },
+        "flags": [
+          "verification accuracy 0.000 <= majority baseline 0.667",
+          "modal predicted label 'undetermined' is 1.000 of answers (>90%)"
+        ]
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "n": 18,
+        "accuracy": 0.16666666666666666,
+        "majority_class_baseline": 0.6666666666666666,
+        "modal_pred_label": "undetermined",
+        "modal_pred_frac": 0.8333333333333334,
+        "pred_label_counts": {
+          "undetermined": 15,
+          "supported": 3
+        },
+        "flags": [
+          "verification accuracy 0.167 <= majority baseline 0.667"
+        ]
+      },
+      "llama3.1:8b-instruct-q8_0": {
+        "n": 18,
+        "accuracy": 0.5,
+        "majority_class_baseline": 0.6666666666666666,
+        "modal_pred_label": "supported",
+        "modal_pred_frac": 0.6666666666666666,
+        "pred_label_counts": {
+          "supported": 12,
+          "undetermined": 6
+        },
+        "flags": [
+          "verification accuracy 0.500 <= majority baseline 0.667"
+        ]
+      }
+    },
+    "per_reasoning_type": {
+      "direct_assertion": {
+        "n": 36,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "supported": 36
+        },
+        "missing_label_classes": [
+          "contradicted",
+          "undetermined"
+        ]
+      },
+      "structural": {
+        "n": 18,
+        "majority_class_baseline": 1.0,
+        "gold_label_counts": {
+          "contradicted": 18
+        },
+        "missing_label_classes": [
+          "supported",
+          "undetermined"
+        ]
+      }
+    },
+    "labels_absent_everywhere": [
+      "undetermined"
+    ],
+    "flags": [
+      "[gpt-4o-2024-11-20] verification accuracy 0.000 <= majority baseline 0.667",
+      "[gpt-4o-2024-11-20] modal predicted label 'undetermined' is 1.000 of answers (>90%)",
+      "[gpt-4o-mini-2024-07-18] verification accuracy 0.167 <= majority baseline 0.667",
+      "[llama3.1:8b-instruct-q8_0] verification accuracy 0.500 <= majority baseline 0.667",
+      "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+      "[reasoning_type=structural] gold missing label classes ['supported', 'undetermined']",
+      "gold label class(es) absent from the whole set: ['undetermined']"
+    ]
+  },
+  "ceiling_floor": {
+    "threshold": 0.9,
+    "per_task": {
+      "T01": {
+        "n_cells": 6,
+        "cells_at_1.0": 3,
+        "cells_at_0.0": 3,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T02": {
+        "n_cells": 6,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 6,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T03": {
+        "n_cells": 6,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 6,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      },
+      "T04": {
+        "n_cells": 6,
+        "cells_at_1.0": 1,
+        "cells_at_0.0": 5,
+        "ceiling": false,
+        "floor": false,
+        "exception_cells": null
+      },
+      "T05": {
+        "n_cells": 6,
+        "cells_at_1.0": 0,
+        "cells_at_0.0": 6,
+        "ceiling": false,
+        "floor": true,
+        "exception_cells": 0
+      }
+    },
+    "flags": [
+      "[T02] FLOOR: 6/6 cells at 0.0 (0 exceptions)",
+      "[T03] FLOOR: 6/6 cells at 0.0 (0 exceptions)",
+      "[T05] FLOOR: 6/6 cells at 0.0 (0 exceptions)"
+    ]
+  },
+  "determinism": {
+    "n_cells": 30,
+    "identical_raw_cells": 20,
+    "identical_frac": 0.6666666666666666,
+    "distinct_system_fingerprints": 5,
+    "system_fingerprints": [
+      "fp_1e6c79a6d6",
+      "fp_5d8d1116aa",
+      "fp_98f538dc1a",
+      "fp_b21e18781d",
+      "fp_ollama"
+    ]
+  },
+  "floor_citations": {
+    "n_floor_rows": 36,
+    "per_model": {
+      "gpt-4o-2024-11-20": {
+        "n_floor_rows": 12,
+        "n_hallucinated_citations": 9,
+        "hallucinated_citation_rate": 0.75
+      },
+      "gpt-4o-mini-2024-07-18": {
+        "n_floor_rows": 12,
+        "n_hallucinated_citations": 12,
+        "hallucinated_citation_rate": 1.0
+      },
+      "llama3.1:8b-instruct-q8_0": {
+        "n_floor_rows": 12,
+        "n_hallucinated_citations": 9,
+        "hallucinated_citation_rate": 0.75
+      }
+    },
+    "flags": [
+      "[gpt-4o-2024-11-20] fabricated a chunk citation on 9/12 no-context rows (0.750)",
+      "[gpt-4o-mini-2024-07-18] fabricated a chunk citation on 12/12 no-context rows (1.000)",
+      "[llama3.1:8b-instruct-q8_0] fabricated a chunk citation on 9/12 no-context rows (0.750)"
+    ]
+  },
+  "flags": [
+    "[gpt-4o-2024-11-20] verification accuracy 0.000 <= majority baseline 0.667",
+    "[gpt-4o-2024-11-20] modal predicted label 'undetermined' is 1.000 of answers (>90%)",
+    "[gpt-4o-mini-2024-07-18] verification accuracy 0.167 <= majority baseline 0.667",
+    "[llama3.1:8b-instruct-q8_0] verification accuracy 0.500 <= majority baseline 0.667",
+    "[reasoning_type=direct_assertion] gold missing label classes ['contradicted', 'undetermined']",
+    "[reasoning_type=structural] gold missing label classes ['supported', 'undetermined']",
+    "gold label class(es) absent from the whole set: ['undetermined']",
+    "[T02] FLOOR: 6/6 cells at 0.0 (0 exceptions)",
+    "[T03] FLOOR: 6/6 cells at 0.0 (0 exceptions)",
+    "[T05] FLOOR: 6/6 cells at 0.0 (0 exceptions)",
+    "[gpt-4o-2024-11-20] fabricated a chunk citation on 9/12 no-context rows (0.750)",
+    "[gpt-4o-mini-2024-07-18] fabricated a chunk citation on 12/12 no-context rows (1.000)",
+    "[llama3.1:8b-instruct-q8_0] fabricated a chunk citation on 9/12 no-context rows (0.750)"
+  ]
+}

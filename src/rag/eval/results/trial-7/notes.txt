@@ -1,0 +1,169 @@
+==============================
+EXPERIMENT DETAILS:
+==============================
+- Naive RAG
+- K=20
+- v7 naive rag prompt
+- Retrieval Sources
+    ISO_15926-14.ttl
+    ISO_23726-1.md
+    https://rds.posccaesar.org/
+    LIS-14.md
+    obi-ido-training-session 2, 3, 8, 9
+    disjointness.md 
+    CII-FMEA.tex 
+    modelling_Objects_in_IDO.md 
+    modelling-facts.md
+    ido-summary 
+    obi-principles 
+- key changes:
+    - changed chunking of md to chunk at #### rather than ###
+    - updated prompt to allow full lists as responses
+    - updated prompt to not respond to ontology modelling questions
+
+==============================
+ANSWER BREAKDOWN:
+==============================
+
+1. What are the key concepts in IDO? PARTIAL
+- Specified is missing. Activity Profile is noted, rather than Activity.
+
+---
+
+2. What is IDO and why would I use it? GOOD
+- good
+
+---
+
+3. I want to model Failure Modes. Where does a “Failure Effect” sit in IDO? BAD
+- It should say "I don't know". I think it believes the CII-FMEA doc is part of IDO?
+- Actual:
+        In the Industrial Data Ontology (IDO), the concept of "Failure Effect" is represented in the context of failure modes and is associated with the consequences of a failure mode on the operation, function, or status of an item. Specifically, a "Failure Effect" is treated as an "FSO: process" that results from a "FMO: functional failure," which means it is a direct outcome of a failure mode and can be categorized as a subclass of "FunctionalFailure." Additionally, the "FinalFailureEffect" represents the terminal consequence of such failures within the system hierarchy.
+
+---
+
+4. Explain an Activity Profile to me and give me an example of how I would use it. GOOD
+- good
+
+---
+
+5. I have a Failure Mode Code (representing the failure mode that has occurred) and I have modelled that as an information object. I also want to model the actual Failure Mode that occurred on the equipment. What IDO relation do I use between the Failure Mode Code and the Failure Mode. GOOD
+- perfect - "Currently, I am unable to answer queries of this nature as they are out of scope."
+
+---
+
+6. What is the difference between a Location and a Site in IDO? PARTIAL
+- fine. same issue. talks about SpatialLocation rather than Location
+
+---
+
+7. What OWL profile does IDO use? GOOD
+- perfect
+
+---
+
+8. I want to create a reference ontology for failure modes aligned with IDO, what should my namespace for my ontology look like? BAD 
+- bad. again just doesnt retrieve correct chunk due to the extra wording in query clouding retrieval. 
+
+---
+
+9. If I create a concept in an IDO aligned ontology, what annotations / metadata is required on that concept. PARTIAL
+- its an ok answer but we just want the 2 REQUIRED annotation properties. again, not retrieved. clouding issue.
+
+---
+
+10. When was IDO last updated? GOOD
+- good 
+
+---
+
+11. What is the difference between OBI and IDO? GOOD
+- good
+
+---
+
+12. What are the principles of OBI GOOD
+- solid answer, just not exhaustive again. Melinda thinks quality is quite good nonetheless.
+
+---
+
+13. What is an ontology maintenance agency? GOOD
+- good
+
+---
+
+14. What does a maintenance agency do? BAD 
+- WEIRD AND BAD!!!! "Currently, I am unable to answer queries of this nature as they are out of scope.'
+
+---
+
+15. What sort of ontology checks are required for ontology resources to be considered part of OBI? GOOD
+- this answer bit different to gold. gold requires section 6.9 Ontology evaluation. seems ok tho? 
+- gold  
+        All ontologies in the OBI series shall have suitable ontology quality tests. These tests should provide evidence of ontology evaluation with, for example, model checking processes, syntax checkers, and reasoners. Processes for ontology evaluation of OBI artefacts managed by external groups are the responsibility of the external group and the evaluation should be done to a standard equivalent to that of the ISO 23726 maintenance agency.
+- actual 
+        To be considered part of the OBI series, ontology resources must meet several checks: \n\n1. **Compliance with OWL 2 Direct Semantics** - Any ontology must adhere to the OWL 2 Direct Semantics standards.\n2. **RDF and RDFS Conformance** - Resources must conform to W3C Linked Data standards and protocols.\n3. **Digital Resource Requirements** - Each ontology must be accompanied by a digital file containing a serialization of all classes and properties, as well as use cases and instance data demonstrating compliance with IDO commitments.\n4. **Axioms, Rules, and Constraints** - Resources should specify necessary constraints and relationships to ensure semantic distinguishability, avoiding redundancy with others in the OBI series.\n\nThese checks help maintain the integrity and interoperability of ontological resources within the OBI framework.
+
+---
+
+16. Who maintains ontologies aligned to IDO that are not part of ISO? BAD 
+- !!! BAD WEIRD !!! 'Currently, I am unable to answer queries of this nature as they are out of scope.'
+
+---
+
+17. Does IDO use Linked Data? GOOD
+- good
+
+---
+
+18. What is a shortcut property GOOD 
+- good
+
+---
+
+19. What are the differences between an upper ontology, reference ontology, application ontology, and enterprise ontology? GOOD 
+- good 
+
+---
+
+20. What are annotation properties? GOOD
+- good 
+
+---
+
+21. Is IDO available in different languages? BAD 
+- this is ok but maybe poor wording, its in scope... Currently, I am unable to answer queries of this nature as they are out of scope.
+
+---
+
+22. Does the class InformationObject in IDO include documents and database records? GOOD 
+- good  
+
+---
+
+23. In IDO what is the difference between the classes 'function', 'capability' and 'disposition? GOOD 
+- good 
+
+---
+
+24. In IDO what is meant by a Dependent class? GOOD 
+- good 
+
+==============================
+SUMMARY:
+==============================
+GOOD = 15 -> 16 
+PARTIAL = 5 -> 3
+BAD = 4 -> 5
+
+==============================
+TAKEAWAYS:
+==============================
+- still not giving top-5 classes for the "key concepts of IDO" question even tho it has access to em
+- it should not answer the failure effect question but i think it believes CII-FMEA input is part of IDO
+- mistakes Location = SpatialLocation
+- still cloudy retrieval for questions with additional wording in them thats irrelevant for retrieval (required annotation property question AND namespace structure question)
+- questions incorrectly chosen not to be answered
+    - "What does a maintenance agency do?", thinks its out of scope!? weird...
+    - "Who maintains ontologies aligned to IDO that are not part of ISO?" thinks its out of scope!? weird...
+    - "Is IDO available in different languages?" -> this is fair, its unable to, but reword it so it doesnt say out of scope (cos this IS in scope) - simple prompt change
